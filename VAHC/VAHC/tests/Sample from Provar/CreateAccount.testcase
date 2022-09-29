@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="6" registryId="e34c936d-897f-487f-804a-672011075b8b" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="2" title="Salesforce Connect: Admin ({resultScope})">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument argId="09338a13-3d6a-4fc0-a7e7-6d0054cc0ffe" id="resultScope">
+          <value class="variable">
+            <path element="resultScope"/>
+          </value>
+        </argument>
+        <argument argId="8df7221e-aded-41fe-b4b9-033453fff8f4" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reopen</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="14" title="Create Object: Account=&gt;AccountId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">AccountId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument argId="aa90b453-4056-4566-9b5c-cc3075636472" id="Name">
+          <value class="variable">
+            <path element="AccountName"/>
+          </value>
+        </argument>
+        <argument argId="1d9d010d-6377-4da4-8dff-afd9916e2d31" id="Type">
+          <value class="variable">
+            <path element="Type"/>
+          </value>
+        </argument>
+        <argument argId="b3fa2172-3469-4450-8847-cd15f5ab8e5f" id="BillingStreet">
+          <value class="variable">
+            <path element="BillingStreet"/>
+          </value>
+        </argument>
+        <argument argId="b52b13d5-1a88-473b-a479-fe4d3ffcc1c8" id="BillingCity">
+          <value class="variable">
+            <path element="BillingCity"/>
+          </value>
+        </argument>
+        <argument id="BillingState">
+          <value class="value" valueClass="string">FL</value>
+        </argument>
+        <argument id="BillingPostalCode"/>
+        <argument id="BillingCountry"/>
+        <argument id="BillingLatitude"/>
+        <argument id="BillingLongitude"/>
+        <argument id="BillingGeocodeAccuracy"/>
+        <argument id="ShippingStreet"/>
+        <argument id="ShippingCity"/>
+        <argument id="ShippingState"/>
+        <argument id="ShippingPostalCode"/>
+        <argument id="ShippingCountry"/>
+        <argument id="ShippingLatitude"/>
+        <argument id="ShippingLongitude"/>
+        <argument id="ShippingGeocodeAccuracy"/>
+        <argument argId="12bfbe77-1362-43b0-a2ab-e2dc344ca869" id="Phone">
+          <value class="variable">
+            <path element="Phone"/>
+          </value>
+        </argument>
+        <argument id="Fax"/>
+        <argument id="AccountNumber"/>
+        <argument id="Website"/>
+        <argument id="Sic"/>
+        <argument id="Industry"/>
+        <argument id="AnnualRevenue"/>
+        <argument id="NumberOfEmployees"/>
+        <argument id="Ownership"/>
+        <argument id="TickerSymbol"/>
+        <argument id="Description"/>
+        <argument id="Rating"/>
+        <argument id="Site"/>
+        <argument id="Jigsaw"/>
+        <argument id="AccountSource"/>
+        <argument id="SicDesc"/>
+        <argument id="CustomerPriority__c"/>
+        <argument id="SLA__c"/>
+        <argument argId="21e82fb5-9704-4016-a946-b6496b2896f2" id="Active__c">
+          <value class="variable">
+            <path element="Active"/>
+          </value>
+        </argument>
+        <argument id="NumberofLocations__c"/>
+        <argument id="UpsellOpportunity__c"/>
+        <argument id="SLASerialNumber__c"/>
+        <argument id="SLAExpirationDate__c">
+          <value class="value" valueClass="date">1657065600000</value>
+        </argument>
+      </arguments>
+      <expectedExceptions>
+        <expectedException caseInsensitive="true" comparisonType="Contains" title="Incorrect Permissions to Create Accounts">
+          <assertionValue class="value" valueClass="string">Unable to create/update fields: CreatedById, LastModifiedById. Please check the security settings of this field and verify that it is read/write for your profile or permission set.</assertionValue>
+        </expectedException>
+      </expectedExceptions>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">SalesUser</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Account</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Type" name="Type" title="Type"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingStreet" name="BillingStreet" title="BillingStreet"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCity" name="BillingCity" title="BillingCity"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingState" name="BillingState" title="BillingState"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingPostalCode" name="BillingPostalCode" title="BillingPostalCode"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCountry" name="BillingCountry" title="BillingCountry"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingLatitude" name="BillingLatitude" title="BillingLatitude"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingLongitude" name="BillingLongitude" title="BillingLongitude"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingGeocodeAccuracy" name="BillingGeocodeAccuracy" title="BillingGeocodeAccuracy"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingStreet" name="ShippingStreet" title="ShippingStreet"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingCity" name="ShippingCity" title="ShippingCity"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingState" name="ShippingState" title="ShippingState"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingPostalCode" name="ShippingPostalCode" title="ShippingPostalCode"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingCountry" name="ShippingCountry" title="ShippingCountry"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingLatitude" name="ShippingLatitude" title="ShippingLatitude"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingLongitude" name="ShippingLongitude" title="ShippingLongitude"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ShippingGeocodeAccuracy" name="ShippingGeocodeAccuracy" title="ShippingGeocodeAccuracy"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Phone" name="Phone" title="Phone"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Fax" name="Fax" title="Fax"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=AccountNumber" name="AccountNumber" title="AccountNumber"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Website" name="Website" title="Website"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Sic" name="Sic" title="Sic"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Industry" name="Industry" title="Industry"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=AnnualRevenue" name="AnnualRevenue" title="AnnualRevenue"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=NumberOfEmployees" name="NumberOfEmployees" title="NumberOfEmployees"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Ownership" name="Ownership" title="Ownership"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=TickerSymbol" name="TickerSymbol" title="TickerSymbol"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Description" name="Description" title="Description"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Rating" name="Rating" title="Rating"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Site" name="Site" title="Site"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Jigsaw" name="Jigsaw" title="Jigsaw"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=AccountSource" name="AccountSource" title="AccountSource"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SicDesc" name="SicDesc" title="SicDesc"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=CustomerPriority__c" name="CustomerPriority__c" title="CustomerPriority__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SLA__c" name="SLA__c" title="SLA__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Active__c" name="Active__c" title="Active__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=NumberofLocations__c" name="NumberofLocations__c" title="NumberofLocations__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=UpsellOpportunity__c" name="UpsellOpportunity__c" title="UpsellOpportunity__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SLASerialNumber__c" name="SLASerialNumber__c" title="SLASerialNumber__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SLAExpirationDate__c" name="SLAExpirationDate__c" title="SLAExpirationDate__c"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:aa90b453-4056-4566-9b5c-cc3075636472" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="AccountName" title="Account Name">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:1d9d010d-6377-4da4-8dff-afd9916e2d31" modelBinding="sf:ui:binding:object?object=Account&amp;field=Type" name="Type" title="Type">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:12bfbe77-1362-43b0-a2ab-e2dc344ca869" modelBinding="sf:ui:binding:object?object=Account&amp;field=Phone" name="Phone" title="Phone">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:21e82fb5-9704-4016-a946-b6496b2896f2" modelBinding="sf:ui:binding:object?object=Account&amp;field=Active__c" name="Active" title="Active">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:8df7221e-aded-41fe-b4b9-033453fff8f4" name="reuseConnectionName" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+    <param linkedToUrl="provar:hasvalue:b3fa2172-3469-4450-8847-cd15f5ab8e5f" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingStreet" name="BillingStreet" title="BillingStreet">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:b52b13d5-1a88-473b-a479-fe4d3ffcc1c8" modelBinding="sf:ui:binding:object?object=Account&amp;field=BillingCity" name="BillingCity" title="Billing City">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:09338a13-3d6a-4fc0-a7e7-6d0054cc0ffe" name="resultScope" title="Result Scope">
+      <summary>How long the resulting connection will remain open for.</summary>
+      <type>
+        <choiceType>
+          <constraints>
+            <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
+          </constraints>
+        </choiceType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="AccountId" title="AccountId">
+      <summary>The name under which the resulting Object Id will be stored.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="AccountId"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="AccountName">
+      <value class="compound">
+        <parts>
+          <value valueClass="string">Test </value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">6</value>
+            </argument>
+          </funcCall>
+        </parts>
+      </value>
+    </argument>
+    <argument id="Type">
+      <value class="value" valueClass="string">Customer - Channel</value>
+    </argument>
+    <argument id="Phone">
+      <value class="compound">
+        <parts>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">3</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="NUMERIC"/>
+              </value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">-</value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">3</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="NUMERIC"/>
+              </value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">-</value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">4</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="NUMERIC"/>
+              </value>
+            </argument>
+          </funcCall>
+        </parts>
+      </value>
+    </argument>
+    <argument id="Active">
+      <value class="value" valueClass="string">Yes</value>
+    </argument>
+    <argument id="reuseConnectionName"/>
+    <argument id="BillingStreet">
+      <value class="value" valueClass="string">877 Sesame Street</value>
+    </argument>
+    <argument id="BillingCity">
+      <value class="value" valueClass="string">Nashville</value>
+    </argument>
+    <argument id="resultScope">
+      <value class="value" valueClass="string">Test</value>
+    </argument>
+  </args>
+  <outputArgs>
+    <outputArgument id="AccountId">
+      <name class="value" valueClass="string">AccountId</name>
+    </outputArgument>
+  </outputArgs>
+  <parameterValueSources/>
+</testCase>

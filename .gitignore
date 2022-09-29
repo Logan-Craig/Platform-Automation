@@ -1,0 +1,7 @@
+.chromeDriver
+.configuration
+.networking
+.testBuilder
+**/.chromeProfiles
+**/.metadata
+**/.testcycles

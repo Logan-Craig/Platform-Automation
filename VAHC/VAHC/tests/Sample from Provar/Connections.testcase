@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="84">
+  <summary>&lt;p&gt;Run in test builder to see tabs open, otherwise only VerifyUserLoggedIn will open a browser since it is the only UI test.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Show test environments tab and connections with env overrides for each profile&lt;/li&gt;&lt;li&gt;Show how callables reuse test connections rather than Re-open or Fail&lt;/li&gt;&lt;li&gt;If connection scope is set to global, no need to pass into callable test or subsequent tests&lt;/li&gt;&lt;/ul&gt;&lt;ol&gt;&lt;li&gt;Call CreateLead will not open a new browser (re-use existing connection and pass in override)&lt;/li&gt;&lt;li&gt;Call CreateAccount will open a new browser (re-use existing connection but override is not passed in). Tab will persist until the end of the test run.&lt;/li&gt;&lt;li&gt;Call Create Account (3) will open a new browser tan and close tab after callable.&lt;/li&gt;&lt;li&gt;Call VerifyUserLoggedIn will not open a new browser tab (but the preceding SF Connect step will as it is a new user). It will re-use SalesUser connection tab. Tab closes after test ends.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;</summary>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="39" title="Salesforce Connect: SysAdmin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="4" title="Reuse Connections">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Reuse Connections</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="5">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="17" title="1 - Do not open a new tab (reuse)">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">1 - Do not open a new tab (reuse)</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="18">
+                  <steps>
+                    <caseCall testCaseId="509678ca-b897-4e52-ac1c-ac35a424e934" testCasePath="tests/Callables/CreateLead.testcase" testItemId="16">
+                      <arguments>
+                        <argument id="LastName">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">Test </value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">5</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="ALPHA"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="Company">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">Testing Inc </value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">5</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="ALPHA"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="reuseConnectionName">
+                          <value class="value" valueClass="string">Admin</value>
+                        </argument>
+                      </arguments>
+                      <outputArguments>
+                        <outputArgument id="LeadId">
+                          <name class="value" valueClass="string">LeadId</name>
+                        </outputArgument>
+                      </outputArguments>
+                    </caseCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="27" title="2 - Open a new tab and persist based on scope  (same connection/profile)">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">2 - Open a new tab and persist based on scope  (same connection/profile)</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="28">
+                  <steps>
+                    <caseCall testCaseId="e34c936d-897f-487f-804a-672011075b8b" testCasePath="tests/Sample from Provar/CreateAccount.testcase" testItemId="29">
+                      <arguments>
+                        <argument id="AccountName">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">Test </value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">6</value>
+                                </argument>
+                              </funcCall>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="Type">
+                          <value class="value" valueClass="string">Customer - Channel</value>
+                        </argument>
+                        <argument id="Phone">
+                          <value class="compound">
+                            <parts>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">3</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="NUMERIC"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                              <value valueClass="string">-</value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">3</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="NUMERIC"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                              <value valueClass="string">-</value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">4</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="NUMERIC"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="Active">
+                          <value class="value" valueClass="string">Yes</value>
+                        </argument>
+                        <argument id="reuseConnectionName"/>
+                        <argument id="BillingStreet">
+                          <value class="value" valueClass="string">877 Sesame Street</value>
+                        </argument>
+                        <argument id="BillingCity">
+                          <value class="value" valueClass="string">Nashville</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Global</value>
+                        </argument>
+                      </arguments>
+                      <outputArguments>
+                        <outputArgument id="AccountId">
+                          <name class="value" valueClass="string">AccountId</name>
+                        </outputArgument>
+                      </outputArguments>
+                    </caseCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="20" title="3 - Open a new tab then close after callable (same connection/profile)">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">3 - Open a new tab then close after callable (same connection/profile)</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="21">
+                  <steps>
+                    <caseCall testCaseId="e34c936d-897f-487f-804a-672011075b8b" testCasePath="tests/Sample from Provar/CreateAccount.testcase" testItemId="12">
+                      <arguments>
+                        <argument id="AccountName">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">Test </value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">6</value>
+                                </argument>
+                              </funcCall>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="Type">
+                          <value class="value" valueClass="string">Customer - Channel</value>
+                        </argument>
+                        <argument id="Phone">
+                          <value class="compound">
+                            <parts>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">3</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="NUMERIC"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                              <value valueClass="string">-</value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">3</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="NUMERIC"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                              <value valueClass="string">-</value>
+                              <funcCall id="UniqueId">
+                                <argument id="length">
+                                  <value class="value" valueClass="decimal">4</value>
+                                </argument>
+                                <argument id="format">
+                                  <value class="variable">
+                                    <path element="NUMERIC"/>
+                                  </value>
+                                </argument>
+                              </funcCall>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="Active">
+                          <value class="value" valueClass="string">Yes</value>
+                        </argument>
+                        <argument id="reuseConnectionName"/>
+                        <argument id="BillingStreet">
+                          <value class="value" valueClass="string">877 Sesame Street</value>
+                        </argument>
+                        <argument id="BillingCity">
+                          <value class="value" valueClass="string">Nashville</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                      </arguments>
+                      <outputArguments>
+                        <outputArgument id="AccountId">
+                          <name class="value" valueClass="string">AccountId</name>
+                        </outputArgument>
+                      </outputArguments>
+                    </caseCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="23" title="4 - Open a new tab then reuse (new profile)">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">4 - Open a new tab then reuse (new profile)</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="24">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="14" title="Salesforce Connect: SalesUser (Test)">
+                      <arguments>
+                        <argument id="connectionName">
+                          <value class="value" valueClass="string">SalesUser</value>
+                        </argument>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">SalesUser</value>
+                        </argument>
+                        <argument id="reuseConnectionName"/>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="alreadyOpenBehaviour">
+                          <value class="value" valueClass="string">Fail</value>
+                        </argument>
+                        <argument id="uiApplicationName"/>
+                        <argument id="closeAllPrimaryTabs">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="quickUiLogin">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="privateBrowsingMode"/>
+                        <argument id="enableObjectIdLogging">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="autoCleanup"/>
+                        <argument id="cleanupConnectionName"/>
+                        <argument id="logFileLocation"/>
+                        <argument id="username"/>
+                        <argument id="password"/>
+                        <argument id="securityToken"/>
+                        <argument id="environment"/>
+                        <argument id="lightningMode">
+                          <value class="value" valueClass="string">default</value>
+                        </argument>
+                        <argument id="webBrowser"/>
+                      </arguments>
+                    </apiCall>
+                    <caseCall testCaseId="d15cdf5d-eab7-4fc7-903a-2df11864e34f" testCasePath="tests/Callables/VerifyUserLoggedIn.testcase" testItemId="15">
+                      <arguments>
+                        <argument id="reuseConnectionName">
+                          <value class="value" valueClass="string">SalesUser</value>
+                        </argument>
+                      </arguments>
+                    </caseCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="35" title="Group Step Scope for Profile">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Group Step Scope for Profile</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="36"/>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Finally" name="Finally" testItemId="33" title="Finally: Just here to pause execution (3 tabs should be open)">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Just here to pause execution (3 tabs should be open)</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="34"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="38" title="Salesforce Connect: IntegrationUser (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">IntegrationUser</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">IntegrationUser</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <caseCall testCaseId="ddf70170-e94a-4a2d-b0f8-8c67291f2fe6" testCasePath="tests/Callables/ConvertLeadToAccount.testcase" testItemId="37">
+      <arguments>
+        <argument id="LeadId">
+          <value class="value" valueClass="string">00Q3k00001RW601EAD</value>
+        </argument>
+        <argument id="ConvertedStatus">
+          <value class="value" valueClass="string">Closed - Converted</value>
+        </argument>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">IntegrationUser</value>
+        </argument>
+      </arguments>
+    </caseCall>
+  </steps>
+</testCase>

@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="30">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="368" title="Salesforce Connect: SysAdmin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: SysAdmin_Lydse_VAVET_DTCSQA (Test)">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SysAdmin_Lydse_VAVET_DTCSQA</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SysAdmin_Lydse_VAVET_DTCSQA</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">VCC_Veteran_Care_Connect</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="27" title="Read File for Creating Cases">
+      <tags/>
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Read File for Creating Cases</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:\\Users\\LydseGedge\\Provar\\VAHC\\VAHC\\templates\\Input\\Cases.xlsx;1657896535537</cacheToken>
+          <cachedParameters>
+            <apiParam name="AccountID"/>
+            <apiParam name="Subject"/>
+            <apiParam name="UltimateOwner"/>
+            <apiParam name="RecordType"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/Input/Cases.xlsx</workbookPath>
+            <worksheetName class="value"/>
+            <valuesRange class="value"/>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="7">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="20" title="Set Values: count">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">count</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">2</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="206" title="Users">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Users</value>
+        </argument>
+      </arguments>
+      <parameterValueSources/>
+      <clauses>
+        <clause name="hidden" testItemId="207">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="266" title="In this step, I determine the User ID for each Record Type to use it to change the Case Owner later">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">In this step, I determine the User ID for each Record Type to use it to change the Case Owner later</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="267"/>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="364" title="The file contains the name of the User for each Record Type. ">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">The file contains the name of the User for each Record Type. </value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="365"/>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" isTitleUpdated="true" name="StepGroup" testItemId="220" title="Read Excel File - Users and Record Types">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Read Excel File</value>
+                </argument>
+              </arguments>
+              <parameterValueSources>
+                <parameterValueSource variableName="User" variableScope="Test">
+                  <cacheToken>C:\\Users\\LydseGedge\\Provar\\VAHC\\VAHC\\templates\\Input\\Users.xlsx;1658518111318</cacheToken>
+                  <cachedParameters>
+                    <apiParam name="FirstName"/>
+                    <apiParam name="LastName"/>
+                    <apiParam name="RecordType"/>
+                  </cachedParameters>
+                  <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+                    <workbookPath class="value" valueClass="string">templates/Input/Users.xlsx</workbookPath>
+                    <worksheetName class="value"/>
+                    <valuesRange class="value"/>
+                  </sourceValue>
+                </parameterValueSource>
+              </parameterValueSources>
+              <clauses>
+                <clause name="hidden" testItemId="221"/>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="222" title="For Each: {User}=&gt;Row">
+              <arguments>
+                <argument id="list">
+                  <value class="variable">
+                    <path element="User"/>
+                  </value>
+                </argument>
+                <argument id="fromItem">
+                  <value class="value" valueClass="decimal">1</value>
+                </argument>
+                <argument id="valueName">
+                  <value class="value" valueClass="string">Row</value>
+                </argument>
+                <argument id="continueOnFailure">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="223">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="312" title="Determine the User for each Record Type and find the User ID">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Determine the User for each Record Type and find the User ID</value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="hidden" testItemId="313">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="230" title="User {Row.FirstName} {Row.LastName}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">User </value>
+                                      <variable>
+                                        <path element="Row"/>
+                                        <path element="FirstName"/>
+                                      </variable>
+                                      <value valueClass="string"> </value>
+                                      <variable>
+                                        <path element="Row"/>
+                                        <path element="LastName"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="231"/>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="238" title="Record Type is {Row.RecordType}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">Record Type is </value>
+                                      <variable>
+                                        <path element="Row"/>
+                                        <path element="RecordType"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="239"/>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="208" title="SOQL Query: SELECT Id FROM User WHERE FirstName = '{Row.FirstName}' AND LastName = '{Row.LastName}' =&gt;UserRows">
+                              <tags/>
+                              <arguments>
+                                <argument id="soqlQuery">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">SELECT Id FROM User WHERE FirstName = '</value>
+                                      <variable>
+                                        <path element="Row"/>
+                                        <path element="FirstName"/>
+                                      </variable>
+                                      <value valueClass="string">' AND LastName = '</value>
+                                      <variable>
+                                        <path element="Row"/>
+                                        <path element="LastName"/>
+                                      </variable>
+                                      <value valueClass="string">' </value>
+                                    </parts>
+                                  </value>
+                                </argument>
+                                <argument id="apexConnectionName">
+                                  <value class="value" valueClass="string">SysAdmin_Lydse_VAVET_DTCSQA</value>
+                                </argument>
+                                <argument id="resultListName">
+                                  <value class="value" valueClass="string">UserRows</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                              </arguments>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="227" title="UserId is {UserRows.Id}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">UserId is </value>
+                                      <variable>
+                                        <path element="UserRows"/>
+                                        <path element="Id"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="228"/>
+                              </clauses>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="298" title="Assign the User ID to each Record Type">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Assign the User ID to each Record Type</value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="hidden" testItemId="299">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.Switch" name="Switch" testItemId="250" title="Switch: {Row.RecordType}">
+                              <arguments>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="Row"/>
+                                    <path element="RecordType"/>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="case" testItemId="251">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" name="SwitchCase" testItemId="252" title="Case: VCC_Clinical_Triage">
+                                      <arguments>
+                                        <argument id="value">
+                                          <value class="value" valueClass="string">VCC_Clinical_Triage</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="string">No</value>
+                                        </argument>
+                                        <argument id="alreadyMatched"/>
+                                        <argument id="switchValue"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="steps" testItemId="253">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="249" title="Set Values: CaseOwner_ClinicalTriage">
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">CaseOwner_ClinicalTriage</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="variable">
+                                                          <path element="UserRows"/>
+                                                          <path element="Id"/>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" name="SwitchCase" testItemId="255" title="Case: VCC_Vitrual_Clinic_Visit">
+                                      <arguments>
+                                        <argument id="value">
+                                          <value class="value" valueClass="string">VCC_Vitrual_Clinic_Visit</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="string">No</value>
+                                        </argument>
+                                        <argument id="alreadyMatched"/>
+                                        <argument id="switchValue"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="steps" testItemId="256">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="257" title="Set Values: CaseOwner_VCV">
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">CaseOwner_VCV</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="variable">
+                                                          <path element="UserRows"/>
+                                                          <path element="Id"/>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="321" title="Create Case and Update  the Owner">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Create Case and Update  the Owner</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="322">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="28" title="For Each: {SourceData}=&gt;Row">
+              <tags/>
+              <arguments>
+                <argument id="list">
+                  <value class="variable">
+                    <path element="SourceData"/>
+                  </value>
+                </argument>
+                <argument id="fromItem">
+                  <value class="value" valueClass="decimal">1</value>
+                </argument>
+                <argument id="valueName">
+                  <value class="value" valueClass="string">Row</value>
+                </argument>
+                <argument id="continueOnFailure">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="13">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="15" title="Create Object: Case=&gt;CaseId">
+                      <arguments>
+                        <argument id="objectType">
+                          <value class="value" valueClass="string">Case</value>
+                        </argument>
+                        <argument id="resultIdName">
+                          <value class="value" valueClass="string">CaseId</value>
+                        </argument>
+                        <argument id="apexConnectionName">
+                          <value class="value" valueClass="string">SysAdmin_Lydse_VAVET_DTCSQA</value>
+                        </argument>
+                        <argument id="assignmentRuleId"/>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument argId="c30672fd-c2d6-44ea-845d-c712b17e97fe" id="AccountId">
+                          <value class="variable">
+                            <path element="Row"/>
+                            <path element="AccountID"/>
+                          </value>
+                        </argument>
+                        <argument id="Subject">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">Creating case as Admin on </value>
+                              <funcCall id="DateFormat">
+                                <argument id="date">
+                                  <value class="variable">
+                                    <path element="NOW"/>
+                                  </value>
+                                </argument>
+                                <argument id="outputFormat">
+                                  <value class="value" valueClass="string">MM/dd/YYYY hh:mm</value>
+                                </argument>
+                                <argument id="timeZone">
+                                  <value class="value" valueClass="string">EST5EDT</value>
+                                </argument>
+                              </funcCall>
+                              <value valueClass="string"> for </value>
+                              <variable>
+                                <path element="Row"/>
+                                <path element="UltimateOwner"/>
+                              </variable>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="cern__RecordTypeDeveloperName__c">
+                          <value class="variable">
+                            <path element="Row"/>
+                            <path element="RecordType"/>
+                          </value>
+                        </argument>
+                      </arguments>
+                      <resultAssertions/>
+                      <parameterValueSources>
+                        <parameterValueSource variableName="SourceData" variableScope="Test"/>
+                      </parameterValueSources>
+                      <parameterGeneratorProperties>
+                        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">RN_User</propertyValue>
+                        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Case</propertyValue>
+                      </parameterGeneratorProperties>
+                      <generatedParameters>
+                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=AccountId" name="AccountId" title="AccountId"/>
+                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Subject" name="Subject" title="Subject"/>
+                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=cern__RecordTypeDeveloperName__c" name="cern__RecordTypeDeveloperName__c" title="cern__RecordTypeDeveloperName__c"/>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="211" title="Query and Logs">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Query and Logs</value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="hidden" testItemId="212">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="147" title="SOQL Query: select CaseNumber, Subject, cern__RecordTypeDeveloperName__c \nfrom Case WHERE Id='{CaseId}'=&gt;CaseRows">
+                              <arguments>
+                                <argument id="soqlQuery">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">select CaseNumber, Subject, cern__RecordTypeDeveloperName__c \nfrom Case WHERE Id='</value>
+                                      <variable>
+                                        <path element="CaseId"/>
+                                      </variable>
+                                      <value valueClass="string">'</value>
+                                    </parts>
+                                  </value>
+                                </argument>
+                                <argument id="apexConnectionName">
+                                  <value class="value" valueClass="string">SysAdmin_Lydse_VAVET_DTCSQA</value>
+                                </argument>
+                                <argument id="resultListName">
+                                  <value class="value" valueClass="string">CaseRows</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                              </arguments>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="148" title="Case Number = {CaseRows.CaseNumber}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">Case Number = </value>
+                                      <variable>
+                                        <path element="CaseRows"/>
+                                        <path element="CaseNumber"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="149"/>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="150" title="Case Subject = {CaseRows.Subject}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">Case Subject = </value>
+                                      <variable>
+                                        <path element="CaseRows"/>
+                                        <path element="Subject"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="151">
+                                  <steps/>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="154" title="Case Record Type = {CaseRows.cern__RecordTypeDeveloperName__c}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">Case Record Type = </value>
+                                      <variable>
+                                        <path element="CaseRows"/>
+                                        <path element="cern__RecordTypeDeveloperName__c"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="155"/>
+                              </clauses>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="366" title="Update the Case Owner based on the Record Type">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Update the Case Owner based on the Record Type</value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="hidden" testItemId="367">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.Switch" name="Switch" testItemId="88" title="Switch: {CaseRows.cern__RecordTypeDeveloperName__c}">
+                              <tags/>
+                              <arguments>
+                                <argument id="value">
+                                  <value class="variable">
+                                    <path element="CaseRows"/>
+                                    <path element="cern__RecordTypeDeveloperName__c"/>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="case" testItemId="89">
+                                  <steps/>
+                                </clause>
+                                <clause name="case" testItemId="92">
+                                  <steps/>
+                                </clause>
+                                <clause name="case" testItemId="103">
+                                  <steps/>
+                                </clause>
+                                <clause name="case" testItemId="106">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" name="SwitchCase" testItemId="170" title="Case: VCC_Administrative">
+                                      <arguments>
+                                        <argument id="value">
+                                          <value class="value" valueClass="string">VCC_Administrative</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="string">No</value>
+                                        </argument>
+                                        <argument id="alreadyMatched"/>
+                                        <argument id="switchValue"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="steps" testItemId="171">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="172" title="It is Administrative">
+                                              <arguments>
+                                                <argument id="description">
+                                                  <value class="value" valueClass="string">It is Administrative</value>
+                                                </argument>
+                                              </arguments>
+                                              <clauses>
+                                                <clause name="hidden" testItemId="173">
+                                                  <steps/>
+                                                </clause>
+                                              </clauses>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="202" title="Set Values: CaseOwner">
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">CaseOwner</value>
+                                                      </namedValue>
+                                                      <namedValue name="value"/>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" name="SwitchCase" testItemId="174" title="Case: VCC_Pharmacy">
+                                      <arguments>
+                                        <argument id="value">
+                                          <value class="value" valueClass="string">VCC_Pharmacy</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="string">No</value>
+                                        </argument>
+                                        <argument id="alreadyMatched"/>
+                                        <argument id="switchValue"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="steps" testItemId="175">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="176" title="It is Pharmacy">
+                                              <arguments>
+                                                <argument id="description">
+                                                  <value class="value" valueClass="string">It is Pharmacy</value>
+                                                </argument>
+                                              </arguments>
+                                              <clauses>
+                                                <clause name="hidden" testItemId="177"/>
+                                              </clauses>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="261" title="Set Values: CaseOwner">
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">CaseOwner</value>
+                                                      </namedValue>
+                                                      <namedValue name="value"/>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" name="SwitchCase" testItemId="178" title="Case: VCC_Vitrual_Clinic_Visit">
+                                      <arguments>
+                                        <argument id="value">
+                                          <value class="value" valueClass="string">VCC_Vitrual_Clinic_Visit</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="string">No</value>
+                                        </argument>
+                                        <argument id="alreadyMatched"/>
+                                        <argument id="switchValue"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="steps" testItemId="179">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="180" title="It is VCC">
+                                              <arguments>
+                                                <argument id="description">
+                                                  <value class="value" valueClass="string">It is VCC</value>
+                                                </argument>
+                                              </arguments>
+                                              <clauses>
+                                                <clause name="hidden" testItemId="181"/>
+                                              </clauses>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="260" title="Set Values: CaseOwner">
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">CaseOwner</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="variable">
+                                                          <path element="CaseOwner_VCV"/>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" name="SwitchCase" testItemId="182" title="Case: VCC_Clinical_Triage">
+                                      <arguments>
+                                        <argument id="value">
+                                          <value class="value" valueClass="string">VCC_Clinical_Triage</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="string">No</value>
+                                        </argument>
+                                        <argument id="alreadyMatched"/>
+                                        <argument id="switchValue"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="steps" testItemId="183">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="184" title="It is Clinical Triage">
+                                              <arguments>
+                                                <argument id="description">
+                                                  <value class="value" valueClass="string">It is Clinical Triage</value>
+                                                </argument>
+                                              </arguments>
+                                              <clauses>
+                                                <clause name="hidden" testItemId="185"/>
+                                              </clauses>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="262" title="Set Values: CaseOwner">
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">CaseOwner</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="variable">
+                                                          <path element="CaseOwner_ClinicalTriage"/>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexUpdateObject" name="ApexUpdateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand" testItemId="263" title="Update Object: Case = {CaseId}">
+                              <arguments>
+                                <argument id="objectType">
+                                  <value class="value" valueClass="string">Case</value>
+                                </argument>
+                                <argument id="resultName">
+                                  <value class="value" valueClass="string">CaseUpdated</value>
+                                </argument>
+                                <argument id="apexConnectionName">
+                                  <value class="value" valueClass="string">SysAdmin_Lydse_VAVET_DTCSQA</value>
+                                </argument>
+                                <argument id="objectId">
+                                  <value class="variable">
+                                    <path element="CaseId"/>
+                                  </value>
+                                </argument>
+                                <argument id="assignmentRuleId"/>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                                <argument id="OwnerId">
+                                  <value class="variable">
+                                    <path element="CaseOwner"/>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <parameterGeneratorProperties>
+                                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand.ConnectionName">SysAdmin_Lydse_VAVET_DTCSQA</propertyValue>
+                                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand.CustomObjectName">Case</propertyValue>
+                              </parameterGeneratorProperties>
+                              <generatedParameters>
+                                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=OwnerId" name="OwnerId" title="OwnerId"/>
+                              </generatedParameters>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

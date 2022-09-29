@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="1">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="36" title="Salesforce Connect: SysAdmin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="3" title="Read Excel File (VA Identity Records)">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Read Excel File (VA Identity Records)</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="VAIdentityRecordFromFile" variableScope="Test">
+          <cacheToken>C:\\Users\\LydseGedge\\Provar\\VAHC\\VAHC\\templates\\VA Identity Records.xlsx;1656005423111</cacheToken>
+          <cachedParameters>
+            <apiParam name="SalesforceContactID"/>
+            <apiParam name="FirstName"/>
+            <apiParam name="LastName"/>
+            <apiParam name="ICN"/>
+            <apiParam name="GenderAtBirth"/>
+            <apiParam name="Gender"/>
+            <apiParam name="DateOfBirth"/>
+            <apiParam name="SSN"/>
+            <apiParam name="Test"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="variable">
+              <path element="VA_Identity_Input_File"/>
+            </workbookPath>
+            <worksheetName class="value" valueClass="string"/>
+            <valuesRange class="value" valueClass="string"/>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="4">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="10" title="Set Values: SalesforceContactID">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">SalesforceContactID</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="VAIdentityRecordFromFile"/>
+                          <path element="SalesforceContactID"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="9" title="Set Values: FirstName">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">FirstName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="VAIdentityRecordFromFile"/>
+                          <path element="FirstName"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="8" title="Set Values: LastName">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">LastName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="VAIdentityRecordFromFile"/>
+                          <path element="LastName"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: ICN">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">ICN</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="VAIdentityRecordFromFile"/>
+                          <path element="ICN"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="11" title="Set Values: DateOfBirth">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">DateOfBirth</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="VAIdentityRecordFromFile"/>
+                          <path element="DateOfBirth"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="35" title="Set Values: SSN">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">SSN</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="VAIdentityRecordFromFile"/>
+                          <path element="SSN"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="33" title="Set Values: Count">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Count</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">2</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="21" title="For Each: {VAIdentityRecordFromFile}=&gt;Row">
+      <arguments>
+        <argument id="list">
+          <value class="variable">
+            <path element="VAIdentityRecordFromFile"/>
+          </value>
+        </argument>
+        <argument id="fromItem">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="valueName">
+          <value class="value" valueClass="string">Row</value>
+        </argument>
+        <argument id="continueOnFailure">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="22">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="37" title="Verify if the Record exists">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Verify if the Record exists</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="38">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="45" title="SOQL Query: select First_Name__c, Last_Name__c \nfrom VA_Identity__c\nwhere ICN__c = '{Row.ICN}'=&gt;VA_Identity_Record">
+                      <arguments>
+                        <argument id="soqlQuery">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">select First_Name__c, Last_Name__c \nfrom VA_Identity__c\nwhere ICN__c = '</value>
+                              <variable>
+                                <path element="Row"/>
+                                <path element="ICN"/>
+                              </variable>
+                              <value valueClass="string">'</value>
+                            </parts>
+                          </value>
+                        </argument>
+                        <argument id="apexConnectionName">
+                          <value class="value" valueClass="string">SysAdmin</value>
+                        </argument>
+                        <argument id="resultListName">
+                          <value class="value" valueClass="string">VA_Identity_Record</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="46" title="The VA Identity Record with this ICN is linked to {VA_Identity_Record.First_Name__c} {VA_Identity_Record.Last_Name__c}">
+                      <arguments>
+                        <argument id="description">
+                          <value class="compound">
+                            <parts>
+                              <value valueClass="string">The VA Identity Record with this ICN is linked to </value>
+                              <variable>
+                                <path element="VA_Identity_Record"/>
+                                <path element="First_Name__c"/>
+                              </variable>
+                              <value valueClass="string"> </value>
+                              <variable>
+                                <path element="VA_Identity_Record"/>
+                                <path element="Last_Name__c"/>
+                              </variable>
+                            </parts>
+                          </value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="hidden" testItemId="47"/>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="48" title="If: {VA_Identity_Record.First_Name__c = null}">
+                      <arguments>
+                        <argument id="condition">
+                          <value class="eq">
+                            <lhs class="variable">
+                              <path element="VA_Identity_Record"/>
+                              <path element="First_Name__c"/>
+                            </lhs>
+                          </value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="then" testItemId="49">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="51" title="No VA Identity record was found with this ICN">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="value" valueClass="string">No VA Identity record was found with this ICN</value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="52"/>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="53" title="Create the VA Identity Record">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="value" valueClass="string">Create the VA Identity Record</value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="54">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="30" title="SOQL Query: select Id from Contact where Name = '{Row.FirstName} {Row.LastName}'=&gt;ContactRows">
+                                      <tags/>
+                                      <arguments>
+                                        <argument id="soqlQuery">
+                                          <value class="compound">
+                                            <parts>
+                                              <value valueClass="string">select Id from Contact where Name = '</value>
+                                              <variable>
+                                                <path element="Row"/>
+                                                <path element="FirstName"/>
+                                              </variable>
+                                              <value valueClass="string"> </value>
+                                              <variable>
+                                                <path element="Row"/>
+                                                <path element="LastName"/>
+                                              </variable>
+                                              <value valueClass="string">'</value>
+                                            </parts>
+                                          </value>
+                                        </argument>
+                                        <argument id="apexConnectionName">
+                                          <value class="value" valueClass="string">SysAdmin</value>
+                                        </argument>
+                                        <argument id="resultListName">
+                                          <value class="value" valueClass="string">ContactRows</value>
+                                        </argument>
+                                        <argument id="resultScope">
+                                          <value class="value" valueClass="string">Test</value>
+                                        </argument>
+                                      </arguments>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="23" title="Create Object: VA_Identity__c=&gt;VAIdentityId">
+                                      <tags/>
+                                      <arguments>
+                                        <argument id="objectType">
+                                          <value class="value" valueClass="string">VA_Identity__c</value>
+                                        </argument>
+                                        <argument id="resultIdName">
+                                          <value class="value" valueClass="string">VAIdentityId</value>
+                                        </argument>
+                                        <argument id="apexConnectionName">
+                                          <value class="value" valueClass="string">SysAdmin</value>
+                                        </argument>
+                                        <argument id="assignmentRuleId"/>
+                                        <argument id="resultScope">
+                                          <value class="value" valueClass="string">Test</value>
+                                        </argument>
+                                        <argument id="Salesforce_Contact_Id__c">
+                                          <value class="variable">
+                                            <path element="ContactRows"/>
+                                            <path element="Id"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="First_Name__c">
+                                          <value class="variable">
+                                            <path element="Row"/>
+                                            <path element="FirstName"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="Last_Name__c">
+                                          <value class="variable">
+                                            <path element="Row"/>
+                                            <path element="LastName"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="ICN__c">
+                                          <value class="variable">
+                                            <path element="Row"/>
+                                            <path element="ICN"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="Date_of_Birth__c">
+                                          <value class="variable">
+                                            <path element="Row"/>
+                                            <path element="DateOfBirth"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="SSN__c">
+                                          <value class="variable">
+                                            <path element="Row"/>
+                                            <path element="SSN"/>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                      <parameterGeneratorProperties>
+                                        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">SysAdmin_Lydse_VAVET_DTCSQA</propertyValue>
+                                        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">VA_Identity__c</propertyValue>
+                                      </parameterGeneratorProperties>
+                                      <generatedParameters>
+                                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=VA_Identity__c&amp;field=Salesforce_Contact_Id__c" name="Salesforce_Contact_Id__c" title="Salesforce_Contact_Id__c">
+                                          <summary>The related Contact Id for this record in this org.</summary>
+                                        </apiParam>
+                                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=VA_Identity__c&amp;field=First_Name__c" name="First_Name__c" title="First_Name__c">
+                                          <summary>Person's first name.</summary>
+                                        </apiParam>
+                                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=VA_Identity__c&amp;field=Last_Name__c" name="Last_Name__c" title="Last_Name__c">
+                                          <summary>Person's last name.</summary>
+                                        </apiParam>
+                                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=VA_Identity__c&amp;field=ICN__c" name="ICN__c" title="ICN__c">
+                                          <summary>The MPI ICN. Historically, the MPI ICN was also referred to as MVI ICN.</summary>
+                                        </apiParam>
+                                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=VA_Identity__c&amp;field=Date_of_Birth__c" name="Date_of_Birth__c" title="Date_of_Birth__c">
+                                          <summary>Person's birthdate.</summary>
+                                        </apiParam>
+                                        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=VA_Identity__c&amp;field=SSN__c" name="SSN__c" title="SSN__c">
+                                          <summary>Person's Social Security Number.</summary>
+                                        </apiParam>
+                                      </generatedParameters>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="25" title="Set Values: Header.VAIdentityId">
+                                      <tags/>
+                                      <arguments>
+                                        <argument id="values">
+                                          <value class="valueList" mutable="Mutable">
+                                            <namedValues mutable="Mutable">
+                                              <namedValue name="valuePath">
+                                                <value class="value" valueClass="string">Header.VAIdentityId</value>
+                                              </namedValue>
+                                              <namedValue name="value">
+                                                <value class="variable">
+                                                  <path element="VAIdentityId"/>
+                                                </value>
+                                              </namedValue>
+                                              <namedValue name="valueScope">
+                                                <value class="value" valueClass="string">Test</value>
+                                              </namedValue>
+                                            </namedValues>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="26" title="Write: {Header}=&gt;templates/Output/VAIdentityRecordIDs.xlsx">
+                                      <tags/>
+                                      <arguments>
+                                        <argument id="data">
+                                          <value class="variable">
+                                            <path element="Header"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="dataUrl">
+                                          <value class="excelTarget" sheetWriteMode="Update">
+                                            <workbookPath class="value" valueClass="string">templates/Output/VAIdentityRecordIDs.xlsx</workbookPath>
+                                            <worksheetName class="value" valueClass="string">Sheet0</worksheetName>
+                                          </value>
+                                        </argument>
+                                        <argument id="targetDescription">
+                                          <value class="value" valueClass="string">templates/Output/VAIdentityRecordIDs.xlsx</value>
+                                        </argument>
+                                        <argument id="updateValueRange"/>
+                                        <argument id="updateColumnNames">
+                                          <value class="value" valueClass="string">FirstRowOfRange</value>
+                                        </argument>
+                                        <argument id="updateMatchType">
+                                          <value class="value" valueClass="string">RowOrColNumber</value>
+                                        </argument>
+                                        <argument id="updateMatchLocator">
+                                          <value class="variable">
+                                            <path element="Count"/>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                      <generatedParameters>
+                                        <apiParam group="result" name="updateValueRange" title="Values Range">
+                                          <summary>The range of cells that needs to updated. If nothing is specified entire sheet is targeted</summary>
+                                          <type>
+                                            <textType>
+                                              <constraints>
+                                                <valueConstraint name="disableTemplateEditor">true</valueConstraint>
+                                              </constraints>
+                                            </textType>
+                                          </type>
+                                        </apiParam>
+                                        <apiParam group="result" name="updateColumnNames" title="Column Names">
+                                          <summary>Identifies where the column names are in the spreadsheet:</summary>
+                                          <defaultValue>FirstRowOfRange</defaultValue>
+                                          <type>
+                                            <choiceType>
+                                              <constraints>
+                                                <valueConstraint name="boundedValues">FirstRowOfRange:Across the first row|FirstColumnOfRange:Down the first column</valueConstraint>
+                                              </constraints>
+                                            </choiceType>
+                                          </type>
+                                        </apiParam>
+                                        <apiParam group="result" internal="true" name="updateMatchType" title="">
+                                          <summary/>
+                                          <defaultValue>RowOrColNumber</defaultValue>
+                                          <type>
+                                            <choiceType>
+                                              <constraints>
+                                                <valueConstraint name="boundedValues">RowOrColNumber:Match by Position|Where:Match on Condition|MatchColumns:Match by Columns</valueConstraint>
+                                              </constraints>
+                                            </choiceType>
+                                          </type>
+                                        </apiParam>
+                                        <apiParam group="result" manuallyResolved="true" name="updateMatchLocator" title="Match Locator">
+                                          <summary>Identifies which rows in the Range will be updated. \n It can either be a row number (where the first row = 1) or a filtering condition against one or more columns (e.g. {firstName = "Joe" and surname = "Bloggs"}.</summary>
+                                        </apiParam>
+                                      </generatedParameters>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                        <clause name="else" testItemId="59">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="60" title="Found an Identity Record with this ICN">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="value" valueClass="string">Found an Identity Record with this ICN</value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="61">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="62" title="Group Steps">
+                                      <arguments>
+                                        <argument id="description"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="hidden" testItemId="63"/>
+                                      </clauses>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="64" title="Identity Record Name: {VA_Identity_Record.First_Name__c} {VA_Identity_Record.Last_Name__c}">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="compound">
+                                    <parts>
+                                      <value valueClass="string">Identity Record Name: </value>
+                                      <variable>
+                                        <path element="VA_Identity_Record"/>
+                                        <path element="First_Name__c"/>
+                                      </variable>
+                                      <value valueClass="string"> </value>
+                                      <variable>
+                                        <path element="VA_Identity_Record"/>
+                                        <path element="Last_Name__c"/>
+                                      </variable>
+                                    </parts>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="65"/>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="66" title="Skip to the next record">
+                              <arguments>
+                                <argument id="description">
+                                  <value class="value" valueClass="string">Skip to the next record</value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="hidden" testItemId="67"/>
+                              </clauses>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="34" title="Set Values: Count">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">Count</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="add">
+                                  <lhs class="variable">
+                                    <path element="Count"/>
+                                  </lhs>
+                                  <rhs class="value" valueClass="decimal">1</rhs>
+                                </value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

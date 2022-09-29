@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="64">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: SysAdmin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="20" title="Set Values: ICN">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">ICN</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">123456</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="6" title="SOQL Query: SELECT FirstName, LastName\nFROM Contact \nWHERE VCC_MVI_External_Id__c = '{ICN}'=&gt;Contact">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">SELECT FirstName, LastName\nFROM Contact \nWHERE VCC_MVI_External_Id__c = '</value>
+              <variable>
+                <path element="ICN"/>
+              </variable>
+              <value valueClass="string">'</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SysAdmin</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">Contact</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="11" title="If: {Contact.FirstName = null}">
+      <arguments>
+        <argument id="condition">
+          <value class="eq">
+            <lhs class="variable">
+              <path element="Contact"/>
+              <path element="FirstName"/>
+            </lhs>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="then" testItemId="12">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="13" title="No contacts found with that ICN">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">No contacts found with that ICN</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="14"/>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+        <clause name="else" testItemId="15">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="16" title="Found a contact with that ICN">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Found a contact with that ICN</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="17"/>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="18" title="Contact Name: {Contact.FirstName} {Contact.LastName}">
+              <arguments>
+                <argument id="description">
+                  <value class="compound">
+                    <parts>
+                      <value valueClass="string">Contact Name: </value>
+                      <variable>
+                        <path element="Contact"/>
+                        <path element="FirstName"/>
+                      </variable>
+                      <value valueClass="string"> </value>
+                      <variable>
+                        <path element="Contact"/>
+                        <path element="LastName"/>
+                      </variable>
+                    </parts>
+                  </value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="19"/>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>
