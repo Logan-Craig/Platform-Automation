@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		143,
+		364,
+		341,
+		38
+	],
+	"lastmodifieddate": 1604597607.2820001,
+	"createddate": 1604440967.848,
+	"name": "Environment_Refresh/FailedLogin",
+	"lastfounddate": 1647185028.701,
+	"ocrcapturestring": "Please check your username and password, if you still can't log in, contact your Salesforce administrator.",
+	"lastfoundlocation": [
+		143,
+		364,
+		341,
+		38
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/0_Launch_and_Login/FailedLogin.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					143,
+					364,
+					341,
+					38
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Please check your username and password, if you still can't log in, contact your Salesforce administrator."
+			}
+	]
+}

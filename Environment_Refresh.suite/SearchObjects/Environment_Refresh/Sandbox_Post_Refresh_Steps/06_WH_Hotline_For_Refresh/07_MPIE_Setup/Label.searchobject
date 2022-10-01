@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		469,
+		392,
+		126,
+		12
+	],
+	"lastmodifieddate": 1614127894.572,
+	"createddate": 1614127880.1009998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Label",
+	"lastfounddate": 1614127882.1370001,
+	"ocrcapturestring": "Label",
+	"lastfoundlocation": [
+		469,
+		392,
+		126,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[63,6]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Label_Sort.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					469,
+					392,
+					126,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Label"
+			}
+	]
+}

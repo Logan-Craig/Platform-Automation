@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		525,
+		391,
+		53,
+		14
+	],
+	"lastmodifieddate": 1646236835.6059999,
+	"createddate": 1646163854.3670001,
+	"name": "Scratch_Logan/Scratch_Madhavi/Headers/Amount",
+	"lastfounddate": 1646165470.717,
+	"ocrcapturestring": "Amount",
+	"lastfoundlocation": [
+		525,
+		391,
+		53,
+		14
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Amount",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,9]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					525,
+					391,
+					53,
+					14
+				],
+				"name": "Scratch_Logan/Scratch_Madhavi/Headers/Amount.png"
+			}
+	]
+}

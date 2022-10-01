@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		336,
+		723,
+		129,
+		16
+	],
+	"lastmodifieddate": 1613075342.799,
+	"createddate": 1613075342.799,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/09",
+	"lastfounddate": 1613510125.51,
+	"ocrcapturestring": "VA Service Cloud Basic",
+	"lastfoundlocation": [
+		336,
+		385,
+		129,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[64,8]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/08_Service_Cloud_Basic_Profile/VAServiceCloudBasic.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					336,
+					723,
+					129,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VA Service Cloud Basic"
+			}
+	]
+}

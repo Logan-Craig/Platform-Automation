@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		126,
+		113,
+		127,
+		16
+	],
+	"lastmodifieddate": 1608330874.233,
+	"createddate": 1608330874.233,
+	"name": "Environment_Refresh/00_Launch_and_Login/ShowNotifications",
+	"lastfounddate": 1621443809.0939999,
+	"ocrcapturestring": "A Show notifications",
+	"lastfoundlocation": [
+		126,
+		113,
+		127,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[51,11]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/ShowNotifications.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					126,
+					113,
+					127,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "A Show notifications"
+			}
+	]
+}

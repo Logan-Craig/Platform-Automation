@@ -1,0 +1,75 @@
+{
+	"originalcapturelocation": [
+		499,
+		291,
+		94,
+		15
+	],
+	"lastmodifieddate": 1614194670.036,
+	"createddate": 1613075621.9819999,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Utilities/CreateNewView",
+	"lastfounddate": 1664461745.8940001,
+	"ocrcapturestring": "Create New View",
+	"lastfoundlocation": [
+		409,
+		351,
+		103,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Utilities/CreateNewView.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					499,
+					291,
+					94,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Create New View"
+			},
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "  1.1",
+					"HotSpot": "[51,7]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					499,
+					291,
+					103,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Create New View"
+			}
+	]
+}

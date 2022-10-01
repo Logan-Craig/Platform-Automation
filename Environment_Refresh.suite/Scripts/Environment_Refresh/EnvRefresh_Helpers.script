@@ -1,0 +1,206 @@
+﻿to Determine_Org
+	set Set_Sandbox to "va--"&the suitevariables.sandboxname
+	set Found_Sandbox to "Helper_Utilities/Helpers".Find_Sandbox_Name
+	if Found_Sandbox contains Set_Sandbox
+	then
+		Log "VA Org sandbox found."
+		Set SetupLocation to "VA-Main"
+	else
+		Log "Non VA-main org sandbox found: "&&the remoteclipboard
+		Set SetupLocation to "Other"
+	end if
+	Log SetupLocation
+	return SetupLocation
+end Determine_Org
+
+
+on Document_Refresh_List Remark
+	Put ResourcePath("Refresh_Report_List"&".csv") into Refresh_Report_List
+	open file Refresh_Report_List for appending 
+	write Remark&return to file Refresh_Report_List
+	close file Refresh_Report_List
+end Document_Refresh_List
+
+
+//Comprehensive Navigate around setup helper.
+//Also checks that sandbox is in approved list.
+//Stays put if its already in the correct spot. But still checks sandbox against approved list.
+//Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup NavtText, NavImage, NavHeader
+on Search_Setup NavText, NavImage, Header1, Header2:empty,Header3:empty,Header4:empty
+	Set HeaderList to [Header1,Header2,Header3,Header4]
+	delete each item of HeaderList which is empty
+	repeat for each item of HeaderList
+		if imagefound(Image:it,waitfor:0)
+		then 
+			Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+			set FoundHeader to true
+			exit repeat
+		end if	
+	end repeat
+	
+	Put ResourcePath("Script_Runs.csv") into ScriptRuns
+	open file ScriptRuns for appending 
+	write return&the suitevariables.SandboxName&&the date && the time && NavText&return to file ScriptRuns
+	
+	if FoundHeader is not true
+		Navigate_to_Setup//findsandboxname leaves focus in the URL. Better to move to top of page first.
+		Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+		Log "Navigating to:"&&NavText
+		QuickFind NavText, NavImage
+		repeat until imagefound(HeaderList)
+			Put "Waiting for"&&NavText&&"banner to load..."
+			Put the repeatindex * 3&&"Seconds have passed"
+			if the repeatindex > 20
+				Throw NavText&&"Expected banner failed to load after 60 seconds.","Show Logan a screenshot of the page you're on, it might be a new/different banner that he needs to add to the list."
+			end if
+		end repeat
+	end if
+end Search_Setup
+
+on Wait_Until_Gone ImageVar
+	repeat until everyimagelocation(image:ImageVar,waitfor:0) is Empty
+		wait 1
+		if the repeatindex > 12
+			throw "Image still present."
+		end if
+	end repeat
+end Wait_Until_Gone
+
+
+//old version of the search setup
+on Search_Setup_Old NavText, NavImage, NavHeader
+	put NavText
+	if imagefound(image:NavHeader,waitfor:0)
+	then
+		Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+	else
+		Navigate_to_Setup//findsandboxname leaves focus in the URL. Better to move to top of page first.
+		Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+		Log "Navigating to:"&&NavText
+		QuickFind NavText, NavImage
+		repeat until imagefound(image:NavHeader,waitfor:6)
+			Put "Waiting for"&&NavText&&"banner to load..."
+			Put the repeatindex * 6&&"Seconds have passed"
+			if the repeatindex > 10
+				Throw NavText&&"banner failed to load after 60 seconds."
+			end if
+		end repeat
+	end if
+end Search_Setup_Old
+
+
+
+
+on Check_For_PII_Sandbox FoundSandbox
+	put [
+		"va",
+		"va--staging",
+		"va--prodmirror",
+		"vapm",
+		"vapm--perfvapm",
+		"VHA-Gov",
+		"vha-gov--perf",
+		"va-vet",
+		"va-vet--perf",
+		"valob",
+		"valob--perf",
+		"vaempl",
+		"vaempl--perf"
+	] into PII_Sandboxes
+	if FoundSandbox is in PII_Sandboxes
+		typetext controlkey, "lc"
+		put the remoteclipboard into FullURL
+		beep
+		throw "Automation found to be running in"&&FoundSandbox&&"environment!","This is a sandbox with potential PII!! This is very bad! Do not run automated scripts in production environments.","Full URL:"&&FullURL,"Found Sandbox name:"&&FoundSandbox
+	end if
+end Check_For_PII_Sandbox
+
+
+on QuickFind NavText, NavImage
+	repeat at least once until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch_OnFocus")
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch", waitfor:9
+		if repeatindex()>12
+			throw "Could not bring focus to quick search after 12 tries."
+		end if
+	end repeat
+	TypeText NavText
+	Click ImageName:NavImage, waitFor:3
+end QuickFind
+
+on Navigate_to_Setup SetupLocation
+	if "Environment_Refresh/EnvRefresh_Helpers".Determine_Org...
+		...="Other": 
+			Log "Sandbox determined to be non-va-main."
+			repeat until imagefound("Common_Images/Setup")
+				typetext PageUp
+				if the repeatindex >5 then throw "Unable to reach Setup."
+			end repeat
+			click foundimagelocation()
+		...="VA-Main":
+			Log "Sandbox is va-main org."
+			repeat until imagefound(image:"Common_Images/Avatar_Classic",waitfor:2) or imagefound(image:"Common_Images/Avatar_Lightning",waitfor:2)
+				if the repeatindex > 2
+					typetext tabkey
+				end if
+				typetext homeKey
+				if the repeatindex > 10
+					Throw "Unable to return to top of page for some reason."
+				end if
+			end repeat
+			
+			if imagefound(image:"Common_Images/QuickFind_Classic",waitfor:0)
+			then
+				Log "Already in Setup."
+			else
+				Set SetupClicked = False
+				Repeat at least once until SetupClicked = true
+					if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar",waitfor:0)
+					then
+						Click foundimagelocation()
+						try
+							if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Setup")
+								click foundimagelocation()
+								set SetupClicked = true
+							else
+								Log "Setup link NOT found"
+								wait 1
+							end if
+							if repeatindex() >10
+							then
+								Throw "Failed to return to Beginning State after 10 tries"
+							end if
+						catch theException
+							put theException
+						end catch
+					else if imagefound("Utilities/Launch_and_Login/AvatarLightning")
+						Run "Helper_Utilities/Helpers".SwitchSandboxMode "Classic"
+					end if
+				End repeat
+				Log "Setup page reached"
+			end if
+		else
+			Log "Unable to determine org."
+	end if
+	
+end Navigate_to_Setup
+
+
+
+on Navigate_to_ExAM
+	if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/TabDropDown",waitfor:6)
+	then
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/TabDropDown",waitfor:6
+	end if
+	if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExAMConfigurationTab",waitfor:6)	
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExAMConfigurationTab",waitfor:6
+	else 
+		if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL")
+		then
+			put "Already in ExAM somehow."
+		else
+			Throw "Unable to find ExAM Configuration tab option! Please send Logan a screenshot!"
+		end if
+	end if
+end Navigate_to_ExAM
+
+

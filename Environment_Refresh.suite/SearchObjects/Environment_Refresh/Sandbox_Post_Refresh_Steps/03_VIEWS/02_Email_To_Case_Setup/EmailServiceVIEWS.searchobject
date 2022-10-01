@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		240,
+		244,
+		239,
+		22
+	],
+	"lastmodifieddate": 1613684836.661,
+	"createddate": 1613684836.661,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailServiceVIEWS",
+	"lastfounddate": 1655754524.122,
+	"ocrcapturestring": "Email Service: VIEWS",
+	"lastfoundlocation": [
+		240,
+		276,
+		239,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[11,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailServiceVIEWS.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					240,
+					244,
+					239,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Email Service: VIEWS"
+			}
+	]
+}

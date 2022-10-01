@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		53,
+		937,
+		71,
+		15
+	],
+	"lastmodifieddate": 1603838656.0369999,
+	"createddate": 1603838653.8410001,
+	"name": "Deliverability",
+	"lastfounddate": 1605921370.697,
+	"ocrcapturestring": "Deliverability",
+	"lastfoundlocation": [
+		305,
+		329,
+		71,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/Deliverability.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					937,
+					71,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Deliverability"
+			}
+	]
+}

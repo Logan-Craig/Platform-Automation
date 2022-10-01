@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		757,
+		405,
+		42,
+		21
+	],
+	"lastmodifieddate": 1620139570.527,
+	"createddate": 1620139570.527,
+	"name": "Utilities/Login_As/Login_Button",
+	"lastfounddate": 1628092526.9089999,
+	"ocrcapturestring": "Login",
+	"lastfoundlocation": [
+		757,
+		455,
+		42,
+		21
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,10]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Login_As/Login_Button.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					757,
+					405,
+					42,
+					21
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Login"
+			}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		260,
+		459,
+		70,
+		13
+	],
+	"lastmodifieddate": 1603838706.858,
+	"createddate": 1603838704.7179999,
+	"name": "Accesslevel",
+	"lastfounddate": 1664461257.161,
+	"ocrcapturestring": "Access level",
+	"lastfoundlocation": [
+		260,
+		491,
+		70,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/Accesslevel.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					260,
+					459,
+					70,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Access level"
+			}
+	]
+}

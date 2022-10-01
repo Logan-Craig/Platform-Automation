@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		240,
+		243,
+		149,
+		22
+	],
+	"lastmodifieddate": 1646236835.6139998,
+	"createddate": 1616458413.638,
+	"name": "Scratch_Logan/Ramya_List/EmailService",
+	"lastfounddate": 1616470926.9630001,
+	"ocrcapturestring": "Email Service",
+	"lastfoundlocation": [
+		240,
+		243,
+		149,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[74,11]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/EmailService.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					240,
+					243,
+					149,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Email Service"
+			}
+	]
+}

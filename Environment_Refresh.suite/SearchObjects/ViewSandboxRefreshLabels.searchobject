@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		238,
+		346,
+		223,
+		24
+	],
+	"lastmodifieddate": 1603983264.2940001,
+	"createddate": 1603983258.5669999,
+	"name": "ViewSandboxRefreshLabels",
+	"lastfounddate": 1664461457.7810001,
+	"ocrcapturestring": "View: Sandbox Refresh Labels v",
+	"lastfoundlocation": [
+		238,
+		393,
+		223,
+		24
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/ViewSandboxRefreshLabels.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					238,
+					346,
+					223,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "View: Sandbox Refresh Labels v"
+			}
+	]
+}

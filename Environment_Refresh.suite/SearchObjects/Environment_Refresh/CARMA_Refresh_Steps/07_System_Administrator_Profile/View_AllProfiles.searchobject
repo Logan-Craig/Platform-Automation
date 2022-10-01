@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		247,
+		341,
+		65,
+		14
+	],
+	"lastmodifieddate": 1613147044.164,
+	"createddate": 1613147044.164,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/07_System_Administrator_Profile/View_AllProfiles",
+	"lastfounddate": 1613626620.7649999,
+	"ocrcapturestring": "All Profiles",
+	"lastfoundlocation": [
+		247,
+		341,
+		65,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[32,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/07_System_Administrator_Profile/View_AllProfiles.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					247,
+					341,
+					65,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "All Profiles"
+			}
+	]
+}

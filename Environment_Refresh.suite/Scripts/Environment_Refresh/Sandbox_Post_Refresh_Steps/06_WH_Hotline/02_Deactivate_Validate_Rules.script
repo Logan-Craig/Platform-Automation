@@ -1,0 +1,52 @@
+﻿Log "Executing CARMA Vet360 - Address Validation (Named Credential)."
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Contacts","Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/ValidationRules", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/ContactValidationRules"
+
+
+Repeat until ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/WHVAHotlineLockAnonymousCaller", searchrectangle: [[318,90],[580,980]])
+	typetext pagedown
+	wait 1
+End Repeat
+click FoundImageLocation()
+
+click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Edit"
+
+
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Checked",SearchRectangle:[(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[25,-25]),(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[125,25])])
+then
+	Log "Active is checked."
+	Log "Un-checking"
+	click foundimagelocation()
+else
+	if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Empty", searchrectangle:[(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[25,-25]),(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[125,25])])
+	then
+		Log 	"Active is not checked."
+	else
+	end if
+end if
+
+
+
+
+
+//this doesn't work
+//Repeat until ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/WHVAHotlineLockAnonymousCaller", searchrectangle: [("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/RuleName"+[259,503]),("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/RuleName"+[-11,-467])])
+//typetext pagedown
+//wait 1
+//End Repeat
+//click FoundImageLocation()
+
+
+//this works
+//Repeat until ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/WHVAHotlineLockAnonymousCaller", searchrectangle: [("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/RuleNameTL"),("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/RuleNameBR")])
+//typetext pagedown
+//wait 1
+//End Repeat
+//click FoundImageLocation()
+
+//this also doesn't work
+//Repeat until ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/WHVAHotlineLockAnonymousCaller", searchrectangle: [("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/RuleName",HotSpot:[259,503]),("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/RuleName",HotSpot:[-11,-467])])
+//typetext pagedown
+//wait 1
+//End Repeat
+//click FoundImageLocation()

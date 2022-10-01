@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		308,
+		701,
+		208,
+		15
+	],
+	"lastmodifieddate": 1646936737.0349998,
+	"createddate": 1646936737.0349998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAServiceCloudBasic",
+	"lastfounddate": 1664462339.984,
+	"ocrcapturestring": "Login Flow for VA Service Cloud Basic",
+	"lastfoundlocation": [
+		308,
+		769,
+		208,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for VA Service Cloud Basic",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[106,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					308,
+					701,
+					208,
+					15
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAServiceCloudBasic.png"
+			}
+	]
+}

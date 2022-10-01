@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		31,
+		341,
+		174,
+		17
+	],
+	"lastmodifieddate": 1613600948.2950001,
+	"createddate": 1613600805.6009998,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurations",
+	"lastfounddate": 1613600807.704,
+	"ocrcapturestring": "Mass Action Configurations",
+	"lastfoundlocation": [
+		31,
+		341,
+		174,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[89,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurations.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					31,
+					341,
+					174,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Mass Action Configurations"
+			}
+	]
+}

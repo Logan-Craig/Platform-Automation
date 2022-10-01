@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		551,
+		368,
+		134,
+		16
+	],
+	"lastmodifieddate": 1646236835.4910002,
+	"createddate": 1616706942.0939999,
+	"name": "Scratch_Logan/Kevin/SearchReportTypes",
+	"lastfounddate": 1616707000.5369999,
+	"ocrcapturestring": "Search Report Types...",
+	"lastfoundlocation": [
+		551,
+		368,
+		134,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[67,8]",
+					"Tolerance": "_42",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Kevin/SearchReportTypes.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					551,
+					368,
+					134,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Search Report Types..."
+			}
+	]
+}

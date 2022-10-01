@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		387,
+		410,
+		74,
+		18
+	],
+	"lastmodifieddate": 1613515567.605,
+	"createddate": 1613515567.605,
+	"name": "Utilities/Developer_Console/CreatingClassWindow",
+	"lastfounddate": 1613675733.5190001,
+	"ocrcapturestring": "Creating...",
+	"lastfoundlocation": [
+		387,
+		410,
+		74,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[27,11]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/CreatingClassWindow.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					387,
+					410,
+					74,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Creating..."
+			}
+	]
+}

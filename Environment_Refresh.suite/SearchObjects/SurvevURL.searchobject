@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		387,
+		742,
+		64,
+		14
+	],
+	"lastmodifieddate": 1603905178.6030002,
+	"createddate": 1603905176.825,
+	"name": "SurvevURL",
+	"lastfounddate": 1664461424.2620001,
+	"ocrcapturestring": "SurvevURL",
+	"lastfoundlocation": [
+		386,
+		923,
+		64,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/SurvevURL.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					387,
+					742,
+					64,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "SurvevURL"
+			}
+	]
+}

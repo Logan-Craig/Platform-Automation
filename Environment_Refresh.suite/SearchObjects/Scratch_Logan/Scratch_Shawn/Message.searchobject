@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		352,
+		249,
+		59,
+		15
+	],
+	"lastmodifieddate": 1646236835.552,
+	"createddate": 1642623565.8099999,
+	"name": "Scratch_Logan/Scratch_Shawn/Message",
+	"lastfounddate": 1643101770.4099998,
+	"ocrcapturestring": "Message",
+	"lastfoundlocation": [
+		352,
+		249,
+		59,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Message",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					352,
+					249,
+					59,
+					15
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Message.png"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		575,
+		148,
+		70,
+		34
+	],
+	"lastmodifieddate": 1623856358.6360002,
+	"createddate": 1623856358.6360002,
+	"name": "Common_Images/Leave_Button",
+	"lastfounddate": 1629300544.392,
+	"ocrcapturestring": "Leave",
+	"lastfoundlocation": [
+		703,
+		182,
+		70,
+		34
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,17]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Leave_Button.png",
+				"connectionname": "18.252.46.96",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					575,
+					148,
+					70,
+					34
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Leave"
+			}
+	]
+}

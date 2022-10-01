@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604082013.881,
+	"ocrcapturestring": "□ Email Delivery Settings Email Relays",
+	"originalcapturelocation": [
+		32,
+		718,
+		159,
+		38
+	],
+	"createddate": 1604082008.6440001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailRelays.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					32,
+					718,
+					159,
+					38
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "□ Email Delivery Settings Email Relays"
+			}
+	],
+	"name": "EmailRelays2"
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		320,
+		289,
+		68,
+		14
+	],
+	"lastmodifieddate": 1646236835.5679998,
+	"createddate": 1620084750.464,
+	"name": "Scratch_Logan/Scratch_Alex/MiddleNa_Label",
+	"lastfounddate": 1620087843.0510001,
+	"ocrcapturestring": "Middle Na",
+	"lastfoundlocation": [
+		368,
+		289,
+		46,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[34,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/Middle_Label.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					320,
+					289,
+					68,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Middle"
+			}
+	]
+}

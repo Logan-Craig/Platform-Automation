@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		464,
+		646,
+		44,
+		15
+	],
+	"lastmodifieddate": 1617195684.3969998,
+	"createddate": 1617149615.753,
+	"name": "Utilities/dtcsqa",
+	"lastfounddate": 1617149666.796,
+	"ocrcapturestring": "dtcsqa-",
+	"lastfoundlocation": [
+		464,
+		646,
+		44,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[22,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/dtcsqa.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					464,
+					646,
+					44,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "dtcsqa-"
+			}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		309,
+		655,
+		145,
+		16
+	],
+	"lastmodifieddate": 1646936733.5570002,
+	"createddate": 1646936733.5570002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAPlatform",
+	"lastfounddate": 1653661299.3829999,
+	"ocrcapturestring": "Login Flow for VA Platform",
+	"lastfoundlocation": [
+		309,
+		700,
+		145,
+		16
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for VA Platform",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[102,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					309,
+					655,
+					145,
+					16
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAPlatform.png"
+			}
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604089635.6989999,
+	"ocrcapturestring": "Single Sign-On Settings",
+	"originalcapturelocation": [
+		53,
+		452,
+		130,
+		15
+	],
+	"createddate": 1604089555.665,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/12_Single_Sign_On_Enabled/SingleSignOnSettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					452,
+					130,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Single Sign-On Settings"
+			}
+	],
+	"name": "SingleSignOnSettings"
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		52,
+		783,
+		42,
+		13
+	],
+	"lastmodifieddate": 1613693883.6789999,
+	"createddate": 1613693883.6789999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Profiles_Blue",
+	"lastfounddate": 1664461096.4790001,
+	"ocrcapturestring": "Profiles",
+	"lastfoundlocation": [
+		52,
+		815,
+		42,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[20,6]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Profiles_Blue.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					52,
+					783,
+					42,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Profiles"
+			}
+	]
+}

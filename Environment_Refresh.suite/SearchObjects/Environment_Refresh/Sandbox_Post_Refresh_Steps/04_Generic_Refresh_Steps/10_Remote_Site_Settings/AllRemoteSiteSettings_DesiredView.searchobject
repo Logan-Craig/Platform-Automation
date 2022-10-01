@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		281,
+		338,
+		144,
+		17
+	],
+	"lastmodifieddate": 1647633224.053,
+	"createddate": 1647633224.053,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_Remote_Site_Settings/AllRemoteSiteSettings_DesiredView",
+	"lastfounddate": 1647633920.49,
+	"ocrcapturestring": "All Remote Site Settings",
+	"lastfoundlocation": [
+		281,
+		338,
+		144,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[72,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_Remote_Site_Settings/AllRemoteSiteSettings_DesiredView.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					281,
+					338,
+					144,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "All Remote Site Settings"
+			}
+	]
+}

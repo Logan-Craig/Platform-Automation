@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		296,
+		269,
+		98,
+		13
+	],
+	"lastmodifieddate": 1633013140.5019999,
+	"createddate": 1633012199.448,
+	"name": "DISTRIBUTIONS",
+	"lastfounddate": 1633012257.457,
+	"ocrcapturestring": "DISTRIBUTIONS",
+	"lastfoundlocation": [
+		296,
+		269,
+		98,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[49,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "DISTRIBUTIONS.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					296,
+					269,
+					98,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "DISTRIBUTIONS"
+			}
+	]
+}

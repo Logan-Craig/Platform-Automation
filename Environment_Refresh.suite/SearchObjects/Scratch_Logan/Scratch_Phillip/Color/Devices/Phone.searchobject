@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		443,
+		511,
+		39,
+		14
+	],
+	"lastmodifieddate": 1632766867.3860002,
+	"createddate": 1632766867.3860002,
+	"name": "Scratch_Logan/Scratch_Phillip/Color/Devices/Phone",
+	"lastfounddate": 1642623554.6100001,
+	"ocrcapturestring": "Phone",
+	"lastfoundlocation": [
+		443,
+		511,
+		39,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[17,4]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Phillip/Color/Devices/Phone.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					443,
+					511,
+					39,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Phone"
+			}
+	]
+}

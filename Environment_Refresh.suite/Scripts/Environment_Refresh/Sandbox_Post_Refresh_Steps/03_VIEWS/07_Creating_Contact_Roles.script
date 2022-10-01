@@ -1,0 +1,28 @@
+﻿
+
+
+
+
+//The only way we can complete this step is to have a pre-existing "Contact Name". I was able to create one by going to Contact > New, but I also had to create a new "Account". Not sure they want us doing that for a VA Employee Contact.
+
+
+//Creating Contact Roles
+
+typetext homekey
+
+click {image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Show_All_Tabs", waitfor:6}, {image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Show_All_Tabs_Clicked", waitfor:6}
+
+waitfor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/AllTabs_WaitFor"
+Typetext Endkey
+
+click Imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/VIEWSContactRoles" , WaitFor:1
+Click Imagename:"Common_Images/New" , WaitFor:6
+set the SearchRectangle to [imagelocation("Common_Images/Save")+[-400,-15],imagelocation("Common_Images/Save")+[600,300]]
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/ContactName"
+Typetext "VA Employee Contact"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Role"
+TypeText "Folder Handler"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/ContactRoleName"
+Typetext"Folder Handler Contact"
+Click "Common_Images/Save"
+set the SearchRectangle to ""

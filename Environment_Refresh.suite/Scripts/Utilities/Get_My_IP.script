@@ -1,0 +1,12 @@
+﻿typetext windowskey, "r"
+typetext "chrome http://whatismyip.com/"
+typetext returnkey
+rightclick text:"My Public IPv4 is:",hotspot:[0,40]
+repeat 5 times
+	typetext downarrow
+end repeat
+typetext returnkey
+put the remoteclipboard into IP_VAR
+replace "https://www.whatismyip.com/" in IP_VAR with ""
+replace "/" in IP_VAR with ""
+put IP_VAR

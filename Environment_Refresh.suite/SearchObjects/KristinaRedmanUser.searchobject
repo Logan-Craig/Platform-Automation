@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		417,
+		212,
+		143,
+		30
+	],
+	"lastmodifieddate": 1616792704.8610001,
+	"createddate": 1616792704.8610001,
+	"name": "KristinaRedmanUser",
+	"lastfounddate": 1616792707.5320001,
+	"ocrcapturestring": "Kristina Redman User",
+	"lastfoundlocation": [
+		417,
+		212,
+		143,
+		30
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[71,15]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "KristinaRedmanUser.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					417,
+					212,
+					143,
+					30
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Kristina Redman User"
+			}
+	]
+}

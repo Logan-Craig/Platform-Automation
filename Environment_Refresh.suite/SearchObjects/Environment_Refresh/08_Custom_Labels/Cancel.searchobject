@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1607110954.0549998,
+	"ocrcapturestring": "Cancel",
+	"originalcapturelocation": [
+		666,
+		510,
+		44,
+		22
+	],
+	"createddate": 1607110954.0549998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_60",
+					"HotSpot": "[22,11]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/08_Custom_Labels/Cancel.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					666,
+					510,
+					44,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Cancel"
+			}
+	],
+	"name": "Environment_Refresh/08_Custom_Labels/Cancel"
+}

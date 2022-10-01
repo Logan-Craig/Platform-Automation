@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		334,
+		613,
+		75,
+		47
+	],
+	"lastmodifieddate": 1646236835.6160002,
+	"createddate": 1629491281.043,
+	"name": "Scratch_Logan/Scratch_Virginia/CoSigned_Checked",
+	"lastfounddate": 1629733506.0570002,
+	"ocrcapturestring": "Co-Signed",
+	"lastfoundlocation": [
+		333,
+		613,
+		75,
+		47
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[16,32]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Virginia/CoSigned_Unchecked.png",
+				"connectionname": "WinDevEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					334,
+					613,
+					75,
+					47
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Co-Signed"
+			}
+	]
+}

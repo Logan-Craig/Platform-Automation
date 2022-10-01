@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		1035,
+		216,
+		112,
+		15
+	],
+	"lastmodifieddate": 1604344199.3629999,
+	"createddate": 1604344199.3629999,
+	"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/DeveloperConsole",
+	"lastfounddate": 1619107461.3610001,
+	"ocrcapturestring": "Developer Console",
+	"lastfoundlocation": [
+		1035,
+		216,
+		112,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/DeveloperConsole.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1035,
+					216,
+					112,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Developer Console"
+			}
+	]
+}

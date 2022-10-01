@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1611606978.7389998,
+	"lastfoundlocation": [
+		259,
+		211,
+		334,
+		228
+	],
+	"originalcapturelocation": [
+		291,
+		216,
+		334,
+		228
+	],
+	"createddate": 1611606718.3039999,
+	"lastfounddate": 1611606720.5880001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[167,114]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "image0001.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					291,
+					216,
+					334,
+					228
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232"
+			}
+	],
+	"name": "image0003"
+}

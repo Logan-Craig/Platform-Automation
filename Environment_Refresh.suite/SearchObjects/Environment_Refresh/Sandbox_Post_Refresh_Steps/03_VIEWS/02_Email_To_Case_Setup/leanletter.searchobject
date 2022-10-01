@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		466,
+		787,
+		163,
+		16
+	],
+	"lastmodifieddate": 1617116604.7079999,
+	"createddate": 1614113856.53,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/leanletter",
+	"lastfounddate": 1614179941.5669999,
+	"ocrcapturestring": "Iean_letter@c-1w7d5x1 do7bh:",
+	"lastfoundlocation": [
+		466,
+		787,
+		70,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[81,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/leanletter.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					466,
+					787,
+					163,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "lean Jetter@"
+			}
+	]
+}

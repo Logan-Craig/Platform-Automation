@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		240,
+		245,
+		55,
+		20
+	],
+	"lastmodifieddate": 1647037650.4749999,
+	"createddate": 1645832482.1659999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Sites_Banner",
+	"lastfounddate": 1664461148.901,
+	"ocrcapturestring": "Sites",
+	"lastfoundlocation": [
+		240,
+		277,
+		55,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[27,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Sites.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					240,
+					245,
+					55,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Sites"
+			}
+	]
+}

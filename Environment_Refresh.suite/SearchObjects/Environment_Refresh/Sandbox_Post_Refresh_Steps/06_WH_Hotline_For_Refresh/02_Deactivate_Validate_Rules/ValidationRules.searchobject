@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1647041458.473,
+	"ocrcapturestring": "Contacts Fields Related Lookup Filters Validation Rules",
+	"originalcapturelocation": [
+		54,
+		367,
+		143,
+		81
+	],
+	"createddate": 1647041458.473,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_59",
+					"HotSpot": "[55,70]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/ValidationRules.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					54,
+					367,
+					143,
+					81
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Contacts Fields Related Lookup Filters Validation Rules"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/ValidationRules"
+}

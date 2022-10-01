@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		17,
+		471,
+		119,
+		35
+	],
+	"lastmodifieddate": 1613675068.0369999,
+	"createddate": 1613675068.0369999,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/DevelopEmailServices",
+	"lastfounddate": 1655761324.743,
+	"ocrcapturestring": "□ Develop Email Services",
+	"lastfoundlocation": [
+		17,
+		383,
+		119,
+		35
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[59,17]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/DevelopEmailServices.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					17,
+					471,
+					119,
+					35
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Develop Email Services"
+			}
+	]
+}

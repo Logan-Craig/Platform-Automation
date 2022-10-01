@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		43,
+		221,
+		170,
+		21
+	],
+	"lastmodifieddate": 1614700982.5409999,
+	"createddate": 1614700982.5409999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Waffle_Search_Apps_and_Items",
+	"lastfounddate": 1614701043.2820001,
+	"ocrcapturestring": "Q Search apps and items...",
+	"lastfoundlocation": [
+		42,
+		221,
+		170,
+		21
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[31,10]",
+					"Tolerance": "_42",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Waffle_Search_Apps_and_Items.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					43,
+					221,
+					170,
+					21
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Q Search apps and items..."
+			}
+	]
+}

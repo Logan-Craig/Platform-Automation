@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1603821836.086,
+	"ocrcapturestring": "+",
+	"originalcapturelocation": [
+		1147,
+		192,
+		67,
+		25
+	],
+	"createddate": 1603821775.339,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/Exam/DevelopDropDown.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1147,
+					192,
+					67,
+					25
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "+"
+			}
+	],
+	"name": "image0001"
+}

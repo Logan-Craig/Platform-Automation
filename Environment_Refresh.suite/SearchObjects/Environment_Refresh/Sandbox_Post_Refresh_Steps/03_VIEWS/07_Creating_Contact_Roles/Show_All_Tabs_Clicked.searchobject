@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1141,
+		181,
+		44,
+		46
+	],
+	"lastmodifieddate": 1617300995.0700002,
+	"createddate": 1617300903.283,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Show_All_Tabs_Clicked",
+	"lastfounddate": 1617302024.5510001,
+	"ocrcapturestring": "n",
+	"lastfoundlocation": [
+		1148,
+		192,
+		31,
+		28
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[22,23]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Show_All_Tabs_Clicked.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					1141,
+					181,
+					44,
+					46
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "+"
+			}
+	]
+}

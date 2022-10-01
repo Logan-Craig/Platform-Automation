@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		621,
+		676,
+		37,
+		17
+	],
+	"lastmodifieddate": 1608826972.1729999,
+	"createddate": 1608826972.1729999,
+	"name": "Environment_Refresh/00_Launch_and_Login/Verify",
+	"lastfounddate": 1624904858.5829999,
+	"ocrcapturestring": "Verify",
+	"lastfoundlocation": [
+		621,
+		676,
+		37,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[14,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/Verify.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					621,
+					676,
+					37,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Verify"
+			}
+	]
+}

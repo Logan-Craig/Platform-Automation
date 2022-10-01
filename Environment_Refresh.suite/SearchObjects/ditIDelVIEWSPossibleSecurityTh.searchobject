@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		255,
+		863,
+		253,
+		30
+	],
+	"lastmodifieddate": 1615936096.691,
+	"createddate": 1614200801.9029999,
+	"name": "ditIDelVIEWSPossibleSecurityTh",
+	"lastfounddate": 1614202091.016,
+	"ocrcapturestring": "dit I Del VIEWS Possible Security Threat Reported via Checkbox on Case",
+	"lastfoundlocation": [
+		255,
+		841,
+		253,
+		30
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[11,16]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "ditIDelVIEWSPossibleSecurityTh.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					255,
+					863,
+					253,
+					30
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "dit I Del VIEWS Possible Security Threat Reported via Checkbox on Case"
+			}
+	]
+}

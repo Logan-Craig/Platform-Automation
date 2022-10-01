@@ -1,0 +1,42 @@
+﻿set VA_Desktop to "Utilities/Launch_and_Login/VADesktop"
+
+set the searchrectangle to ""
+put FormattedTime("HH:mm:ss:SSSSSS", the time)
+Log "Beginning desktop verification."
+Log "Remote screen size:"&&RemoteScreenSize()
+//hits escape twice in case a 
+
+repeat until imagefound(image:VA_Desktop,waitfor:0)
+	put FormattedTime("HH:mm:ss:SSSSSS", the time)
+	CaptureScreen "Desktop Fail"&&FormattedTime("SSSSSS",the time)
+	typetext altkey, tabkey
+	typetext altkey, F4
+	if the repeatindex = 2 or the repeatindex = 6
+	then
+		//Clicks the Leave button if it shows up.
+		if imagefound(text:"Leave site?",searchrectangle:[323,65,950,258])
+			click text:"Leave",searchrectangle:[foundimagelocation(),foundimagelocation()+[500,300]]
+		end if
+	end if
+	if the repeatindex > 10
+		Log "Gave up trying to show the desktop.", "The script might run anyway..."
+		exit repeat
+	end if
+end repeat
+
+repeat until not imagefound(image:VA_Desktop,waitfor:9)
+	typetext windowskey, "r"
+	typetext "chrome va.gov"
+	typetext returnkey
+	repeat at least once until the number of items in everyimagelocation(image:VA_Desktop, waitfor:9, scale: 0.1..0.9 by 0.1,tolerance:70)>0
+		Log "Waiting for browser page to open in order to confirm SUT is taking user input."&&the repeatindex
+		if the repeatindex > 4
+			throw "Browser opened, but no VA logo found."
+		end if
+	end repeat
+	if the repeatindex > 4
+		throw "Unable to verify SUT interaction after about 36 seconds"
+	end if
+end repeat
+put foundImageInfo().Scale
+typetext altkey, F4

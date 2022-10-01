@@ -1,0 +1,78 @@
+﻿//  11. Email Relay Configuration
+// a.	From Quick Find search and select "Email Relay Activation"
+// b.	Click "Create Email Relay":
+// c.	Enter Email Relay properties
+//  i.	Host: partnersmtp.va.gov
+// ii.	Port: 25
+// iii.	TLS Setting: Required
+// iv.	Leave 'Enable SMTP Auth' unchecked. 
+// v.	Click 'Save'.
+// d.	Go to Setup / Email Domain Filters:
+// e.	Create new 'Email Domain Filter'.
+//  i.	Sender Domain: va.gov
+// ii.	Recipient Domain: *
+// iii.	Email Relay: Leave selection as is.
+// iv.	Leave as 'Active'
+// v.	Click 'Save'.
+
+
+//time stamp: 21:55
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Email Relays" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/EmailRelays", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/EmailRelays"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"11_Email_Relay_Configuration"& return to file Refresh_Report
+write "Updating Email Relay Configurations" & return to file Refresh_Report
+
+
+put the MultipleFoundAction into MultipleFoundState
+set the MultipleFoundAction to UseFirstLocation
+//Check for Email Relay
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/EmailRelaypartnersmtp", waitFor:6)
+	log <<Email Relay "partnersmtp.va.gov" found to already exist.>>
+	write <<Email Relay "partnersmtp.va.gov" found to already exist.>>&&"This probably means the script has already updated it."& return to file Refresh_Report
+else
+	log <<Email Relay "partnersmtp.va.gov" not found. Creating relay now.>>
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/CreateEmailRelay"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/Host"
+	typetext "partnersmtp.va.gov"
+	typetext tabKey
+	typetext "25"
+	typetext tabKey
+	typetext "r"
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/EnableSMTPAuth", waitFor:3)
+	else
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/EnableSMTPAuthsChecked"
+	end if
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/Save"
+	write <<Email Relay "partnersmtp.va.gov" created.>>& return to file Refresh_Report
+End if
+
+//Check for Email Domain Filters
+//Navigate to Email Domain Filters
+repeat [6] times
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/EmailDomainFilters", waitFor:1)
+		click FoundImageLocation()
+		Exit Repeat
+	else
+		typetext PageDown
+		wait 1
+	end if
+end repeat
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/EmailDomainFilterExists", waitfor:3)
+then
+	write "Domain filter found to already exist. Most likely the script has already run and created it."& return to file Refresh_Report
+else 
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/CreateEmailDomainFilter"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/SenderDomainDF"
+	typetext "va.gov"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/Active"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration/Save"
+	write "Email domain filter va.gov created."& return to file Refresh_Report
+end if
+set the MultipleFoundAction to MultipleFoundState
+
+close file Refresh_Report

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		244,
+		243,
+		86,
+		21
+	],
+	"lastmodifieddate": 1617300790.6989999,
+	"createddate": 1617300790.6989999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/AllTabs_WaitFor",
+	"lastfounddate": 1617302024.671,
+	"ocrcapturestring": "All Tabs",
+	"lastfoundlocation": [
+		244,
+		243,
+		86,
+		21
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[43,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/AllTabs_WaitFor.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					244,
+					243,
+					86,
+					21
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "All Tabs"
+			}
+	]
+}

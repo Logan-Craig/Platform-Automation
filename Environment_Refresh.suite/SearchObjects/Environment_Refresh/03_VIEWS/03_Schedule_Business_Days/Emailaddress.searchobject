@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		343,
+		497,
+		77,
+		12
+	],
+	"lastmodifieddate": 1613675898.181,
+	"createddate": 1613675898.181,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/Emailaddress",
+	"lastfounddate": 1655754514.115,
+	"ocrcapturestring": "Email address",
+	"lastfoundlocation": [
+		343,
+		529,
+		77,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[17,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/Emailaddress.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					343,
+					497,
+					77,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Email address"
+			}
+	]
+}

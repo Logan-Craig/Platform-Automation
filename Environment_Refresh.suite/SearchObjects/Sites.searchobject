@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603820960.6230001,
+	"ocrcapturestring": "Sites",
+	"originalcapturelocation": [
+		53,
+		654,
+		29,
+		13
+	],
+	"createddate": 1603820958.0339999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/Sites.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					654,
+					29,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Sites"
+			}
+	],
+	"name": "Sites"
+}

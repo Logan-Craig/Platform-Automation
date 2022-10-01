@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		392,
+		502,
+		50,
+		31
+	],
+	"lastmodifieddate": 1612397087.49,
+	"createddate": 1612397087.49,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CARMASettings",
+	"lastfounddate": 1612452112.513,
+	"ocrcapturestring": "CARMA Settings",
+	"lastfoundlocation": [
+		392,
+		502,
+		50,
+		31
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,14]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CARMASettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					392,
+					502,
+					50,
+					31
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "CARMA Settings"
+			}
+	]
+}

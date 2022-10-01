@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		19,
+		349,
+		151,
+		37
+	],
+	"lastmodifieddate": 1613069395.8010001,
+	"createddate": 1613069395.8010001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Navigation_Links/CompanyInformation",
+	"lastfounddate": 1613069862.9650002,
+	"ocrcapturestring": "□ Company Profile Company Information",
+	"lastfoundlocation": [
+		19,
+		349,
+		151,
+		37
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[78,28]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Navigation_Links/CompanyInformation.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					19,
+					349,
+					151,
+					37
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Company Profile Company Information"
+			}
+	]
+}

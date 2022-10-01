@@ -1,0 +1,42 @@
+{
+	"lastmodifieddate": 1618433162.533,
+	"ocrcapturestring": "Last Name",
+	"originalcapturelocation": [
+		329,
+		510,
+		58,
+		12
+	],
+	"createddate": 1618433131.401,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[85,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/LastName_1.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					329,
+					510,
+					58,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Last Name"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/LastName_1"
+}

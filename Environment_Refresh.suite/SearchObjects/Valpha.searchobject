@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		1060,
+		326,
+		57,
+		16
+	],
+	"lastmodifieddate": 1603840186.7709999,
+	"createddate": 1603840184.191,
+	"name": "Valpha",
+	"lastfounddate": 1664461276.158,
+	"ocrcapturestring": "U V w",
+	"lastfoundlocation": [
+		1060,
+		358,
+		57,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/Valpha.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1060,
+					326,
+					57,
+					16
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "U V w"
+			}
+	]
+}

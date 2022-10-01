@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		13,
+		205,
+		32,
+		32
+	],
+	"lastmodifieddate": 1646236835.444,
+	"createddate": 1629491573.3610001,
+	"name": "Scratch_Logan/Scratch_Virginia/Immunizations_Icon",
+	"lastfounddate": 1629733561.1690001,
+	"ocrcapturestring": "*",
+	"lastfoundlocation": [
+		13,
+		205,
+		32,
+		32
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,17]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Virginia/Immunizations_Icon.png",
+				"connectionname": "WinDevEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					13,
+					205,
+					32,
+					32
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "*"
+			}
+	]
+}

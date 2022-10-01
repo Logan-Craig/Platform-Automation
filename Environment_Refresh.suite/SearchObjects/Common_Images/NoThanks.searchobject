@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		446,
+		326,
+		59,
+		12
+	],
+	"lastmodifieddate": 1641924062.28,
+	"createddate": 1641924062.28,
+	"name": "Common_Images/NoThanks",
+	"lastfounddate": 1664461288.8369999,
+	"ocrcapturestring": "No Thanks",
+	"lastfoundlocation": [
+		446,
+		358,
+		59,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[29,6]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/NoThanks.png",
+				"connectionname": "SUT3 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.253.100.225",
+				"capturerect": [
+					446,
+					326,
+					59,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "No Thanks"
+			}
+	]
+}

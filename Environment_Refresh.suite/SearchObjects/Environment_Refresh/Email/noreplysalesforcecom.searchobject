@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		264,
+		232,
+		153,
+		17
+	],
+	"lastmodifieddate": 1608652363.9749999,
+	"createddate": 1608652363.9749999,
+	"name": "Environment_Refresh/Email/noreplysalesforcecom",
+	"lastfounddate": 1617715811.8369999,
+	"ocrcapturestring": "noreply@salesforce.com",
+	"lastfoundlocation": [
+		264,
+		232,
+		153,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[79,5]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Email/noreplysalesforcecom.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					264,
+					232,
+					153,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "noreply@salesforce.com"
+			}
+	]
+}

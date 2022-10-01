@@ -1,0 +1,10 @@
+﻿//Log into corresponding Sandbox when Refresh has completed
+
+//Complete all standard Refresh steps captured within the SOP Sandbox Post Refresh Steps doc
+
+//Analytics Set up 
+//NOTE: Whoever does these steps needs to have Event Monitoring Permission Set and Licences as well as the //Analytics Permission Set and Licences
+//Permission Sets: Event Monitoring Analytics Admin, Event Monitoring Analytics User, Analytics Sys Admin
+
+//Required Permission Set Licenses: Analytics Platform, Einstein Analytics Plus, Event Monitoring Analytics Apps
+

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		36,
+		139,
+		97,
+		14
+	],
+	"lastmodifieddate": 1647041228.5420001,
+	"createddate": 1647041228.5420001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/ProcessBuilder",
+	"lastfounddate": 1647041230.441,
+	"ocrcapturestring": "Process Builder",
+	"lastfoundlocation": [
+		36,
+		139,
+		97,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[48,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/ProcessBuilder.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					36,
+					139,
+					97,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Process Builder"
+			}
+	]
+}

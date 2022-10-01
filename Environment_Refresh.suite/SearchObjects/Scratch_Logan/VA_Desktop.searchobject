@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1618000123.152,
+	"lastfoundlocation": [
+		175,
+		644,
+		227,
+		140
+	],
+	"originalcapturelocation": [
+		175,
+		644,
+		227,
+		140
+	],
+	"createddate": 1616531267.9070001,
+	"lastfounddate": 1618000071.9219999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[113,70]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/VA_Desktop.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"capturerect": [
+					175,
+					644,
+					227,
+					140
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.1.123"
+			}
+	],
+	"name": "Scratch_Logan/VA_Desktop"
+}

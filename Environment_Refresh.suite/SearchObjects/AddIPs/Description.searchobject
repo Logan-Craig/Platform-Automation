@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		357,
+		437,
+		62,
+		14
+	],
+	"lastmodifieddate": 1609955600.5780001,
+	"createddate": 1609955600.5780001,
+	"name": "AddIPs/Description",
+	"lastfounddate": 1618584005.1399999,
+	"ocrcapturestring": "Description",
+	"lastfoundlocation": [
+		357,
+		437,
+		62,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[122,16]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "AddIPs/Description.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					357,
+					437,
+					62,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Description"
+			}
+	]
+}

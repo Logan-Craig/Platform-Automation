@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		547,
+		513,
+		91,
+		13
+	],
+	"lastmodifieddate": 1613157137.0580001,
+	"createddate": 1613157137.0580001,
+	"name": "Utilities/Helpers/AddIPs/IPEndAddress",
+	"lastfounddate": 1613510181.8070002,
+	"ocrcapturestring": "IP End Address",
+	"lastfoundlocation": [
+		547,
+		513,
+		91,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[29,8]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Helpers/AddIPs/IPEndAddress.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					547,
+					513,
+					91,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "IP End Address"
+			}
+	]
+}

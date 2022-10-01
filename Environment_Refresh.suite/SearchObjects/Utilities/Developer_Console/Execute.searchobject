@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		585,
+		633,
+		41,
+		12
+	],
+	"lastmodifieddate": 1624817265.168,
+	"createddate": 1624817265.168,
+	"name": "Utilities/Developer_Console/Execute",
+	"lastfounddate": 1664461725.0880001,
+	"ocrcapturestring": "Execute",
+	"lastfoundlocation": [
+		586,
+		633,
+		41,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[20,6]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/Execute.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					585,
+					633,
+					41,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Execute"
+			}
+	]
+}

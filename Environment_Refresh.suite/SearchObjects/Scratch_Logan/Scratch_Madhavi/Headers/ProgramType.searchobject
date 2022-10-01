@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		676,
+		391,
+		89,
+		17
+	],
+	"lastmodifieddate": 1646236835.553,
+	"createddate": 1646163854.9809999,
+	"name": "Scratch_Logan/Scratch_Madhavi/Headers/ProgramType",
+	"lastfounddate": 1646165471.3530002,
+	"ocrcapturestring": "Program Type",
+	"lastfoundlocation": [
+		676,
+		391,
+		89,
+		17
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Program Type",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[44,9]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					676,
+					391,
+					89,
+					17
+				],
+				"name": "Scratch_Logan/Scratch_Madhavi/Headers/ProgramType.png"
+			}
+	]
+}

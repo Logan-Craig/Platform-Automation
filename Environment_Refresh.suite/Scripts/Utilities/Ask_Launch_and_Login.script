@@ -1,0 +1,55 @@
+﻿//this launch and login asks the user for input
+
+beep
+Ask "What is your sandbox name?" with "" title "Sandbox to Refresh" message "For example: dtcsqa"
+if it = ""
+	throw "User did not input a sandbox name."
+end if
+put it into SandboxName
+put "chrome" into BrowserVar
+
+put "https://va--"&SandboxName&".my.salesforce.com" into the suitevariable.SandboxURL
+
+
+
+Answer "Do you want to use the standard Username: Eggplant@b3groupinc.com."&SandboxName&&"and Password: EggyPassword1!" with "Yes" or "No" title "Verify Login User" timeout 180 seconds
+if it is "Yes"
+then
+	Log "Refresh will execute using Username: Eggplant@b3groupinc.com."&SandboxName&&"and Password: EggyPassword1!"
+set MyUsername to "Eggplant@b3groupinc.com"&"."&SandboxName
+Set MyPassword to "EggyPassword1!"
+else
+Ask "What is the refresh Username for this sandbox? Please input the ENTIRE username WITH the sandbox name if you appended it." with "" title "Username" message "For example: eggplant@b3groupinc.com.dtcsqa"
+if it = ""
+	throw "User did not input a Username."
+end if
+set MyUsername to it
+Log "Username set to:"&&MyUsername&"."&SandboxName
+Ask "What is the refresh Password for this sandbox?" with "" title "Username" message "For example: EggyPassword1!"
+if it = ""
+	throw "User did not input a Password."
+end if
+Set MyPassword to it
+Log "Password set to:"&&MyPassword
+end if
+
+
+typetext windowskey, "r"
+typetext BrowserVar&&SandboxURL, returnkey
+WaitFor 6, "Utilities/Launch_and_Login/SalesForceLoginLogo"
+
+//Login
+//waits for the text to appear
+WaitFor 6, text:"Log In"
+
+
+//Enter MyUsername and Password
+Click {Image:"Utilities/Launch_and_Login/Username", WaitFor:1}
+TypeText MyUsername, tabKey, MyPassword
+
+Click {Text:"Log In"}
+
+if imagefound(imagename:"Utilities/Launch_and_Login/FailedLogin", waitfor:1)
+then
+	throw "Login failed."
+end if

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		256,
+		415,
+		217,
+		31
+	],
+	"lastmodifieddate": 1604089747.7519999,
+	"createddate": 1604089739.2160001,
+	"name": "SSOI_Enabled",
+	"lastfounddate": 1664461703.217,
+	"ocrcapturestring": "Disable login with Salesforce credentials Z i",
+	"lastfoundlocation": [
+		256,
+		447,
+		217,
+		31
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/12_Single_Sign_On_Enabled/SSOI_Enabled.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					256,
+					415,
+					217,
+					31
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Disable login with Salesforce credentials Z i"
+			}
+	]
+}

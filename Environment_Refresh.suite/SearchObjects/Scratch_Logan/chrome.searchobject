@@ -1,0 +1,103 @@
+{
+	"originalcapturelocation": [
+		27,
+		113,
+		27,
+		30
+	],
+	"lastmodifieddate": 1616531245.5469999,
+	"createddate": 1616528356.6560001,
+	"name": "Scratch_Logan/chrome",
+	"lastfounddate": 1616528917.9720001,
+	"ocrcapturestring": "o",
+	"lastfoundlocation": [
+		27,
+		113,
+		27,
+		30
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,15]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/chrome.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					27,
+					113,
+					27,
+					30
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "o"
+			},
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,15]",
+					"Tolerance": "_30",
+					"Discrepancy": "_0",
+					"SearchType": "Adaptive to Image"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/chrome.png",
+				"connectionname": "[].png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/[].png",
+				"capturerect": [
+					27,
+					113,
+					27,
+					30
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "o"
+			},
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[1,1,26,29]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,14]",
+					"Tolerance": "_30",
+					"Discrepancy": "_0",
+					"SearchType": "Adaptive to Image"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/chrome.png",
+				"connectionname": "[].png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/[].png",
+				"capturerect": [
+					27,
+					113,
+					25,
+					28
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "o"
+			}
+	]
+}

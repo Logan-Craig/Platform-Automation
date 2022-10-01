@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		566,
+		762,
+		147,
+		17
+	],
+	"lastmodifieddate": 1645830605.385,
+	"createddate": 1645830605.385,
+	"name": "Utilities/Launch_and_Login/EnrollinLightningLogin",
+	"lastfounddate": 1645830694.072,
+	"ocrcapturestring": "Enroll in Lightning Login",
+	"lastfoundlocation": [
+		566,
+		762,
+		147,
+		17
+	],
+	"testlocationdata": [
+		{
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[40,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Utilities/Launch_and_Login/EnrollinLightningLogin.png",
+				"connectionname": "18.252.47.44 User1.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/18.252.47.44 User1.png",
+				"capturerect": [
+					566,
+					762,
+					147,
+					17
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Enroll in Lightning Login"
+			}
+	]
+}

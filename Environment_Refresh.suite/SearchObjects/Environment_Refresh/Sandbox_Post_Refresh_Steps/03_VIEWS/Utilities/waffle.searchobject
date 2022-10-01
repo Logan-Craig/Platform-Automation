@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		21,
+		156,
+		29,
+		40
+	],
+	"lastmodifieddate": 1614958528.951,
+	"createddate": 1614958528.951,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/waffle",
+	"lastfounddate": 1614958812.1760001,
+	"ocrcapturestring": "• • • • • • • • •",
+	"lastfoundlocation": [
+		21,
+		156,
+		29,
+		40
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[14,20]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/waffle.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					21,
+					156,
+					29,
+					40
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "• • • • • • • • •"
+			}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		840,
+		289,
+		68,
+		14
+	],
+	"lastmodifieddate": 1646236835.55,
+	"createddate": 1620084855.2220001,
+	"name": "Scratch_Logan/Scratch_Alex/OwnerFirs_Label",
+	"lastfounddate": 1620087843.243,
+	"ocrcapturestring": "Owner Firs",
+	"lastfoundlocation": [
+		880,
+		289,
+		64,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[34,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/OwnerFir_Label.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					840,
+					289,
+					68,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Owner Fir"
+			}
+	]
+}

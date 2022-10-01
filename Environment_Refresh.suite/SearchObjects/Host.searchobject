@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604073864.7049999,
+	"ocrcapturestring": "Host",
+	"originalcapturelocation": [
+		391,
+		378,
+		108,
+		24
+	],
+	"createddate": 1604073861.3299999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/Host.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					391,
+					378,
+					108,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Host"
+			}
+	],
+	"name": "Host"
+}

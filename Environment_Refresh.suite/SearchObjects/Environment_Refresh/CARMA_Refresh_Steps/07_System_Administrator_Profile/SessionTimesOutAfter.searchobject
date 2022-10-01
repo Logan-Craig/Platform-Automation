@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		284,
+		401,
+		128,
+		12
+	],
+	"lastmodifieddate": 1613074080.1830001,
+	"createddate": 1613074080.1830001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/07_System_Administrator_Profile/SessionTimesOutAfter",
+	"lastfounddate": 1616521284.5700002,
+	"ocrcapturestring": "Session Times Out After",
+	"lastfoundlocation": [
+		284,
+		401,
+		128,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[73,4]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/07_System_Administrator_Profile/SessionTimesOutAfter.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					284,
+					401,
+					128,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Session Times Out After"
+			}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		250,
+		850,
+		313,
+		33
+	],
+	"lastmodifieddate": 1617207611.4349999,
+	"createddate": 1614196926.309,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/Youcanenteruptofive5emailaddre",
+	"lastfounddate": 1614282356.681,
+	"ocrcapturestring": "You can enter up to five (5) email addresses to be notified. Additional Emails Brooks.Tucker@va.gov",
+	"lastfoundlocation": [
+		250,
+		850,
+		313,
+		33
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[142,22]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/Youcanenteruptofive5emailaddre.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					250,
+					850,
+					313,
+					33
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "You can enter up to five (5) email addresses to be notified. Additional Emails Brooks.Tucker@va.gov"
+			}
+	]
+}

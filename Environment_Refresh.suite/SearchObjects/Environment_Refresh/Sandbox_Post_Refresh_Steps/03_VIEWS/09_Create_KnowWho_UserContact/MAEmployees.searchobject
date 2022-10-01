@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		439,
+		376,
+		287,
+		19
+	],
+	"lastmodifieddate": 1614368497.2160001,
+	"createddate": 1614368497.2160001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MAEmployees",
+	"lastfounddate": 1618603240.2519999,
+	"ocrcapturestring": "MA Employees",
+	"lastfoundlocation": [
+		442,
+		376,
+		287,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[118,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MAEmployees.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					439,
+					376,
+					287,
+					19
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "MA Employees"
+			}
+	]
+}

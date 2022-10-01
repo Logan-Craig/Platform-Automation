@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1120,
+		359,
+		71,
+		38
+	],
+	"lastmodifieddate": 1608330464.6490002,
+	"createddate": 1608330464.6490002,
+	"name": "Environment_Refresh/00_Launch_and_Login/Never",
+	"lastfounddate": 1630087486.655,
+	"ocrcapturestring": "Never",
+	"lastfoundlocation": [
+		1120,
+		316,
+		71,
+		38
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,15]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/Never.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1120,
+					359,
+					71,
+					38
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Never"
+			}
+	]
+}

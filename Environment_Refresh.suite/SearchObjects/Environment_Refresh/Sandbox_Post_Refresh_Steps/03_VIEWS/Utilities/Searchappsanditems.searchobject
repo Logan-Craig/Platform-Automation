@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		64,
+		226,
+		149,
+		17
+	],
+	"lastmodifieddate": 1614958581.069,
+	"createddate": 1614958581.069,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/Searchappsanditems",
+	"lastfounddate": 1614958813.076,
+	"ocrcapturestring": "Search apps and items...",
+	"lastfoundlocation": [
+		64,
+		224,
+		149,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/Searchappsanditems.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					64,
+					226,
+					149,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Search apps and items..."
+			}
+	]
+}

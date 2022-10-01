@@ -1,0 +1,36 @@
+﻿(*
+This script will create an Eggplant@b3groupinc.com user in ONLY the following environments:
+https://va--int.my.salesforce.com/
+https://va--reg.my.salesforce.com/
+This user will be given a role of VA Admin Plus as the use must be able to login as other users for testing purposes.
+This script will also add various IPs to the whitelist so that they are unaffected by 2FA
+*)
+
+
+//set CreateUser to "Eggplant@b3groupinc.com"
+set CreateUser to "Logan.Craig@octo.us"
+set SelectedView to "Helper_Utilities/Helpers/Create_Users/Logancraig_Selected_View"
+set DesiredView to "Helper_Utilities/Helpers/Create_Users/Logancraig_Desired_View"
+set ViewName to "Logan.Craig"
+Set MakeMyView to true
+Set FilterBoolean to true
+Set FieldFilterVar to "Last Name"
+Set FieldOperatorVar to "Equals"
+Set FieldValueVar to "Logan.Craig"
+
+put ["va--int", 
+	"va--reg", 
+	"va--dtcsqa"
+] into EggySandboxes
+
+
+if  EggySandboxes contains "Helper_Utilities/Helpers".FindSandboxName 
+then
+	Log "DTC Sandbox. Checking to see if user should be created."
+	Log "First Eggy will add the trusted IPs."
+	Run "Helper_Utilities/Add_to_Trusted_IPs"
+	Log "Completed adding trusted IPs.", "Eggy will now add the Eggplant user."
+	Run "Helper_Utilities/Create_Users" CreateUser,SelectedView,DesiredView,ViewName,MakeMyView,FilterBoolean,FieldFilterVar,FieldOperatorVar,FieldValueVar
+else
+	Log "Not an Eggplant sandbox. No Eggplant user will be created."
+end if

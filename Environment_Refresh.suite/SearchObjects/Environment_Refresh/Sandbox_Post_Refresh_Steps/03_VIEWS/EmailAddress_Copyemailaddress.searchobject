@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		525,
+		909,
+		106,
+		16
+	],
+	"lastmodifieddate": 1617113174.598,
+	"createddate": 1617113157.388,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/EmailAddress_Copyemailaddress",
+	"lastfounddate": 1655753840.072,
+	"ocrcapturestring": "Copy email address",
+	"lastfoundlocation": [
+		335,
+		964,
+		106,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[53,8]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddress_Copyemailaddress.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					525,
+					909,
+					106,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Copy email address"
+			}
+	]
+}

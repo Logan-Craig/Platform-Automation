@@ -1,0 +1,97 @@
+﻿//8.	Custom Labels:
+// a.	Under Setup, go to Build / Create / Custom Labels in Setup.
+// b.	Update the 'Environment_Base_URL' to the Sandbox URL and click 'Save'
+// c.	Update the 'Standard_ URL' to the Sandbox URL and click 'Save'.
+// d.	Update the 'VA_Base_URL' to the Sandbox URL and click 'Save'.
+// e.	Update the 'VA_Community' to match the sandboxes Community/Site URL and click 'Save'.  The Salesforce site domain can be found under Setup and 'Sites'.
+//  f.	Update the 'VA_Salesforce_Help_Desk' to match the sandboxes Community/Site URL and click 'Save'.  The Salesforce site domain can be found under Setup                 and 'Sites'.
+// g.	NOTE: Leave the "/Helpdesk" portion of the url address. 
+
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Objects", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Objects", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/CustomObjects"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"07_Assignment_Manager"& return to file Refresh_Report
+
+
+//Finds Assignment Manager 
+Repeat 10 times
+	If ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/AssignmentManager",waitFor:0) then
+		Log "Assignment Manager found."
+		Click FoundImageLocation()
+		Exit Repeat
+	Else 
+		typetext PageDown
+		wait 1
+	End If
+End repeat
+typetext homekey
+repeat until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/AssignmentManagerManaged",waitfor:6)
+	Put "Waiting for Assignment Manager banner to load..."
+	Put the repeatindex * 6&&"Seconds have passed"
+	if the repeatindex > 10
+		Throw "Assignment Manager banner failed to load after 60 seconds."
+end if
+end repeat
+
+//Finds SurveryURL
+Repeat 12 times
+	If ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/SurveyURL",waitFor:0) then
+		Log "Survey URL found."
+		Click FoundImageLocation()
+		Exit Repeat
+	Else 
+		typetext PageDown
+		wait 1
+	End If
+End repeat
+
+//sometimes this page takes more than 10 seconds to load.
+if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/SurveyURLPage")
+else
+	Repeat until ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/SurveyURLPage")
+		wait 1
+		if repeatindex() > 100
+		then
+			throw "Survey URL page never loaded."	
+		end if
+	End Repeat
+	Click FoundImageLocation()
+end if
+
+
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/Edit",waitfor:9
+waitfor 12, "Common_Images/Save"
+//new banner showing up and pushing this down screen.
+repeat until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/SurveyURLText", waitfor:3)
+	scrollwheeldown 3
+	wait 1
+	if the repeatindex > 4
+		Throw "Unable to locate SurveyURL text box."
+	end if
+end repeat
+scrollwheeldown 2
+wait 1
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/SurveyURLText", waitfor:3
+
+typetext ControlKey, "a"
+typetext Backspace
+typetext <<"Https://>>&SitesCommunityURL&<</survey/ShareyourVAexperience?id="& Id>>
+Repeat at least once until imagefound(image:"Common_Images/Save",waitfor:0)
+	if the repeatindex > 4
+		Throw "Unable to locate Save button."
+	end if
+	scrollwheelup 3
+	wait 1
+End Repeat
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/Save"
+WaitFor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager/SurveyURLPage"
+write "Survey URL updated to:"&&<<"Https://>>&SitesCommunityURL&<</survey/ShareyourVAexperience?id="& Id>>& return to file Refresh_Report
+
+
+
+close file Refresh_Report
+

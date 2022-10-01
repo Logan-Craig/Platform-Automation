@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		271,
+		545,
+		379,
+		17
+	],
+	"lastmodifieddate": 1612465437.164,
+	"createddate": 1612465437.164,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/04_Session_Settings/EnableCaching_Title",
+	"lastfounddate": 1612465562.346,
+	"ocrcapturestring": "Enable secure and persistent browser caching to improve performance",
+	"lastfoundlocation": [
+		271,
+		545,
+		379,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[-19,-1]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/04_Session_Settings/EnableCaching_Title.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					271,
+					545,
+					379,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Enable secure and persistent browser caching to improve performance"
+			}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1603836697.372,
+	"ocrcapturestring": "k zx TRAI^IEAD thfc^iut (JJOg, to* feo/tn. SafcApxtcc VIEW FREE TUTORIALS >",
+	"originalcapturelocation": [
+		1029,
+		281,
+		205,
+		233
+	],
+	"createddate": 1603836590.3099999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "kzxTRAIIEADthfciutJJOgtofeotnS.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1029,
+					281,
+					205,
+					233
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "k zx TRAI^IEAD thfc^iut (JJOg, to* feo/tn. SafcApxtcc VIEW FREE TUTORIALS >"
+			}
+	],
+	"name": "kzxTRAIIEADthfciutJJOgtofeotnS"
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		199,
+		731,
+		74,
+		15
+	],
+	"lastmodifieddate": 1646236835.418,
+	"createddate": 1627327270.783,
+	"name": "Scratch_Logan/Scratch_Muhammad/NewUser_PrimaryCoC",
+	"lastfounddate": 1627327410.7719998,
+	"ocrcapturestring": "Primary CoC",
+	"lastfoundlocation": [
+		199,
+		931,
+		74,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[37,7]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Muhammad/NewUser_PrimaryCoC.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					199,
+					731,
+					74,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Primary CoC"
+			}
+	]
+}

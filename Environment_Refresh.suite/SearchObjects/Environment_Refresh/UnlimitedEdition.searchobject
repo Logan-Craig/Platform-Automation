@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604620380.0320001,
+	"ocrcapturestring": "Unlimited Edition",
+	"originalcapturelocation": [
+		239,
+		254,
+		163,
+		21
+	],
+	"createddate": 1604615746.1269999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/UnlimitedEdition.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					239,
+					254,
+					163,
+					21
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Unlimited Edition"
+			}
+	],
+	"name": "Environment_Refresh/UnlimitedEdition"
+}

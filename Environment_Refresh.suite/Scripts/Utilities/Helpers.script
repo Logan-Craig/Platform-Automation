@@ -1,0 +1,102 @@
+﻿to SwitchToLightning
+	if not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher")
+	then
+		//Switching to lightning mode
+		click "Environment_Refresh/Generic_Refresh_Steps/01_Delete_Production/Avatar"
+		Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+		Log "Mode switched to Lightning."
+		wait 3
+		waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher"
+		Log "Switched to Lightning mode."
+		typetext controlkey,"lc"
+		if remoteclipboard() contains "Mass_Action_Configuration"
+		else
+			click FoundImageLocation()
+			typetext "Mass Action Scheduler",returnKey
+		end if
+	else
+		Log "User is already in Lightning mode."
+	end if	
+end SwitchToLightning
+
+
+
+//There are a couple of slightly different menus for entering IPs. This helper will handle them both.
+//Load your list like this:
+//Put [
+//	["152.129.17.0","152.129.17.255"],
+//	["152.129.18.0","152.129.18.255"]
+//] into IP_List
+//Log IP_List
+to AddIps IP_List, IPRangeDescription
+	repeat for each item IPRange of IP_List
+		click "Utilities/Helpers/AddIPs/New", "Utilities/Helpers/AddIPs/AddIPRanges"
+		click "Utilities/Helpers/AddIPs/StartIPAddress","Utilities/Helpers/AddIPs/IPStartAddress"
+		Log "Adding IP Start Address"&&item 1 of IPRange
+		typetext item 1 of IPRange
+		click "Utilities/Helpers/AddIPs/EndIPAddress", "Utilities/Helpers/AddIPs/IPEndAddress"
+		Log "Adding IP End Address"&&item 2 of IPRange
+		typetext item 2 of IPRange
+		if IPRangeDescription = ""
+		then 
+			Log "No Description given."
+		else
+			click "Utilities/Helpers/AddIPs/Description", "Utilities/Helpers/AddIPs/Description_2"
+			typetext IPRangeDescription
+		end if
+		click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Save"
+	end repeat
+end AddIPs
+
+
+//This triple-click handler is designed to triple click objects and put them in the variable TripleClickVar.
+//Provide the argument SearchType as "text" or "image" or "coordinates", if no Searchtype is provided it will assume the SearchType is a text string.
+//Provide the argument TCObject as a text string OR an image or the coordinates (imagelocation()).
+//if you call this handler as a command it will not return the TripleClickVar (but it will still be in the remote clipboard) if you call it as a function it will return it.
+to TripleClick TCObject, SearchType:"text"
+	put the RemoteWorkInterval
+	put the RemoteWorkInterval into defaultRWI -- stores the current Remote Work Interval value so that it can be restored later
+	put the MouseDoubleClickDelay
+	put the MouseDoubleClickDelay into clickTime -- gets the current time interval between clicks in a double-click
+	set the RemoteWorkInterval to clickTime -- sets the Remote Work Interval to the double-click time
+	if SearchType = "Coordinates"
+	then
+		click TCObject
+	else
+		click (SearchType):TCObject
+	end if
+	Click -- quickly clicks in the current mouse location
+	Click -- quickly clicks
+	// The last line restores the timing between Eggplant Functional commands by resetting the RemoteWorkInterval global property to its original value.
+	set the RemoteWorkInterval to defaultRWI
+	typetext controlkey,"c"
+	SetRemoteClipboard line 1 of RemoteClipboard()//Gets rid of the extra line return
+	put remoteclipboard() into TripleClickVar
+	Log TripleClickVar
+	Return (TripleClickVar)
+end TripleClick
+
+//Use this column width helper to enlarge columns so that Eggy can read/find what's in them.
+//It will first check if your column width is already wide enough, so don't hesitate to use it when you're not sure if your columns will be reset/changed.
+//set ColumnLabel to the IMAGELOCATION of the header of your column.
+//set ColumnSpot to an IMAGELOCATION of an image that includes the edge of your column. It is recommended that you include a drop down arrow or something so its not just a line.
+//Use a searchrectangle property that derives it's search area from the column header.
+//examples:
+//set ColumnLabel to imagelocation("Permissions_Check/Permission_Set_Groups_Verification/Label_ColumnHeader")
+//set ColumnSpot to imagelocation(image:"Permissions_Check/Permission_Set_Groups_Verification/Column_Edge",searchrectangle:[FoundImageLocation()+[0,-40],FoundImageLocation()+[400,40]])
+//note that the 2nd imagelocation can use foundimagelocation as above
+//set ColumnSize to a number that is wide enough to show all of your data. Remember that it is in reference to the imagelocation of your label which can vary depending on how many letters are in it.
+//Use the following script to check your column width needs: put x of ColumnSpot - x of ColumnLabel
+to ColumnWidth ColumnLabel, ColumnSpot, ColumnSize
+	if x of ColumnSpot - x of ColumnLabel > ColumnSize
+	then
+		Log "Column already enlarged."
+	else
+		//enlarge the column
+		moveto ColumnSpot
+		mousebuttondown 1
+		moveto ColumnSpot+[ColumnSize,0]
+		mousebuttonUp 1
+		moveto ColumnSpot+[0,-50]
+	end if 
+end ColumnWidth

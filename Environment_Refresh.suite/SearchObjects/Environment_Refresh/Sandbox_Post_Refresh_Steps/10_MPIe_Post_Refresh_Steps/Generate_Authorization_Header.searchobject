@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		297,
+		757,
+		193,
+		19
+	],
+	"lastmodifieddate": 1614713479.829,
+	"createddate": 1614710480.7449999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Generate_Authorization_Header",
+	"lastfounddate": 1617121429.5640001,
+	"ocrcapturestring": "Generate Authorization Header Q",
+	"lastfoundlocation": [
+		295,
+		775,
+		193,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[96,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Generate_Authorization_Header_Checked.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					297,
+					757,
+					193,
+					19
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Generate Authorization Header Q"
+			}
+	]
+}

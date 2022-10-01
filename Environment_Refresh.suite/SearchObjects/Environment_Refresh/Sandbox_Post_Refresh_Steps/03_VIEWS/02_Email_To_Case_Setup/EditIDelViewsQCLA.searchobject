@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		251,
+		846,
+		133,
+		14
+	],
+	"lastmodifieddate": 1613761282.0279999,
+	"createddate": 1613761282.0279999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EditIDelViewsQCLA",
+	"lastfounddate": 1655761359.118,
+	"ocrcapturestring": "Edit I Del Views QCLA",
+	"lastfoundlocation": [
+		251,
+		521,
+		133,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EditIDelViewsQCLA.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					251,
+					846,
+					133,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit I Del Views QCLA"
+			}
+	]
+}

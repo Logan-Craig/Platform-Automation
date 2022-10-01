@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		31,
+		642,
+		107,
+		16
+	],
+	"lastmodifieddate": 1613601918.8239999,
+	"createddate": 1613601918.8239999,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental",
+	"lastfounddate": 1614116859.3210001,
+	"ocrcapturestring": "Named Credent'al",
+	"lastfoundlocation": [
+		31,
+		642,
+		107,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[53,8]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					31,
+					642,
+					107,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Named Credent'al"
+			}
+	]
+}

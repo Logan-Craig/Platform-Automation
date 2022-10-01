@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		51,
+		298,
+		85,
+		16
+	],
+	"lastmodifieddate": 1614142647.655,
+	"createddate": 1614142623.997,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/App_Manager_Link",
+	"lastfounddate": 1614145248.7079999,
+	"ocrcapturestring": "App Manager",
+	"lastfoundlocation": [
+		50,
+		298,
+		85,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[42,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/App_Manager_SearchResult.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					51,
+					298,
+					85,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "App Manager"
+			}
+	]
+}

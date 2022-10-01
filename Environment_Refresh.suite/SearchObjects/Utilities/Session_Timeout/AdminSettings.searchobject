@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		247,
+		308,
+		91,
+		17
+	],
+	"lastmodifieddate": 1616520607.4579999,
+	"createddate": 1616520579.691,
+	"name": "Utilities/Session_Timeout/AdminSettings",
+	"lastfounddate": 1617893675.6570001,
+	"ocrcapturestring": "Admin Settings",
+	"lastfoundlocation": [
+		247,
+		308,
+		91,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[45,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Session_Timeout/AdminSettings_Desired.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					247,
+					308,
+					91,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Admin Settings"
+			}
+	]
+}

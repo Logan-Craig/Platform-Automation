@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		248,
+		555,
+		312,
+		14
+	],
+	"lastmodifieddate": 1617196968.592,
+	"createddate": 1614196174.8099999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/EditIDelACaseHasBeenAssignedto",
+	"lastfounddate": 1614282353.1630001,
+	"ocrcapturestring": "Edit I Del A Case Has Been Assigned to Exec Writer",
+	"lastfoundlocation": [
+		248,
+		555,
+		312,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[14,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/EditIDelACaseHasBeenAssignedto.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					248,
+					555,
+					312,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit I Del A Case Has Been Assigned to Exec Writer"
+			}
+	]
+}

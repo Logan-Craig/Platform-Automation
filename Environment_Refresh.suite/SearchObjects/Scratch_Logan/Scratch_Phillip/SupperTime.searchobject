@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		327,
+		595,
+		84,
+		18
+	],
+	"lastmodifieddate": 1646236835.5829999,
+	"createddate": 1632766902.484,
+	"name": "Scratch_Logan/Scratch_Phillip/SupperTime",
+	"lastfounddate": 1642623581.5420001,
+	"ocrcapturestring": "Supper Time",
+	"lastfoundlocation": [
+		327,
+		595,
+		84,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[43,13]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Phillip/SupperTime.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					327,
+					595,
+					84,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Supper Time"
+			}
+	]
+}

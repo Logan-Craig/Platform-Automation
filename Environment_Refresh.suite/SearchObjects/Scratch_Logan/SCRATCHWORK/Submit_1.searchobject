@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		426,
+		628,
+		45,
+		14
+	],
+	"lastmodifieddate": 1646236835.573,
+	"createddate": 1643048117.6859999,
+	"name": "Scratch_Logan/SCRATCHWORK/Submit_1",
+	"lastfounddate": 1643048491.3610001,
+	"ocrcapturestring": "Submit",
+	"lastfoundlocation": [
+		426,
+		628,
+		45,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[22,7]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/SCRATCHWORK/Submit.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					426,
+					628,
+					45,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Submit"
+			}
+	]
+}

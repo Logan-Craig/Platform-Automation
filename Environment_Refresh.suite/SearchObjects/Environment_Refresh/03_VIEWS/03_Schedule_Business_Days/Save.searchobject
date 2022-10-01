@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		559,
+		741,
+		27,
+		12
+	],
+	"lastmodifieddate": 1613675937.0310001,
+	"createddate": 1613675937.0310001,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/Save",
+	"lastfounddate": 1655754522.7449999,
+	"ocrcapturestring": "Save",
+	"lastfoundlocation": [
+		559,
+		773,
+		27,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[20,9]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/Save.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					559,
+					741,
+					27,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Save"
+			}
+	]
+}

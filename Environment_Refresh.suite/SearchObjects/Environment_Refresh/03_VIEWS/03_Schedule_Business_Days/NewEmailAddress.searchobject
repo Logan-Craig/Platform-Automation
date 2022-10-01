@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		558,
+		723,
+		102,
+		12
+	],
+	"lastmodifieddate": 1613675815.4219999,
+	"createddate": 1613675815.4219999,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/NewEmailAddress",
+	"lastfounddate": 1655761333.467,
+	"ocrcapturestring": "New Email Address",
+	"lastfoundlocation": [
+		558,
+		755,
+		102,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[56,9]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/NewEmailAddress.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					558,
+					723,
+					102,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "New Email Address"
+			}
+	]
+}

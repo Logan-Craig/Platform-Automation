@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		266,
+		557,
+		30,
+		13
+	],
+	"lastmodifieddate": 1614201798.582,
+	"createddate": 1614201756.217,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Field_Filter",
+	"lastfounddate": 1614203768.2449999,
+	"ocrcapturestring": "Field",
+	"lastfoundlocation": [
+		266,
+		557,
+		30,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[31,29]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Field.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					266,
+					557,
+					30,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Field"
+			}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1608661714.8380001,
+	"lastfoundlocation": [
+		592,
+		237,
+		30,
+		22
+	],
+	"originalcapturelocation": [
+		592,
+		237,
+		30,
+		22
+	],
+	"createddate": 1608650633.619,
+	"lastfounddate": 1608660041.51,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[37,-12]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Email/EmailBodyTL.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					592,
+					237,
+					30,
+					22
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232"
+			}
+	],
+	"name": "Environment_Refresh/Email/EmailBodyTL"
+}

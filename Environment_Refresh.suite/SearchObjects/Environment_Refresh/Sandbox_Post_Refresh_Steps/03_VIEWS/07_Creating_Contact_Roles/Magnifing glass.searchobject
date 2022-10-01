@@ -1,0 +1,39 @@
+{
+	"lastmodifieddate": 1614366076.2220001,
+	"originalcapturelocation": [
+		620,
+		371,
+		27,
+		25
+	],
+	"createddate": 1614366076.2220001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_45",
+					"HotSpot": "[9,7]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Magnifing glass.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"capturerect": [
+					620,
+					371,
+					27,
+					25
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Magnifing glass"
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		443,
+		465,
+		161,
+		15
+	],
+	"lastmodifieddate": 1614900138.2150002,
+	"createddate": 1614900138.2150002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/ReportAllOverdue",
+	"lastfounddate": 1614900205.7920001,
+	"ocrcapturestring": "View Report (All Overdue 0...",
+	"lastfoundlocation": [
+		443,
+		465,
+		161,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[69,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/ReportAllOverdue.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					443,
+					465,
+					161,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "View Report (All Overdue 0..."
+			}
+	]
+}

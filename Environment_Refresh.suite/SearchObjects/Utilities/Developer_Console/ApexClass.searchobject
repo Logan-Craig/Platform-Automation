@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		291,
+		97,
+		56,
+		15
+	],
+	"lastmodifieddate": 1613514705.1599998,
+	"createddate": 1613514705.1599998,
+	"name": "Utilities/Developer_Console/ApexClass",
+	"lastfounddate": 1614964974.773,
+	"ocrcapturestring": "Apex Class",
+	"lastfoundlocation": [
+		291,
+		97,
+		56,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[25,7]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/ApexClass.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					291,
+					97,
+					56,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Apex Class"
+			}
+	]
+}

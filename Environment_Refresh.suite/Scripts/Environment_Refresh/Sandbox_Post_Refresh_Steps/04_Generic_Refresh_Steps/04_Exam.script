@@ -1,0 +1,181 @@
+﻿// 4.	Exam:
+// a.	In the Lightning Experience, go to the App Launcher and search for the 'Exam Configuration'.
+// b.	Update Site URL field for "Assess Anything" to match the sandbox url and click "Save Endpoint URL".
+// c.	Update the URL field for "Public Site Assessment URL Configuration" to match the sandboxes "Community/Site URL".  The Salesforce site domain can be found //          under Setup and 'Sites'.
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Sites" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Sites", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Sites"
+
+
+//Note: There are basically two URLs used throught the Environment Refresh, the "Sites Tab URL" that contains the word "community" and will look something like this:"dtcsqava-vacommunity.cs32.force.com". We have been advised that the cs32 will sometimes read cs33. This is likely the only difference besides the sandbox name. The other URL used is the sandbox URL itself: https://va--dtcsqava.my.salesforce.com/
+
+
+//Site URLs are shown here
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////Sets the suite.variable for SitesCommunityURL////////////////////////////////////////
+//////////////////////////////////////This is not used again after this until Step 7/////////////////////////////////////////
+/////////////////////////////////////////dtcsqava-vacommunity.cs32.force.com///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Old sitescommunityURL script
+//put ReadText ("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ReadArea_TopLeft", //{image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ReadArea_TopLeft", HotSpot: [600, 15]}, //TextStyle:"CustomLowRes") into the suitevariables.SitesCommunityURL
+//log "This is the community URL: ",SitesCommunityURL
+ 
+//New sitescommunityURL script
+set TCObject to "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/YourSalesforcesitedomainnameis"
+set SearchType to "image"
+set TripleClickVar to "Utilities/Helpers".TripleClick (TCObject, SearchType)
+replace "Your Salesforce site domain name is " in TripleClickVar with ""
+set the suitevariables.SitesCommunityURL to line 1 of TripleClickVar
+Log SitesCommunityURL
+
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"Step 04 - Exam"&return to file Refresh_Report
+write "Sandbox Post-Refresh: " & the long date &", "& the abbrev time & return & "Salesforce site domain name:"&", "& SitesCommunityURL & return to file Refresh_Report
+
+
+
+// Navigate to the Exam App
+//Clicks the AppLauncher button no matter what app is currently loaded
+if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExAM")
+else
+	click  ImageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/AppLauncher2", waitfor:3
+	click  ImageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExamApp", waitfor:6
+end if
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//it might help to return to the setup page before attempting to get to the exam tab.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Folks were reporting this stuff having trouble finding the tab so I made it a little more resilient. It never has had trouble on mine, so tough to fix.
+//Adding additional stuff to this as it seems to be clicking everything right but nothing opens. Still always works for me.
+//not   :     https://va--int.my.salesforce.com/0DM/o?setupid=CustomDomain&retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DDevToolsIntegrate
+//between: https://va--int.my.salesforce.com/servlet/servlet.Integration?lid=01rt00000004LFu&ic=1&linkToken=VmpFPSxNakF5TWkwd015MHdNVlF3TURvd01Eb3pNaTQxTmpOYSxOTjNJR1NRUlo5SEVTRlVnXzUxSk9pLFlXWmtNR0po
+//exam:     https://va--int--exam.visualforce.com/apex/AdminConfig?sfdc.tabName=01rt00000004LFu
+wait 3
+Run "Environment_Refresh/EnvRefresh_Helpers".Navigate_to_ExAM
+wait 2
+typetext controlkey, "l"
+typetext controlkey, "c"
+put the RemoteClipboard
+put the RemoteClipboard into EXAM_URL_Var 
+put the last 17 characters of EXAM_URL_Var
+put the last 17 characters of EXAM_URL_Var into EXAM_URL_Var 
+if EXAM_URL_Var contains "DevToolsIntegrate"
+	Run "Environment_Refresh/EnvRefresh_Helpers".Navigate_to_ExAM
+end if
+//Sometimes the page appears to completely load briefly but then gets a processing overlay. 
+//Waits for the ExamConfiguration tab to load which seems to take a while
+//Sometime it just doesn't load at all.
+//Sometimes it takes about 45 seconds to load.
+Repeat for 3 minutes 
+	if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded")
+		Exit repeat
+	end if
+end repeat
+
+repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL")
+	if Imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/ExportAssessmentTemplate")
+	then
+		repeat until not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/ExportAssessmentTemplate")
+			click foundimagelocation()+[175,0]
+			typetext homekey
+			if the repeatindex > 10
+				throw "Stuck trying to get to the top of the ExAM page."
+			end if
+		end repeat
+	else 
+		Throw "Waited 3 minutes for ExAM Configuration tab to load. Gave up."
+	end if
+	if the repeatindex > 10
+		throw "Unable to get to the top of the ExAM page."
+	end if
+end repeat
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+wait 5
+// Proceeds to change the Assess Anything Endpoint URL
+if not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL")
+	repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL")
+		if Imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/ExportAssessmentTemplate")
+		then
+			repeat until not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/ExportAssessmentTemplate")
+				click foundimagelocation()+[175,0]
+				typetext homekey
+				if the repeatindex > 10
+					throw "Stuck trying to get to the top of the ExAM page."
+				end if
+			end repeat
+		else 
+			Throw "Waited 3 minutes for ExAM Configuration tab to load. Gave up."
+		end if
+		if the repeatindex > 10
+			throw "Unable to get to the top of the ExAM page."
+		end if
+	end repeat
+end if
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL"
+//Clicks inside the URL box
+//its getting all the way here before not finding the image above. I think its click edit and then the screen is jumping down.
+if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/SaveEndpointURLContents")
+then
+	click foundimagelocation()
+else
+	typetext homekey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/SaveEndpointURLContents"
+end if
+
+typetext ControlKey, "a"
+typetext Backspace
+//Despite the fact that we just retrieved the "Community" URL we are going to enter the "Sandbox" URL here. We will use the "Cummunity URL later."
+typetext SandboxURL
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/SaveEndpointURL"
+
+write "Assess Anything Endpoint URL updated to:"&", "& SitesCommunityURL & return to file Refresh_Report
+
+//Finds Public Site Assessment URL Configuration
+//This was taking so long I added a pagedown 3 to take it to where the field always it, but added an if in case it moves or something.
+repeat 3 times
+	typetext PageDown 
+end repeat
+wait 1
+//finds the first Edit Configuration button and sets a searchrectangle around it to include the section header
+//eggy has a much harder time finding the section header than the button
+put item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/EditConfiguration") into EditConfiguration
+set the SearchRectangle to [EditConfiguration+[-500,-150],EditConfiguration+[150,50]]
+if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/PublicSiteAssessmentURLConfig",waitfor:0)
+then
+	Log <<Found "Public Site Assessment URL Configuration".>>
+else
+	Log "Not the correct Edit Configuration button."
+	Log "Proceeding with the old search method."
+	//this old method searches from the top down for the section header. It takes longer, but searches a unique image.
+	typetext homekey
+	set the searchrectangle to ""
+	wait 1
+	Repeat 4 times
+		If ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/PublicSiteAssessmentURLConfig.png",waitFor:0) 
+		then
+			Log <<"Public Site Assessment URL Configuration" section found.>>
+			Exit Repeat
+		Else 
+			typetext PageDown
+			wait 1
+		End If
+	End repeat
+end if
+//actually clicks and populates it
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/EditConfiguration"
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/PublicSiteAssessmentURLConfig",HotSpot: [400, 60]
+typetext ControlKey, "a",deleteKey
+typetext "https://"&SitesCommunityURL&"/survey"
+//This time we will use the suite variable site "Community" URL.
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Save"
+write "Public Site Assessment URL Configuration updated to:"&", "& "https://"&SitesCommunityURL&"/survey" & return to file Refresh_Report
+set the SearchRectangle to ""
+
+close file Refresh_Report

@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		426,
+		628,
+		45,
+		14
+	],
+	"lastmodifieddate": 1646236835.612,
+	"createddate": 1642623579.155,
+	"name": "Scratch_Logan/Scratch_Shawn/Submit",
+	"lastfounddate": 1643101776.0900002,
+	"ocrcapturestring": "Submit",
+	"lastfoundlocation": [
+		426,
+		628,
+		45,
+		14
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Submit",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,11]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					426,
+					628,
+					45,
+					14
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Submit.png"
+			}
+	]
+}

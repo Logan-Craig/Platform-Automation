@@ -1,0 +1,50 @@
+﻿
+//Update Org level session time out to 24 hours
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Session", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/SessionSettings",  "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SessionSettings"
+
+
+if not imagefound(image:"Utilities/Session_Timeout/24hours", searchrectangle: [imagelocation("Utilities/Session_Timeout/TimeoutValue")+[50,-15],imagelocation("Utilities/Session_Timeout/TimeoutValue")+[150,25]])
+then
+	Log "Session Timeout Value not set to 24 hours.","Updating Timeout Value."
+	click image:"Utilities/TimeoutValue",hotspot:[200,10]
+	typetext "24",enterKey
+	typetext endkey
+	wait 1
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+else
+	Log "Session Timeout Value already set to 24 hours."
+end if
+
+
+
+//Update Profile Session Timeout
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Profiles", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Profiles", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Profiles"
+
+
+set SelectedView = "Utilities/Session_Timeout/AdminSettings_Selected"
+set DesiredView = "Utilities/Session_Timeout/AdminSettings_Desired"
+Set ViewName = "Admin Settings"
+set MakeMyView = false
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SystemAdministrator"
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SystemAdministratorHeader"
+typetext endkey
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SessionSettings"
+waitfor 9, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SystemAdministratorHeader"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+
+if not imagefound(image:"Utilities/Session_Timeout/24hours", searchrectangle: [imagelocation("Utilities/Session_Timeout/SessionTimesOutAfter")+[50,-15],imagelocation("Utilities/Session_Timeout/SessionTimesOutAfter")+[150,25]])
+then
+	Log "Session Timeout Value not set to 24 hours.","Updating Timeout Value."
+	click image:"Utilities/Session_Timeout/SessionTimesOutAfter",hotspot:[200,10]
+	typetext "24",enterKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+else
+	Log "Session Timeout Value already set to 24 hours."
+end if
+
+
+

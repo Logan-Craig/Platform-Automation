@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1060,
+		400,
+		60,
+		32
+	],
+	"lastmodifieddate": 1617113463.855,
+	"createddate": 1613760308.6110001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/UVW",
+	"lastfounddate": 1655761344.3280001,
+	"ocrcapturestring": "U V w",
+	"lastfoundlocation": [
+		1060,
+		442,
+		60,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,16]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/UVW.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					1060,
+					400,
+					60,
+					32
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "U V w"
+			}
+	]
+}

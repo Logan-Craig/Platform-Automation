@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		356,
+		332,
+		165,
+		17
+	],
+	"lastmodifieddate": 1613156503.9720001,
+	"createddate": 1613156503.9720001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SystemPermissions_DropDown",
+	"lastfounddate": 1613510166.6500001,
+	"ocrcapturestring": "System Permissions",
+	"lastfoundlocation": [
+		356,
+		332,
+		165,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[158,6]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SystemPermissions_DropDown.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					356,
+					332,
+					165,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "System Permissions"
+			}
+	]
+}

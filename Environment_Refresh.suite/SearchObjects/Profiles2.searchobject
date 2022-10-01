@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		241,
+		243,
+		80,
+		21
+	],
+	"lastmodifieddate": 1616792499.6230001,
+	"createddate": 1616217856.461,
+	"name": "Profiles2",
+	"lastfounddate": 1616445469.9489999,
+	"ocrcapturestring": "Profiles",
+	"lastfoundlocation": [
+		241,
+		243,
+		80,
+		21
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[40,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Profiles.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					241,
+					243,
+					80,
+					21
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Profiles"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		564,
+		148,
+		134,
+		20
+	],
+	"lastmodifieddate": 1632160653.2649999,
+	"createddate": 1632160653.2649999,
+	"name": "Utilities/MyPublicIPv4",
+	"lastfounddate": 1632160658.6100001,
+	"ocrcapturestring": "My Public IPv4",
+	"lastfoundlocation": [
+		564,
+		148,
+		134,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[67,10]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/MyPublicIPv4.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					564,
+					148,
+					134,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "My Public IPv4"
+			}
+	]
+}

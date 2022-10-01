@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		263,
+		814,
+		55,
+		22
+	],
+	"lastmodifieddate": 1617293449.5770001,
+	"createddate": 1617293449.5770001,
+	"name": "Common_Images/Continue",
+	"lastfounddate": 1617297008.135,
+	"ocrcapturestring": "Continue",
+	"lastfoundlocation": [
+		263,
+		814,
+		55,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[27,11]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Continue.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					263,
+					814,
+					55,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Continue"
+			}
+	]
+}

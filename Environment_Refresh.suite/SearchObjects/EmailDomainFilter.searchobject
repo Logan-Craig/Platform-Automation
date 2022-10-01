@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		251,
+		423,
+		686,
+		14
+	],
+	"lastmodifieddate": 1604081451.401,
+	"createddate": 1604081440.0539999,
+	"name": "EmailDomainFilter",
+	"lastfounddate": 1624815837.2160001,
+	"ocrcapturestring": "Edit I Del ya.gov DartnersmtD.va.qov:25 n~ls:Reauired'",
+	"lastfoundlocation": [
+		251,
+		423,
+		686,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailDomainFilterExists.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					423,
+					686,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit I Del ya.gov DartnersmtD.va.qov:25 n~ls:Reauired'"
+			}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1606505164.1269999,
+	"ocrcapturestring": "Setup",
+	"originalcapturelocation": [
+		1036,
+		149,
+		35,
+		15
+	],
+	"createddate": 1606505164.1269999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_47",
+					"HotSpot": "[24,7]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/01_Delete_Production/SetupHover.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1036,
+					149,
+					35,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Setup"
+			}
+	],
+	"name": "Environment_Refresh/01_Delete_Production/SetupHover"
+}

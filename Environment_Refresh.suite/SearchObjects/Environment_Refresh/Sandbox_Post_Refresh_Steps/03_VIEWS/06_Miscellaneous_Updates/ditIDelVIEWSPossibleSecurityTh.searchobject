@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		255,
+		704,
+		306,
+		31
+	],
+	"lastmodifieddate": 1614198912.6529999,
+	"createddate": 1614198912.6529999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ditIDelVIEWSPossibleSecurityTh",
+	"lastfounddate": 1614202113.1289999,
+	"ocrcapturestring": "dit I Del VIEWS Possible Security Three: has Been Reported via Checkbox on Case",
+	"lastfoundlocation": [
+		255,
+		840,
+		306,
+		31
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,17]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ditIDelVIEWSPossibleSecurityTh.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					255,
+					704,
+					306,
+					31
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "dit I Del VIEWS Possible Security Three: has Been Reported via Checkbox on Case"
+			}
+	]
+}

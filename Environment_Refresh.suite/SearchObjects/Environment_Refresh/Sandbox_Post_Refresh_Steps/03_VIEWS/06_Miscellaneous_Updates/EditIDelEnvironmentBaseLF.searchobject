@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		251,
+		475,
+		205,
+		14
+	],
+	"lastmodifieddate": 1617143129.0219998,
+	"createddate": 1617143129.0219998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/EditIDelEnvironmentBaseLF",
+	"lastfounddate": 1617143130.971,
+	"ocrcapturestring": "Edit I Del Environment Base LF ￼",
+	"lastfoundlocation": [
+		251,
+		475,
+		205,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[14,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/EditIDelEnvironmentBaseLF.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					251,
+					475,
+					205,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit I Del Environment Base LF ￼"
+			}
+	]
+}

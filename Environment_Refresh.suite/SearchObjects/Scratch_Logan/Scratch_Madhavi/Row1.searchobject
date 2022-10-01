@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		182,
+		335,
+		19,
+		16
+	],
+	"lastmodifieddate": 1646236835.5640001,
+	"createddate": 1645040745.5910001,
+	"name": "Scratch_Logan/Scratch_Madhavi/Row1",
+	"lastfounddate": 1645040749.8959999,
+	"ocrcapturestring": "1",
+	"lastfoundlocation": [
+		182,
+		335,
+		19,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[9,8]",
+					"Tolerance": "_29",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Madhavi/Row1.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					182,
+					335,
+					19,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "1"
+			}
+	]
+}

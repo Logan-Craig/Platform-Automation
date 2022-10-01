@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		468,
+		581,
+		99,
+		13
+	],
+	"lastmodifieddate": 1608826958.911,
+	"createddate": 1608826958.911,
+	"name": "Environment_Refresh/00_Launch_and_Login/VerificationCode",
+	"lastfounddate": 1624904845.6630001,
+	"ocrcapturestring": "Verification Code",
+	"lastfoundlocation": [
+		468,
+		581,
+		99,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[63,43]",
+					"Tolerance": "_50",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/VerificationCode.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					468,
+					581,
+					99,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Verification Code"
+			}
+	]
+}

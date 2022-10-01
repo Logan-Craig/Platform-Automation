@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		308,
+		769,
+		231,
+		16
+	],
+	"lastmodifieddate": 1646936736.092,
+	"createddate": 1646936736.092,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAPlatformQMSAdmin",
+	"lastfounddate": 1664462354.369,
+	"ocrcapturestring": "Login Flow for VBA Platform - QMS Admin",
+	"lastfoundlocation": [
+		308,
+		768,
+		231,
+		16
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for VBA Platform - QMS Admin",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[111,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					308,
+					769,
+					231,
+					16
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAPlatformQMSAdmin.png"
+			}
+	]
+}

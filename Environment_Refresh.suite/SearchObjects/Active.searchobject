@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		373,
+		427,
+		88,
+		22
+	],
+	"lastmodifieddate": 1604081813.888,
+	"createddate": 1604081810.7680001,
+	"name": "Active",
+	"lastfounddate": 1661788560.8429999,
+	"ocrcapturestring": "Active",
+	"lastfoundlocation": [
+		373,
+		459,
+		88,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/Active.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					373,
+					427,
+					88,
+					22
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Active"
+			}
+	]
+}

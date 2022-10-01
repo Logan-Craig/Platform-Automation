@@ -1,0 +1,3 @@
+﻿connect serverID:"192.168.1.101",PortNum:"3389",type:"RDP",Username:"logan",Password:"eggy"
+Log "User: logan connected to: Local Linux"
+

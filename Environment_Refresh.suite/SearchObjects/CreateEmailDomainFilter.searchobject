@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		667,
+		371,
+		147,
+		20
+	],
+	"lastmodifieddate": 1604081536.2179999,
+	"createddate": 1604081532.9780002,
+	"name": "CreateEmailDomainFilter",
+	"lastfounddate": 1661788558.3210001,
+	"ocrcapturestring": "Create Email Domain Filter",
+	"lastfoundlocation": [
+		667,
+		403,
+		147,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/CreateEmailDomainFilter.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					667,
+					371,
+					147,
+					20
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Create Email Domain Filter"
+			}
+	]
+}

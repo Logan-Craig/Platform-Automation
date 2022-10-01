@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1646937582.3759999,
+	"lastfoundlocation": [
+		428,
+		433,
+		134,
+		17
+	],
+	"originalcapturelocation": [
+		428,
+		401,
+		134,
+		17
+	],
+	"createddate": 1646937582.3759999,
+	"lastfounddate": 1664462356.1670001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[67,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/Login_User_acceptance.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"capturerect": [
+					428,
+					401,
+					134,
+					17
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.105"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/Login_User_acceptance"
+}

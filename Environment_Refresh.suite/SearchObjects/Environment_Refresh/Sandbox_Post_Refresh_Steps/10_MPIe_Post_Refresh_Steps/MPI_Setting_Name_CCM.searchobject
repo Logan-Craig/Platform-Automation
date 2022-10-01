@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		364,
+		466,
+		150,
+		15
+	],
+	"lastmodifieddate": 1615411268.5420001,
+	"createddate": 1615411268.5420001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/MPI_Setting_Name_CCM",
+	"lastfounddate": 1615505610.158,
+	"ocrcapturestring": "MPI setting Name CCM",
+	"lastfoundlocation": [
+		364,
+		466,
+		150,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[75,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/MPI_Setting_Name_CCM.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					364,
+					466,
+					150,
+					15
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "MPI setting Name CCM"
+			}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		799,
+		395,
+		157,
+		36
+	],
+	"lastmodifieddate": 1603823619.599,
+	"createddate": 1603823613.161,
+	"name": "SaveEndpointURL",
+	"lastfounddate": 1624602643.8169999,
+	"ocrcapturestring": "Save Endpoint URL",
+	"lastfoundlocation": [
+		798,
+		395,
+		157,
+		36
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/SaveEndpointURL.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					799,
+					395,
+					157,
+					36
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Save Endpoint URL"
+			}
+	]
+}

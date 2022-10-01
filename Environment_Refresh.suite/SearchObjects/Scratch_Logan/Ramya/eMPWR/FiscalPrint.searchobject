@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		28,
+		797,
+		272,
+		14
+	],
+	"lastmodifieddate": 1621630809.3,
+	"createddate": 1621630796.2249999,
+	"name": "Scratch_Logan/Ramya/eMPWR/FiscalPrint",
+	"lastfounddate": 1621633696.5240002,
+	"ocrcapturestring": "— Fiscal Print BT-00000696-20210520-1131",
+	"lastfoundlocation": [
+		65,
+		797,
+		65,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[80,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya/eMPWR/FiscalPrint.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					28,
+					797,
+					272,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Fiscal Print"
+			}
+	]
+}

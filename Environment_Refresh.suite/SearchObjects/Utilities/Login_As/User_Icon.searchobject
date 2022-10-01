@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1620138201.819,
+	"lastfoundlocation": [
+		370,
+		211,
+		24,
+		24
+	],
+	"originalcapturelocation": [
+		370,
+		211,
+		24,
+		24
+	],
+	"createddate": 1620138201.819,
+	"lastfounddate": 1620140362.9429998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,12]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Login_As/User_Icon.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"capturerect": [
+					370,
+					211,
+					24,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.103"
+			}
+	],
+	"name": "Utilities/Login_As/User_Icon"
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		239,
+		322,
+		32,
+		10
+	],
+	"lastmodifieddate": 1604005582.003,
+	"createddate": 1604005578.7709999,
+	"name": "View",
+	"lastfounddate": 1664461013.573,
+	"ocrcapturestring": "View:",
+	"lastfoundlocation": [
+		243,
+		395,
+		41,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/View.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					239,
+					322,
+					32,
+					10
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "View:"
+			}
+	]
+}

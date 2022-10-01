@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		242,
+		287,
+		181,
+		15
+	],
+	"lastmodifieddate": 1646236835.605,
+	"createddate": 1627659953.0640001,
+	"name": "Scratch_Logan/Scratch_Muhammad/StandardOOODeactivate_TXT",
+	"lastfounddate": 1627661803.586,
+	"ocrcapturestring": "Standard OOODeactivate",
+	"lastfoundlocation": [
+		242,
+		287,
+		181,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[90,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Muhammad/StandardOOODeactivate_TXT.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					242,
+					287,
+					181,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Standard OOODeactivate"
+			}
+	]
+}

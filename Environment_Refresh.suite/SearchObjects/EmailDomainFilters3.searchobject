@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		175,
+		721,
+		113,
+		13
+	],
+	"lastmodifieddate": 1604426840.7849998,
+	"createddate": 1604426829.4630001,
+	"name": "EmailDomainFilters3",
+	"lastfounddate": 1664461690.9879999,
+	"ocrcapturestring": "Email Domain Filters",
+	"lastfoundlocation": [
+		71,
+		555,
+		113,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailDomainFilters.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					175,
+					721,
+					113,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Email Domain Filters"
+			}
+	]
+}

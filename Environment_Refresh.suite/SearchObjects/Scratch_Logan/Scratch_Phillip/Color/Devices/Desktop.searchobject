@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		443,
+		561,
+		51,
+		17
+	],
+	"lastmodifieddate": 1632766877.6989999,
+	"createddate": 1632766877.6989999,
+	"name": "Scratch_Logan/Scratch_Phillip/Color/Devices/Desktop",
+	"lastfounddate": 1642623556.9619999,
+	"ocrcapturestring": "Desktop",
+	"lastfoundlocation": [
+		443,
+		561,
+		51,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[28,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Phillip/Color/Devices/Desktop.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					443,
+					561,
+					51,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Desktop"
+			}
+	]
+}

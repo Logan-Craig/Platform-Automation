@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		443,
+		536,
+		44,
+		17
+	],
+	"lastmodifieddate": 1646236835.586,
+	"createddate": 1642623573.796,
+	"name": "Scratch_Logan/Scratch_Shawn/Laptop",
+	"lastfounddate": 1643101773.3959999,
+	"ocrcapturestring": "Laptop",
+	"lastfoundlocation": [
+		443,
+		536,
+		44,
+		17
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Laptop",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[23,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					443,
+					536,
+					44,
+					17
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Laptop.png"
+			}
+	]
+}

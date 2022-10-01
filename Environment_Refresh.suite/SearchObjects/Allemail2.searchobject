@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		338,
+		510,
+		53,
+		14
+	],
+	"lastmodifieddate": 1603838967.2319999,
+	"createddate": 1603838964.4130001,
+	"name": "Allemail2",
+	"lastfounddate": 1664461258.062,
+	"ocrcapturestring": "All email",
+	"lastfoundlocation": [
+		338,
+		542,
+		53,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/Allemail.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					338,
+					510,
+					53,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "All email"
+			}
+	]
+}

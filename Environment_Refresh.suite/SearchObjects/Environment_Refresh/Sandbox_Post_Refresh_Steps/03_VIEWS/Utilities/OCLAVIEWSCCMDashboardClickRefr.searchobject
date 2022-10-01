@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		71,
+		840,
+		334,
+		18
+	],
+	"lastmodifieddate": 1614895284.7160001,
+	"createddate": 1614895284.7160001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/OCLAVIEWSCCMDashboardClickRefr",
+	"lastfounddate": 1614899950.6199999,
+	"ocrcapturestring": "OCLA VIEWS CCM Dashboard - Click Refresh to Update",
+	"lastfoundlocation": [
+		70,
+		840,
+		334,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[23,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/OCLAVIEWSCCMDashboardClickRefr.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					71,
+					840,
+					334,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "OCLA VIEWS CCM Dashboard - Click Refresh to Update"
+			}
+	]
+}

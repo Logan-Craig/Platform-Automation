@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		357,
+		332,
+		117,
+		17
+	],
+	"lastmodifieddate": 1613154782.2119999,
+	"createddate": 1613154782.2119999,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SessionSettings_Options",
+	"lastfounddate": 1613154872.757,
+	"ocrcapturestring": "Session Settings",
+	"lastfoundlocation": [
+		357,
+		332,
+		117,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[133,8]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SessionSettings_Options.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					357,
+					332,
+					117,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Session Settings"
+			}
+	]
+}

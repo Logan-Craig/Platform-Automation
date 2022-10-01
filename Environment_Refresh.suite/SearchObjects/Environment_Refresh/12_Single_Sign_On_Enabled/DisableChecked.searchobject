@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		266,
+		352,
+		194,
+		27
+	],
+	"lastmodifieddate": 1608328281.2620001,
+	"createddate": 1608328281.2620001,
+	"name": "Environment_Refresh/12_Single_Sign_On_Enabled/DisableChecked",
+	"lastfounddate": 1664461704.1849999,
+	"ocrcapturestring": "Disable login with Salesforce credentials s",
+	"lastfoundlocation": [
+		266,
+		384,
+		194,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[183,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/12_Single_Sign_On_Enabled/DisableChecked.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					266,
+					352,
+					194,
+					27
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Disable login with Salesforce credentials s"
+			}
+	]
+}

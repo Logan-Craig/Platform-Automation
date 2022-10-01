@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		337,
+		387,
+		112,
+		15
+	],
+	"lastmodifieddate": 1603841217.951,
+	"createddate": 1603841215.619,
+	"name": "VAAdminPlusUser",
+	"lastfounddate": 1624814558.734,
+	"ocrcapturestring": "VA Admin Plus User.",
+	"lastfoundlocation": [
+		337,
+		411,
+		81,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/VAAdminPlusUser.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					337,
+					387,
+					112,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "VA Admin Plus User."
+			}
+	]
+}

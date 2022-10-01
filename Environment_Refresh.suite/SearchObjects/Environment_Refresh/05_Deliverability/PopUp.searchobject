@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1607112802.7709999,
+	"ocrcapturestring": "Welcome to the Enhanced Profile User Interface Start Tour ► No Thanks Show Me Later Managing profiles is easy with the enhanced profile user interface. Take a quick tour...",
+	"originalcapturelocation": [
+		432,
+		225,
+		416,
+		124
+	],
+	"createddate": 1607112802.7709999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_73",
+					"HotSpot": "[54,106]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/05_Deliverability/PopUp.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					432,
+					225,
+					416,
+					124
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Welcome to the Enhanced Profile User Interface Start Tour ► No Thanks Show Me Later Managing profiles is easy with the enhanced profile user interface. Take a quick tour..."
+			}
+	],
+	"name": "Environment_Refresh/05_Deliverability/PopUp"
+}

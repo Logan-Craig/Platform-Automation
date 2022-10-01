@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		389,
+		551,
+		185,
+		35
+	],
+	"lastmodifieddate": 1614202514.3049998,
+	"createddate": 1614197665.5910001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AvailableRecipientsUserSalesfo",
+	"lastfounddate": 1614202409.822,
+	"ocrcapturestring": "Available Recipients User: Salesforce Administrator",
+	"lastfoundlocation": [
+		223,
+		0,
+		161,
+		11
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[90,25]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AvailableRecipientsUserSalesfo.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					389,
+					551,
+					185,
+					35
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Available Recipients User: Salesforce Administrator"
+			}
+	]
+}

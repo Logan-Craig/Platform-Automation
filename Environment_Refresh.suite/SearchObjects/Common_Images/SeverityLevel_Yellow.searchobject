@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1642007984.9460001,
+	"ocrcapturestring": "Severity Level",
+	"originalcapturelocation": [
+		268,
+		424,
+		78,
+		16
+	],
+	"createddate": 1642007984.9460001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_54",
+					"HotSpot": "[39,8]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/SeverityLevel_Yellow.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					268,
+					424,
+					78,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Severity Level"
+			}
+	],
+	"name": "Common_Images/SeverityLevel_Yellow"
+}

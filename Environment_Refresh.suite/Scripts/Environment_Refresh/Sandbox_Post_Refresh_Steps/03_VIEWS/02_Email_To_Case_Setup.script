@@ -1,0 +1,262 @@
+﻿
+//Run Launch& Login from Utilities(Make sure we r in Classic Mode
+//Before running the script ,change email address on Setup, Email Services, VIEWS Email to case, Click edit to change.
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Email Services", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/EmailServices","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/EmailServices"
+
+
+Log "Email Services link opened"
+
+Run "Helper_Utilities/Helpers".Scroll_N_Look_2_0 "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/VIEWSEmailtoCase", 8
+click foundimagelocation()
+
+//Go Setup and create a Lean_Letter email ID
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//check to see if Lean_Letter email has already been created.
+if imagefound(imagE:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/LeanLetter_Email_Addresses_Exists",waitfor:1)
+then
+	Log "Lean_Letter Email Address already created."	
+else
+	Log "Creating Lean_Letter email address."
+	
+	Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress" , waitfor:3
+	set the searchrectangle to [ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName")+[-250,-30],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName")+[550,400]]
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName"
+	Typetext "Lean_Letter"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Emailaddress"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Typetext "Lean_Letter"
+	Log "Lean Email Address entered"
+	If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Activecheckbox")
+	else
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Active"
+	End If
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ContextUser"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Typetext "SalesForce Administrator"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/AcceptEmailFrom"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Save")
+	set the searchrectangle to ""
+	Waitfor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailServiceVIEWS"
+	Log"Lean Email address generated"
+end if
+Log "Copying the Lean_Letter email address for later use."
+//Copy Lean_Email email
+set the searchrectangle to [ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress")+[-300,-150],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress")+[550,300]]
+RightClick "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/LeanLetter_Email_Addresses_Exists"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddress_Copyemailaddress"
+put remoteclipboard() into EMAILID
+Log"Lean Email address copied"
+Log EMAILID
+set the searchrectangle to ""
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//check to see if Generic_cong-corr email has already been created.
+if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Genericcongcorr_Email_Addresses_Exists",waitfor:1)
+then
+	Log "Generic_cong_corr Email Address already created."	
+else
+	Log "Creating Generic_cong_corr email address."
+	//Setting the searchrectangle
+	Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress" , waitfor:3
+	set the searchrectangle to [ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName")+[-250,-30],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName")+[550,400]]
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName"
+	Typetext "Generic_cong_corr"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Emailaddress"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Typetext "Generic_cong_corr"
+	Log "Generic_cong_corr Email Address entered"
+	If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Activecheckbox")
+	else
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Active"
+	End If
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ContextUser"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Typetext "SalesForce Administrator"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/AcceptEmailFrom"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Save")
+	set the searchrectangle to ""
+	Waitfor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailServiceVIEWS"
+	Log"Generic_cong_corr Email address generated"
+end if
+//Copy Generic_Cong_Corr email
+set the searchrectangle to [ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress")+[-300,-150],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress")+[550,300]]
+RightClick "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Genericcongcorr_Email_Addresses_Exists"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddress_Copyemailaddress"
+put remoteclipboard() into GenericEmailID
+Log "Generic_cong_corr address copied"
+Log GenericEmailID
+set the searchrectangle to ""
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Case_mail
+//check to see if Case_mail email has already been created.
+if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Case_mail_Email_Addresses_Exists",waitfor:1)
+then
+	Log "Case_mail Email Address already created."	
+else
+	Log "Creating Case_mail email address."
+	Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress" , waitfor:3
+	set the searchrectangle to [ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName")+[-250,-30],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName")+[550,400]]
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddressName"
+	Typetext "Case_mail"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Emailaddress"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Typetext "Case_mail"
+	Log "Case_mail Address entered"
+	If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Activecheckbox")
+	else
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Active"
+	End If
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ContextUser"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Typetext "SalesForce Administrator"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/AcceptEmailFrom"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Save")
+	set the searchrectangle to ""
+	Log"Case_mail address generated"
+	Waitfor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailServiceVIEWS"
+end if
+set the searchrectangle to [ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress")+[-300,-150],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/NewEmailAddress")+[550,300]]
+RightClick "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Case_mail_Email_Addresses_Exists"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EmailAddress_Copyemailaddress"
+put remoteclipboard() into CaseMailID
+Log "Case_email address copied"
+Log CaseMailID
+set the searchrectangle to ""
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Beginning of paste operations
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Custom Settings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/CustomSettings","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/CustomSettings"
+
+//Paste Lean Email Id 
+Set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/All_View_Selected"
+Set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/ALL_View_Desired"
+Set ViewName to "All"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName
+
+//Navigate to VIEWS Email to Case Mapping
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/UVW", waitfor:3
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/VIEWSEmailtoCaseMapping" , WaitFor:3
+
+
+Set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsExecSec_SelectedView"
+Set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsExecSec_DesiredView"
+Set ViewName to "Views_ExecSec"
+Set MakeMyView to true
+Set FilterBoolean to true
+Set FieldFilterVar to "Name"
+Set FieldOperatorVar to "equals"
+Set FieldValueVar to "Views_ExecSec"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+
+
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EditDelViewsExecSec" , WaitFor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ServiceEmailAddress"
+typetext ControlKey, "ac"
+if the remoteclipboard contains EMAILID
+then
+	Log "Views_ExecSec Service Email Address already updated."
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Cancel"
+else
+	typetext Backspace
+	typetext EMAILID
+	Click "Common_Images/Save"
+	Log "Views_ExecSec email Id changed"
+end if
+WaitFor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/CustomSettingVIEWSEmailtoCaseM"
+
+
+//END OF Lean_email
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Paste Generic_Cong_Corr Email Id 
+(*Set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/All_View_Selected"
+Set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/ALL_View_Desired"
+Set ViewName to "All"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName*)
+
+//Paste Generic EmailID
+(*Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/UVW", waitfor:3
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/VIEWSEmailtoCaseMapping" , WaitFor:3*)
+
+Set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsOCLA_SelectedView"
+Set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsOCLA_DesiredView"
+Set ViewName to "Views_OCLA"
+Set MakeMyView to true
+Set FilterBoolean to true
+Set FieldFilterVar to "Name"
+Set FieldOperatorVar to "equals"
+Set FieldValueVar to "Views_OCLA"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EditIDelViewsQCLA"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ServiceEmailAddress"
+typetext ControlKey, "ac"
+if the remoteclipboard contains GenericEmailID
+then
+	Log "Views_OCLA Service Email Address already updated."
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Cancel"
+else
+	typetext Backspace
+	typetext GenericEmailID
+	Click "Common_Images/Save"
+	Log "Views_OCLA email Id changed"
+end if
+WaitFor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/CustomSettingVIEWSEmailtoCaseM"
+//end of Generic_Cong_Corr
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(*Set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/All_View_Selected"
+Set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/ALL_View_Desired"
+Set ViewName to "All"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName
+
+//Paste CaseEmail
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/UVW", waitfor:3
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/VIEWSEmailtoCaseMapping" , WaitFor:3*)
+
+Set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Caseemail_Selected_View"
+Set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Caseemail_Desired_View"
+Set ViewName to "Case mail"
+Set MakeMyView to true
+Set FilterBoolean to true
+Set FieldFilterVar to "Name"
+Set FieldOperatorVar to "equals"
+Set FieldValueVar to "Case mail"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+
+Click Imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EditDelCaseMail" , WaitFor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ServiceEmailAddress"
+
+typetext ControlKey, "ac"
+if the remoteclipboard contains CaseMailID
+then
+	Log "Views_CaseEmail Service Email Address already updated."
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Cancel"
+else
+	typetext Backspace
+	typetext CaseMailID
+	Click "Common_Images/Save"
+	Log "Views_CaseEmail email Id changed"
+end if
+
+//End of CaseEmail
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

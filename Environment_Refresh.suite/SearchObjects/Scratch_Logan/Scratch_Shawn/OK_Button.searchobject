@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1646236835.595,
+	"lastfoundlocation": [
+		703,
+		148,
+		70,
+		34
+	],
+	"originalcapturelocation": [
+		703,
+		148,
+		70,
+		34
+	],
+	"createddate": 1642624181.099,
+	"lastfounddate": 1643101776.628,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,17]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Shawn/OK_Button.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"capturerect": [
+					703,
+					148,
+					70,
+					34
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.252.45.244"
+			}
+	],
+	"name": "Scratch_Logan/Scratch_Shawn/OK_Button"
+}

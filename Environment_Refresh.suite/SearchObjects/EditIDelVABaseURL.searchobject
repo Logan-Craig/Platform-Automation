@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		251,
+		507,
+		153,
+		14
+	],
+	"lastmodifieddate": 1603983535.678,
+	"createddate": 1603983487.9660001,
+	"name": "EditIDelVABaseURL",
+	"lastfounddate": 1624815400.9720001,
+	"ocrcapturestring": "Edit I Del VA Base URL",
+	"lastfoundlocation": [
+		251,
+		522,
+		153,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/EditIDelVABaseURL.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					507,
+					153,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit I Del VA Base URL"
+			}
+	]
+}

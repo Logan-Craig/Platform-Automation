@@ -1,0 +1,44 @@
+﻿//This script is designed to "attempt" to login in to every sandbox listed in the Credentials.csv in an effort to get Salesforce to send the VID email so that users can copy the VIDs all at once into the Credentials.csv It will handle logins that are succesfful without a VID (null VID is allowed in the Credentials.csv).
+
+///////////////////////////////////////////////////////////////////////
+//set the StartPoint to the sandbox you want to start on and the script will begin with that sandbox and complete the list from that point.
+//if you want the script to start at the beginning then set the StartPoint to ""
+////////////////////////////////////////////
+set StartPoint to ""
+put file ResourcePath("Credentials.csv") into MyFileVar
+if StartPoint = ""
+then
+	log "Starting at the beginning of the Sandbox list."
+	set StartLine = 2//starting at 2 skips the header
+else
+	log "Starting Sandbox name:"&&StartPoint
+	repeat for each line of MyFileVar
+		if it contains StartPoint
+		then set StartLine to the repeatindex//the CSVValue loses a row because it knows a header isn't a row.
+	end repeat
+end if
+log "Row number of the text file to start at:"&&StartLine
+repeat for each line of MyFileVar
+	if the repeatIndex is less than StartLine then next repeat
+	insert line the repeatindex of MyFileVar after SandboxList
+end repeat
+
+repeat for each item SandboxCredentials of SandboxList
+	Set CSVWorkingLine to Startline-2+(the repeatindex)
+	Set SandboxCredentials to item CSVWorkingLine of CSVValue(file resourcePath("Credentials.csv"))
+	Log "Row number of the CSV file:"&&CSVWorkingLine
+	Log "Sandbox Name:"&&SandboxCredentials's Sandbox 
+	if SandboxCredentials's VID = "" 
+	then 
+		Log "No VID provided for"&&SandboxCredentials's Sandbox 
+	else
+		Log "Sandbox VID:"&&SandboxCredentials's VID	
+	end if
+	Log "Sandbox Username:"&&SandboxCredentials's Username
+	Log "Sandbox Password:"&&SandboxCredentials's Password
+	log "Beginning Sandbox Refresh sequence..."
+	//Everything above this line works to set up a start point of the loop in case you don't want it to start at the beginning.
+	Log "Logging in."
+	Run "Utilities/Login_VID"
+	typetext controlKey, "w"
+end repeat

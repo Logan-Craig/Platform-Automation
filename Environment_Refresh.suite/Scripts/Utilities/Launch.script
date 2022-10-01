@@ -1,0 +1,41 @@
+﻿params SandboxCredentials//:{Password:"EggyPassword1!", Sandbox:"dtcsqa", Username:"eggplant@b3groupinc.com", VID:""}
+
+
+set BrowserVar to "chrome"
+//Launches the browser and goes to the sandbox URL, but does not login.
+
+//Set the suitevariable for SandboxName
+set the suitevariables.SandboxName to SandboxCredentials's Sandbox
+put "https://va--"&SandboxName&".my.salesforce.com" into the suitevariables.SandboxURL
+Log SandboxName
+Log SandboxURL
+
+//Set the Mode variable that you wish this script to run in (Classic/Lightning).
+set SandboxMode to "Classic"
+//set SandboxMode to "Lightning"
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+Log SandboxURL
+
+
+//Launch (skips launch if its not needed.
+//checks for Ubuntu log in
+if ImageFound(imageName: "Utilities/Launch_and_Login/SalesForceLoginLogo", waitFor:0)
+	Log "Salesforce login page already open."
+else
+	if ImageFound(imagename: "Utilities/Ubuntu_Launch_Chrome/Activities",waitfor:0)
+	then
+		Log "I'm in Ubuntu!"
+		click FoundImageLocation()
+		click "Utilities/Ubuntu_Launch_Chrome/Chrome_Shortcut"
+		run "utilities/Ubuntu_Authentication_logan".Ubuntu_Authentication_logan
+		typetext windowsKey,upArrow
+		typetext SandboxURL, returnkey
+	end if
+	if imagefound(imagename:"Utilities/Ubuntu_Launch_Chrome/Windows_Launcher",waitfor:0)
+		Log "I'm in Windows."
+		typetext windowskey, "r"
+		typetext BrowserVar&&SandboxURL, returnkey
+		WaitFor 12, "Utilities/Launch_and_Login/SalesForceLoginLogo"
+	end if
+end if

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		332,
+		251,
+		53,
+		18
+	],
+	"lastmodifieddate": 1649190852.1069999,
+	"createddate": 1649190715.789,
+	"name": "Email_Check/Email_Check",
+	"lastfounddate": 1649190718.302,
+	"ocrcapturestring": "Users",
+	"lastfoundlocation": [
+		332,
+		251,
+		53,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[28,14]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Email_Check.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					332,
+					251,
+					53,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Users"
+			}
+	]
+}

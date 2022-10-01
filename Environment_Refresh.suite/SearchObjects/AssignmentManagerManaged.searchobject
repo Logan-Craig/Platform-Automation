@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		238,
+		254,
+		317,
+		24
+	],
+	"lastmodifieddate": 1603905507.217,
+	"createddate": 1603905503.904,
+	"name": "AssignmentManagerManaged",
+	"lastfounddate": 1664461412.5479999,
+	"ocrcapturestring": "Assignment Manager (Managed)",
+	"lastfoundlocation": [
+		238,
+		286,
+		317,
+		24
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/AssignmentManagerManaged.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					238,
+					254,
+					317,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Assignment Manager (Managed)"
+			}
+	]
+}

@@ -1,0 +1,82 @@
+﻿//Universal Login_As script 1.0
+//Looks up a user and logs in as them
+//Lightning mode only
+
+//Navigate to setup
+
+repeat at least once until imagefound("Utilities/Login_As/Home_Icon")
+	click image:"Utilities/Login_As/Setup_Icon_Grey",waitfor:6
+	click image:"Utilities/Login_As/Setup_Icon_Blue",waitfor:3
+	wait 3
+end repeat
+
+//////////////////////////Update this name//////////////////////////////////////
+//Set the user's first and last name to search for them.
+set Login_As_Username to "Molly May"
+//////////////////////////////////////////////////////////////////////////////////
+
+if imagefound(image:"Utilities/Launch_and_Login/Allow",waitfor:2)
+	click foundimagelocation()
+end if
+waitfor 6, "Utilities/Login_As/SearchSetup"
+click foundimagelocation()
+typetext Login_As_Username
+
+
+
+//waits until only 1 user icon appears
+repeat until the number of items in everyimagelocation("Utilities/Login_As/User_Icon") = 1
+	wait 1
+	put "waiting 1"
+	if the number of items in everyimagelocation("Utilities/Login_As/User_Icon") = 0
+	then
+		put "No user icon found. Waiting."
+		wait 3
+	end if
+	if the repeatindex >12 
+		throw "Unable to find User_Icon"
+	end if
+end repeat
+
+
+repeat until everyimagelocation(readtext (topright of imagerectangle("Utilities/Login_As/User_Icon")),(bottomright of imagerectangle("Utilities/Login_As/User_Icon")+[250,0])) = Login_As_Username
+	wait 1	
+	if the repeatindex >15
+		throw "Unable to find login as user."
+	end if
+end repeat
+
+set the searchrectangle to [(topright of imagerectangle("Utilities/Login_As/User_Icon")+[0,-15]),(bottomright of imagerectangle("Utilities/Login_As/User_Icon")+[250,-9])]
+put readtext (topright of imagerectangle("Utilities/Login_As/User_Icon")),(bottomright of imagerectangle("Utilities/Login_As/User_Icon")+[250,0])
+
+
+//wait for the search in setup option that always seems to come after the user is found and bumps it down the list.
+waitfor 9, text:"in Setup",SearchRectangle:[TopRight of imagerectangle("Utilities/Login_As/User_Icon")+[0,-10],imagelocation("Utilities/Login_As/User_Icon")+[400,-75]]
+
+
+
+if imagefound(text:Login_As_Username,waitfor:4,searchrectangle:[TopRight of imagerectangle("Utilities/Login_As/User_Icon"),bottomright of imagerectangle("Utilities/Login_As/User_Icon")+[400,0]],validwords:"*")
+then
+	Click FoundImageLocation()
+else
+	Throw "Unable to find User specified:"&&Login_As_Username
+end if
+
+
+//This forces Eggy to wait for the links to load above the Login button before attempting to click
+repeat until imagefound(image:"Utilities/Login_As/LoginHistory",searchrectangle:[[0,(y of imagelocation("Utilities/Login_As/Login_Button")-100)],imagelocation("Utilities/Login_As/Login_Button")+[x of remotescreensize(),0]])
+	wait 1
+	if the repeatindex > 10
+		throw "Unable to find Login button for user:"&&Login_As_Username
+	end if
+end repeat
+
+click "Utilities/Login_As/Login_Button"
+waitfor 14, "Utilities/Login_As/Loggedinas"
+
+
+
+
+
+
+

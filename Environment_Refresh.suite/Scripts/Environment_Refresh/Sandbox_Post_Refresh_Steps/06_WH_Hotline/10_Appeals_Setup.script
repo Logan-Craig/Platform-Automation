@@ -1,0 +1,23 @@
+﻿Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Remote Site Settings" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/RemoteSiteSettings"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/10_Appeals_setup/AllRemoteSiteSettings_SelectedView"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/10_Appeals_setup/AllRemoteSiteSettings_DesiredView"
+set ViewName to "All Remote Site Settings"
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".ChangeMyView SelectedView, DesiredView, ViewName
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/10_Appeals_setup/AppealsEndpoint_Link"
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:9
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/10_Appeals_setup/RemoteSiteURL"
+typetext controlkey,"a"
+typetext "https://staging-api.va.gov"
+
+
+//where is Views Appeal Custom Metadata Type
+

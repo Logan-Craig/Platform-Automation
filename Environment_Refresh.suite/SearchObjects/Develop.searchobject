@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		16,
+		510,
+		68,
+		15
+	],
+	"lastmodifieddate": 1604099275.961,
+	"createddate": 1604099270.151,
+	"name": "Develop",
+	"lastfounddate": 1606151772.346,
+	"ocrcapturestring": "Develop",
+	"lastfoundlocation": [
+		16,
+		310,
+		68,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/1_Delete_Production/Develop.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					16,
+					510,
+					68,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Develop"
+			}
+	]
+}

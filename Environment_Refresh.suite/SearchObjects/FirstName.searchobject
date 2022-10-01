@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		362,
+		437,
+		57,
+		11
+	],
+	"lastmodifieddate": 1646236841.224,
+	"createddate": 1638378952.783,
+	"name": "FirstName",
+	"lastfounddate": 1638379168.829,
+	"ocrcapturestring": "First Name",
+	"lastfoundlocation": [
+		362,
+		437,
+		57,
+		11
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[28,5]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "FirstName.png",
+				"connectionname": "SUT4 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					362,
+					437,
+					57,
+					11
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "First Name"
+			}
+	]
+}

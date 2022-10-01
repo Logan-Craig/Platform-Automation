@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		198,
+		620,
+		175,
+		13
+	],
+	"lastmodifieddate": 1646236835.5700002,
+	"createddate": 1627327260.467,
+	"name": "Scratch_Logan/Scratch_Muhammad/NewUser_AssociatedVAMedicalCenter",
+	"lastfounddate": 1627327409.109,
+	"ocrcapturestring": "Associated VA Medical Center",
+	"lastfoundlocation": [
+		198,
+		820,
+		175,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[87,6]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Muhammad/NewUser_AssociatedVAMedicalCenter.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					198,
+					620,
+					175,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Associated VA Medical Center"
+			}
+	]
+}

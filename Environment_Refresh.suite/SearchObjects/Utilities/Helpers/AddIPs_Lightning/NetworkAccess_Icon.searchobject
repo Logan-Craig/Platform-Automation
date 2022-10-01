@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1629324832.4450002,
+	"lastfoundlocation": [
+		279,
+		225,
+		46,
+		46
+	],
+	"originalcapturelocation": [
+		279,
+		225,
+		46,
+		46
+	],
+	"createddate": 1629324832.4450002,
+	"lastfounddate": 1632159274.29,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[23,23]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Helpers/AddIPs_Lightning/NetworkAccess_Icon.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"capturerect": [
+					279,
+					225,
+					46,
+					46
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.106"
+			}
+	],
+	"name": "Utilities/Helpers/AddIPs_Lightning/NetworkAccess_Icon"
+}

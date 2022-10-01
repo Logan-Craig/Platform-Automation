@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1612307052.6690001,
+	"lastfoundlocation": [
+		17,
+		561,
+		68,
+		68
+	],
+	"originalcapturelocation": [
+		17,
+		561,
+		68,
+		68
+	],
+	"createddate": 1612307052.6690001,
+	"lastfounddate": 1612370071.4530001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[39,35]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Ubuntu_Launch_Chrome/Chrome_Shortcut.png",
+				"connectionname": "Local Linux",
+				"type": 1,
+				"capturerect": [
+					17,
+					561,
+					68,
+					68
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.1.101"
+			}
+	],
+	"name": "Utilities/Ubuntu_Launch_Chrome/Chrome_Shortcut"
+}

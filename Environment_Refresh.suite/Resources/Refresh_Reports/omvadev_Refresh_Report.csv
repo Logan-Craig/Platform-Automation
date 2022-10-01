@@ -1,0 +1,48 @@
+
+Checking for Environment Custom Setting
+Production Custom Setting found and deleted.
+
+
+******************************************************************************************
+Sandbox Post-Refresh: Friday, May 27, 2022, 02:29:33
+Salesforce site domain name:, omvadev-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, omvadev-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://omvadev-vacommunity.cs132.force.com/survey
+
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--omvadev.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--omvadev.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--omvadev.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: omvadev-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://omvadev-vacommunity.cs132.force.com/helpdesk
+
+
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--omvadev.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--omvadev.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--omvadev.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://omvadev-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va--c.na107.visual.force.com
+Case Task e2excel Sandbox Refresh Site URL updated to: https://va--omvadev-c.cs132.visual.force.com
+E2Excel Sandbox Refresh Site URL found to be: https://va--e2ex.na107.visual.force.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--omvadev--e2ex.cs132.visual.force.com
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--omvadev.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--omvadev--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--omvadev.my.salesforce.com
+
+Test run End: Friday, May 27, 2022 02:36:39
+

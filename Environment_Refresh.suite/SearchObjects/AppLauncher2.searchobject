@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		915,
+		146,
+		194,
+		14
+	],
+	"lastmodifieddate": 1603822409.8889999,
+	"createddate": 1603822346.395,
+	"name": "AppLauncher2",
+	"lastfounddate": 1664461153.9200001,
+	"ocrcapturestring": "!'6 Switch to Lightning Experience",
+	"lastfoundlocation": [
+		904,
+		178,
+		194,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/AppLauncher2.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					915,
+					146,
+					194,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "!'6 Switch to Lightning Experience"
+			}
+	]
+}

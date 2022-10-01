@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		43,
+		314,
+		211,
+		16
+	],
+	"lastmodifieddate": 1646236835.441,
+	"createddate": 1645041197.4819999,
+	"name": "Scratch_Logan/Scratch_Madhavi/ProceedsAccountableBalance",
+	"lastfounddate": 1645041201.4119999,
+	"ocrcapturestring": "Proceeds Accountable Balance",
+	"lastfoundlocation": [
+		43,
+		314,
+		211,
+		16
+	],
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[114,8]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/Scratch_Madhavi/ProceedsAccountableBalance.png",
+				"connectionname": "75A_Prceeds.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/75A_Prceeds.png",
+				"capturerect": [
+					43,
+					314,
+					211,
+					16
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Proceeds Accountable Balance"
+			}
+	]
+}

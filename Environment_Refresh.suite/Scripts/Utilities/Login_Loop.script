@@ -1,0 +1,130 @@
+﻿params SandboxCredentials//:{Password:"EggyPassword1!", Sandbox:"empwrdtc", Username:"eggplant@b3groupinc.com", VID:""}
+
+log SandboxCredentials
+
+//Retrieves login credentials
+Log "Sandbox Name:"&&SandboxCredentials's Sandbox 
+if SandboxCredentials's VID = "" 
+then 
+	Log "No VID provided for"&&SandboxCredentials's Sandbox 
+else
+	Log "Sandbox VID:"&&SandboxCredentials's VID	
+end if
+Log "Sandbox Username:"&&SandboxCredentials's Username
+Log "Sandbox Password:"&&SandboxCredentials's Password
+
+//Sets the username to match the sandbox
+set the suitevariables.SandboxName to SandboxCredentials's Sandbox
+set MyUserName to SandboxCredentials's Username&"."&SandboxName
+set MyPassword to SandboxCredentials's Password
+set VID to SandboxCredentials's VID
+put "https://va--"&SandboxName&".my.salesforce.com" into the suitevariables.SandboxURL
+Log SandboxName
+Log MyUserName
+Log SandboxURL
+
+
+//Set the Mode variable that you wish this script to run in (Classic/Lightning).
+set SandboxMode to "Classic"
+//set SandboxMode to "Lightning"
+
+
+//Login
+//waits for the text to appear
+WaitFor 30, "Utilities/Launch_and_Login/LogIntoSandbox"
+
+
+//Enter MyUsername and Password
+Click {Image:"Utilities/Launch_and_Login/Username", WaitFor:1}
+TypeText MyUsername, tabKey, MyPassword
+
+Click "Utilities/Launch_and_Login/LogIntoSandbox"
+
+if imagefound(imagename:"Utilities/Launch_and_Login/FailedLogin", waitfor:1)
+then
+	throw "Login failed."
+end if
+
+//Checks for first time login google password pop-up
+if imagefound(imagename:"Utilities/Launch_and_Login/SavePassword", waitfor:2)
+then
+	click "Utilities/Launch_and_Login/Never"
+end if
+
+//Checks for verification code message
+typetext controlKey,"l"
+//click imagename:"Utilities/Launch_and_Login/URL", waitfor:6
+typetext controlKey, "c"
+if "EmailVerificationFinish" is in RemoteClipboard()
+then
+	Log "Verification code needed for login."
+	Click "Utilities/Launch_and_Login/VerificationCode"
+	if VID = ""
+	then
+		Ask password "Please input the VID for this login." with "" title "VID Needed" message "This must be the first login of this user on this machine for this module. Please check the email for this user and input the VID below."
+		put it into VID
+		Log VID
+	end if
+	typetext VID
+	click "Utilities/Launch_and_Login/Verify"
+end if
+
+//Checks for Register Your Mobile Phone message
+if imagefound(imagename:"Utilities/Launch_and_Login/IDontWanttoRegisterMyPhone",waitfor:3)
+then
+	Log "Register Phone popup found. Skipping."
+	click FoundImageLocation()
+end if
+
+//Checks for Show Notifications popup
+if imageFound(imageName:"Utilities/Launch_and_Login/ShowNotifications",waitfor:3)
+	Log "Show Notifications popup found. Allowing."
+	click "Utilities/Launch_and_Login/Allow"
+end if
+
+//Checks for "density" popup
+if ImageFound(imageName:"Utilities/Launch_and_Login/RefreshNow", waitFor:3)
+	Log "Change Density popup found, refreshing page."
+	click FoundImageLocation()	
+end if
+
+//Checks which mode you are in
+//since the browser buttons are OS-dependent I need a different way of getting here. Ctrl+l is the hotkey, but I'm worried about losing the wait.
+typetext controlKey,"l"
+//click imagename:"Utilities/Launch_and_Login/URL", waitfor:6
+typetext controlKey, "c"
+log RemoteClipboard()
+if "lightning" is in RemoteClipboard()
+then
+	Log "Sandbox is in Lightning Mode."
+	Set FoundMode to "lightning"
+else
+	log "Sandbox is in Classic Mode."
+	Set FoundMode to "Classic"
+end if
+
+Log "Script requires: "&SandboxMode&" Mode."
+
+//Changes Mode if needed
+if FoundMode = SandboxMode
+then
+	Log "No environment change needed."
+else
+	if SandboxMode = "Lightning"
+	then
+		Wait 3
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar"
+		Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+		Log "Mode switched to Lightning."
+		Wait 3
+	end if
+	if SandboxMode = "Classic"
+	then
+		Wait 3
+		Click ImageName:"Utilities/Launch_and_Login/AvatarLightning"
+		wait 3
+		click "Utilities/Launch_and_Login/SwitchtoSalesforceClassic"
+		Log "Mode switched to Classic."
+		Wait 3
+	end if
+end if

@@ -1,0 +1,16 @@
+﻿//Clear Cache
+typetext windowskey, "r"
+typetext "Chrome", returnkey
+waitfor 9,text:"Search Google"
+typetext Controlkey,shiftkey,deleteKey
+set the searchrectangle to [[375,300],[900,775]]
+if not imagefound(text:"All time",waitfor:0)
+	click text:"Time range",waitfor:5, hotspot:[125,0]
+	click text:"All time"
+end if
+click text:"Clear data"
+repeat until the remoteclipboard does not contain "clearBrowserData"
+	typetext controlkey,"l","c"
+	if the repeatindex >12 then throw "Something went wrong."
+end repeat
+typetext controlkey, "w"

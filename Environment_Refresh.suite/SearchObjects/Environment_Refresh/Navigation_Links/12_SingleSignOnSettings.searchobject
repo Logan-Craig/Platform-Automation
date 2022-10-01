@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1607034716.908,
+	"ocrcapturestring": "□ Security Controls Single Sign-On Settings",
+	"originalcapturelocation": [
+		16,
+		350,
+		172,
+		37
+	],
+	"createddate": 1607034716.908,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_69",
+					"HotSpot": "[57,28]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Navigation_Links/12_SingleSignOnSettings.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					16,
+					350,
+					172,
+					37
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Security Controls Single Sign-On Settings"
+			}
+	],
+	"name": "Environment_Refresh/Navigation_Links/12_SingleSignOnSettings"
+}

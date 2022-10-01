@@ -1,0 +1,34 @@
+﻿Log "Executing Update System Administrator profile."
+
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Profiles" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Profiles"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/RST", waitfor:12
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/View_All_Profiles_Selected"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/View_AllProfiles" 
+set ViewName to "All Profiles"
+set MakeMyView = "False"
+
+//set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/test_ProfileName_new"
+//set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/test_ProfileName_new"
+//set ViewName to "Test"
+//set MakeMyView = "True"
+
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SystemAdministrator"
+waitfor 8, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SystemAdministratorHeader"
+typetext controlkey,endkey
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SessionSettings",waitfor: 6
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:6
+waitfor 8, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SessionTimesOutAfter", waitfor:6
+typetext "24"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"

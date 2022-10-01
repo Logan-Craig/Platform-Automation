@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		36,
+		731,
+		102,
+		15
+	],
+	"lastmodifieddate": 1604005225.4060001,
+	"createddate": 1604005222.2290001,
+	"name": "SecurityControls2",
+	"lastfounddate": 1646936073.763,
+	"ocrcapturestring": "Security Controls",
+	"lastfoundlocation": [
+		36,
+		351,
+		102,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/SecurityControls.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					36,
+					731,
+					102,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Security Controls"
+			}
+	]
+}

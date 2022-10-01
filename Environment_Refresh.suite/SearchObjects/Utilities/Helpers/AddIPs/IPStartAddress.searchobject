@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		363,
+		513,
+		95,
+		13
+	],
+	"lastmodifieddate": 1613157121.346,
+	"createddate": 1613157121.346,
+	"name": "Utilities/Helpers/AddIPs/IPStartAddress",
+	"lastfounddate": 1613510179.9660001,
+	"ocrcapturestring": "IP Start Address",
+	"lastfoundlocation": [
+		363,
+		513,
+		95,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,5]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Helpers/AddIPs/IPStartAddress.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					363,
+					513,
+					95,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "IP Start Address"
+			}
+	]
+}

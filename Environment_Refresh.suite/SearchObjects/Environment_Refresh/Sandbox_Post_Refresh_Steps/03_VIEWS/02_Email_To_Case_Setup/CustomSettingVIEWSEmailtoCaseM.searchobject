@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		238,
+		243,
+		301,
+		35
+	],
+	"lastmodifieddate": 1614014478.5650001,
+	"createddate": 1614014478.5650001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/CustomSettingVIEWSEmailtoCaseM",
+	"lastfounddate": 1655761362.618,
+	"ocrcapturestring": "Custom Setting VIEWS Email to Case Mapping",
+	"lastfoundlocation": [
+		238,
+		275,
+		301,
+		35
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[150,17]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/CustomSettingVIEWSEmailtoCaseM.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					238,
+					243,
+					301,
+					35
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Custom Setting VIEWS Email to Case Mapping"
+			}
+	]
+}

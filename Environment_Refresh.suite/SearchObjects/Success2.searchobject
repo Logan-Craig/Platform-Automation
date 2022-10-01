@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604422101.2719998,
+	"ocrcapturestring": "Success",
+	"originalcapturelocation": [
+		562,
+		711,
+		41,
+		12
+	],
+	"createddate": 1604421321.2639999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Success2.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					562,
+					711,
+					41,
+					12
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Success"
+			}
+	],
+	"name": "Success2"
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		396,
+		124,
+		82,
+		16
+	],
+	"lastmodifieddate": 1616797728.2880001,
+	"createddate": 1616792791.549,
+	"name": "SearchSetup",
+	"lastfounddate": 1616793978.4159999,
+	"ocrcapturestring": "Search Setup",
+	"lastfoundlocation": [
+		404,
+		124,
+		82,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[41,6]",
+					"Tolerance": "_42",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "SearchSetup.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					396,
+					124,
+					82,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Search Setup"
+			}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		954,
+		289,
+		70,
+		15
+	],
+	"lastmodifieddate": 1646236835.497,
+	"createddate": 1620084876.6389999,
+	"name": "Scratch_Logan/Scratch_Alex/EmailEdit_Label",
+	"lastfounddate": 1620087843.286,
+	"ocrcapturestring": "Email (Edit",
+	"lastfoundlocation": [
+		992,
+		289,
+		65,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/EmailEdit_Label.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					954,
+					289,
+					70,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Email (Edi"
+			}
+	]
+}

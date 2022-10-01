@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1603822011.7410002,
+	"ocrcapturestring": "+ ▼",
+	"originalcapturelocation": [
+		1140,
+		191,
+		81,
+		26
+	],
+	"createddate": 1603821370.5479999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/Exam/AdditionalTabs.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1140,
+					191,
+					81,
+					26
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "+ ▼"
+			}
+	],
+	"name": "AdditionalTabs"
+}

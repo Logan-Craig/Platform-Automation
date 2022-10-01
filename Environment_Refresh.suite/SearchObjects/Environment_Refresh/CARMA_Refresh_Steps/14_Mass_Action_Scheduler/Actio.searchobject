@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		31,
+		389,
+		44,
+		16
+	],
+	"lastmodifieddate": 1613605345.6529999,
+	"createddate": 1613605336.29,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/Actio",
+	"lastfounddate": 1645041233.7059999,
+	"ocrcapturestring": "Actio",
+	"lastfoundlocation": [
+		1138,
+		790,
+		44,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[50,26]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/Action.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					31,
+					389,
+					44,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Actio"
+			}
+	]
+}

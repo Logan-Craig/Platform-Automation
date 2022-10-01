@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		111,
+		332,
+		198,
+		14
+	],
+	"lastmodifieddate": 1614095323.9619999,
+	"createddate": 1614095323.9619999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/CARMABenefit_Mass_Action",
+	"lastfounddate": 1614964945.3569999,
+	"ocrcapturestring": "CARMA Benefit End Mass Action",
+	"lastfoundlocation": [
+		111,
+		332,
+		198,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[99,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/CARMABenefit_Mass_Action.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					111,
+					332,
+					198,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "CARMA Benefit End Mass Action"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		321,
+		554,
+		229,
+		14
+	],
+	"lastmodifieddate": 1617196958.227,
+	"createddate": 1617196958.227,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ACaseHasBeenAssignedtoExecWriter",
+	"lastfounddate": 1617196994.779,
+	"ocrcapturestring": "A Case Has Been Assigned tc Exec Writer",
+	"lastfoundlocation": [
+		321,
+		554,
+		229,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[114,7]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ACaseHasBeenAssignedtoExecWriter.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					321,
+					554,
+					229,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "A Case Has Been Assigned tc Exec Writer"
+			}
+	]
+}

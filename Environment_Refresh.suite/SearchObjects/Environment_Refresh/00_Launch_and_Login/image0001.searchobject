@@ -1,0 +1,33 @@
+{
+	"lastmodifieddate": 1608649938.5409999,
+	"originalcapturelocation": [
+		551,
+		521,
+		70,
+		30
+	],
+	"createddate": 1608649630.7079999,
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,15]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"type": 1,
+				"capturerect": [
+					551,
+					521,
+					70,
+					30
+				],
+				"name": "Environment_Refresh/00_Launch_and_Login/image0001.png"
+			}
+	],
+	"name": "Environment_Refresh/00_Launch_and_Login/image0001"
+}

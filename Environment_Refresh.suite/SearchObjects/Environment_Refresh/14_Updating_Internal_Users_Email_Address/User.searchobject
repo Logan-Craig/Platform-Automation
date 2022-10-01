@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		15,
+		690,
+		25,
+		12
+	],
+	"lastmodifieddate": 1604344458.125,
+	"createddate": 1604344458.125,
+	"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/User",
+	"lastfounddate": 1619107464.0310001,
+	"ocrcapturestring": "User",
+	"lastfoundlocation": [
+		15,
+		690,
+		25,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/User.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					15,
+					690,
+					25,
+					12
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "User"
+			}
+	]
+}

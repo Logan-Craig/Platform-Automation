@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		17,
+		491,
+		124,
+		75
+	],
+	"lastmodifieddate": 1604429372.5450001,
+	"createddate": 1604429358.131,
+	"name": "Objects2",
+	"lastfounddate": 1605921452.1599998,
+	"ocrcapturestring": "□ Create Apps Custom Labels Objects",
+	"lastfoundlocation": [
+		17,
+		293,
+		124,
+		75
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/7_Assignment_Manager/Objects.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					17,
+					491,
+					124,
+					75
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "□ Create Apps Custom Labels Objects"
+			}
+	]
+}

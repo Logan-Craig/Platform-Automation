@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1158,
+		118,
+		23,
+		24
+	],
+	"lastmodifieddate": 1614142287.0050001,
+	"createddate": 1614142287.0050001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/Setup_Lightning",
+	"lastfounddate": 1620138850.319,
+	"ocrcapturestring": "$",
+	"lastfoundlocation": [
+		1158,
+		118,
+		23,
+		24
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[11,12]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/Setup_Lightning.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					1158,
+					118,
+					23,
+					24
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "$"
+			}
+	]
+}

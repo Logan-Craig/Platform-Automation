@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		24,
+		533,
+		91,
+		17
+	],
+	"lastmodifieddate": 1646236835.5450001,
+	"createddate": 1619726126.7719998,
+	"name": "Scratch_Logan/Kevin/GrandTotals",
+	"lastfounddate": 1619726353.1859999,
+	"ocrcapturestring": "Grand Totals",
+	"lastfoundlocation": [
+		24,
+		533,
+		91,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[45,8]",
+					"Tolerance": "_36",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Kevin/GrandTotals.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					24,
+					533,
+					91,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Grand Totals"
+			}
+	]
+}

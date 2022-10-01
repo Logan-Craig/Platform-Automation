@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		538,
+		353,
+		204,
+		28
+	],
+	"lastmodifieddate": 1608330690.2779999,
+	"createddate": 1608330690.2779999,
+	"name": "Environment_Refresh/00_Launch_and_Login/VerifyYourIdentity",
+	"lastfounddate": 1609357206.599,
+	"ocrcapturestring": "Verify Your Identity",
+	"lastfoundlocation": [
+		538,
+		353,
+		204,
+		28
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[102,14]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/VerifyYourIdentity.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					538,
+					353,
+					204,
+					28
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Verify Your Identity"
+			}
+	]
+}

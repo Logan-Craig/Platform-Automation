@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		309,
+		724,
+		143,
+		15
+	],
+	"lastmodifieddate": 1646936735.2589998,
+	"createddate": 1646936735.2589998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAAdmin",
+	"lastfounddate": 1664462344.9790001,
+	"ocrcapturestring": "Login Flow for VBA Admin",
+	"lastfoundlocation": [
+		309,
+		769,
+		143,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for VBA Admin",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[91,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					309,
+					724,
+					143,
+					15
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAAdmin.png"
+			}
+	]
+}

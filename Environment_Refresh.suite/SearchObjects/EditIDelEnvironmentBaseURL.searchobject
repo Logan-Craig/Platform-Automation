@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		249,
+		461,
+		206,
+		15
+	],
+	"lastmodifieddate": 1603983535.6370001,
+	"createddate": 1603983466.2579999,
+	"name": "EditIDelEnvironmentBaseURL",
+	"lastfounddate": 1624815230.9159999,
+	"ocrcapturestring": "Edit I Del Environment Base URL",
+	"lastfoundlocation": [
+		249,
+		476,
+		206,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/EditIDelEnvironmentBaseURL.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					249,
+					461,
+					206,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit I Del Environment Base URL"
+			}
+	]
+}

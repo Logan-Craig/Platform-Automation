@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		30,
+		328,
+		69,
+		16
+	],
+	"lastmodifieddate": 1613605216.671,
+	"createddate": 1613605216.671,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/ActionType",
+	"lastfounddate": 1614116866.812,
+	"ocrcapturestring": "Action Type",
+	"lastfoundlocation": [
+		30,
+		328,
+		69,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[39,25]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/ActionType.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					30,
+					328,
+					69,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Action Type"
+			}
+	]
+}

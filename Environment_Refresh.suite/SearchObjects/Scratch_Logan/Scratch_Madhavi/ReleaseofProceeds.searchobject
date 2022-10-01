@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		43,
+		268,
+		302,
+		22
+	],
+	"lastmodifieddate": 1646236835.5440001,
+	"createddate": 1645038565.8270001,
+	"name": "Scratch_Logan/Scratch_Madhavi/ReleaseofProceeds",
+	"lastfounddate": 1645039748.5770001,
+	"ocrcapturestring": "Release of Proceeds - Payment of Proceeds",
+	"lastfoundlocation": [
+		43,
+		268,
+		302,
+		22
+	],
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[151,11]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/Scratch_Madhavi/ReleaseofProceeds.png",
+				"connectionname": "75A_Prceeds.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/75A_Prceeds.png",
+				"capturerect": [
+					43,
+					268,
+					302,
+					22
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Release of Proceeds - Payment of Proceeds"
+			}
+	]
+}

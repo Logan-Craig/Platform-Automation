@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		390,
+		139,
+		27
+	],
+	"lastmodifieddate": 1603989912.5089998,
+	"createddate": 1603989909.4000001,
+	"name": "ApplicationEnhancementRequest",
+	"lastfounddate": 1664461519.4359999,
+	"ocrcapturestring": "Application Enhancement Request",
+	"lastfoundlocation": [
+		332,
+		423,
+		139,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/9_Custom_Links/ApplicationEnhancementRequest.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					390,
+					139,
+					27
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Application Enhancement Request"
+			}
+	]
+}

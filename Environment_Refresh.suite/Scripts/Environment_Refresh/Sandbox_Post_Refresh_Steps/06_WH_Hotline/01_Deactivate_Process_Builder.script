@@ -1,0 +1,43 @@
+﻿//video UAT 4 Post Refresh Steps WHH @ timestamp 5:45 discusses 06_WH_Hotline though it is referred to as step 15.
+
+Log "Executing CARMA Vet360 - Address Validation (Named Credential)."
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Process Builder", "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/ProcessBuilder","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/ProcessBuilder"
+
+
+repeat until imagefound ("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/New")
+	wait 3
+	Log "Waiting for Process Builder to load."
+	if repeatindex()>25 then Throw "Process Builder failed to load after about 75 seconds."
+end repeat
+
+repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/CFContactUtility") 
+	waitfor 24, "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Scroll_Focus"
+	click foundimagelocation()
+	typetext endkey
+	wait 1
+	if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/CFContactUtility", waitfor:2) 
+	then 
+		exit repeat
+	end if
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Next_Page"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Scroll_Focus_Logo"
+	typetext homekey
+end repeat
+click FoundImageLocation()
+
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Deactivate",waitfor: 3)
+then
+	click FoundImageLocation()
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Confirm"
+	Log "CF Contact Utility process deactivated."
+else
+	if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Activate")
+	then
+		Log "Activate image found. Process has already been Deactivated."
+	end if
+end if
+
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/BackToSetup"
+
+

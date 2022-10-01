@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		248,
+		475,
+		83,
+		17
+	],
+	"lastmodifieddate": 1616087267.9429998,
+	"createddate": 1613686733.4679999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/EggplantView",
+	"lastfounddate": 1613687353.5409999,
+	"ocrcapturestring": "Eggpl antView",
+	"lastfoundlocation": [
+		248,
+		475,
+		83,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[41,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/EggplantView.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					248,
+					475,
+					83,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Eggpl antView"
+			}
+	]
+}

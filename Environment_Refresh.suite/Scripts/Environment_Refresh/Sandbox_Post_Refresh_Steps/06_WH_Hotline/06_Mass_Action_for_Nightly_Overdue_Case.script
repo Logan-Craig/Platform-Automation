@@ -1,0 +1,105 @@
+﻿//Video timestamp: 19:00
+
+typetext homeKey
+Log "Executing Mass Action Scheduler for Nightly Overdue Case Update Job."
+//Switching to lightning mode
+click "Environment_Refresh/Generic_Refresh_Steps/01_Delete_Production/Avatar"
+Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+Log "Mode switched to Lightning."
+wait 3
+waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher"
+Log "Switched to Lightning mode."
+typetext controlkey,"l"
+typetext controlkey,"c"
+if remoteclipboard() contains "Mass_Action_Configuration"
+else
+	click FoundImageLocation()
+	typetext "Mass Action Scheduler",returnKey
+end if
+
+
+//Checking to see if the action has been created already
+Log "Checking to see if the action has been created already."
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/RecentlyViewed", waitfor:  8
+click {imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/All", searchrectangle: [(foundimagelocation()+[-150,50]),(FoundImageLocation()+[-25,85])]}
+
+
+//use imagecollection
+if not imagefound (image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/06_Mass_Action_for_Nightly_Overdue_Case/WHVAHotlineSetOverdueCheckboxonCases",waitfor:9)
+then
+	Log "Creating new WH Hotline Mass Action"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/New",waitfor: 6
+	//Data Input for Mass Action Scheduler
+	Log "Data Input for Mass Action Scheduler"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurationN",waitfor:12
+	typetext controlkey,"a",backspace
+	typetext "WHVA Hotline - Set Overdue Checkbox on Cases with missed Target SLA"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurationUniqueN"
+	typetext controlkey,"a",backspace, 
+	typetext "WHVA_Hotline_-_Set_Overdue_Checkbox_on_Cases_with_missed_Target_SLA"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Description" 
+	typetext controlkey,"a",backspace, 
+	SetRemoteClipboard "When WHVA Hotline Cases are not completed ( do not have status of Closed or Closed Duplicate) prior to their SLA target date, the Overdue Checkbox will be marked as true."
+	typetext controlkey,"v"
+	assert imagefound(imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/None", searchrectangle: [topleft of ImageRectangle ("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental")+[10,10],(topleft of ImageRectangle ("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental")+[80,50])])
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	Log "Data Input for Choose Source"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SourceType"
+	typetext "SOQL"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SOQLQuery"
+	SetRemoteClipboard <<
+SELECT Id, VIEWS_SLA_End_Date_DateTime__c, Status, WH_VA_Hotline_Overdue__c, 
+RecordTypeId, RecordType.DeveloperName, Days_Until_SLA_Overdue__c 
+FROM Case 
+WHERE VIEWS_SLA_End_Date_DateTime__c < TODAY 
+AND WH_VA_Hotline_Overdue__c = false
+AND Status != 'Closed' 
+AND Status != 'Closed - Duplicate'
+AND RecordType.DeveloperName IN ('VIEWS_WH_OCR_Complaint_Cases', 'VIEWS_Tier_1_Complaint',
+'Hotline_Restricted_Case', 'WH_VA_Hotline_Technical_Support', 'WH_VA_Hotline_Service_Recovery')
+>>
+	typetext controlkey,"v"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Action Information
+	Log "Data Input for Action Information"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/ActionType"
+	typetext"Process Builders and Flows"&returnKey
+	assert imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/ActionType", waitfor:12)
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Action",waitfor:6,searchrectangle:[(foundimagelocation()+[-50,25]),(FoundImageLocation()+[50,65])]
+	typetext "PB WHVA Set Case As Overdue if SLA Target Date Passed"&&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Field Mappings
+	Log "Data Input for Field Mappings"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SOURCEFIELD"
+	typetext "ID"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data input for Schedule Information
+	Log "Data input for Schedule Information"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Scheduled"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/1200AM"
+	typetext tabKey&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SUNDAY"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	typetext pagedown
+	wait 1
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/06_Mass_Action_for_Nightly_Overdue_Case/ScheduleDay"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	typetext controlkey,endKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/JANUARY"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	//Saving
+	Log "Saving Mass Action"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Save"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/CARMABenefitEndMassAction", waitfor:8
+	
+else 
+	Log "WH Hotline Mass Action found to already exist. Skipping actions."
+end if
+
+//Switching back to Classic mode
+Click ImageName:"Utilities/Launch_and_Login/AvatarLightning"
+click "Utilities/Launch_and_Login/SwitchtoSalesforceClassic"
+Log "Mode switched to Classic."

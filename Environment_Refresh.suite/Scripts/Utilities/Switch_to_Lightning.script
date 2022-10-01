@@ -1,0 +1,18 @@
+﻿
+
+//switches to Lightning if not already there
+
+if imagefound(image:"Utilities/Launch_and_Login/AvatarLightning",waitfor:0)
+then
+	Put "Already in Lightning mode."
+else
+	if imagefound(image:"Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite",waitfor:0)
+	then
+		Put "Switching to Lightning mode."
+		click foundimagelocation()
+	else
+		throw "Unable to determine if page is in Lightning mode or Classic mode."
+	end if
+	waitfor 14, image:"Utilities/Launch_and_Login/AvatarLightning",waitfor:0
+end if
+

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		255,
+		726,
+		171,
+		46
+	],
+	"lastmodifieddate": 1603902654.132,
+	"createddate": 1603902636.3039999,
+	"name": "LogoutPageSettingsLogoutURL",
+	"lastfounddate": 1664461373.8610001,
+	"ocrcapturestring": "Logout Page Settings Logout URL",
+	"lastfoundlocation": [
+		255,
+		807,
+		171,
+		46
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/6_SessionSettings/LogoutPageSettingsLogoutURL.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					255,
+					726,
+					171,
+					46
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Logout Page Settings Logout URL"
+			}
+	]
+}

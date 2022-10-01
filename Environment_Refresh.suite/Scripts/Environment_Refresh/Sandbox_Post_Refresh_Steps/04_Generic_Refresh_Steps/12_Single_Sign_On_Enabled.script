@@ -1,0 +1,42 @@
+﻿//Get back to Home Page
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Single Sign-On Settings" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/SingleSignOnSettings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SingleSignOnSettings"
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"12_Single_Sign_On_Enabled"& return to file Refresh_Report
+write "Updating single sign on Configurations" & return to file Refresh_Report
+
+//The checkbox should be UNCHECKED!
+//if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/DisableUnchecked", waitFor:3)
+//then
+//	Log "Login with Salesforce credentials is ENABLED. Proceeding to disable..."
+//	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/Edit"
+//	Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/DisableUnchecked", waitfor:3
+//	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/Save"
+//end if
+//if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/SSOI_Enabled", waitFor:3)
+//then
+//	Log "Login with Salesforce credentials is DISABLED (This is good)."
+//else
+//	throw "Something went wrong when attempting to disable login with Salesforce credentials."
+//end if
+
+put the MultipleFoundAction into MultipleFoundState
+set the MultipleFoundAction to UseFirstLocation
+//The checkbox should be UNCHECKED!
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/SSOI_Enabled", waitFor:3)
+then
+	Log "Diable login with Salesforce credentials is CHECKED. Proceeding to UNCHECK..."
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/Edit"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/DisableChecked"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/Save"
+	write "Disable login with Salesforce credentials checkbox has been UNCHECKED."& return to file Refresh_Report
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SingleSignOnSettings"
+assert that imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/DisableUnchecked",waitfor:12)
+wait 3 //Chelsea wanted it to chill here for a second.
+Log <<Disable login with Salesforce credentials" is UNCHECKED.>>
+set the MultipleFoundAction to MultipleFoundState
+
+close file Refresh_Report

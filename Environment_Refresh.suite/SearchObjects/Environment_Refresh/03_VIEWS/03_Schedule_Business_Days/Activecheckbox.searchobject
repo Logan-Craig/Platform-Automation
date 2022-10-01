@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		441,
+		563,
+		19,
+		19
+	],
+	"lastmodifieddate": 1613677584.2690001,
+	"createddate": 1613677584.2690001,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/Activecheckbox",
+	"lastfounddate": 1655754517.1700001,
+	"ocrcapturestring": "s",
+	"lastfoundlocation": [
+		441,
+		595,
+		19,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[6,13]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/Activecheckbox.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					441,
+					563,
+					19,
+					19
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "s"
+			}
+	]
+}

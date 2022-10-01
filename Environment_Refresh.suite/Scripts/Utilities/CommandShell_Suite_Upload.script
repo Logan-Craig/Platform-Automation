@@ -1,0 +1,30 @@
+﻿
+//This token changes periodically
+set Token to "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTYxNzA0MjgsImlhdCI6MTYyNDYzNDQyOCwic3ViIjoiZGMyZTZmZWUtZGQzMi00MTdiLTliNWEtNDg5NTAwMzgyMTUzIiwiaXNzIjoiZWdncGxhbnRhaS5jb20iLCJ1c2VyIjp7InVzZXJuYW1lIjoibG9nYW4uY3JhaWdAYjNncm91cGluYy5jb20iLCJyb2xlIjoiQWRtaW4iLCJpc19zZXJ2aWNlIjpmYWxzZX0sImdyb3VwcyI6W3siaWQiOjEsIm5hbWUiOiJsb2dhbi5jcmFpZ0BiM2dyb3VwaW5jLmNvbSJ9LHsiaWQiOjIsIm5hbWUiOiJUZWFtUGlja2xlcyJ9LHsiaWQiOjIwLCJuYW1lIjoiUFRFTVMtQ0NDIn1dLCJyYW5kIjo3MTU5MzEyNjk1NjMwNH0.WDsWAloW-sD92IYOv_g7yuwA0KyVXp8QvBs-i1vCqSU"
+
+//address of DAI
+set address to <<-a 18.253.36.232:8000>>
+
+//Navigate to the suite you want to upload.
+ask folder "Which Suite?" 
+put it into filepath
+//hardcode the filepath
+//put "D:/Logan Records/Career/B3 Group/DTC/Liberty/Test-Automation-VIEWS-FOM/FOM.suite/" into filepath
+
+//this can be anything, even previously used version numbers, just not the current one, and not special characters or spaces!
+ask "What version?"
+put it into version
+//preformatted version number based on date and time.
+//put FormattedTime("[month name]-[day]-[year]--[hr24]-[mi]-[se]", the time) into version
+
+//If an error occurs it will show here. If no Error then the file will be blank.
+set output to "C:\Tmp\output.txt"
+
+//Location of the Accelerator followed by all commands in a string as dicated by the Accelerator
+put <<"D:\Logan Records\Career\B3 Group\DTC\DTC Documents\Accelerators\suite2dai.exe">> && token && quote& filepath& quote && version && address into Command
+put command  &" > " & output & " 2>&1" into CommandExecute //the 2>&1 sends both the STDOUT and STDERR to the output file
+log CommandExecute //To make sure everything looks correct
+
+//execution
+shell "c:\windows\system32\cmd.exe",<< /c ">>& CommandExecute &<<">>
+

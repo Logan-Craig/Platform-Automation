@@ -1,0 +1,87 @@
+﻿//This step asks the user to remove all IP restrictions from the following profiles:
+// 1.	VA Admin Plus User Mgmt 
+// 2.	VA Base Platform
+// 3.	VA Platform
+// 4.	VA Sales Cloud
+// 5.	VA Service Cloud
+// 6.	VA Service Cloud Basic
+// 7.	VBA Admin
+// 8.	VBA Platform
+// 9.	Views Congressional Letters
+// 10.	Views Nintex
+
+Log "Executing Remove IP Restrictions."
+
+
+//Profiles to have their IP Range restrictions removed
+if the suitevariables.SandboxName = "reg"
+then
+	//REG
+	set ProfileList to [
+		"VA Admin Plus User Mgmt",
+		"VA Base Platform",
+		"VA Platform",
+		"VA Sales Cloud",
+		"VA Service Cloud",
+		"VA Service Cloud Basic",
+		"VBA Admin",
+		"VBA Platform",
+		"Views Congressional Letters",
+		"Views Nintex"
+	]
+	
+else if the suitevariables.SandboxName is not equal to "reg"
+then
+	//dev or sit
+	set ProfileList to [
+		"VA Admin Plus User Mgmt"
+	]
+end if
+
+
+
+if the suitevariables.SandboxName is not equal to "staging"
+then	
+	
+	Log "Removing Login IP Restrictions for:"&&the suitevariables.SandboxName,"Profiles:"&&ProfileList
+	
+	Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Profiles", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Profiles", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Profiles"
+	
+	//Checks for the view, if it doesn't find it then it creates it and then selects it. All because some of the Profile names are too big for the dumb columns.
+	
+	//As above, this view is really just "All Profiles" with only the default "Profile Name" column so that the names aren't cut off. This is easier than messing with column widths. We could add a filter of "v", but its pretty easy to just click the "v" letter filter.
+	
+	set SelectedView ="Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/EggplantView_Selected"
+	set DesiredView = "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/EggplantView_Desired"
+	Set ViewName = "EggplantView"
+	set MakeMyView = true
+	//set FilterBoolean
+	
+	Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean
+	
+	
+	repeat for each ProfileNameVar of ProfileList
+		//Currently, all Profile Names that need their restrictions removed start with "V". If another one shows up code changes will be needed. Probably need to add 1 or more filters to the custom view.
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/UVW",waitfor:6
+		Log "Removing IP Restrictions for:"&&ProfileNameVar
+		click text:ProfileNameVar,waitfor:15
+		waitfor 30,"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/ProfileOverview"
+		typetext endKey
+		wait 1
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/LoginIPRanges"
+		waitfor 12, "Utilities/Helpers/AddIPs/AddIPRanges"//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		repeat until the number of items in everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete",waitfor:6) =0
+			//repeat until not ImageFound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete",waitfor:6)
+			click item 1 of everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete",waitfor:6)
+			Log "Deleting an IP Restriction range."
+			click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Delete", waitfor:6
+			if not imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/DeleteIPWarningPopUp",waitfor:5) 
+			else
+				click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/DeleteConfirm"
+			end if
+		end repeat
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Profiles_Blue"
+	end repeat
+else
+	Log "Sandbox name is Staging. Skipping Remove_IP_Resctrictions step."
+end if

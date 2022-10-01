@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1035,
+		216,
+		112,
+		15
+	],
+	"lastmodifieddate": 1624816402.2779999,
+	"createddate": 1624816402.2779999,
+	"name": "Utilities/Developer_Console/DeveloperConsole",
+	"lastfounddate": 1664461711.9320002,
+	"ocrcapturestring": "Developer Console",
+	"lastfoundlocation": [
+		1035,
+		248,
+		112,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[50,8]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/DeveloperConsole.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1035,
+					216,
+					112,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Developer Console"
+			}
+	]
+}

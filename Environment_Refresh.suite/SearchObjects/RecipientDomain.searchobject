@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604081782.224,
+	"ocrcapturestring": "Recipient Domain",
+	"originalcapturelocation": [
+		325,
+		360,
+		101,
+		13
+	],
+	"createddate": 1604081604.1339998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/RecipientDomainDF.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					325,
+					360,
+					101,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Recipient Domain"
+			}
+	],
+	"name": "RecipientDomain"
+}

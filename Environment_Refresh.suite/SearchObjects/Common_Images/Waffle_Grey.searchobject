@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		20,
+		160,
+		29,
+		30
+	],
+	"lastmodifieddate": 1619106518.9130001,
+	"createddate": 1619106518.9130001,
+	"name": "Common_Images/Waffle_Grey",
+	"lastfounddate": 1642533948.036,
+	"ocrcapturestring": "• • • • • • • • •",
+	"lastfoundlocation": [
+		20,
+		163,
+		29,
+		30
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[14,15]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Waffle_Grey.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					20,
+					160,
+					29,
+					30
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "• • • • • • • • •"
+			}
+	]
+}

@@ -1,0 +1,6 @@
+﻿
+set the remoteclipboard to "https://vaempl--cabsdev2.my.salesforce.com/"
+typetext controlkey, "l",  "v", returnkey
+
+
+typetext "logan.craig@vaempl.gov.cabsdev2"

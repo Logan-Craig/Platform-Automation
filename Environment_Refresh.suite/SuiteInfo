@@ -1,0 +1,6 @@
+﻿{EPVersionNumber = 2207212021; RunPreScript = NO; Schedules = ({ChangeCount = 18; Name = "Schedule 1"; Path = "~~schedule~~Schedule 1"; Schedule = ({Connection = SUT2; Num = 4; Parameters = test; Run = YES; Script = "Utilities/Launch_and_Login.script"; ScriptDepth = 0; }, {Connection = SUT2; Num = 10; Parameters = ""; Run = YES; Script = "Utilities/Clear_Cache.script"; }); }); ScriptMetaData = {}; SuiteEncodedTextKey = "Ljp,JQMq7<kpE/TT"; SuiteVariables = "{
+ MyUsername:@\"logan.craig@va.gov.cirtsdev\",
+ SandboxName:@\"cirtsdev\",
+ SandboxURL:@\"https://va--cirtsdev.my.salesforce.com\",
+ SitesCommunityURL:@\"cirtsdev-vacommunity.cs132.force.com\"
+}"; Tags = (Buttons, "Navigation_Links"); helpedSuitesInfo = (); helperSuitesInfo = ({filePath = "./Helper.suite"; }); }

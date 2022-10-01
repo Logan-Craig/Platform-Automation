@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		23,
+		159,
+		27,
+		27
+	],
+	"lastmodifieddate": 1614700762.279,
+	"createddate": 1614700581.9349999,
+	"name": "Utilities/Launch_and_Login/Waffle",
+	"lastfounddate": 1619106557.661,
+	"ocrcapturestring": "• • • • • • • • •",
+	"lastfoundlocation": [
+		22,
+		162,
+		27,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[15,16]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Waffle.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					23,
+					159,
+					27,
+					27
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "• • • • • • • • •"
+			}
+	]
+}

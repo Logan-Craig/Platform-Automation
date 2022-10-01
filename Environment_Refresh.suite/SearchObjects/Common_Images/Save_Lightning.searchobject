@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		571,
+		566,
+		38,
+		21
+	],
+	"lastmodifieddate": 1618805117.7579999,
+	"createddate": 1618805117.7579999,
+	"name": "Common_Images/Save_Lightning",
+	"lastfounddate": 1626119747.115,
+	"ocrcapturestring": "Save",
+	"lastfoundlocation": [
+		17,
+		258,
+		19,
+		10
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[19,10]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Save_Lightning.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					571,
+					566,
+					38,
+					21
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Save"
+			}
+	]
+}

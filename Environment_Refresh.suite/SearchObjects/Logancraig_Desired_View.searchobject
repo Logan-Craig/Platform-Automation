@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		282,
+		682,
+		71,
+		17
+	],
+	"lastmodifieddate": 1647188506.934,
+	"createddate": 1647188506.934,
+	"name": "Logancraig_Desired_View",
+	"lastfounddate": 1647188510.974,
+	"ocrcapturestring": "Logan, craig",
+	"lastfoundlocation": [
+		282,
+		682,
+		71,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Logancraig_Desired_View.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					282,
+					682,
+					71,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Logan, craig"
+			}
+	]
+}

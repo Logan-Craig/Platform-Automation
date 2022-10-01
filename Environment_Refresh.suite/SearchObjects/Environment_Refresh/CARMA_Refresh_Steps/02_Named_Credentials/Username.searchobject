@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		372,
+		619,
+		56,
+		12
+	],
+	"lastmodifieddate": 1612395567.977,
+	"createddate": 1612395567.977,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/02_Named_Credentials/Username",
+	"lastfounddate": 1614140159.3600001,
+	"ocrcapturestring": "Username",
+	"lastfoundlocation": [
+		372,
+		619,
+		56,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[97,8]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/02_Named_Credentials/Username.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					372,
+					619,
+					56,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Username"
+			}
+	]
+}

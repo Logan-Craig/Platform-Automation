@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		440,
+		661,
+		591,
+		16
+	],
+	"lastmodifieddate": 1614105665.0999999,
+	"createddate": 1614105574.0669999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/Ieanletter27fwur5l0oggdo1l4w2",
+	"lastfounddate": 1614105657.671,
+	"ocrcapturestring": "Iean_letter@27fwur5l0oggdo1l4w1fcrj5anaelg3373ojwxxtd7pomdfd7vr-2jwieaa.cs32 apex.sandbox.salesforce.",
+	"lastfoundlocation": [
+		440,
+		661,
+		591,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[111,11]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/Ieanletter27fwur5l0oggdo1l4w1f.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					440,
+					661,
+					591,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Iean_letter@27fwur5l0oggdo1l4w1fcrj5anaelg3373ojwxxtd7pomdfd7vr-2jwieaa.cs32 apex.sandbox.salesforce."
+			}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604093606.29,
+	"ocrcapturestring": "Single Sign-On Settings Save Cancel Delegated Authentication Disable login with Salesforce credentials Delegated Gateway URL QU Federated Single Sign-On Using SAML SAML Enabled □",
+	"originalcapturelocation": [
+		241,
+		235,
+		422,
+		246
+	],
+	"createddate": 1604092376.115,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "SingleSignOnSettingsSaveCancel.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					241,
+					235,
+					422,
+					246
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Single Sign-On Settings Save Cancel Delegated Authentication Disable login with Salesforce credentials Delegated Gateway URL QU Federated Single Sign-On Using SAML SAML Enabled □"
+			}
+	],
+	"name": "SingleSignOnSettingsSaveCancel"
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		500,
+		107,
+		17
+	],
+	"lastmodifieddate": 1604009713.4320002,
+	"createddate": 1604009700.7950001,
+	"name": "MetaDataEndPoint",
+	"lastfounddate": 1664461589.24,
+	"ocrcapturestring": "Meta Data EndPoint",
+	"lastfoundlocation": [
+		332,
+		532,
+		107,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/MetaDataEndPoint.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					500,
+					107,
+					17
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Meta Data EndPoint"
+			}
+	]
+}

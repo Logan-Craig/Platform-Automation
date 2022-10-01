@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		261,
+		507,
+		113,
+		16
+	],
+	"lastmodifieddate": 1613748801.8179998,
+	"createddate": 1613748801.8179998,
+	"name": "Utilities/Launch_and_Login/LogIntoSandbox",
+	"lastfounddate": 1635970891.9980001,
+	"ocrcapturestring": "Log In to Sandbox",
+	"lastfoundlocation": [
+		263,
+		591,
+		113,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Utilities/Launch_and_Login/LogIntoSandbox.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					261,
+					507,
+					113,
+					16
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Log In to Sandbox"
+			}
+	]
+}

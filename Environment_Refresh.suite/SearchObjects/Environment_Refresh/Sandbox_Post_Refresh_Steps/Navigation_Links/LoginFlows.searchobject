@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		36,
+		350,
+		103,
+		38
+	],
+	"lastmodifieddate": 1646935768.4879999,
+	"createddate": 1646935768.4879999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/LoginFlows",
+	"lastfounddate": 1664462309.881,
+	"ocrcapturestring": "Security Controls Login Flows",
+	"lastfoundlocation": [
+		36,
+		382,
+		103,
+		38
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[38,27]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/LoginFlows.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					36,
+					350,
+					103,
+					38
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Security Controls Login Flows"
+			}
+	]
+}

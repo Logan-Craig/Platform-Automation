@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		240,
+		244,
+		256,
+		26
+	],
+	"lastmodifieddate": 1647025068.7940001,
+	"createddate": 1645836664.125,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled/SingleSignOnSettings_Banner",
+	"lastfounddate": 1664461705.1919999,
+	"ocrcapturestring": "Single Sign-On Settings",
+	"lastfoundlocation": [
+		240,
+		276,
+		256,
+		26
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[128,13]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SingleSignOnSettings.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					240,
+					244,
+					256,
+					26
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Single Sign-On Settings"
+			}
+	]
+}

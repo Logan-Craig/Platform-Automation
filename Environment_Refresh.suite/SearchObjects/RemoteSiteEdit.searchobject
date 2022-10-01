@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604006135.2449999,
+	"ocrcapturestring": "Remote Site Edit",
+	"originalcapturelocation": [
+		251,
+		345,
+		116,
+		14
+	],
+	"createddate": 1604005978.3140001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/RemoteSiteEdit.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					345,
+					116,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Remote Site Edit"
+			}
+	],
+	"name": "RemoteSiteEdit"
+}

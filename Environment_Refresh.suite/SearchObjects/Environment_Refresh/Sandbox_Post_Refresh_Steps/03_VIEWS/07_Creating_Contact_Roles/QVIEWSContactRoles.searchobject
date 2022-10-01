@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		745,
+		639,
+		144,
+		16
+	],
+	"lastmodifieddate": 1617302006.6500001,
+	"createddate": 1614280739.1500001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/QVIEWSContactRoles",
+	"lastfounddate": 1617302026.138,
+	"ocrcapturestring": "Q VIEWS Contact Roles",
+	"lastfoundlocation": [
+		745,
+		705,
+		144,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[36,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/VIEWSContactRoles.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					745,
+					639,
+					144,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Q VIEWS Contact Roles"
+			}
+	]
+}

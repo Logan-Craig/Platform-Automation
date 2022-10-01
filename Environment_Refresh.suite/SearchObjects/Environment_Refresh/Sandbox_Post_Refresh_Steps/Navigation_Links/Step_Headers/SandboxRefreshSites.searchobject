@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		240,
+		244,
+		247,
+		21
+	],
+	"lastmodifieddate": 1647632492.0910001,
+	"createddate": 1647632492.0910001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SandboxRefreshSites",
+	"lastfounddate": 1647634217.3380001,
+	"ocrcapturestring": "Sandbox Refresh Sites",
+	"lastfoundlocation": [
+		240,
+		244,
+		247,
+		21
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[123,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SandboxRefreshSites.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					240,
+					244,
+					247,
+					21
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Sandbox Refresh Sites"
+			}
+	]
+}

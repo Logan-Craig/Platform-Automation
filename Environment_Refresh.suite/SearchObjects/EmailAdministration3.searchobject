@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604081158.4980001,
+	"ocrcapturestring": "Email Administration",
+	"originalcapturelocation": [
+		251,
+		300,
+		143,
+		14
+	],
+	"createddate": 1604081149.0510001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "EmailAdministration.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					300,
+					143,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Email Administration"
+			}
+	],
+	"name": "EmailAdministration3"
+}

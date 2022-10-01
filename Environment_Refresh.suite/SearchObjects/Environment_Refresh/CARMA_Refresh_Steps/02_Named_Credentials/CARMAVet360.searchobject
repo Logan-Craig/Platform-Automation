@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		468,
+		694,
+		86,
+		13
+	],
+	"lastmodifieddate": 1612395362.733,
+	"createddate": 1612395362.733,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/02_Named_Credentials/CARMAVet360",
+	"lastfounddate": 1614126758.302,
+	"ocrcapturestring": "CARMA Vet360",
+	"lastfoundlocation": [
+		468,
+		694,
+		86,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[42,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/02_Named_Credentials/CARMAVet360.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					468,
+					694,
+					86,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "CARMA Vet360"
+			}
+	]
+}

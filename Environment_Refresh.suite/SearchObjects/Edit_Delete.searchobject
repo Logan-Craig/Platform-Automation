@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		244,
+		426,
+		68,
+		14
+	],
+	"lastmodifieddate": 1603841618.839,
+	"createddate": 1603841601.4660001,
+	"name": "Edit_Delete",
+	"lastfounddate": 1664461087.862,
+	"ocrcapturestring": "Edit I Delete",
+	"lastfoundlocation": [
+		244,
+		459,
+		68,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/Edit_Delete.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					244,
+					426,
+					68,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit I Delete"
+			}
+	]
+}

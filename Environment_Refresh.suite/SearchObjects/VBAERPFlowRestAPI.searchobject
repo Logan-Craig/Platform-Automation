@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		538,
+		134,
+		14
+	],
+	"lastmodifieddate": 1604009713.473,
+	"createddate": 1604009703.431,
+	"name": "VBAERPFlowRestAPI",
+	"lastfounddate": 1664461599.6199999,
+	"ocrcapturestring": "VBA ERP FlowRestAPI",
+	"lastfoundlocation": [
+		332,
+		570,
+		134,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/VBAERPFlowRestAPI.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					538,
+					134,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "VBA ERP FlowRestAPI"
+			}
+	]
+}

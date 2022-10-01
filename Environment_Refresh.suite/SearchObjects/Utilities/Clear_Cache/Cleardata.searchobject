@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		789,
+		719,
+		91,
+		32
+	],
+	"lastmodifieddate": 1620952273.3179998,
+	"createddate": 1620951946.0700002,
+	"name": "Utilities/Clear_Cache/Cleardata",
+	"lastfounddate": 1620951948.848,
+	"ocrcapturestring": "Clear data",
+	"lastfoundlocation": [
+		789,
+		719,
+		91,
+		32
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[45,16]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Clear_Cache/Cleardata.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					789,
+					719,
+					91,
+					32
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Clear data"
+			}
+	]
+}

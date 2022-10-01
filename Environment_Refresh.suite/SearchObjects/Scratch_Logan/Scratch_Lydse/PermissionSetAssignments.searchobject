@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		317,
+		283,
+		141,
+		15
+	],
+	"lastmodifieddate": 1646236835.598,
+	"createddate": 1617821085.198,
+	"name": "Scratch_Logan/Scratch_Lydse/PermissionSetAssignments",
+	"lastfounddate": 1617824700.197,
+	"ocrcapturestring": "Permission Set Assignments",
+	"lastfoundlocation": [
+		317,
+		283,
+		141,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[70,7]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Lydse/PermissionSetAssignments.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					317,
+					283,
+					141,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Permission Set Assignments"
+			}
+	]
+}

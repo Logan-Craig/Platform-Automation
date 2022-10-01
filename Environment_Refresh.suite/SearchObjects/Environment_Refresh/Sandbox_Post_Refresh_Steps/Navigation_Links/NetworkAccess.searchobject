@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		52,
+		303,
+		94,
+		14
+	],
+	"lastmodifieddate": 1629324557.5180001,
+	"createddate": 1629324557.5180001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/NetworkAccess",
+	"lastfounddate": 1632157858.1500001,
+	"ocrcapturestring": "Network Access",
+	"lastfoundlocation": [
+		51,
+		303,
+		94,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/NetworkAccess.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					52,
+					303,
+					94,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Network Access"
+			}
+	]
+}

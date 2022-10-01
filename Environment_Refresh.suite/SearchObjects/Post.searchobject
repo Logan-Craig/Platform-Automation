@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604593808.9190001,
+	"ocrcapturestring": "O Post",
+	"originalcapturelocation": [
+		257,
+		322,
+		57,
+		26
+	],
+	"createddate": 1604593395.7410002,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "PracticeCSV/Post.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					257,
+					322,
+					57,
+					26
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "O Post"
+			}
+	],
+	"name": "Post"
+}

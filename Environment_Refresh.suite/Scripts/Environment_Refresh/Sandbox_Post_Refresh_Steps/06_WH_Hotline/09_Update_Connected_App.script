@@ -1,0 +1,40 @@
+﻿
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Log "Update Named Credential"
+typetext homeKey
+Log "Executing Mass Action Scheduler for Nightly Overdue Case Update Job."
+//Switching to lightning mode
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar"
+Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+Log "Mode switched to Lightning."
+wait 3
+waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher"
+Log "Switched to Lightning mode."
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Setup_Lightning"
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Setup_Lightning_Link", waitfor:6
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Quick_Find"
+typetext "App Manager"
+click the 2nd item of EveryImageLocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/App_Manager_SearchResult", waitfor:10)
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Scroll_bar"
+repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/PATSRIntegration")
+	typetext pagedown
+	wait 1
+end repeat
+
+//Finds the drop down for PATSR
+//this one is best
+set rectanglevar to ImageRectangle("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/PATSRIntegration")
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Drop_Down_Option_Arrow",searchrectangle:[topleft of rectanglevar,[x of RemoteScreenSize(),[(bottom of rectanglevar+y of (RemoteScreenSize()/100))]]]
+//clicks it
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Edit_Link"
+waitfor 9, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Have to upload some kind of file
+
+
+
+

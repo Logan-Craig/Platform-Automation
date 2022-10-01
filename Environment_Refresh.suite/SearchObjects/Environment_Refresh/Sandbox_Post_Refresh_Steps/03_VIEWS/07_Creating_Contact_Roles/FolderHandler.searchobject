@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		445,
+		453,
+		89,
+		14
+	],
+	"lastmodifieddate": 1617301559.0219998,
+	"createddate": 1614281023.9960001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/FolderHandler",
+	"lastfounddate": 1614365874.5250001,
+	"ocrcapturestring": "Folder Handler",
+	"lastfoundlocation": [
+		445,
+		453,
+		89,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[60,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/FolderHandler.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					445,
+					453,
+					89,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Folder Handler"
+			}
+	]
+}

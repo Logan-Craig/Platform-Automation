@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1621630777.013,
+	"lastfoundlocation": [
+		29,
+		745,
+		24,
+		24
+	],
+	"originalcapturelocation": [
+		29,
+		745,
+		24,
+		24
+	],
+	"createddate": 1621630777.013,
+	"lastfounddate": 1621633696.5120001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,12]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya/eMPWR/File_Icon.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"capturerect": [
+					29,
+					745,
+					24,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.105"
+			}
+	],
+	"name": "Scratch_Logan/Ramya/eMPWR/File_Icon"
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		282,
+		386,
+		97,
+		14
+	],
+	"lastmodifieddate": 1617114070.191,
+	"createddate": 1617114070.191,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsExecSec_SelectedView",
+	"lastfounddate": 1655761347.4619999,
+	"ocrcapturestring": "Views ExecSec",
+	"lastfoundlocation": [
+		282,
+		419,
+		97,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[48,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsExecSec_SelectedView.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					282,
+					386,
+					97,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Views ExecSec"
+			}
+	]
+}

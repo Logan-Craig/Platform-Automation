@@ -1,0 +1,35 @@
+﻿
+
+//Open the developer console
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+
+
+set UpdateScript to <<
+VIEWS_ScheduleBusinessDaystoDueDate schedBatch = new VIEWS_ScheduleBusinessDaystoDueDate();
+String schedule = '0 0 3 * * ?' ;
+System.schedule('Update Case Business Days to Due Date', schedule, schedBatch);
+
+VIEWS_ScheduleTaskBusinessDaystoDueDate schedTaskBatch = new VIEWS_ScheduleTaskBusinessDaystoDueDate();
+String taskSchedule = '0 0 3 * * ?' ;
+System.schedule('Update Task Business Days to Due Date', taskSchedule, schedTaskBatch);
+>>
+setremoteclipboard UpdateScript
+log UpdateScript
+
+
+
+Run "Utilities/Developer_Console_Apex".RunApex
+
+
+typetext altkey, F4
+
+
+
+
+
+
+
+
+
+
+

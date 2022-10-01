@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		392,
+		539,
+		86,
+		29
+	],
+	"lastmodifieddate": 1612461955.6570001,
+	"createddate": 1612461955.6570001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CARMATriggerManager",
+	"lastfounddate": 1612461957.0469999,
+	"ocrcapturestring": "CARMA Trigger Manager",
+	"lastfoundlocation": [
+		392,
+		539,
+		86,
+		29
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[43,14]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CARMATriggerManager.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					392,
+					539,
+					86,
+					29
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "CARMA Trigger Manager"
+			}
+	]
+}

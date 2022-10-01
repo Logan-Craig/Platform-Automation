@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		251,
+		450,
+		566,
+		14
+	],
+	"lastmodifieddate": 1604073746.2509999,
+	"createddate": 1604073720.658,
+	"name": "EmailRelaypartnersmtp",
+	"lastfounddate": 1619107437.8080001,
+	"ocrcapturestring": "Edit Del DartnersmtD.va.gov 25 Required",
+	"lastfoundlocation": [
+		251,
+		450,
+		566,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailRelaypartnersmtp.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					450,
+					566,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit Del DartnersmtD.va.gov 25 Required"
+			}
+	]
+}

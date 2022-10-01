@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604073818.1469998,
+	"ocrcapturestring": "Create Email Relay",
+	"originalcapturelocation": [
+		685,
+		400,
+		111,
+		22
+	],
+	"createddate": 1604073815.786,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/CreateEmailRelay.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					685,
+					400,
+					111,
+					22
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Create Email Relay"
+			}
+	],
+	"name": "CreateEmailRelay"
+}

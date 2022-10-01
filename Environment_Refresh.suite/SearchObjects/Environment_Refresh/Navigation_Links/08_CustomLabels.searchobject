@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1607034017.283,
+	"ocrcapturestring": "□ Create Custom Labels",
+	"originalcapturelocation": [
+		18,
+		349,
+		119,
+		36
+	],
+	"createddate": 1607034017.283,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_69",
+					"HotSpot": "[61,28]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Navigation_Links/08_CustomLabels.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					18,
+					349,
+					119,
+					36
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Create Custom Labels"
+			}
+	],
+	"name": "Environment_Refresh/Navigation_Links/08_CustomLabels"
+}

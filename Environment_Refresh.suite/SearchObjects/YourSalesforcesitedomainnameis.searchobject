@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		266,
+		647,
+		201,
+		15
+	],
+	"lastmodifieddate": 1603827696.944,
+	"createddate": 1603827694.474,
+	"name": "YourSalesforcesitedomainnameis",
+	"lastfounddate": 1664461149.7550001,
+	"ocrcapturestring": "Your Salesforce site domain name is",
+	"lastfoundlocation": [
+		266,
+		664,
+		201,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/YourSalesforcesitedomainnameis.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					266,
+					647,
+					201,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Your Salesforce site domain name is"
+			}
+	]
+}

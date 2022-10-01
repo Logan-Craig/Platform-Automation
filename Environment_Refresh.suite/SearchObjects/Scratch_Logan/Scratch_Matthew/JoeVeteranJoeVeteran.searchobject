@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		305,
+		440,
+		77,
+		37
+	],
+	"lastmodifieddate": 1646236835.4960001,
+	"createddate": 1619734385.4130001,
+	"name": "Scratch_Logan/Scratch_Matthew/JoeVeteranJoeVeteran",
+	"lastfounddate": 1619734388.4320002,
+	"ocrcapturestring": "Joe Veteran Joe Veteran",
+	"lastfoundlocation": [
+		305,
+		440,
+		77,
+		37
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[38,18]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Matthew/JoeVeteranJoeVeteran.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					305,
+					440,
+					77,
+					37
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Joe Veteran Joe Veteran"
+			}
+	]
+}

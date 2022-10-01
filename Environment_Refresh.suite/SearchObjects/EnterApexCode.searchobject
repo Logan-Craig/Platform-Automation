@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		262,
+		264,
+		117,
+		18
+	],
+	"lastmodifieddate": 1604415786.447,
+	"createddate": 1604415770.3309999,
+	"name": "EnterApexCode",
+	"lastfounddate": 1619107465.6170001,
+	"ocrcapturestring": "Enter Apex Code",
+	"lastfoundlocation": [
+		262,
+		265,
+		117,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/EnterApexCode.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					262,
+					264,
+					117,
+					18
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Enter Apex Code"
+			}
+	]
+}

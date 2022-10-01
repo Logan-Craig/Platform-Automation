@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		343,
+		369,
+		152,
+		13
+	],
+	"lastmodifieddate": 1646236835.6069999,
+	"createddate": 1617820662.211,
+	"name": "Scratch_Logan/Scratch_Lydse/AvailablePermissionSets",
+	"lastfounddate": 1617824702.4330001,
+	"ocrcapturestring": "Available Permission Sets",
+	"lastfoundlocation": [
+		343,
+		369,
+		152,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[76,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Lydse/AvailablePermissionSets.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					343,
+					369,
+					152,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Available Permission Sets"
+			}
+	]
+}

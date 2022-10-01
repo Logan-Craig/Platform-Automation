@@ -1,0 +1,19 @@
+﻿Log "Executing Update Network Access."
+
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Network Access" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/09_Network_Access/SecurityControlsNetworkAccess"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+
+Put [
+	["152.129.17.0","152.129.17.255"],
+	["152.129.18.0","152.129.18.255"]
+] into IP_List
+Log IP_List
+
+Set IPRangeDescription to "VA Network Users"
+Run "Utilities/Helpers".AddIps IP_List, IPRangeDescription

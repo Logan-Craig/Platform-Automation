@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604344341.858,
+	"ocrcapturestring": "Debug",
+	"originalcapturelocation": [
+		100,
+		66,
+		45,
+		15
+	],
+	"createddate": 1604344341.858,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/Debug.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					100,
+					66,
+					45,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Debug"
+			}
+	],
+	"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/Debug"
+}

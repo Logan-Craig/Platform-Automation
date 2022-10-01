@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		587,
+		670,
+		51,
+		26
+	],
+	"lastmodifieddate": 1604066098.8769999,
+	"createddate": 1604066094.161,
+	"name": "DeleteConfirm",
+	"lastfounddate": 1617397878.5019999,
+	"ocrcapturestring": "Delete",
+	"lastfoundlocation": [
+		587,
+		670,
+		51,
+		26
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/DeleteConfirm.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					587,
+					670,
+					51,
+					26
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Delete"
+			}
+	]
+}

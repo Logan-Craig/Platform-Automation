@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		231,
+		391,
+		30,
+		14
+	],
+	"lastmodifieddate": 1646236835.5710001,
+	"createddate": 1646163852.5580001,
+	"name": "Scratch_Logan/Scratch_Madhavi/Headers/Cost",
+	"lastfounddate": 1646165471.0139999,
+	"ocrcapturestring": "Cost",
+	"lastfoundlocation": [
+		231,
+		391,
+		30,
+		14
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Cost",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[17,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					231,
+					391,
+					30,
+					14
+				],
+				"name": "Scratch_Logan/Scratch_Madhavi/Headers/Cost.png"
+			}
+	]
+}

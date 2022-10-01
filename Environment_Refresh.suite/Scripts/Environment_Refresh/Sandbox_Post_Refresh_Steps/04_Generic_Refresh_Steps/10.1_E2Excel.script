@@ -1,0 +1,73 @@
+﻿Run "Helper_Utilities/Helpers".SwitchSandboxMode "Lightning"
+
+Run "Helper_Utilities/Navigate_To_Module".Navigate_To_Module "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/CONFIGURATION", "E2Excel Configuration", 
+
+set E2Excel_URL to "Helper_Utilities/Helpers".TripleClick ("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/Step4", "image")
+
+delete "Step 4: In Remote Site URL , type " from E2Excel_URL
+
+Log "E2Excel URL found to be:"&&E2Excel_URL
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"10.1_E2Excel"& return to file Refresh_Report
+write "Checking E2Excel URL from remote site settings against the E2Excel configuration tab." & return to file Refresh_Report
+write "E2Excel URL found to be:"&&E2Excel_URL & return to file Refresh_Report
+
+Run "Helper_Utilities/Helpers".SwitchSandboxMode "Classic"
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Remote Site Settings" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/RemoteSiteSettings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/RemoteSiteSettings","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/AllRemoteSiteSettings"
+
+
+//edits the E2Excel URL
+
+if not imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/SandboxRefreshSites",waitfor:1)
+then
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/ViewChange"
+	typetext "Sand",returnkey
+end if
+
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.0_Remote_Site_Settings/E2Excel", waitfor:3
+Click item 1 of everyimagelocation(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:3)
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.0_Remote_Site_Settings/RemoteSiteEdit",waitfor:7
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+
+if E2Excel_URL = RemoteClipboard()
+then
+	Log "E2Excel Sandbox Refresh Site URL already set to: "&RemoteClipboard()
+	write "E2Excel Sandbox Refresh Site URL already set to: " &RemoteClipboard()&return to file Refresh_Report
+	click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel")
+else
+	TypeText ControlKey,"a", DeleteKey
+	typetext  E2Excel_URL
+	write "E2Excel Sandbox Refresh Site URL found to be: " &RemoteClipboard()&return&"E2Excel Sandbox Refresh Site URL updated to: " &E2Excel_URL& return to file Refresh_Report
+	Log  "E2Excel Sandbox Refresh Site URL updated to: " & CustomSandBoxURL & "--e2ex" & CustomSitesCommunityURL & ".visual.force.com"
+	Click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save")
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3
+
+
+
+//edits the E2Ex_Custom URL
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/ViewChange"
+typetext "All", returnkey
+repeat at least once until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/E2ExCustom", waitfor: 1) 
+	click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/DEF")
+	if the repeatindex > 9 then throw "Unable to find E2Ex_Custom URL link."	
+end repeat
+
+click foundimagelocation()
+
+Click item 1 of everyimagelocation(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:3)
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.0_Remote_Site_Settings/RemoteSiteEdit",waitfor:7
+typetext controlkey, "a",DeleteKey
+set the remoteclipboard to "https://va--"&the suitevariables.SandboxName&"--c.visualforce.com"
+typetext controlkey, "v"
+write "Updated E2Ex_Custom URL to:"&&the RemoteClipboard&return to file Refresh_Report
+Click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save")
+
+Log "E2Excel configuration completed."
+close file Refresh_Report
+
+

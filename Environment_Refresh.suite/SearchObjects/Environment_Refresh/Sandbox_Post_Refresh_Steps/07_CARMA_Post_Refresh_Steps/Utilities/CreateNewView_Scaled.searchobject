@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		498,
+		291,
+		95,
+		15
+	],
+	"lastmodifieddate": 1616086444.5880001,
+	"createddate": 1616086444.5880001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_Scaled",
+	"lastfounddate": 1664461048.967,
+	"ocrcapturestring": "Create New View",
+	"lastfoundlocation": [
+		498,
+		323,
+		95,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_Scaled.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					498,
+					291,
+					95,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Create New View"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1157,
+		198,
+		10,
+		11
+	],
+	"lastmodifieddate": 1614280698.7490001,
+	"createddate": 1614280698.7490001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Plussign",
+	"lastfounddate": 1628106621.5339999,
+	"ocrcapturestring": "+",
+	"lastfoundlocation": [
+		1157,
+		198,
+		10,
+		11
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[5,8]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Plussign.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1157,
+					198,
+					10,
+					11
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "+"
+			}
+	]
+}

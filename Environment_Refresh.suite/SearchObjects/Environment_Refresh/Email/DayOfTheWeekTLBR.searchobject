@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		636,
+		229,
+		153,
+		17
+	],
+	"lastmodifieddate": 1608665683.451,
+	"createddate": 1608665683.451,
+	"name": "Environment_Refresh/Email/DayOfTheWeekTLBR",
+	"lastfounddate": 1617715811.8299999,
+	"ocrcapturestring": "noreply@salesforce.com",
+	"lastfoundlocation": [
+		264,
+		232,
+		153,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,32]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Email/DayOfTheWeekTLBR.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					636,
+					229,
+					153,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "noreply@salesforce.com"
+			}
+	]
+}

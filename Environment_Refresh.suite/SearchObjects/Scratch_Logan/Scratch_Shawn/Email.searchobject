@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		370,
+		218,
+		41,
+		15
+	],
+	"lastmodifieddate": 1646236835.6009998,
+	"createddate": 1642623564.158,
+	"name": "Scratch_Logan/Scratch_Shawn/Email",
+	"lastfounddate": 1643101767.9980001,
+	"ocrcapturestring": "Email",
+	"lastfoundlocation": [
+		370,
+		218,
+		41,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Email",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[19,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					370,
+					218,
+					41,
+					15
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Email.png"
+			}
+	]
+}

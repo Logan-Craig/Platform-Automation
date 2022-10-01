@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604426840.77,
+	"ocrcapturestring": "□ Email Delivery Settings Email Relays Email Domain Filters",
+	"originalcapturelocation": [
+		32,
+		719,
+		163,
+		58
+	],
+	"createddate": 1604082059.302,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailDomainFilters.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					32,
+					719,
+					163,
+					58
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "□ Email Delivery Settings Email Relays Email Domain Filters"
+			}
+	],
+	"name": "EmailDomainFilters2"
+}

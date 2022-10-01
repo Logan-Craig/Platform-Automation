@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		239,
+		352,
+		32,
+		10
+	],
+	"lastmodifieddate": 1603983327.0320001,
+	"createddate": 1603983325.306,
+	"name": "ViewChange",
+	"lastfounddate": 1664461670.05,
+	"ocrcapturestring": "View:",
+	"lastfoundlocation": [
+		239,
+		354,
+		32,
+		10
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/ViewChange.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					239,
+					352,
+					32,
+					10
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "View:"
+			}
+	]
+}

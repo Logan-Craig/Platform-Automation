@@ -1,0 +1,85 @@
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, August 15, 2022, 11:47:25
+Salesforce site domain name:, ofmdev4-vacommunity.cs133.force.com
+Assess Anything Endpoint URL updated to:, ofmdev4-vacommunity.cs133.force.com
+Public Site Assessment URL Configuration updated to:, https://ofmdev4-vacommunity.cs133.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--OFMDEV4.my.salesforce.com
+va.lightning.force.com updated to: va--OFMDEV4.lightning.force.com
+Logout URL updated to: https://va--OFMDEV4.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://ofmdev4-vacommunity.cs133.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--OFMDEV4.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--OFMDEV4.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--OFMDEV4.my.salesforce.com/
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL already updated to: https://va--OFMDEV4.my.salesforce.com
+Standard URL already updated to: https://va--OFMDEV4.my.salesforce.com/
+VA Base URL already updated to: va--OFMDEV4.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: ofmdev4-vacommunity.cs133.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://ofmdev4-vacommunity.cs133.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--OFMDEV4.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--OFMDEV4.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--OFMDEV4.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://ofmdev4-vacommunity.cs133.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Case Task e2excel Sandbox Refresh Site URL updated to: https://va--OFMDEV4-c.cs133.visual.force.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--OFMDEV4--e2ex.cs133.visual.force.com
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--OFMDEV4.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--OFMDEV4--c.cs133.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--OFMDEV4.my.salesforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Monday, August 15, 2022 12:24:23
+

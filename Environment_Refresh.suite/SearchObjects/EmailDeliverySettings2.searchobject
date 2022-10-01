@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604081294.256,
+	"ocrcapturestring": "Email Delivery Settings",
+	"originalcapturelocation": [
+		37,
+		532,
+		151,
+		15
+	],
+	"createddate": 1604081248.7509999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailDeliverySettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					37,
+					532,
+					151,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Email Delivery Settings"
+			}
+	],
+	"name": "EmailDeliverySettings2"
+}

@@ -1,0 +1,48 @@
+﻿
+//Schedule Batch Jobs 
+Log "Executing Schedule Batch Jobs"
+//CARMA_SyncCarmaContactWithContactJob
+Log "CARMA_SyncCarmaContactWithContactJob"
+//Open the developer console
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+set UpdateScript to <<
+System.schedule('CARMA Contact Sync Job', '0 0 * * * ?', new CARMA_SyncCarmaContactWithContactJob());
+>>
+setremoteclipboard UpdateScript
+log UpdateScript
+Run "Utilities/Developer_Console_Apex".RunApex
+
+//CARMA_ChangeEventTaskGenerationJob
+Log "CARMA_ChangeEventTaskGenerationJob"
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+set UpdateScript to <<
+System.schedule('CARMA Contact Change Task Generator Job', '0 30 * * * ?', new CARMA_ChangeEventTaskGenerationJob());
+>>
+setremoteclipboard UpdateScript
+log UpdateScript
+Run "Utilities/Developer_Console_Apex".RunApex
+
+//EDIPI Clean up
+Log "EDIPI Clean up"
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+set UpdateScript to <<
+System.schedule('CARMA Clean Edipi Batch', '0 0 0 * * ?', new CARMA_CleanEDIPIDataBatchSchedule());
+>>
+setremoteclipboard UpdateScript
+log UpdateScript
+Run "Utilities/Developer_Console_Apex".RunApex
+
+Log "Schedule Batch Jobs execution complete."
+
+
+Log "CARMA Sandbox Post-refresh Steps complete!!!!!!"
+
+
+
+
+
+
+
+
+
+

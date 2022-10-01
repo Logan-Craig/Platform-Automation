@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		238,
+		245,
+		669,
+		33
+	],
+	"lastmodifieddate": 1614200277.1919999,
+	"createddate": 1614200277.1919999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/emailAienVIEWSPossibleSecurity",
+	"lastfounddate": 1614282418.0669999,
+	"ocrcapturestring": "email Aien VIEWS Possible Security Threat has Been Reported via Checkbox on",
+	"lastfoundlocation": [
+		238,
+		245,
+		669,
+		33
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[334,16]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/emailAienVIEWSPossibleSecurity.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					238,
+					245,
+					669,
+					33
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "email Aien VIEWS Possible Security Threat has Been Reported via Checkbox on"
+			}
+	]
+}

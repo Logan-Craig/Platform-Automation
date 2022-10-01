@@ -1,0 +1,42 @@
+{
+	"lastmodifieddate": 1614202466.665,
+	"ocrcapturestring": "Operator",
+	"originalcapturelocation": [
+		522,
+		557,
+		54,
+		15
+	],
+	"createddate": 1614201780.895,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[33,29]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Operator.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					522,
+					557,
+					54,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Operator"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Operator"
+}

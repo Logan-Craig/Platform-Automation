@@ -1,0 +1,75 @@
+{
+	"originalcapturelocation": [
+		269,
+		886,
+		119,
+		15
+	],
+	"lastmodifieddate": 1614202398.1900001,
+	"createddate": 1614201543.2280002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AdditionalEmails",
+	"lastfounddate": 1614201545.8439999,
+	"ocrcapturestring": "Additional Emails",
+	"lastfoundlocation": [
+		269,
+		886,
+		119,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[117,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AdditionalEmails.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					269,
+					886,
+					119,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Additional Emails"
+			},
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_30",
+					"HotSpot": "[117,8]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Adaptive to Image"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AdditionalEmails.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					269,
+					886,
+					119,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Additional Emails"
+			}
+	]
+}

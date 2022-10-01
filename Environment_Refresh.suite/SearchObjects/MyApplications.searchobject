@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		707,
+		86,
+		14
+	],
+	"lastmodifieddate": 1604004038.6269999,
+	"createddate": 1604004033.5110002,
+	"name": "MyApplications",
+	"lastfounddate": 1664461564.53,
+	"ocrcapturestring": "My Applications",
+	"lastfoundlocation": [
+		332,
+		233,
+		86,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/9_Custom_Links/MyApplications.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					707,
+					86,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "My Applications"
+			}
+	]
+}

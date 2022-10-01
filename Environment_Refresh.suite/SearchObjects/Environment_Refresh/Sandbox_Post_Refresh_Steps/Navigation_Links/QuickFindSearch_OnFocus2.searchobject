@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1628102645.6500001,
+	"lastfoundlocation": [
+		23,
+		268,
+		145,
+		26
+	],
+	"originalcapturelocation": [
+		23,
+		236,
+		145,
+		26
+	],
+	"createddate": 1628102645.6500001,
+	"lastfounddate": 1664462308.812,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[72,13]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch_OnFocus.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"capturerect": [
+					23,
+					236,
+					145,
+					26
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.106"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch_OnFocus2"
+}

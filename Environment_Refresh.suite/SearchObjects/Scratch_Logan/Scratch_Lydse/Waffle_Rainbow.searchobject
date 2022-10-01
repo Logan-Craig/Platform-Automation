@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		23,
+		161,
+		27,
+		27
+	],
+	"lastmodifieddate": 1646236835.556,
+	"createddate": 1617824146.799,
+	"name": "Scratch_Logan/Scratch_Lydse/Waffle_Rainbow",
+	"lastfounddate": 1617824264.925,
+	"ocrcapturestring": "• • • • • • • • •",
+	"lastfoundlocation": [
+		23,
+		161,
+		27,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,13]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Lydse/Waffle_Rainbow.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					23,
+					161,
+					27,
+					27
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "• • • • • • • • •"
+			}
+	]
+}

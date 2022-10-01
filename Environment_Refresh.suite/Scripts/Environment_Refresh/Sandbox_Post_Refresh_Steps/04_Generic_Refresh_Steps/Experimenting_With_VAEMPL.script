@@ -1,0 +1,14 @@
+﻿//Run "Helper_Utilities/Helpers".SwitchSandboxMode "Classic"
+
+on Determine_Org
+	set Set_Sandbox to "va--"&the suitevariables.sandboxname
+	set Found_Sandbox to "Helper_Utilities/Helpers".Find_Sandbox_Name
+	if Found_Sandbox contains Set_Sandbox
+	then
+		Log "VA Org sandbox found."
+		Set SetupLocation to "VA-Main"
+	else
+		Log "Non VA-main org sandbox found: "&&the remoteclipboard
+		Set SetupLocation to "Other"
+	end if
+end Determine_Org

@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		444,
+		474,
+		41,
+		17
+	],
+	"lastmodifieddate": 1646236835.4400001,
+	"createddate": 1642623570.569,
+	"name": "Scratch_Logan/Scratch_Shawn/Purple",
+	"lastfounddate": 1643101772.493,
+	"ocrcapturestring": "Purple",
+	"lastfoundlocation": [
+		444,
+		474,
+		41,
+		17
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Purple",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					444,
+					474,
+					41,
+					17
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Purple.png"
+			}
+	]
+}

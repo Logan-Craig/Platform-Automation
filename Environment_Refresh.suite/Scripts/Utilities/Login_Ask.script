@@ -1,0 +1,127 @@
+﻿set SandboxMode to "Classic"
+//this launch and login asks the user for input
+//test commit
+beep
+Ask "What is your sandbox name?" with "" title "Sandbox to Refresh" message "For example: dtcsqa"
+if it = ""
+	throw "User did not input a sandbox name."
+end if
+replace " " in it with ""
+put it into the suitevariables.SandboxName
+put "chrome" into BrowserVar
+
+put "https://va--"&the suitevariables.SandboxName&".my.salesforce.com" into the suitevariables.SandboxURL
+
+Ask "What is the refresh Username for this sandbox? Please input the ENTIRE username WITH the sandbox name if you appended it." with "" title "Username" message "For example: eggplant@b3groupinc.com.dtcsqa"
+if it = ""
+	throw "User did not input a Username."
+end if
+set the suitevariables.MyUsername to it 
+Log "Username set to:"&&the suitevariables.MyUsername
+Ask Password "What is the refresh Password for this sandbox?" with "" title "Password"
+if it = ""
+	throw "User did not input a Password."
+end if
+Set MyPassword to it
+
+typetext windowskey, "r"
+typetext BrowserVar&&SandboxURL, returnkey
+repeat until imagefound("Utilities/Launch_and_Login/SalesForceLoginLogo")
+	wait 3
+	Log "Waiting for Salesforce login logo."&&the repeatindex
+	if the repeatindex > 10
+		throw "Login Logo did not show up after about 30 seconds."
+	end if
+end repeat
+
+
+//Login
+//waits for the text to appear
+WaitFor 6, "Utilities/Launch_and_Login/LogIntoSandbox"
+
+//Enter MyUsername and Password
+Click Image:"Utilities/Launch_and_Login/Username", Waitfor:3
+typetext controlKey,"a",deleteKey
+TypeText the suitevariables.MyUsername, tabKey
+TypeHiddenText MyPassword
+
+Click "Utilities/Launch_and_Login/LogIntoSandbox"
+
+if imagefound(imagename:"Utilities/Launch_and_Login/FailedLogin", waitfor:1)
+then
+	throw "Login failed."
+end if
+
+repeat until not imagefound("Utilities/Launch_and_Login/Username")
+	wait 3
+	put "Waiting for next page. Attempt #:"&&the repeatindex
+	if the repeatindex >5
+		throw "Login failed."
+	end if
+end repeat
+
+
+//Not entirely sure when this Salesforce Authenticator should be expected.
+if imagefound(image:"Utilities/Launch_and_Login/ConnectSalesforceAuthenticator",waitfor:3)
+	click "Utilities/Launch_and_Login/TwoWordPhrase"
+	Ask Password "Please enter your two-word phrase." with "" title "Two-word phrase"
+	Set the scriptlogging to Silent
+	typetext it
+	Set the scriptlogging to on
+	click "Utilities/Launch_and_Login/Connect"
+end if
+
+repeat until not imagefound(Image:"Utilities/Launch_and_Login/Connect", Waitfor:3)
+	put "Waiting for next page. Attempt #:"&&the repeatindex
+	if the repeatindex >5
+		throw "two-word phrase check failed."
+	end if
+end repeat
+
+
+
+//Checks for verification code message
+typetext controlKey,"l"
+typetext controlKey,"c"
+if "EmailVerificationFinish" is in RemoteClipboard()
+then
+	Log "Verification code needed for login."
+	Click "Utilities/Launch_and_Login/VerificationCode"
+	Ask password "Please input the VID for this login." with "" title "VID Needed" message "This must be the first login of this user on this machine for this module. Please check the email for this user and input the VID below."
+	put it into VID
+	Log "VID:"&&VID
+	typetext VID
+	click "Utilities/Launch_and_Login/Verify"
+end if
+
+
+//Checks for Register Your Mobile Phone message
+if imagefound(imagename:"Utilities/Launch_and_Login/IDontWanttoRegisterMyPhone",waitfor:2)
+then
+	Log "Register Phone popup found. Skipping."
+	click FoundImageLocation()
+end if
+
+
+
+//New phone pop up the SIs have been getting also //Check for Lightning Login
+if imagefound(image:"Utilities/Launch_and_Login/HatepasswordsSodowe",waitfor:8)
+then
+	click "Utilities/Launch_and_Login/NeverShowMeThisMessageAgain"
+end if
+
+
+//checks for Save Password dialogue
+if imagefound(image:"Utilities/Launch_and_Login/SavePassword",waitfor:0)
+	Log <<Save Password dialogue found. Clicking "Never".>>
+	click "Utilities/Launch_and_Login/Never"
+end if
+
+Log "Running additional pop-up message checks."
+Run "Helper_Utilities/Login_Checks_2Mid"
+Run "Helper_Utilities/Login_Checks_3Post"
+
+
+//Checks which mode you are in
+Run "Helper_Utilities/Switch_Modes" "Classic"
+

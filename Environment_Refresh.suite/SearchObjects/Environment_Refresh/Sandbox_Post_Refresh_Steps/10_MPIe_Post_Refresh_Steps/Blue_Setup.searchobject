@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		1020,
+		171,
+		24,
+		22
+	],
+	"lastmodifieddate": 1614702256.6820002,
+	"createddate": 1614702256.6820002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Blue_Setup",
+	"lastfounddate": 1620138866.7709999,
+	"ocrcapturestring": "XjX",
+	"lastfoundlocation": [
+		1028,
+		171,
+		24,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,11]",
+					"Tolerance": "_61",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Blue_Setup.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					1020,
+					171,
+					24,
+					22
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "XjX"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1028,
+		169,
+		26,
+		28
+	],
+	"lastmodifieddate": 1620138862.9320002,
+	"createddate": 1620138862.9320002,
+	"name": "Utilities/Login_As/Setup_Icon_Blue",
+	"lastfounddate": 1628091727.2460001,
+	"ocrcapturestring": "$",
+	"lastfoundlocation": [
+		1033,
+		203,
+		26,
+		28
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,14]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Login_As/Setup_Icon_Blue.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					1028,
+					169,
+					26,
+					28
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "$"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		44,
+		498,
+		82,
+		17
+	],
+	"lastmodifieddate": 1614125761.9990001,
+	"createddate": 1614125761.9990001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/06_Mass_Action_for_Nightly_Overdue_Case/ScheduleDay",
+	"lastfounddate": 1614125764.072,
+	"ocrcapturestring": "Schedule Day",
+	"lastfoundlocation": [
+		44,
+		498,
+		82,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[22,60]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/06_Mass_Action_for_Nightly_Overdue_Case/ScheduleDay.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					44,
+					498,
+					82,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Schedule Day"
+			}
+	]
+}

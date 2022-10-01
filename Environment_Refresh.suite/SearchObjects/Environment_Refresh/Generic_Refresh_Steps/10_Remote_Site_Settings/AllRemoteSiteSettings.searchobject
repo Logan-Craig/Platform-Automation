@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		282,
+		320,
+		160,
+		17
+	],
+	"lastmodifieddate": 1612392348.7940001,
+	"createddate": 1612391878.8639998,
+	"name": "Environment_Refresh/Generic_Refresh_Steps/10_Remote_Site_Settings/AllRemoteSiteSettings",
+	"lastfounddate": 1647633181.9650002,
+	"ocrcapturestring": "All Remote Site Settings v",
+	"lastfoundlocation": [
+		282,
+		320,
+		146,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/01_Remote_Site_Updates/AllRemoteSiteSettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					282,
+					320,
+					160,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "All Remote Site Settings"
+			}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1628106658.2869999,
+	"lastfoundlocation": [
+		297,
+		16,
+		7,
+		5
+	],
+	"originalcapturelocation": [
+		1191,
+		198,
+		14,
+		11
+	],
+	"createddate": 1628106658.2869999,
+	"lastfounddate": 1628107031.2119999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[7,5]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Tabs_DropDown.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"capturerect": [
+					1191,
+					198,
+					14,
+					11
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.106"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Tabs_DropDown"
+}

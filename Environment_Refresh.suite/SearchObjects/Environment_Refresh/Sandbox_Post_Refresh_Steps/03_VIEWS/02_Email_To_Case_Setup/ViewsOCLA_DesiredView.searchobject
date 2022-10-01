@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		282,
+		438,
+		80,
+		17
+	],
+	"lastmodifieddate": 1617117736.539,
+	"createddate": 1617117736.539,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsOCLA_DesiredView",
+	"lastfounddate": 1655761357.1399999,
+	"ocrcapturestring": "ViewsOCLA",
+	"lastfoundlocation": [
+		282,
+		471,
+		80,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[40,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ViewsOCLA_DesiredView.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					282,
+					438,
+					80,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ViewsOCLA"
+			}
+	]
+}

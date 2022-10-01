@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603821636.9780002,
+	"ocrcapturestring": "GENERAL CONFIGURATION",
+	"originalcapturelocation": [
+		287,
+		284,
+		174,
+		13
+	],
+	"createddate": 1603821635.3569999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/GENERALCONFIGURATION.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					287,
+					284,
+					174,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "GENERAL CONFIGURATION"
+			}
+	],
+	"name": "GENERALCONFIGURATION"
+}

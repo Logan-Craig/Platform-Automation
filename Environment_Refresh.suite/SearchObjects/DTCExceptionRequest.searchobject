@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		437,
+		132,
+		14
+	],
+	"lastmodifieddate": 1603997375.227,
+	"createddate": 1603997359.6459999,
+	"name": "DTCExceptionRequest",
+	"lastfounddate": 1664461535.6240001,
+	"ocrcapturestring": "PTC Exception Request",
+	"lastfoundlocation": [
+		332,
+		731,
+		132,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/9_Custom_Links/DTCExceptionRequest.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					437,
+					132,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "PTC Exception Request"
+			}
+	]
+}
