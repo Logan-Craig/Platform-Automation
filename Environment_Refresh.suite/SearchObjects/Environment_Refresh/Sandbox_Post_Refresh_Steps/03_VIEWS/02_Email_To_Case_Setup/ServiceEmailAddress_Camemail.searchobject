@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		301,
+		474,
+		119,
+		12
+	],
+	"lastmodifieddate": 1617142986.2309999,
+	"createddate": 1613761383.675,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ServiceEmailAddress_Camemail",
+	"lastfounddate": 1617140701.7839999,
+	"ocrcapturestring": "Service Email Address",
+	"lastfoundlocation": [
+		301,
+		474,
+		119,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[146,8]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ServiceEmailAddress_Casemail.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					301,
+					474,
+					119,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Service Email Address"
+			}
+	]
+}

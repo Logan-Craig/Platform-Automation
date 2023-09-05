@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		372,
+		618,
+		56,
+		12
+	],
+	"lastmodifieddate": 1614140155.1919999,
+	"createddate": 1614140155.1919999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09",
+	"lastfounddate": 1614140159.3410001,
+	"ocrcapturestring": "Username",
+	"lastfoundlocation": [
+		372,
+		618,
+		56,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[117,8]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Username_Field.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					372,
+					618,
+					56,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Username"
+			}
+	]
+}

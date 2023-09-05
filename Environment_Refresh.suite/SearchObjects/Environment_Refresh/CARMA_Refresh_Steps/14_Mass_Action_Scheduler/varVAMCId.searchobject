@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		653,
+		607,
+		70,
+		13
+	],
+	"lastmodifieddate": 1613622961.029,
+	"createddate": 1613622961.029,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/varVAMCId",
+	"lastfounddate": 1613676456.402,
+	"ocrcapturestring": "varVAMCId",
+	"lastfoundlocation": [
+		653,
+		607,
+		70,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[38,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/varVAMCId.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					653,
+					607,
+					70,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "varVAMCId"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		387,
+		408,
+		182,
+		17
+	],
+	"lastmodifieddate": 1684519745.026,
+	"createddate": 1684519745.026,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/03_Schedule_Email_Alerts/ExecuteAnonymousError",
+	"lastfounddate": 1684519751.7130001,
+	"ocrcapturestring": "Execute Anonymous Error",
+	"lastfoundlocation": [
+		387,
+		408,
+		182,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[91,8]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/03_Schedule_Email_Alerts/ExecuteAnonymousError.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					387,
+					408,
+					182,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Execute Anonymous Error"
+			}
+	]
+}

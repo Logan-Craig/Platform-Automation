@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		387,
+		408,
+		182,
+		17
+	],
+	"lastmodifieddate": 1604345476.283,
+	"createddate": 1604345476.283,
+	"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/ExecuteAnonymousError",
+	"lastfounddate": 1613624394.175,
+	"ocrcapturestring": "Execute Anonymous Error",
+	"lastfoundlocation": [
+		212,
+		401,
+		182,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/ExecuteAnonymousError.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					387,
+					408,
+					182,
+					17
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Execute Anonymous Error"
+			}
+	]
+}

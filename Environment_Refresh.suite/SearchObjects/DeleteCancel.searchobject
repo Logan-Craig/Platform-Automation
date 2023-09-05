@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		596,
+		556,
+		87,
+		12
+	],
+	"lastmodifieddate": 1603841666.4390001,
+	"createddate": 1603841660.4000001,
+	"name": "DeleteCancel",
+	"lastfounddate": 1624814743.6430001,
+	"ocrcapturestring": "Delete Cancel",
+	"lastfoundlocation": [
+		596,
+		676,
+		87,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/DeleteCancel.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					596,
+					556,
+					87,
+					12
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Delete Cancel"
+			}
+	]
+}

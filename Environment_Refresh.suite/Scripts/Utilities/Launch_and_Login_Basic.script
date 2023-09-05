@@ -1,0 +1,40 @@
+﻿Set Sandboxvar to "dtcsqa"
+Set Username to "Eggplant@b3groupinc.com"&"."&Sandboxvar
+Set Password to "EggyPassword1!"
+if Sandboxvar = "vha-gov--int"
+then 
+	set URLVar to "https://"&SandboxVar&".my.salesforce.com"
+else
+	set URLVar to "https://va--"&SandboxVar&".my.salesforce.com"
+end if
+log URLVar
+
+typetext windowskey, "r"
+typetext "Chrome" &&URLVar, returnkey
+WaitFor 12, "Utilities/Launch_and_Login/SalesForceLoginLogo"
+
+
+//Enter MyUsername and Password
+Click {Image:"Utilities/Launch_and_Login/Username", WaitFor:1}
+typetext controlkey, "a", deletekey
+TypeText Username, tabKey
+TypeText Password
+
+Click "Utilities/Launch_and_Login/LogIntoSandbox"
+
+(*
+//INT
+
+set URLVar to "vha-gov--int.my.salesforce.com"
+typetext windowskey, "r"
+typetext "Chrome" &&URLVar, returnkey
+//"vha-gov--int.my.salesforce.com"
+typetext"eggplant@b3groupinc.com.vha-gov--int"
+typetext tabkey
+typetext"EggyPassword1!"
+
+
+typetext"eggplant@b3groupinc.com.vha--int"
+typetext tabkey
+
+*)

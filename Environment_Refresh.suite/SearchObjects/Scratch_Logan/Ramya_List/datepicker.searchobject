@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		227,
+		684,
+		165,
+		22
+	],
+	"lastmodifieddate": 1646236835.566,
+	"createddate": 1616540359.0469999,
+	"name": "Scratch_Logan/Ramya_List/datepicker",
+	"lastfounddate": 1616540387.2909999,
+	"ocrcapturestring": "□",
+	"lastfoundlocation": [
+		227,
+		684,
+		165,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[51,10]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/datepicker.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					227,
+					684,
+					165,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□"
+			}
+	]
+}

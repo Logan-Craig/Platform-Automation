@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		562,
+		711,
+		43,
+		14
+	],
+	"lastmodifieddate": 1686665726.204,
+	"createddate": 1686665726.204,
+	"name": "Common_Images/Success_Apex",
+	"lastfounddate": 1692816503.983,
+	"ocrcapturestring": "Success",
+	"lastfoundlocation": [
+		562,
+		717,
+		43,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,7]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Success_Apex.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					562,
+					711,
+					43,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Success"
+			}
+	]
+}

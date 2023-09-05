@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		364,
+		466,
+		156,
+		17
+	],
+	"lastmodifieddate": 1615410355.8959999,
+	"createddate": 1615410355.8959999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/MPI_Setting_Name_WHHL",
+	"lastfounddate": 1615410609.1259999,
+	"ocrcapturestring": "MPI setting Name WHHL",
+	"lastfoundlocation": [
+		364,
+		466,
+		156,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[78,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/MPI_Setting_Name_WHHL.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					364,
+					466,
+					156,
+					17
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "MPI setting Name WHHL"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1035,
+		249,
+		181,
+		15
+	],
+	"lastmodifieddate": 1607977341.7639999,
+	"createddate": 1607977341.7639999,
+	"name": "Environment_Refresh/00_Launch_and_Login/SwitchtoLightningExperience",
+	"lastfounddate": 1618431207.8200002,
+	"ocrcapturestring": "Switch to Lightning Experience",
+	"lastfoundlocation": [
+		1035,
+		249,
+		181,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[79,6]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/SwitchtoLightningExperience.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1035,
+					249,
+					181,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Switch to Lightning Experience"
+			}
+	]
+}

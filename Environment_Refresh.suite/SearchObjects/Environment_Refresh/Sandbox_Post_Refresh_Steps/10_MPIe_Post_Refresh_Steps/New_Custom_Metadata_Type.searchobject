@@ -1,0 +1,40 @@
+{
+	"lastmodifieddate": 1615316958.9320002,
+	"ocrcapturestring": "New Custom Metadata Type",
+	"originalcapturelocation": [
+		582,
+		466,
+		138,
+		13
+	],
+	"createddate": 1615316958.9320002,
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_58",
+					"HotSpot": "[91,4]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/New_Custom_Metadata_Type.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					582,
+					466,
+					138,
+					13
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "New Custom Metadata Type"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/New_Custom_Metadata_Type"
+}

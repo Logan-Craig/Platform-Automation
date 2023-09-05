@@ -1,0 +1,21 @@
+﻿//Soujanya says we can skip this step.
+
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Connected Apps OAuth Usage" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Navigation_Links/ConnectedAppsOAutlUs"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+repeat until ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/05_Authorize_Workbench/Workbench")
+	if repeatindex()>12 then throw "Workbench Connected App not found."
+	typetext pageDown
+	wait 1	
+end repeat
+click {imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/05_Authorize_Workbench/Unblock", searchrectangle: [(foundimagelocation()+[745,-10]),(FoundImageLocation()+[800,20])]}
+
+
+
+
+

@@ -1,0 +1,31 @@
+﻿
+Log "Launching and Logging in"
+
+//Run "Helper_Utilities/SUT_Conditioner"
+//Run "Environment_Refresh/Login_Ask" "Lightning"
+Run "Utilities/Launch_Login_Optimized", "Classic"
+
+
+//Determine sandbox org
+//Run "Environment_Refresh/EnvRefresh_Helpers"
+Run "Environment_Refresh/EnvRefresh_Helpers".Document_Refresh_List the date&&the time&&"Beginning Generic Refresh steps for:"&&the suitevariables.SandboxName
+
+
+//Identify va-main vs other sandbox refresh steps
+if the suitevariables.VA_Main_Org =...
+	...True:Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/VA_Main_Post_Refresh"
+	...False:Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main_Post_Refresh"
+	else
+		Throw "Unable to identify if sandbox is VA Main or not."
+end if
+
+
+//Log "Checking to see if environment is INT or REG.","Eggplant user will be added if so."
+//Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/99_Create_Eggplant_User"
+Run "Environment_Refresh/EnvRefresh_Helpers".Document_Refresh_List the date&&the time&&"End of Generic Refresh steps for:"&&the suitevariables.SandboxName
+
+
+(*Log "Execution complete","Preparing email to:"&&the suitevariables.To_Var
+Run "Utilities/Email_Results"*)
+
+

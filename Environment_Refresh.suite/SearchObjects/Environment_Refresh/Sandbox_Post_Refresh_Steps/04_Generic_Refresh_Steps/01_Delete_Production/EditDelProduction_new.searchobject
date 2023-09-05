@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		286,
+		559,
+		112,
+		14
+	],
+	"lastmodifieddate": 1682347185.487,
+	"createddate": 1682347125.5929999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/EditDelProduction_new",
+	"lastfounddate": 1682347135.6950002,
+	"ocrcapturestring": "Edit Del Production",
+	"lastfoundlocation": [
+		286,
+		559,
+		112,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[40,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/EditDelProduction/EditDelProduction_new.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					286,
+					559,
+					112,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit Del Production"
+			}
+	]
+}

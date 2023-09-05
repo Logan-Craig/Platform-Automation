@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1664902392.8169999,
+	"lastfoundlocation": [
+		703,
+		154,
+		70,
+		34
+	],
+	"originalcapturelocation": [
+		703,
+		148,
+		70,
+		34
+	],
+	"createddate": 1664902392.8169999,
+	"lastfounddate": 1692652855.7389998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[36,17]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/ConfirmDeleteEnvironment.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"capturerect": [
+					703,
+					148,
+					70,
+					34
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.105"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/ConfirmDeleteEnvironment"
+}

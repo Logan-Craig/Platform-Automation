@@ -1,0 +1,39 @@
+{
+	"lastmodifieddate": 1646936732.2249999,
+	"lastfoundlocation": [
+		308,
+		613,
+		140,
+		16
+	],
+	"originalcapturelocation": [
+		308,
+		571,
+		140,
+		16
+	],
+	"createddate": 1646936732.2249999,
+	"lastfounddate": 1692734647.131,
+	"testlocationdata": [
+		{
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/ReadOnly.png",
+				"type": 1,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[87,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"capturerect": [
+					308,
+					571,
+					140,
+					16
+				]
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/ReadOnly"
+}

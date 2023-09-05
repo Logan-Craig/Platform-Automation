@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		263,
+		592,
+		113,
+		16
+	],
+	"lastmodifieddate": 1646236835.506,
+	"createddate": 1635970893.5209999,
+	"name": "Scratch_Logan/Scratch_Alex/LogIntoSandbox",
+	"lastfounddate": 1635972681.806,
+	"ocrcapturestring": "Log In to Sandbox",
+	"lastfoundlocation": [
+		263,
+		577,
+		113,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[56,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/LogIntoSandbox.png",
+				"connectionname": "SUT3 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.253.100.225",
+				"capturerect": [
+					263,
+					592,
+					113,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Log In to Sandbox"
+			}
+	]
+}

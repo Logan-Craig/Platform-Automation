@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		955,
+		817,
+		85,
+		13
+	],
+	"lastmodifieddate": 1646236835.609,
+	"createddate": 1619705540.677,
+	"name": "Scratch_Logan/Ramya_List/ClaimNumber",
+	"lastfounddate": 1621443751.7750001,
+	"ocrcapturestring": "Claim Number",
+	"lastfoundlocation": [
+		13,
+		722,
+		85,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[56,8]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/ClaimNumber.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					955,
+					817,
+					85,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Claim Number"
+			}
+	]
+}

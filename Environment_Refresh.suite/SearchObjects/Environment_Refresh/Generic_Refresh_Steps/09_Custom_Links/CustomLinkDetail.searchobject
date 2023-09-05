@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		250,
+		324,
+		131,
+		14
+	],
+	"lastmodifieddate": 1612390195.8959999,
+	"createddate": 1612390195.8959999,
+	"name": "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail",
+	"lastfounddate": 1692887779.2,
+	"ocrcapturestring": "Custom Link Detail",
+	"lastfoundlocation": [
+		250,
+		363,
+		131,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[74,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					250,
+					324,
+					131,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Custom Link Detail"
+			}
+	]
+}

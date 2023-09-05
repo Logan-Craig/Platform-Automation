@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		110,
+		550,
+		132,
+		13
+	],
+	"lastmodifieddate": 1646236835.447,
+	"createddate": 1627658295.575,
+	"name": "Scratch_Logan/Scratch_Muhammad/StandardOOODeactivate",
+	"lastfounddate": 1627659709.323,
+	"ocrcapturestring": "Standard OOODeactivate",
+	"lastfoundlocation": [
+		110,
+		550,
+		132,
+		13
+	],
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[66,6]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/Scratch_Muhammad/StandardOOODeactivate.png",
+				"connectionname": "Liberty SUT.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/Liberty SUT.png",
+				"capturerect": [
+					110,
+					550,
+					132,
+					13
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Standard OOODeactivate"
+			}
+	]
+}

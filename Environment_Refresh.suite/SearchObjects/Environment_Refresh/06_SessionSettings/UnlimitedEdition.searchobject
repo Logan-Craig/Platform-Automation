@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		240,
+		240,
+		164,
+		35
+	],
+	"lastmodifieddate": 1607992351.5110002,
+	"createddate": 1607992351.5110002,
+	"name": "Environment_Refresh/06_SessionSettings/UnlimitedEdition",
+	"lastfounddate": 1692887629.46,
+	"ocrcapturestring": "Security Controls Unlimited Edition",
+	"lastfoundlocation": [
+		240,
+		278,
+		164,
+		35
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[82,17]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/06_SessionSettings/UnlimitedEdition.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					240,
+					240,
+					164,
+					35
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Security Controls Unlimited Edition"
+			}
+	]
+}

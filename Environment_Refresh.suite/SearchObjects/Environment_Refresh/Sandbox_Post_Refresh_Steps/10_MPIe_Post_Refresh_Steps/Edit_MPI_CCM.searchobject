@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		286,
+		458,
+		122,
+		15
+	],
+	"lastmodifieddate": 1615411082.4489999,
+	"createddate": 1615411019.175,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Edit_MPI_CCM",
+	"lastfounddate": 1615411025.9359999,
+	"ocrcapturestring": "Edit | Del MPI CCM",
+	"lastfoundlocation": [
+		286,
+		458,
+		122,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Edit_MPI_CCM.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					286,
+					458,
+					122,
+					15
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Edit | Del MPI CCM"
+			}
+	]
+}

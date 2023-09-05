@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1607114908.6469998,
+	"ocrcapturestring": "All Profiles",
+	"originalcapturelocation": [
+		247,
+		341,
+		65,
+		14
+	],
+	"createddate": 1607114908.6469998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_73",
+					"HotSpot": "[39,8]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/05_Deliverability/AllProfilesView.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					247,
+					341,
+					65,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "All Profiles"
+			}
+	],
+	"name": "Environment_Refresh/05_Deliverability/AllProfilesView"
+}

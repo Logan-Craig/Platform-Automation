@@ -1,0 +1,15 @@
+﻿put "Loading login variables."
+//username and password the tester typically uses for whatever sandbox they want to use.
+//If this script runs on an Eggplant SUT then it will over-write logins with the Eggplant one. This could be modified to only do so in certain sandboxes (like INT and REG). Depends what needs the users have.
+set SandboxName to "va--dtcsqa" //viewsuat for Liberty folks
+Set Use_DTC_Login to True //will attempt to use the DTC Login. This is for environments where the tester wishes to LoginAs another user and needs the sys admin role. Testers must communicate with DTC if they need a sys admin role. DTC maintains a login in va--int, va--reg, and va--dtcsqa by default.
+Set EncodedPass to True //If you are encoding your password then set this to True and use the Helper suite's encryption key.
+set UsernameVar to "eggplant@b3groupinc.com.dtcsqa"
+//We should all be encrpting our passwords now using the Helper suite's encryption key, which should not be hardcoded in your own suites.
+set PasswordVar to "|vF\b_*&kM`kD!"
+set BrowserVar to "Chrome" //"msedge" for Edge browser
+set URL_Var to "https://"&SandboxName&".lightning.force.com" //modify this to go to your sandbox.
+
+put "Running Dynamic_Login"
+Run "Helper_Utilities/Login_Dynamic"UsernameVar, PasswordVar, sandboxName, BrowserVar, URL_Var, Use_DTC_Login, EncodedPass
+

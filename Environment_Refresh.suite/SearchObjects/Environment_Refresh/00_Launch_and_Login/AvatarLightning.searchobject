@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1227,
+		112,
+		34,
+		34
+	],
+	"lastmodifieddate": 1608132982.46,
+	"createddate": 1608132982.46,
+	"name": "Environment_Refresh/00_Launch_and_Login/AvatarLightning",
+	"lastfounddate": 1692816487.049,
+	"ocrcapturestring": "• • r*> J",
+	"lastfoundlocation": [
+		1227,
+		152,
+		34,
+		34
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[15,19]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/AvatarLightning.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1227,
+					112,
+					34,
+					34
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "• • r*> J"
+			}
+	]
+}

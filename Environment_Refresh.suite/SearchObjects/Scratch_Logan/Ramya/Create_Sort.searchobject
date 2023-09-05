@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		353,
+		577,
+		172,
+		62
+	],
+	"lastmodifieddate": 1646236835.4990001,
+	"createddate": 1621267663.372,
+	"name": "Scratch_Logan/Ramya/Create_Sort",
+	"lastfounddate": 1621351684.6619999,
+	"ocrcapturestring": "Created... v Last Modi 5/17/20 Created Date /2021",
+	"lastfoundlocation": [
+		226,
+		617,
+		16,
+		14
+	],
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[73,13]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/Ramya/Create_Sort.png",
+				"connectionname": "Ramya VM.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/Ramya VM.png",
+				"capturerect": [
+					353,
+					577,
+					172,
+					62
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "4-"
+			}
+	]
+}

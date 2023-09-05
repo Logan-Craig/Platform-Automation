@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		445,
+		612,
+		86,
+		17
+	],
+	"lastmodifieddate": 1618432383.2979999,
+	"createddate": 1618432383.2979999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/VAEmployees",
+	"lastfounddate": 1618432476.645,
+	"ocrcapturestring": "VA Employees",
+	"lastfoundlocation": [
+		445,
+		612,
+		86,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[55,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/VAEmployees.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					445,
+					612,
+					86,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VA Employees"
+			}
+	]
+}

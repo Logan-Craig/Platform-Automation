@@ -1,0 +1,117 @@
+﻿// 5.	Deliverability:
+// a.	Under Setup, go to Deliverability.
+// b.	Update your 'Access Level' under 'Access to Send Email (All Email Services)' to "All email".
+// c.	Login IP Ranges (DO NOT REMOVE IN Staging OR ProdMirror)
+//   i.	Under Setup, go to Manage Users / Profiles.
+//   ii.	Find the "VA Admin Plus User Mgmt" Profile and scroll down to the 'Login IP Ranges' section.
+//   iii.	Remove/Delete all IP Ranges in this section.
+
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Deliverability" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Deliverability", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Deliverability"
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"Step 05 - Deliverability"& return to file Refresh_Report
+
+//Sets Deliverability > Access level to "All email"
+if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Allemail")
+else
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Accesslevel"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Allemail"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Save"
+end if
+
+write "Deliverability > Access Level set to All Email."&return to file  Refresh_Report
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Profiles", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Profiles", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Profiles"
+
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/AllProfiles_ViewSelected"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/AllProfiles_DesiredView"
+set ViewName to "All Profiles"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName
+
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Valpha", waitfor:12
+repeat until imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusUserMGMT_Link",Waitfor:9) or imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusU_Link")//not sure if this should be mgmt or not
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Description_ScrollFocus"
+	typetext pagedown
+	wait 1
+	if repeatindex()>6 
+		throw "Profile not found. Please review."
+	end if
+end repeat
+click FoundImageLocation()
+
+//VA Admin Plus User Mgmt. Needs to find Login IP Ranges next.
+
+//first time here there will be a pop up
+Repeat until ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusUserMgmt", waitFor:9)
+	if ImageFound(imageName:"Common_Images/NoThanks", waitFor:0)
+	then 
+		click Foundimagelocation()
+	end if
+	if repeatindex() > 15
+	then
+		throw "Could not find VAAdminPlusUserMgmt"
+	end if
+	wait 1
+End repeat
+
+
+repeat [6] times
+	if ImageFound(imageName: "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/LoginIPRanges", waitFor:1)
+		click FoundImageLocation()
+		Exit Repeat
+	else
+		typetext PageDown
+		wait 1
+	end if
+end repeat
+
+repeat for each item of everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete", waitfor:3)
+	if the repeatindex = 1 then write "IP range(s) found. Removing."&return to file Refresh_Report
+	put readtext([it+[75,-15],it+[x of remotescreensize(),15]]) into IPRangeVar
+	write "IP Start Address: "&line 1 of IPRangeVar & "IP End Address: "&line 2 of IPRangeVar & "Description:"& line 3 of IPRangeVar&return to file Refresh_Report
+end repeat
+
+put the MultipleFoundAction into MultipleFoundState
+set the MultipleFoundAction to UseFirstLocation
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete", waitfor:3) 
+then
+	repeat until not imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete", waitfor:3)
+		click foundimagelocation()
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Delete"
+		if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/DeleteIPWarningPopUp", waitfor:6)
+		then 
+			click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/DeleteConfirm"
+		end if
+	end repeat
+	write "VA Admin Plus login IP ranges deleted."&return to file  Refresh_Report
+else
+	Log "Login IP Ranges already deleted."
+end if
+set the MultipleFoundAction to MultipleFoundState
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Doing a second check for IP Ranges that were not deleted as some users report the above not finding anything to delete (when it should have).
+waitfor 9, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusUserMgmt"
+set the SearchRectangle to [(foundimagelocation()+[-125,100]),(FoundImageLocation()+[500,600])]
+repeat until not ImageFound({text:"Delete"})
+	Log "Found IP Range()s via OCR search. Proceeding to delete."
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/Edit_Delete",waitfor:8
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Delete", waitfor:3
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/DeleteIPWarningPopUp", waitfor:6)
+	then 
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/DeleteConfirm",waitfor:3
+	end if
+	if repeatindex()>10 
+		throw "Stuck in a find image loop."
+	end if
+end repeat
+set the SearchRectangle to ""
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+close file Refresh_Report
+

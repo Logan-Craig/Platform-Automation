@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		45,
+		219,
+		67,
+		18
+	],
+	"lastmodifieddate": 1614142477.0599999,
+	"createddate": 1614142477.0599999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/Quick_Find",
+	"lastfounddate": 1618803513.4429998,
+	"ocrcapturestring": "Quick Find",
+	"lastfoundlocation": [
+		45,
+		221,
+		67,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[33,9]",
+					"Tolerance": "_42",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/Quick_Find.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					45,
+					219,
+					67,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Quick Find"
+			}
+	]
+}

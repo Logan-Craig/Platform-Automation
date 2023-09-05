@@ -1,0 +1,59 @@
+﻿typetext homekey
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar",waitfor:20
+Click "Utilities/Launch_and_Login/Logout"
+//because the logout URL doesn't actually update until after logging in again it is neccessary to close the browser and login and logout to see that it is indeed modifying the logout URL
+Run "Utilities/Clean_up"
+
+put "chrome" into BrowserVar
+if ImageFound(imageName: "Utilities/Launch_and_Login/SalesForceLoginLogo", waitFor:0)
+	Log "Salesforce login page already open."
+else
+	typetext windowskey, "r"
+	typetext BrowserVar&&the suitevariables.SandboxURL, returnkey
+	WaitFor 6, "Utilities/Launch_and_Login/SalesForceLoginLogo"
+end if
+
+
+
+//This login uses the stored suitevariables to login again. It requires that the suitevariables be current.
+//its only check is that the login did not fail
+//Login
+//waits for the text to appear
+WaitFor 6, "Utilities/Launch_and_Login/SalesForceLoginLogo"
+//Enter MyUsername and Password
+Click Image:"Utilities/Launch_and_Login/Username", waitfor:3
+typetext controlKey,"a",deleteKey
+TypeText the suitevariables.MyUsername, tabKey, the suitevariables.MyPassword
+typetext tabkey, returnkey
+
+if imagefound(imagename:"Utilities/Launch_and_Login/FailedLogin", waitfor:1)
+then
+	throw "Login failed."
+end if
+
+
+//Checks for Register Your Mobile Phone message
+if imagefound(imagename:"Utilities/Launch_and_Login/IDontWanttoRegisterMyPhone",waitfor:2)
+then
+	Log "Register Phone popup found. Skipping."
+	click FoundImageLocation()
+end if
+
+
+
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar",waitfor:20
+Click "Utilities/Launch_and_Login/Logout"
+
+typetext controlkey,"l"
+typetext controlKey, "c"
+Log RemoteClipboard()
+Log the suitevariables.SandboxURL
+if RemoteClipboard() = the suitevariables.SandboxURL&"/"
+then
+	Log "Logout URL is correct: "&RemoteClipboard()
+Else
+	Throw "Logout URL incorrect: "&RemoteClipboard()
+end if
+
+set the suitevariables.MyPassword to ""
+

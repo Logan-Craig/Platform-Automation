@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		293,
+		648,
+		101,
+		16
+	],
+	"lastmodifieddate": 1621631085.5320001,
+	"createddate": 1621631085.5320001,
+	"name": "Scratch_Logan/Ramya/eMPWR/TransactionId_PDF",
+	"lastfounddate": 1621633700.868,
+	"ocrcapturestring": "Transaction Id",
+	"lastfoundlocation": [
+		293,
+		384,
+		101,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[50,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya/eMPWR/TransactionId_PDF.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					293,
+					648,
+					101,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Transaction Id"
+			}
+	]
+}

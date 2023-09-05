@@ -1,0 +1,228 @@
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Tuesday, October 11, 2022, 12:53:05
+Salesforce site domain name:, rdtofm-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, rdtofm-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://rdtofm-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--rdtofm.my.salesforce.com
+va.lightning.force.com updated to: va--rdtofm.lightning.force.com
+Logout URL updated to: https://va--rdtofm.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://rdtofm-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--rdtofm.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--rdtofm.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--rdtofm.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: rdtofm-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://rdtofm-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--rdtofm.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--rdtofm.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--rdtofm.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://rdtofm-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--rdtofm.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--rdtofm--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--rdtofm.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--rdtofm.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--rdtofm.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--rdtofm--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Tuesday, October 11, 2022 01:16:06
+
+
+Step 01 - Delete Production
+Production Custom Setting not found.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Tuesday, December 20, 2022, 11:18:34
+Salesforce site domain name:, rdtofm-vacommunity.cs132.force.com
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+Could not find: Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_1 This probably means that the script has already run in this environment and updated the Trusted Domains.
+Logout URL updated to: https://va--rdtofm.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://rdtofm-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL already updated to: https://va--RDTOFM.my.salesforce.com
+Standard URL already updated to: https://va--RDTOFM.my.salesforce.com/
+VA Base URL already updated to: va--RDTOFM.my.salesforce.com/
+VA Community URL already updated to: rdtofm-vacommunity.cs132.force.com
+VA Salesforce Helpdesk URL already updated to: https://rdtofm-vacommunity.cs132.force.com/helpdesk
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL already updated to: https://va--RDTOFM.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL already found to be: https://va--RDTOFM.my.salesforce.com/a3d/o
+My Application Requests URL already found to be: https://va--RDTOFM.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application URL already found to be: https://rdtofm-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL already found to be: https://va--RDTOFM.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL found to be: https://va--RDTOFM--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL already set to: https://va--RDTOFM.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--rdtofm.my.salesforce.com
+E2Excel Sandbox Refresh Site URL already set to: https://va--rdtofm.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--rdtofm--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Tuesday, December 20, 2022 11:38:43
+
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Wednesday, March 15, 2023, 01:59:27
+Salesforce site domain name:, rdtofm-vacommunity.cs234.force.com
+Assess Anything Endpoint URL updated to:, rdtofm-vacommunity.cs234.force.com
+Public Site Assessment URL Configuration updated to:, https://rdtofm-vacommunity.cs234.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--rdtofm.my.salesforce.com
+va.lightning.force.com updated to: va--rdtofm.lightning.force.com
+Logout URL updated to: https://va--rdtofm.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://rdtofm-vacommunity.cs234.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--rdtofm.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--rdtofm.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--rdtofm.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: rdtofm-vacommunity.cs234.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://rdtofm-vacommunity.cs234.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--rdtofm.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--rdtofm.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--rdtofm.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://rdtofm-vacommunity.cs234.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--rdtofm.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--rdtofm--c.cs234.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--rdtofm.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--rdtofm.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--rdtofm.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--rdtofm--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Wednesday, March 15, 2023 02:17:53
+

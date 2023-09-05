@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		392,
+		560,
+		91,
+		29
+	],
+	"lastmodifieddate": 1612452989.7059999,
+	"createddate": 1612452964.9660001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CARMAFeatureJoggle",
+	"lastfounddate": 1613756559.4980001,
+	"ocrcapturestring": "CARMA Feature Joggle",
+	"lastfoundlocation": [
+		392,
+		560,
+		91,
+		29
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[24,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CARMAFeatureToggle.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					392,
+					560,
+					91,
+					29
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "CARMA Feature Joggle"
+			}
+	]
+}

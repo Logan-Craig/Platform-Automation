@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1646236835.6110001,
+	"lastfoundlocation": [
+		625,
+		926,
+		162,
+		24
+	],
+	"originalcapturelocation": [
+		625,
+		540,
+		162,
+		24
+	],
+	"createddate": 1627324891.6129999,
+	"lastfounddate": 1627327410.779,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[81,12]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Muhammad/Data_Entry_Field.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"capturerect": [
+					625,
+					540,
+					162,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.106"
+			}
+	],
+	"name": "Scratch_Logan/Scratch_Muhammad/Data_Entry_Fields"
+}

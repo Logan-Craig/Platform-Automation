@@ -1,0 +1,34 @@
+{
+	"lastmodifieddate": 1603983735.582,
+	"lastfoundlocation": [
+		551,
+		333,
+		40,
+		27
+	],
+	"originalcapturelocation": [
+		550,
+		333,
+		40,
+		27
+	],
+	"createddate": 1603983733.0139999,
+	"lastfounddate": 1624815297.7610002,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"connectionserverid": "18.253.36.232",
+				"connectiontype": "RDP",
+				"type": 1,
+				"capturerect": [
+					550,
+					333,
+					40,
+					27
+				],
+				"connectionname": "SUT2",
+				"name": "Environment_Refresh/8_Custom_Labels/Edit.png"
+			}
+	],
+	"name": "Edit2"
+}

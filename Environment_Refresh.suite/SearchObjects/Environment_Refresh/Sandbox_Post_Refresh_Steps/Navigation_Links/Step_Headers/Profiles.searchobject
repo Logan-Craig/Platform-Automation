@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		241,
+		244,
+		80,
+		21
+	],
+	"lastmodifieddate": 1647038741.609,
+	"createddate": 1647038741.609,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Profiles",
+	"lastfounddate": 1692887546.306,
+	"ocrcapturestring": "Profiles",
+	"lastfoundlocation": [
+		241,
+		282,
+		80,
+		21
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[40,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/Profiles.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					241,
+					244,
+					80,
+					21
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Profiles"
+			}
+	]
+}

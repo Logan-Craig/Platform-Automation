@@ -1,0 +1,16 @@
+﻿//Need to add some MSEdge stuff here...
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Never_SavePassword",waitfor:0)
+	click FoundImageLocation()
+end if
+
+//Checks for Show Notifications popup
+if imageFound(image:"Helper_Utilities/Launch_and_Login/ShowNotifications",waitfor:3)
+	Log "Show Notifications popup found. Allowing."
+	click "Helper_Utilities/Launch_and_Login/Allow"
+end if
+
+//Checks the Show notifications popup for Edge
+if imagefound (image:"Helper_Utilities/Launch_and_Login/MSEdge_Checks/Allow_notification_buttons",waitfor:0)
+then
+	click FoundImageLocation()
+end if

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		477,
+		416,
+		323,
+		28
+	],
+	"lastmodifieddate": 1612308222.6170001,
+	"createddate": 1612308222.6170001,
+	"name": "Utilities/Ubuntu_Launch_Chrome/Authenticationrequired",
+	"lastfounddate": 1612308274.2020001,
+	"ocrcapturestring": "Authentication required",
+	"lastfoundlocation": [
+		477,
+		416,
+		323,
+		28
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[142,13]",
+					"Tolerance": "_55",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Ubuntu_Launch_Chrome/Authenticationrequired.png",
+				"connectionname": "Local Linux",
+				"type": 1,
+				"connectionserverid": "192.168.1.101",
+				"capturerect": [
+					477,
+					416,
+					323,
+					28
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Authentication required"
+			}
+	]
+}

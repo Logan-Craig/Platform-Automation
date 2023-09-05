@@ -1,0 +1,82 @@
+﻿
+// looking for EnvironmentBaseURL
+//This stuff is updated by the generic refresh steps.
+
+//Setup to Email alerts
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup  "Email Alerts", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/EmailAlerts","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/EmailAlerts"
+
+//Deleting the additional emails
+Click "Common_Images/Continue"
+
+if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ACaseHasBeenAssignedtoExecWriter")
+then
+	Click Image:"Common_Images/Edit_Link_Blue", searchrectangle:[FoundImageLocation()+[-250,-18],FoundImageLocation()+[0,18]]
+else
+	throw <<Could not find "A Case Has Been Assigned to Exec Writer" edit link.>>
+end if
+
+if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/UserSalesforceAdministrator", searchrectangle:[imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/SelectedRecipients")+[-110,-15],imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/SelectedRecipients")+[100,100]])
+then
+	Log <<Update has already been made for email alert "A Case Has Been Assigned to Exec Writer">>
+Else
+	Log "Update not yet made. Proceeding."
+	
+	
+	//Click Image:"Utilities/Common_Buttons/Edit_Link_Blue", searchrectangle:[ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ACaseHasBeenAssignedtoExecWriter")+[-250,-18],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ACaseHasBeenAssignedtoExecWriter")+[0,18]]
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AdditionalEmails"
+	typetext ControlKey, "a"
+	typetext Backspace
+	
+	//Email Alerts to A case has been assigned to Exec Writer
+	Click Image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/RecipientType_for", searchrectangle:[ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/RecipientType")+[-75,-18],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/RecipientType")+[700,18]]
+
+
+	TypeText "Salesforce Admin"
+	Click "Common_Images/Find"
+	Click image: "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/UserSalesforceAdministrator", WaitFor:6
+	typeText tabKey
+	typetext returnkey
+	
+	
+	Click Image:"Common_Images/Save", Waitfor:3
+	WaitFor 10, "Common_Images/Edit"
+end if
+
+//Email alerts to Views Possible Security Alerts , V multiple pages
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup  "Email Alerts", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/EmailAlerts","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/EmailAlerts"
+
+Click "Common_Images/Continue"
+
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/VIEWSPossibleSecurityThreat_Selected"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/VIEWSPossibleSecurityThreat_Desired"
+set ViewName to "VIEWS Possible Security Threat"
+set MakeMyView to true
+set FilterBoolean to true
+set FieldFilterVar to "Description"
+set FieldOperatorVar to"starts with"
+set FieldValueVar to "VIEWS Possible Security Threat"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+Click "Common_Images/Edit_Link_Blue"
+
+if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/UserSalesforceAdministrator", searchrectangle:[imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/SelectedRecipients")+[-110,-15],imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/SelectedRecipients")+[100,100]])
+then
+	Log <<Update has already been made for email alert "VIEWS Possible Security Threat">>
+Else
+	Log "Update not yet made. Proceeding."
+	
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AdditionalEmails"
+	typetext ControlKey, "a"
+	typetext Backspace
+	Click Image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/RecipientType_for", searchrectangle:[ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/RecipientType")+[-75,-18],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/RecipientType")+[700,18]]
+	TypeText "Salesforce Admin"
+	Click "Common_Images/Find"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/UserSalesforceAdministrator"
+	typeText tabKey
+	typetext returnkey
+	
+	
+	Click "Common_Images/Save"
+	WaitFor 10, "Common_Images/Edit"
+End if
+

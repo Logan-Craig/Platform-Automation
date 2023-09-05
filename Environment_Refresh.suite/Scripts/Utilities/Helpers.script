@@ -1,0 +1,196 @@
+﻿to SwitchSandboxMode DesiredMode
+	Put "Desired Mode received as:"&&DesiredMode
+	put "Utilities/Helpers".Find_Sandbox_Mode into FoundMode
+	if FoundMode is not DesiredMode
+		if DesiredMode = "Lightning"
+			Log "Switching from Classic mode to Lightning mode."
+			//lightning link doesn't always show up on all windows--but it does on the home tab -- Not even on the home tab anymore
+			//
+			if imagefound(image:"Helper_Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite", wiatfor:0)
+			then
+				click foundimagelocation()
+			else 
+				click "Helper_Utilities/Launch_and_Login/Avatar_Classic"
+				click "Helper_Utilities/Launch_and_Login/SwitchtoLightningExperience"                                                       
+			end if
+			waitfor 18, "Helper_Utilities/Launch_and_Login/Avatar_Lightning"
+		end if
+		if DesiredMode = "Classic"
+			Log "Switching from Lightning mode to Classic mode."
+			click "Helper_Utilities/Launch_and_Login/Avatar_Lightning"
+			waitfor 9, "Helper_Utilities/Launch_and_Login/Compact"
+			click "Helper_Utilities/Launch_and_Login/SwitchtoSalesforceClassic"
+			waitfor 18, "Helper_Utilities/Launch_and_Login/Avatar_Classic"
+		end if
+	else
+	Log "Sandbox mode is already correct."
+end if
+return FoundMode //Returns the found mode so that the sandbox can be set back later if desired
+end SwitchSandboxMode
+
+
+to SwitchToLightning
+	if not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher")
+	then
+		//Switching to lightning mode
+		click "Environment_Refresh/Generic_Refresh_Steps/01_Delete_Production/Avatar"
+		Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+		Log "Mode switched to Lightning."
+		wait 3
+		waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher"
+		Log "Switched to Lightning mode."
+		typetext controlkey,"lc"
+		if remoteclipboard() contains "Mass_Action_Configuration"
+		else
+			click FoundImageLocation()
+			typetext "Mass Action Scheduler",returnKey
+		end if
+		else
+		Log "User is already in Lightning mode."
+	end if	
+end SwitchToLightning
+
+to Find_Sandbox_Mode
+	typetext Controlkey, "lc"
+	if the remoteclipboard contains "lightning" 
+	then
+		put "Sandbox mode found to be Lightning."
+		put "Lightning" into FoundMode
+	else
+		put "Sandbox mode found to be Classic."
+		put "Classic" into FoundMode
+	end if
+	return FoundMode
+end Find_Sandbox_Mode
+
+
+//This helper handler will verify that data entry into fields is successful. 
+//Be aware that it uses the clipboardboard to very the field contents and will replace anything you have in your SUT's clipbaord.
+//If data entry is not succesful it will reattempt 10 times.
+//If a field is already populated with something other than what is desired it will overwrite it.
+//This helper will make no special effort to verify that the field has shown up on the screen. A waitfor of some type should be used prior to this helper.
+//To use:
+//Provide first the string that is desired to be input. It is not neccesary to provide this as a variable.
+//Provide second an image that is the field label or image reference that is used to locate the field. Be sure that the hotspot is centered on this image.
+//If desired, thirdly provide a hotspot adjustment for the focus of the reference label. This will only be neccesary if clicking the field label does not bring focus to the field or if the field does not have a traditional label. Provide the hotspot coordinates thusly:"[123,123]". If desired, the hotspot coordinates can be dynamically generated, just be sure to include the square brackets.
+//Field label can now be null if you don't want it to click anywhere (eg: windowskey,"r")
+
+on Verify_Field_Contents Field_Data, Field_Label:"", HotSpot_Var:"",clickout:False
+	put "This is my field data:"&&Field_Data
+	set the remoteclipboard to ""
+	repeat forever
+		if Field_Label is ""
+		else
+			if HotSpot_Var is ""
+			then
+				click Field_Label
+			else
+				click image:Field_Label,hotspot:HotSpot_Var
+			end if
+		end if
+		typetext controlkey, "ac"
+		if the remoteclipboard is ""
+		then
+			typetext Field_Data
+			typetext controlkey, "ac"
+			put "The remoteclipboard contains:"&&the remoteclipboard
+			if the remoteclipboard contains Field_Data
+				exit repeat
+			end if
+		else if the remoteclipboard contains Field_Data
+			exit repeat
+		else
+			put "Found this junk in the input field:"&& the remoteclipboard
+			put "Replacing it with:"&& Field_Data
+			typetext Field_Data
+		end if
+		if the repeatindex > 10
+			throw "Unable to input field data."
+		end if
+	end repeat
+	if clickout = False
+	then
+		//	click foundimagelocation()+[0,-15]	
+	end if
+end Verify_Field_Contents
+
+
+//There are a couple of slightly different menus for entering IPs. This helper will handle them both.
+//Load your list like this:
+//Put [
+//	["152.129.17.0","152.129.17.255"],
+//	["152.129.18.0","152.129.18.255"]
+//] into IP_List
+//Log IP_List
+to AddIps IP_List, IPRangeDescription
+	repeat for each item IPRange of IP_List
+		click "Utilities/Helpers/AddIPs/New", "Utilities/Helpers/AddIPs/AddIPRanges"
+		click "Utilities/Helpers/AddIPs/StartIPAddress","Utilities/Helpers/AddIPs/IPStartAddress"
+		Log "Adding IP Start Address"&&item 1 of IPRange
+		typetext item 1 of IPRange
+		click "Utilities/Helpers/AddIPs/EndIPAddress", "Utilities/Helpers/AddIPs/IPEndAddress"
+		Log "Adding IP End Address"&&item 2 of IPRange
+		typetext item 2 of IPRange
+		if IPRangeDescription = ""
+		then 
+			Log "No Description given."
+		else
+			click "Utilities/Helpers/AddIPs/Description", "Utilities/Helpers/AddIPs/Description_2"
+			typetext IPRangeDescription
+		end if
+		click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Save"
+	end repeat
+end AddIPs
+
+
+//This triple-click handler is designed to triple click objects and put them in the variable TripleClickVar.
+//Provide the argument SearchType as "text" or "image" or "coordinates", if no Searchtype is provided it will assume the SearchType is a text string.
+//Provide the argument TCObject as a text string OR an image or the coordinates (imagelocation()).
+//if you call this handler as a command it will not return the TripleClickVar (but it will still be in the remote clipboard) if you call it as a function it will return it.
+to TripleClick TCObject, SearchType:"text"
+	put the RemoteWorkInterval
+	put the RemoteWorkInterval into defaultRWI -- stores the current Remote Work Interval value so that it can be restored later
+	put the MouseDoubleClickDelay
+	put the MouseDoubleClickDelay into clickTime -- gets the current time interval between clicks in a double-click
+	set the RemoteWorkInterval to clickTime -- sets the Remote Work Interval to the double-click time
+	if SearchType = "Coordinates"
+	then
+		click TCObject
+	else
+		click (SearchType):TCObject
+	end if
+	Click -- quickly clicks in the current mouse location
+	Click -- quickly clicks
+	// The last line restores the timing between Eggplant Functional commands by resetting the RemoteWorkInterval global property to its original value.
+	set the RemoteWorkInterval to defaultRWI
+	typetext controlkey,"c"
+	SetRemoteClipboard line 1 of RemoteClipboard()//Gets rid of the extra line return
+	put remoteclipboard() into TripleClickVar
+	Log TripleClickVar
+	Return (TripleClickVar)
+end TripleClick
+
+//Use this column width helper to enlarge columns so that Eggy can read/find what's in them.
+//It will first check if your column width is already wide enough, so don't hesitate to use it when you're not sure if your columns will be reset/changed.
+//set ColumnLabel to the IMAGELOCATION of the header of your column.
+//set ColumnSpot to an IMAGELOCATION of an image that includes the edge of your column. It is recommended that you include a drop down arrow or something so its not just a line.
+//Use a searchrectangle property that derives it's search area from the column header.
+//examples:
+//set ColumnLabel to imagelocation("Permissions_Check/Permission_Set_Groups_Verification/Label_ColumnHeader")
+//set ColumnSpot to imagelocation(image:"Permissions_Check/Permission_Set_Groups_Verification/Column_Edge",searchrectangle:[FoundImageLocation()+[0,-40],FoundImageLocation()+[400,40]])
+//note that the 2nd imagelocation can use foundimagelocation as above
+//set ColumnSize to a number that is wide enough to show all of your data. Remember that it is in reference to the imagelocation of your label which can vary depending on how many letters are in it.
+//Use the following script to check your column width needs: put x of ColumnSpot - x of ColumnLabel
+to ColumnWidth ColumnLabel, ColumnSpot, ColumnSize
+	if x of ColumnSpot - x of ColumnLabel > ColumnSize
+	then
+		Log "Column already enlarged."
+	else
+		//enlarge the column
+		moveto ColumnSpot
+		mousebuttondown 1
+		moveto ColumnSpot+[ColumnSize,0]
+		mousebuttonUp 1
+		moveto ColumnSpot+[0,-50]
+	end if 
+end ColumnWidth

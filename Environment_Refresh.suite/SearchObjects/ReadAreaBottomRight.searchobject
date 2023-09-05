@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603829788.1760001,
+	"ocrcapturestring": "com",
+	"originalcapturelocation": [
+		666,
+		649,
+		24,
+		11
+	],
+	"createddate": 1603829788.1760001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "ReadAreaBottomRight.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					666,
+					649,
+					24,
+					11
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "com"
+			}
+	],
+	"name": "ReadAreaBottomRight"
+}

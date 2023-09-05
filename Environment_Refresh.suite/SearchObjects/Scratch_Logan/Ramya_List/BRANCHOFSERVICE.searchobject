@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		55,
+		586,
+		140,
+		13
+	],
+	"lastmodifieddate": 1646236835.5880001,
+	"createddate": 1619703737.2319999,
+	"name": "Scratch_Logan/Ramya_List/BRANCHOFSERVICE",
+	"lastfounddate": 1619703763.237,
+	"ocrcapturestring": "BRANCH OF SERVICE",
+	"lastfoundlocation": [
+		55,
+		586,
+		140,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[74,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/BRANCHOFSERVICE.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					55,
+					586,
+					140,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "BRANCH OF SERVICE"
+			}
+	]
+}

@@ -1,0 +1,44 @@
+﻿Set CurrentSandBoxNameAndID to the first item of CSVValue(file resourcePath("SandboxNamesandIDs.csv"))
+Log CurrentSandBoxNameAndID's Sandbox 
+Log CurrentSandBoxNameAndID's VID
+
+set the suitevariables.SandboxName to CurrentSandBoxNameAndID's Sandbox
+set VID to CurrentSandBoxNameAndID's VID
+Log VID
+Log SandboxName
+
+
+set the suitevariables.SandboxName to SandboxCredentials's Sandbox
+//Sets the username to match the sandbox
+set MyUserName to SandboxCredentials's Username&"."&SandboxName
+set MyPassword to SandboxCredentials's Password
+set VID to SandboxCredentials's VID
+//Sets the suitevariable for SandboxURL
+put "https://va--"&SandboxName&".my.salesforce.com" into the suitevariables.SandboxURL
+Log SandboxName
+Log MyUserName
+Log SandboxURL
+
+//Login
+//waits for the text to appear
+WaitFor 6, text:"Log In"
+
+//Enter MyUsername and Password
+Click {Image:"Utilities/Launch_and_Login/Username", WaitFor:1}
+TypeText MyUsername, tabKey, MyPassword
+
+Click {Text:"Log In"}
+
+if imagefound(imagename:"Utilities/Launch_and_Login/FailedLogin", waitfor:1)
+then
+	throw "Login failed."
+end if
+
+//Checks for verification code message
+typetext controlKey,"l","c"
+if "EmailVerificationFinish" is in RemoteClipboard()
+then
+	Log "Verification Code send to the email address for User:"&&MyUserName
+else
+	Log "No VID was required for this login."
+end if

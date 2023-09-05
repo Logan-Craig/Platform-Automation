@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1684512347.0840001,
+	"lastfoundlocation": [
+		302,
+		451,
+		16,
+		16
+	],
+	"originalcapturelocation": [
+		302,
+		411,
+		16,
+		16
+	],
+	"createddate": 1684512347.0840001,
+	"lastfounddate": 1692816467.3280001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,8]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Green_Check.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"capturerect": [
+					302,
+					411,
+					16,
+					16
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.105"
+			}
+	],
+	"name": "Common_Images/Green_Check"
+}

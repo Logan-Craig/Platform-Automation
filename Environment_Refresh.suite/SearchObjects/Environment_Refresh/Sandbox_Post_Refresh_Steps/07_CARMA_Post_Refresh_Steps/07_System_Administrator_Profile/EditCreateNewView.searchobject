@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		356,
+		334,
+		135,
+		15
+	],
+	"lastmodifieddate": 1614127450.2090001,
+	"createddate": 1614127450.2090001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/EditCreateNewView",
+	"lastfounddate": 1614127547.3439999,
+	"ocrcapturestring": "Edit I Create New View",
+	"lastfoundlocation": [
+		356,
+		334,
+		135,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[67,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/EditCreateNewView.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					356,
+					334,
+					135,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit I Create New View"
+			}
+	]
+}

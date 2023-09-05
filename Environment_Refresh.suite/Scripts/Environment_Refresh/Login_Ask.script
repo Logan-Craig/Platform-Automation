@@ -1,0 +1,167 @@
+﻿Params SandboxMode:"Classic"
+
+//this launch and login asks the user for input
+
+beep
+(*
+Answer "Who is executing this refresh?" with "Logan" or "Jonathan" or "Someone Else" Title "Select Executioner"
+put it into Executioner
+If Executioner = ...
+	... "Logan" : Answer "Which base username do you wish to use?" with "logan.craig@octo.us" or "logan.craig@va.gov"
+	... "Jonathan" : Answer "Which base username do you wish to use?" with "Jonathan.Cavey@octo.us" or "Jonathan.Cavey@va.gov" 
+	... "Someone Else" : Ask <<What is the refresh Username for this sandbox? Do not input the ".sandbox", it will be added later.>> Title "Username" message "For example: eggplant@b3groupinc.com.dtcsqa"
+End If
+put it into the suitevariables.MyUsername
+
+*)
+
+
+Ask "Input the full username as provided by email."with "You can paste here." title "Sandbox Username" message <<>>
+delete " " from it
+put it into the suitevariables.MyUsername
+
+(*if Base_Username = ""
+	throw "User did not input a Username."
+end if
+if Executioner is not in ["Logan","Jonathan"]
+then
+	Ask Password "What is the refresh Password for this sandbox?" with "" title "Password"
+	if it = ""
+		throw "User did not input a Password."
+	end if
+	set PasswordVar to encodetext(it)
+end if*)
+(*
+if Executioner is in ["Logan","Jonathan"]
+then
+	Ask Password "What is the refresh Password for this sandbox?" with "" title "Password"
+	if it = ""
+		throw "User did not input a Password."
+	end if
+	set PasswordVar to "EggyPassword1!"
+end if*)
+
+set PasswordVar to "EggyPassword1!"
+
+Ask "Input the sandbox name. This should come from slack." with "" title "Sandbox to Refresh" message <<>>
+if it = ""
+	throw "User did not input a sandbox name."
+end if
+delete " " from it
+
+put it into the suitevariables.SandboxName
+log "Sandbox name:"&&the suitevariables.SandboxName
+
+//Run "Environment_Refresh/EnvRefresh_Helpers".Parse_Sandbox_Name_Info
+Run "Environment_Refresh/EnvRefresh_Helpers".Build_Sandbox_URL
+
+
+(*
+//figures out what kind of org it is in
+set Base_Sandbox_Name to the suitevariables.SandboxURL
+split Base_Sandbox_Name by "--"
+set Base_Sandbox_Name to item 1 of Base_Sandbox_Name
+log "My base sandbox name is:"&&Base_Sandbox_Name
+
+Set Non_Standard_Orgs to [
+	"VAPM",
+	"VHA-Gov",
+	"VALOB",
+	"VAEMPL",
+	"VAEMCC",
+	"VA-Vet"
+]
+if at least one item of Non_Standard_Orgs contains Base_Sandbox_Name is True
+then
+	if imagefound(image:"Utilities/Launch_and_Login/Avatar_Non_VA_Main",searchrectangle:[1000,0,1280,181],wait:30) or if imagefound(image:"Utilities/Launch_and_Login/Avatar_Lightning",searchrectangle:[1000,0,1280,181], wait:30)
+	then 
+		set the suitevariables.VA_Main_Org to False
+		Log "the suitevariables.VA_Main_Org set to False"
+	else
+		Throw "Unable to find non va-main avatar."
+	end if
+else if Base_Sandbox_Name contains "va"
+	set the suitevariables.VA_Main_Org to True
+	Log "the suitevariables.VA_Main_Org set to True"
+	waitfor 30, ["Utilities/Launch_and_Login/Avatar_Lightning","Utilities/Launch_and_Login/Avatar_Classic"]
+else 
+	throw "I don't know what kind of sandbox this is."
+end if*)
+
+
+(*set Additional_Emails to ""
+Ask "What other (if any) email would you like to send the results to besides yourself (seperate multiple addresses with commas)?" with "Just hit OK if no one else needs the results." title "Results Email"
+if it is not "Just hit OK if no one else needs the results." then put it into Additional_Emails
+Log Additional_Emails
+split Additional_Emails by ","
+log Additional_Emails*)
+
+
+(*if the suitevariables.SandboxName contains ".sandbox"
+then
+	set enhanced_domain_Sandbox to the suitevariables.SandboxName
+	delete ".sandbox" from enhanced_domain_Sandbox
+	set the suitevariables.MyUsername to Base_Username&"."&enhanced_domain_Sandbox
+else
+	set the suitevariables.MyUsername to Base_Username&"."&the suitevariables.SandboxName	
+end if*)
+
+//removes va-- from va--main usernames if it has been input. VA main usernames are not preceeded by va-- like all of the others.
+(*if the suitevariables.MyUsername contains "va--" then delete "va--" from the suitevariables.MyUsername
+
+Log "Sandbox set to:"&&the suitevariables.SandboxName
+Log "Username set to:"&&the suitevariables.MyUsername*)
+(*
+set To_Var to the suitevariables.MyUsername
+delete ("."&the suitevariables.SandboxName) from To_Var
+if Additional_Emails is not empty then insert Additional_Emails after To_Var
+set the suitevariables.To_Var to To_Var
+Log "Email Address(es) for results:"&&the suitevariables.To_Var*)
+
+
+(*Answer <<Is this a sandbox url that has the word "Sandbox" in it?>> with "Yes" or "No" title "Sandbox label" //message "For example: whsusdev2.sandbox"
+if it is "Yes"
+then
+	put "https://va--"&the suitevariables.SandboxName&".sandbox.my.salesforce.com" into the suitevariables.SandboxURL
+else if it is "No"
+then
+	put "https://va--"&the suitevariables.SandboxName&".my.salesforce.com" into the suitevariables.SandboxURL
+else
+	throw "Received no answer to sandbox label question."
+end if*)
+(*put "https://va--"&the suitevariables.SandboxName&".sandbox.my.salesforce.com" into the suitevariables.SandboxURL
+log "Sandbox URL:"&&the suitevariables.SandboxURL*)
+
+
+(*
+if name of ConnectionInfo() is "Local Eggplant1" or if name of ConnectionInfo() is "802_SUT"
+	then
+	set the suitevariables.MyUsername to "logan.craig@va.gov."&the suitevariables.SandboxName
+	set PasswordVar to "|vF\b_*&kM`kD!"
+else
+	Ask "What is the refresh Username for this sandbox? Please input the ENTIRE username WITH the sandbox name if you appended it." with "" title "Username" message "For example: eggplant@b3groupinc.com.dtcsqa"
+	if it = ""
+		throw "User did not input a Username."
+	end if
+	set the suitevariables.MyUsername to it 
+	Ask Password "What is the refresh Password for this sandbox?" with "" title "Password"
+	if it = ""
+		throw "User did not input a Password."
+	end if
+	set PasswordVar to encodetext(it)
+end if
+Log "Username set to:"&&the suitevariables.MyUsername
+*)
+
+
+put "Loading login variables."
+set UsernameVar to the suitevariables.MyUsername
+set SandboxName to "va--"&the suitevariables.SandboxName
+set BrowserVar to "Chrome"
+//set URL_Var to "https://"&SandboxName&".lightning.force.com"
+put "Running Dynamic_Login"
+Run "Utilities/Login_Dynamic" UsernameVar, PasswordVar, the suitevariables.SandboxName, BrowserVar, the suitevariables.SandboxURL
+
+//Checks which mode you are in
+Run "Utilities/Helpers".SwitchSandboxMode SandboxMode
+

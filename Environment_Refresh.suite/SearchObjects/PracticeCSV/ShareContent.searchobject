@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604593903.1469998,
+	"ocrcapturestring": "Share an update, @mention someone...",
+	"originalcapturelocation": [
+		266,
+		362,
+		215,
+		16
+	],
+	"createddate": 1604593762.881,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "PracticeCSV/ShareField.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					266,
+					362,
+					215,
+					16
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Share an update, @mention someone..."
+			}
+	],
+	"name": "PracticeCSV/ShareContent"
+}

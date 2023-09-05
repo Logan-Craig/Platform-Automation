@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		315,
+		576,
+		124,
+		17
+	],
+	"lastmodifieddate": 1626118742.994,
+	"createddate": 1626118742.994,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_2",
+	"lastfounddate": 1692887597.2160001,
+	"ocrcapturestring": "va. lightning, force, com",
+	"lastfoundlocation": [
+		315,
+		869,
+		124,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[62,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_2.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					315,
+					576,
+					124,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "va. lightning, force, com"
+			}
+	]
+}

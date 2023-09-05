@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		81,
+		391,
+		33,
+		17
+	],
+	"lastmodifieddate": 1646163851.95,
+	"createddate": 1646163851.95,
+	"name": "Scratch_Logan/Scratch_Madhavi/Headers/Type",
+	"lastfounddate": 1646164804.8400002,
+	"ocrcapturestring": "Type",
+	"lastfoundlocation": [
+		81,
+		391,
+		33,
+		17
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Type",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[19,9]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					81,
+					391,
+					33,
+					17
+				],
+				"name": "Scratch_Logan/Scratch_Madhavi/Headers/Type.png"
+			}
+	]
+}

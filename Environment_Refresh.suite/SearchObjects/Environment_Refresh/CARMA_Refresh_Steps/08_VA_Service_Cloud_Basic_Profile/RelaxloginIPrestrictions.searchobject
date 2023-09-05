@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		275,
+		502,
+		137,
+		14
+	],
+	"lastmodifieddate": 1613153608.9590001,
+	"createddate": 1613153608.9590001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/RelaxloginIPrestrictions",
+	"lastfounddate": 1613510143.391,
+	"ocrcapturestring": "Relax login IP restrictions",
+	"lastfoundlocation": [
+		275,
+		502,
+		137,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[62,5]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/RelaxloginIPrestrictions.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					275,
+					502,
+					137,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Relax login IP restrictions"
+			}
+	]
+}

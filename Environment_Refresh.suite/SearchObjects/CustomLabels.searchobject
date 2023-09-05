@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		53,
+		334,
+		82,
+		13
+	],
+	"lastmodifieddate": 1603980611.5599999,
+	"createddate": 1603980605.934,
+	"name": "CustomLabels",
+	"lastfounddate": 1605921509.49,
+	"ocrcapturestring": "Custom Labels",
+	"lastfoundlocation": [
+		318,
+		342,
+		82,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/CustomLabels.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					334,
+					82,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Custom Labels"
+			}
+	]
+}

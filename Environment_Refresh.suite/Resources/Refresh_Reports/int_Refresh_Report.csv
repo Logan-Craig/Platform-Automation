@@ -1,0 +1,639 @@
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 01 - Delete Production
+Production Custom Setting not found.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, June 27, 2022, 08:05:33
+Salesforce site domain name:, va--int.sandbox.my.salesforce-sites.com
+Assess Anything Endpoint URL updated to:, va--int.sandbox.my.salesforce-sites.com
+Public Site Assessment URL Configuration updated to:, https://va--int.sandbox.my.salesforce-sites.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: va--int.sandbox.my.salesforce-sites.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://va--int.sandbox.my.salesforce-sites.com/helpdesk
+
+
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://va--int.sandbox.my.salesforce-sites.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Case Task e2excel Sandbox Refresh Site URL updated to: https://va--int-c.sandbox.visual.force.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int--e2ex.sandbox.visual.force.com
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.sandbox.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+Test run End: Monday, June 27, 2022 08:12:25
+
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Friday, July 8, 2022, 01:28:01
+Salesforce site domain name:, int-vacommunity.cs133.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs133.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs133.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs133.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labelsr
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs133.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs133.force.com/helpdesk
+
+
+08_Custom_Labelsr
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs133.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Case Task e2excel Sandbox Refresh Site URL updated to: https://va--int-c.cs133.visual.force.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int--e2ex.cs133.visual.force.com
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs133.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+Test run End: Friday, July 8, 2022 01:35:19
+
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, July 25, 2022, 08:25:25
+Salesforce site domain name:, int-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labelsr
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Labelsr
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Case Task e2excel Sandbox Refresh Site URL updated to: https://va--int-c.cs132.visual.force.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int--e2ex.cs132.visual.force.com
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+Test run End: Monday, July 25, 2022 08:32:41
+
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+10_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va--int-c.cs132.visual.force.com
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, August 29, 2022, 09:47:55
+Salesforce site domain name:, int-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Case Task ecexcel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Case Task e2excel Sandbox Refresh Site URL updated to: https://va--int-c.cs132.visual.force.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int--e2ex.cs132.visual.force.com
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Email domain filter va.gov created.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Monday, August 29, 2022 10:32:32
+
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, September 26, 2022, 08:04:39
+Salesforce site domain name:, int-vacommunity.cs132.force.com
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, September 26, 2022, 08:05:30
+Salesforce site domain name:, int-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--int.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--int--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Monday, September 26, 2022 08:23:49
+
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Friday, October 21, 2022, 01:39:10
+Salesforce site domain name:, int-vacommunity.cs133.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs133.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs133.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs133.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs133.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs133.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs133.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs133.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--int.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--int--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Friday, October 21, 2022 01:56:34
+
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, December 19, 2022, 10:05:06
+Salesforce site domain name:, int-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--int.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--int--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Monday, December 19, 2022 10:23:01
+
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, January 30, 2023, 08:18:32
+Salesforce site domain name:, int-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, int-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://int-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.my.salesforce.com
+va.lightning.force.com updated to: va--int.lightning.force.com
+Logout URL updated to: https://va--int.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://int-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.my.salesforce.com
+Standard URL found: https://va.my.salesforce.com/
+Standard URL updated to: https://va--int.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: int-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://int-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://int-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--int.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--int--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va.visual.force.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--int.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--int.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--int.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--int--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+Disable login with Salesforce credentials checkbox has been UNCHECKED.
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Monday, January 30, 2023 08:36:59
+

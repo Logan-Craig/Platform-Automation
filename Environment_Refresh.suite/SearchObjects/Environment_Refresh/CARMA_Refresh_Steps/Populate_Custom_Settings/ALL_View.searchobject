@@ -1,0 +1,102 @@
+{
+	"originalcapturelocation": [
+		288,
+		365,
+		26,
+		14
+	],
+	"lastmodifieddate": 1682345462.872,
+	"createddate": 1612397123.744,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/ALL_View",
+	"lastfounddate": 1682346333.494,
+	"ocrcapturestring": "ALL",
+	"lastfoundlocation": [
+		338,
+		446,
+		22,
+		11
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[6,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/ALL_View.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					288,
+					365,
+					26,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ALL"
+			},
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "  0.8",
+					"HotSpot": "[4,5]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/ALL_View.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					288,
+					365,
+					20,
+					11
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ALL"
+			},
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[11,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/ALL_View_new.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					339,
+					446,
+					22,
+					11
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ALL"
+			}
+	]
+}

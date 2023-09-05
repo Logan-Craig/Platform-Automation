@@ -1,0 +1,77 @@
+﻿
+
+if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/SwitchtoLightningExperience")
+	click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Plussign" , waitFor:3
+else
+	Log "Plus Sign NOT found"
+	wait 1
+end if
+ScrollWheelDown 27
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Contacts" , WaitFor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/New"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MAEmployees"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/KWMemberRecord"
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Continue" , Waitfor: 2
+
+
+
+
+///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+///Make sure checking the mode step is needed or not based on on the previous step 
+set SandboxMode to "Classic"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/URLRefreshButton" ,waitfor:6
+typetext controlKey, "c"
+if "lightning" is in RemoteClipboard()
+then
+	Log "Sandbox is in Lightning Mode."
+	Set FoundMode to "lightning"
+	else
+	log "Sandbox is in Classic Mode."
+	Set FoundMode to "Classic"
+end if
+
+//SandboxMode = FoundMode
+if FoundMode = SandboxMode
+then
+	Log "No environment change needed."
+	else
+	if SandboxMode = "Lightning"
+	then
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/AvatarClassic"
+		Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+		Log "Mode switched to Lightning."
+	end if
+	if SandboxMode = "Classic"
+	then
+		Click ImageName:"Utilities/Launch_and_Login/AvatarLightning"
+		click "Utilities/Launch_and_Login/SwitchtoSalesforceClassic"
+		Log "Mode switched to Classic."
+	end if
+end if
+////Clicking Contact
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Contacts" , WaitFor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/New"
+If imagefound ("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MAEmployees")
+	Log "VA Employess selected"
+Else
+	Click imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/RecordTypeofnewrecord", waitfor:4
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/VAEmployees"
+End If
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Continue" , Waitfor: 16
+Wait 3
+//////New Contact Page ///
+/////Search rectangle for Account name search
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/LastName" , waitfor:8
+Typetext "Cooper"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Email"
+Typetext "Eggplant@b3groupinc.com"
+Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MagGlass" , SearchRectangle:[ ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/AccountName")+[100,-25],ImageLocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/AccountName")+[225,25]]
+
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/GoNew"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/AccountName_1"
+Typetext "VIEWS NEW ACCOUNT E"
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Save" , waitfor:12
+Wait 3
+Click imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/Save_1" , waitfor:4

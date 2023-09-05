@@ -1,0 +1,16 @@
+﻿On ConnectSut ServerID, TypeVar, SUTUsername, SUTPassword
+	if TypeVar = "RDP" then put "3389" into ConnectionTypeVar
+	if TypeVar = "VNC" then put "5900" into ConnectionTypeVar
+	connect serverID:ServerID,PortNum:ConnectionTypeVar,type:TypeVar,Username:SUTUsername,Password:SUTPassword
+	Log "User: "&SUTUsername&&"connected to: "&ServerID
+end ConnectSut
+
+On SUT2
+	connect serverID:"18.253.36.232",PortNum:"3389",type:"RDP",Username:"Eggplant2",Password:"Pickles1!"
+	Log "User: Eggplant2 connected to: 18.253.36.232"
+End SUT2
+
+On SUT1
+	connect serverID:"18.252.46.96",PortNum:"3389",type:"RDP",Username:"Eggplant2",Password:"Pickles1!"
+	Log "User: Eggplant2 connected to: 18.252.46.96"
+End SUT1

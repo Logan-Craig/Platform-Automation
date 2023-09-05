@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		311,
+		794,
+		177,
+		22
+	],
+	"lastmodifieddate": 1614712617.5310001,
+	"createddate": 1614712617.5310001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Body_Checked_Click",
+	"lastfounddate": 1614712873.4619999,
+	"ocrcapturestring": "Allow Merge Fields in HTTP© Body Q",
+	"lastfoundlocation": [
+		311,
+		794,
+		177,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[168,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Body_Checked_Click.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					311,
+					794,
+					177,
+					22
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Allow Merge Fields in HTTP© Body Q"
+			}
+	]
+}

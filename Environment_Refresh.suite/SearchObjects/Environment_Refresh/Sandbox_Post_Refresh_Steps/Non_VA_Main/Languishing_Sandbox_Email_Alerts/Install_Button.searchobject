@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		928,
+		462,
+		42,
+		14
+	],
+	"lastmodifieddate": 1687893282.2869999,
+	"createddate": 1687893282.2869999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/Install_Button",
+	"lastfounddate": 1688057407.4190001,
+	"ocrcapturestring": "Install",
+	"lastfoundlocation": [
+		928,
+		589,
+		42,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/Install_Button.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					928,
+					462,
+					42,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Install"
+			}
+	]
+}

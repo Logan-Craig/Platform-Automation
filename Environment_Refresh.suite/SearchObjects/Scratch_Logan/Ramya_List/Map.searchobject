@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		725,
+		192,
+		34,
+		22
+	],
+	"lastmodifieddate": 1646236835.421,
+	"createddate": 1616451568.7810001,
+	"name": "Scratch_Logan/Ramya_List/Map",
+	"lastfounddate": 1616454002.4920001,
+	"ocrcapturestring": "Map",
+	"lastfoundlocation": [
+		725,
+		192,
+		34,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[17,11]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/Map.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					725,
+					192,
+					34,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Map"
+			}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		21,
+		671,
+		54,
+		13
+	],
+	"lastmodifieddate": 1603904138.9630001,
+	"createddate": 1603904135.1030002,
+	"name": "Create",
+	"lastfounddate": 1605921508.5929999,
+	"ocrcapturestring": "► Create",
+	"lastfoundlocation": [
+		21,
+		290,
+		54,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/Create.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					21,
+					671,
+					54,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "► Create"
+			}
+	]
+}

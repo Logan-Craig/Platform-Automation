@@ -1,0 +1,39 @@
+{
+	"lastmodifieddate": 1646936733.1430001,
+	"lastfoundlocation": [
+		309,
+		729,
+		181,
+		14
+	],
+	"originalcapturelocation": [
+		309,
+		632,
+		181,
+		14
+	],
+	"createddate": 1646936733.1430001,
+	"lastfounddate": 1692734650.928,
+	"testlocationdata": [
+		{
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAMarketingUser.png",
+				"type": 1,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[103,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"capturerect": [
+					309,
+					632,
+					181,
+					14
+				]
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAMarketingUser"
+}

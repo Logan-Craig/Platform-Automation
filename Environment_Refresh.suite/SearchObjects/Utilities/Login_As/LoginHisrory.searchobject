@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		960,
+		369,
+		65,
+		13
+	],
+	"lastmodifieddate": 1620140580.174,
+	"createddate": 1620139298.1160002,
+	"name": "Utilities/Login_As/LoginHisrory",
+	"lastfounddate": 1628092524.796,
+	"ocrcapturestring": "Login Hisrory",
+	"lastfoundlocation": [
+		965,
+		419,
+		65,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[32,6]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Login_As/LoginHistory.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					960,
+					369,
+					65,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Login Hisrory"
+			}
+	]
+}

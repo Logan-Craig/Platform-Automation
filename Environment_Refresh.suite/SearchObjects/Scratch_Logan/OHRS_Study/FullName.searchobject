@@ -1,0 +1,42 @@
+{
+	"lastmodifieddate": 1646236835.425,
+	"ocrcapturestring": "Full Name",
+	"originalcapturelocation": [
+		457,
+		369,
+		66,
+		13
+	],
+	"createddate": 1616428649.464,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[33,6]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/OHRS_Study/FullName.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					457,
+					369,
+					66,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Full Name"
+			}
+	],
+	"name": "Scratch_Logan/OHRS_Study/FullName"
+}

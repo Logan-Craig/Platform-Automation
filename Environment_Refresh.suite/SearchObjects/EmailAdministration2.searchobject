@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604072987.0089998,
+	"ocrcapturestring": "► Email Administration",
+	"originalcapturelocation": [
+		21,
+		911,
+		136,
+		13
+	],
+	"createddate": 1604072918.905,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailAdministration.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					21,
+					911,
+					136,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "► Email Administration"
+			}
+	],
+	"name": "EmailAdministration2"
+}

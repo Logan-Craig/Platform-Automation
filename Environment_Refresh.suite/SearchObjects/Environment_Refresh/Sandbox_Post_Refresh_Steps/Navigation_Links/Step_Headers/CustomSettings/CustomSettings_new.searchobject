@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		281,
+		334,
+		168,
+		26
+	],
+	"lastmodifieddate": 1682346151.9630001,
+	"createddate": 1682346151.9630001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/CustomSettings/CustomSettings_new",
+	"lastfounddate": 1692635158.974,
+	"ocrcapturestring": "Custom Settings",
+	"lastfoundlocation": [
+		281,
+		353,
+		168,
+		26
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[84,13]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/CustomSettings/CustomSettings_new.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					281,
+					334,
+					168,
+					26
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Custom Settings"
+			}
+	]
+}

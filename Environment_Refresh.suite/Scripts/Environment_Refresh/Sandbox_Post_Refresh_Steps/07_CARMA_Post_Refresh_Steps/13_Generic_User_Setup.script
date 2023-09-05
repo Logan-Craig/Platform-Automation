@@ -1,0 +1,19 @@
+﻿//This script activates about 40+ users. Reach out to the POC on CARMA team to confirm, which team users are to be activated in REG.
+//The script file is changed into a .txt and loaded into resources. If any edits to the script are desired they should be made there. Pasting all-new stuff 
+//over it is fine. Just keep the name and location the same.
+Log "Executing Generic User Setup."
+
+Log "Preparing to run Generic User Setup Apex code in the Developer Console."
+Log "Loading Apex code file into remoteclipboard():"&&ResourcePath("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/CARMA_GenericUserSetupScript.txt")
+
+
+//Because the Apex code is too many characters to run in the "Execute Anonymous Window" we will have to create a class to hold all of it and then run the 
+//class.
+
+//Update the ResourcePath below to your own resource.
+put file ResourcePath("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/CARMA_GenericUserSetupScript.txt") into MyApexCode
+
+//Update the TeamUser text below to suit your step.
+set ClassNameVar to uppercase(SandboxName)&"_GenericUser_"&"Eggy"
+
+Run "Utilities/Developer_Console_Apex".CustomClass ClassNameVar, MyApexCode

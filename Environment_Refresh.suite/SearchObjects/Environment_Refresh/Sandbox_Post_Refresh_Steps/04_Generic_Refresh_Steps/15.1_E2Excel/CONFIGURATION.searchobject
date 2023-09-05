@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		36,
+		251,
+		161,
+		17
+	],
+	"lastmodifieddate": 1663771971.9910002,
+	"createddate": 1663771971.9910002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/15.1_E2Excel/CONFIGURATION",
+	"lastfounddate": 1692887840.5679998,
+	"ocrcapturestring": "CONFIGURATION",
+	"lastfoundlocation": [
+		36,
+		259,
+		161,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[80,8]",
+					"Tolerance": "_47",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/15.1_E2Excel/CONFIGURATION.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					36,
+					251,
+					161,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "CONFIGURATION"
+			}
+	]
+}

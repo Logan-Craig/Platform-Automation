@@ -1,0 +1,21 @@
+﻿//Open the developer console
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+
+
+//Adds the script to a variable and loads it into the SUT clipboard and pastes it. This script has something to do with removing the "invalid" text that gets automatically added to these email addresses when the environment refresh occurs.
+set UpdateScript to <<
+VIEWS_CaseDaysSinceCreatedSchedulable schedBatch = new VIEWS_CaseDaysSinceCreatedSchedulable();
+String schedule = '0 0 3 * * ?' ;
+System.schedule('Update Case Business Days Since Status has been New', schedule, schedBatch);
+
+VIEWS_TaskDaysSinceCreatedSchedulable schedTaskBatch = new VIEWS_TaskDaysSinceCreatedSchedulable();
+String taskSchedule = '0 0 3 * * ?' ;
+System.schedule('Update Case Tasks Business Days Since Status has been New', taskSchedule, schedTaskBatch);
+>>
+setremoteclipboard UpdateScript
+log UpdateScript
+
+
+
+Run "Utilities/Developer_Console_Apex".RunApex
+typetext altkey, F4

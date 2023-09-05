@@ -1,0 +1,58 @@
+﻿
+set the searchrectangle to ""
+put FormattedTime("HH:mm:ss:SSSSSS", the time)
+Log "Beginning desktop verification."
+Log "Remote screen size:"&&RemoteScreenSize()
+//hits escape twice in case a 
+repeat until imagefound("Utilities/Launch_and_Login/VADesktop")
+	put FormattedTime("HH:mm:ss:SSSSSS", the time)
+	CaptureScreen "Failed 1"&&FormattedTime("SSSSSS",the time)
+	if the repeatindex > 2
+	then
+		//Clicks the Leave button if it shows up.
+		if imagefound(text:"Leave site?",searchrectangle:[323,65,950,258])
+			click text:"Leave",searchrectangle:[foundimagelocation(),foundimagelocation()+[500,300]]
+		end if
+	end if
+	if the repeatindex = 3
+		repeat until imagefound("Utilities/Launch_and_Login/VADesktop")
+			typetext altkey, tabkey
+			typetext altkey, F4
+			if the repeatindex > 10
+				exit repeat
+			end if
+		end repeat
+	end if
+	if the repeatindex = 2
+	then
+		//checks if a Cancel button is available, such as when a windows explorer prompt is blocking browser function.
+		//pretty iffy. There could be Cancel words in lots of places...
+		if imagefound(text:"Cancel",waitfor:3)
+			click foundimagelocation()
+		end if
+	end if
+	click [640,23] //attempting to click a browser top bar to bring focus to the window
+	typetext controlkey,shiftkey,"w" //closes all tabs
+	CaptureScreen "Failed 2"&&FormattedTime("SSSSSS",the time)
+	if the repeatindex > 10 then throw "Gave up trying to show the desktop"
+end repeat
+Log "Found Desktop:"&&the time
+
+
+
+(*
+typetext windowskey, "r"
+typetext cmd, returnkey
+typetext "ECHO %USERNAME%"
+typetext returnkey
+typetext controlkey, "a", "c"
+if the RemoteClipboard contains "Eggplant"
+then
+	put "Good"
+else
+	put "Bad"
+end if
+typetext altkey, F4
+*)
+
+

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		33,
+		820,
+		134,
+		13
+	],
+	"lastmodifieddate": 1646236835.5,
+	"createddate": 1616452034.4099998,
+	"name": "Scratch_Logan/Ramya_List/MobileAdministration",
+	"lastfounddate": 1616454007.8380001,
+	"ocrcapturestring": "Mobile Administration",
+	"lastfoundlocation": [
+		33,
+		796,
+		134,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[67,6]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/MobileAdministration.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					33,
+					820,
+					134,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Mobile Administration"
+			}
+	]
+}

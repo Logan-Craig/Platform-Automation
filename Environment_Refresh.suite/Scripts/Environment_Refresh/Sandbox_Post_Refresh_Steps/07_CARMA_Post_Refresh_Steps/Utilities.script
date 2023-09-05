@@ -1,0 +1,59 @@
+﻿//searches for each sub item 1 of ListVar and populates it according to sub-item 2
+to Populate_List
+	repeat for each item ManualSetting of Custom_Settings_List
+		repeat until limagefound(item 1 of(text:ManualSetting))
+			if imagefound(item 1 of(text:ManualSetting))
+			then
+				Log "Found:"&&(item 1 of{text:ManualSetting})
+				click FoundImageLocation()
+				click imagefound:"Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:3
+				if item 2 of ManualSetting = "True"
+				then
+					if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/Checked")
+					then
+						click FoundImageLocation()
+						Log "Setting Default Value of"&&item 1 of ManualSetting&&<<to "checked".>>
+					else
+					if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/Checked_Already") then Log item 1 of ManualSetting &&"already checked."
+				end if
+				else if item 2 of ManualSetting = "False"
+				if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/Unchecked")
+				then
+					click FoundImageLocation()
+					Log "Setting Default Value of"&&item 1 of ManualSetting&&<<to "Unchecked".>>
+				else
+					if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/Unchecked_Already") then Log item 1 of ManualSetting &&"already unchecked."
+				end if
+				else
+				Log "Setting Default Value of"&&item 1 of ManualSetting&&"to"&&item 2 of ManualSetting
+				click imagefound:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/DefaultValue",waitfor: 3
+				typetext item 2 of ManualSetting
+			end if
+			click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Save"
+			waitfor 8, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/CustomSettingDefinitionDetail"
+			else
+			if repeatindex()>6	then throw "Failed to find: "&item 1 of ManualSetting&" after 6 attempts."
+			typetext pagedown
+			wait 1
+		end if
+	end repeat
+end repeat
+end Populate_List
+
+to Populate_List_Test Custom_Settings_List
+	repeat for each item of Custom_Settings_List
+		log item 1 of it
+	end repeat
+end Populate_List_Test
+
+
+//returns to Custom Settings main screen (from setting edit)
+To Return_to_Custom_Settings
+	repeat until ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Populate_Custom_Settings/CustomSettings_Blue")
+		if repeatindex()>6 then throw "Could not find Custom Settings link."
+		typetext pagedown
+		wait 1
+	end repeat
+	click FoundImageLocation()
+End Return_to_Custom_Settings
+

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		15,
+		347,
+		125,
+		38
+	],
+	"lastmodifieddate": 1609952183.4289999,
+	"createddate": 1609952183.4289999,
+	"name": "AddIPs/SecurityControlsNetworkAccess",
+	"lastfounddate": 1609952211.5809999,
+	"ocrcapturestring": "□ Security Controls Network Access",
+	"lastfoundlocation": [
+		15,
+		347,
+		125,
+		38
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[70,29]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "AddIPs/SecurityControlsNetworkAccess.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					15,
+					347,
+					125,
+					38
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Security Controls Network Access"
+			}
+	]
+}

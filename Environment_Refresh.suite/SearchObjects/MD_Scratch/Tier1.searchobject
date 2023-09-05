@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		841,
+		356,
+		35,
+		14
+	],
+	"lastmodifieddate": 1646236833.4299998,
+	"createddate": 1640799932.1670001,
+	"name": "MD_Scratch/Tier1",
+	"lastfounddate": 1640800703.8730001,
+	"ocrcapturestring": "Tier 1",
+	"lastfoundlocation": [
+		841,
+		356,
+		35,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[17,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "MD_Scratch/Tier1.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					841,
+					356,
+					35,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Tier 1"
+			}
+	]
+}

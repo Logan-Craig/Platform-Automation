@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		309,
+		678,
+		164,
+		15
+	],
+	"lastmodifieddate": 1646936734.437,
+	"createddate": 1646936734.437,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VASalesCloud",
+	"lastfounddate": 1691524251.842,
+	"ocrcapturestring": "Login Flow for VA Sales Cloud",
+	"lastfoundlocation": [
+		309,
+		752,
+		164,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for VA Sales Cloud",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[113,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					309,
+					678,
+					164,
+					15
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VASalesCloud.png"
+			}
+	]
+}

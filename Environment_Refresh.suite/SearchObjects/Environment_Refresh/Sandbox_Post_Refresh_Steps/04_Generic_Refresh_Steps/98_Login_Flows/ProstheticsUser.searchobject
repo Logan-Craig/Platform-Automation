@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		308,
+		549,
+		171,
+		15
+	],
+	"lastmodifieddate": 1646936731.8340001,
+	"createddate": 1646936731.8340001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/ProstheticsUser",
+	"lastfounddate": 1692654067.6719999,
+	"ocrcapturestring": "Login Flow for Prosthetics User",
+	"lastfoundlocation": [
+		308,
+		610,
+		171,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for Prosthetics User",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[97,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					308,
+					549,
+					171,
+					15
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/ProstheticsUser.png"
+			}
+	]
+}

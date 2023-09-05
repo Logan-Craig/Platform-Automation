@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		262,
+		325,
+		175,
+		20
+	],
+	"lastmodifieddate": 1687893088.1059999,
+	"createddate": 1687893088.1059999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/InstallforAdminsOnly",
+	"lastfounddate": 1687893193.6300001,
+	"ocrcapturestring": "Install for Admins Only",
+	"lastfoundlocation": [
+		262,
+		325,
+		175,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[87,10]",
+					"Tolerance": "_50",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/InstallforAdminsOnly.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					262,
+					325,
+					175,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Install for Admins Only"
+			}
+	]
+}

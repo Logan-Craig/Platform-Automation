@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		33,
+		865,
+		128,
+		38
+	],
+	"lastmodifieddate": 1614029865.819,
+	"createddate": 1614029865.819,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/ContactsValidationRules",
+	"lastfounddate": 1614280894.079,
+	"ocrcapturestring": "□ Contacts Validation Rules",
+	"lastfoundlocation": [
+		33,
+		854,
+		128,
+		38
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[73,32]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/ContactsValidationRules.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					33,
+					865,
+					128,
+					38
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Contacts Validation Rules"
+			}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1603842253.8299999,
+	"ocrcapturestring": "Chat",
+	"originalcapturelocation": [
+		53,
+		673,
+		30,
+		13
+	],
+	"createddate": 1603842184.4450002,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/5_Deliverability/Chat.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					673,
+					30,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Chat"
+			}
+	],
+	"name": "Chat"
+}

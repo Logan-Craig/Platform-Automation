@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		320,
+		496,
+		79,
+		13
+	],
+	"lastmodifieddate": 1663773714.053,
+	"createddate": 1663773714.053,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/E2ExCustom",
+	"lastfounddate": 1692887870.5219998,
+	"ocrcapturestring": "E2Ex Custom",
+	"lastfoundlocation": [
+		320,
+		502,
+		79,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[39,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10.1_E2Excel/E2ExCustom.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					320,
+					496,
+					79,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "E2Ex Custom"
+			}
+	]
+}

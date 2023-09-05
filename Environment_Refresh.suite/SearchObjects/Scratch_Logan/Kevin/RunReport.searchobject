@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		25,
+		472,
+		61,
+		14
+	],
+	"lastmodifieddate": 1646236835.559,
+	"createddate": 1619726049.9170001,
+	"name": "Scratch_Logan/Kevin/RunReport",
+	"lastfounddate": 1619726353.0739999,
+	"ocrcapturestring": "Run Report",
+	"lastfoundlocation": [
+		25,
+		472,
+		61,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,7]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Kevin/RunReport.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					25,
+					472,
+					61,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Run Report"
+			}
+	]
+}

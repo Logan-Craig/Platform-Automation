@@ -1,0 +1,43 @@
+﻿//Universal Login_As script 2.0
+//Looks up a user and logs in as them
+//Lightning mode only
+
+
+
+//Navigate to setup
+params Login_As_Username
+if imagefound (image:"Utilities/Login_As/SearchSetup", waitfor:2)
+then 
+	Run "Utilities/Switch_User"Login_As_Username
+else 
+	waitfor 9,"Common_Images/Notification_Icon"
+	wait 2
+	click image:"Common_Images/Setup_Icon_Grey",waitfor:6
+	click image:"Common_Images/Setup_Icon_Blue",waitfor:3
+	wait 4
+	Run "Utilities/Switch_User"Login_As_Username
+end if
+
+
+//sometimes salesforce simply doesn't display the "logged in as" statement. Not sure if it isn't logging in as them, or just not showing it. Attempting a refresh to determine.
+if imagefound(image:"Utilities/Login_As/Loggedinas",waitfor:15)
+then
+	Log <<Found "Logged in as" statement.>>
+else
+	Log <<Unable to locate "Logged in as" statement after 15 seconds.>>,"Atttempting refresh."
+	typetext controlkey,"r"
+	if imagefound(image:"Utilities/Login_As/Loggedinas",waitfor:15)
+	then
+		Log <<Found "Logged in as" statement after a refresh.>>
+	else
+		Run "Utilities/Switch_User"Login_As_Username
+		if imagefound(image:"Utilities/Login_As/Loggedinas",waitfor:15)
+		then
+			Log "Found Logged in as after 2nd attempt."
+		else
+			throw "Gave up trying to switch user."
+		end if
+	end if
+end if
+
+set the SearchRectangle to []

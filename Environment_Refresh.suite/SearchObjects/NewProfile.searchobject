@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		252,
+		331,
+		61,
+		12
+	],
+	"lastmodifieddate": 1616792504.8629999,
+	"createddate": 1616443717.197,
+	"name": "NewProfile",
+	"lastfounddate": 1616444033.915,
+	"ocrcapturestring": "New Profile",
+	"lastfoundlocation": [
+		252,
+		331,
+		61,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[38,6]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "NewProfile.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					252,
+					331,
+					61,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "New Profile"
+			}
+	]
+}

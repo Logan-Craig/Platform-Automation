@@ -1,0 +1,75 @@
+﻿/////////These are checks for things that occur after the login button is clicked, but before the avatar actually shows up. Stuff like 2fa.
+//Checks for verification code message
+repeat until not imagefound("Helper_Utilities/Launch_and_Login/LogIntoSandbox")
+	wait 1
+	if the repeatindex >12
+		Throw "Login failed."
+	end if
+end repeat
+
+typetext controlKey,"l"
+typetext controlKey, "c"
+if "EmailVerificationFinish" is in RemoteClipboard()
+then
+	Log "Verification Code required."
+	Ask "Provide your verification code from email." with "" title "Verification Code" message "For example: 422998"
+	if it = ""
+		throw "User did not input a verification code."
+	end if
+	click "Helper_Utilities/Launch_and_Login/VerificationCode"
+	typetext it, returnkey
+end if
+
+//checks for Hate Passwords popup
+typetext controlKey,"l"
+typetext controlKey,"c"
+if "EnableLightningLogin" is in RemoteClipboard()
+then
+	Log "Hate Passwords popup found."
+	click "Helper_Utilities/Launch_and_Login/NeverShowMeThisMessageAgain"
+end if
+
+if imagefound(image:"Helper_Utilities/Launch_and_Login/HatepasswordsSodowe",waitfor:0)
+then
+	click "Helper_Utilities/Launch_and_Login/NeverShowMeThisMessageAgain"
+end if
+
+//Checks for Remember Password popup in Chrome and Egde
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Never_SavePassword",waitfor:0)
+	click FoundImageLocation()
+end if
+
+//Checks the Authorized Use Only window (seen in va--INT)
+if imagefound (image:"Helper_Utilities/Launch_and_Login/SystemWarning",waitfor:0)
+then
+	scrollwheeldown 3
+	wait 1
+	click "Common_Images/Accept"
+	if imagefound(image:"Helper_Utilities/Launch_and_Login/Finish",waitfor:3)
+		click foundimagelocation()
+	end if
+end if
+
+//Checks for Register Your Mobile Phone message
+if imagefound(imagename:"Helper_Utilities/Launch_and_Login/IDontWanttoRegisterMyPhone",waitfor:3)
+then
+	Log "Register Phone popup found. Skipping."
+	click FoundImageLocation()
+end if
+
+//Close the restore page for ms Edge
+if imagefound(image:"Helper_Utilities/Launch_and_Login/MSEdge_Checks/Restorepages" ,waitfor:0)
+then
+	Click {Image:"Helper_Utilities/Launch_and_Login/MSEdge_Checks/cancelButton"}
+else
+	log "Restore message didn't popup"
+end if
+
+//Close the restore page for Chrome
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Restore", waitfor:0)
+then
+	Log "Chrome Restore Pages pop up encountered. Closing."
+	click image:"Helper_Utilities/Launch_and_Login/Close_Dialogue", searchrectangle:[foundimagelocation(),[x of remotescreensize(),-200]]
+end if
+
+

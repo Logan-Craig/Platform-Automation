@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		854,
+		454,
+		79,
+		16
+	],
+	"lastmodifieddate": 1646236833.428,
+	"createddate": 1640800164.1399999,
+	"name": "MD_Scratch/CaseCategory",
+	"lastfounddate": 1640800696.9559999,
+	"ocrcapturestring": "Case Category",
+	"lastfoundlocation": [
+		853,
+		454,
+		79,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[39,8]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "MD_Scratch/CaseCategory.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.45.244",
+				"capturerect": [
+					854,
+					454,
+					79,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Case Category"
+			}
+	]
+}

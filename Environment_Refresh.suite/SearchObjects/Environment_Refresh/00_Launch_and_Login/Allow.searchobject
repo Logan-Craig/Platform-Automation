@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		275,
+		146,
+		70,
+		38
+	],
+	"lastmodifieddate": 1608827197.1719999,
+	"createddate": 1608827197.1719999,
+	"name": "Environment_Refresh/00_Launch_and_Login/Allow",
+	"lastfounddate": 1621443809.6589999,
+	"ocrcapturestring": "Allow",
+	"lastfoundlocation": [
+		275,
+		146,
+		70,
+		38
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,17]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/Allow.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					275,
+					146,
+					70,
+					38
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Allow"
+			}
+	]
+}

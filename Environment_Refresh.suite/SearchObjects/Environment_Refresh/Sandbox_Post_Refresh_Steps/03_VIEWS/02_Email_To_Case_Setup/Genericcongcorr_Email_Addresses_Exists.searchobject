@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		326,
+		788,
+		105,
+		13
+	],
+	"lastmodifieddate": 1617116573.3010001,
+	"createddate": 1617116573.3010001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Genericcongcorr_Email_Addresses_Exists",
+	"lastfounddate": 1655761331.737,
+	"ocrcapturestring": "Generic_cong_corr",
+	"lastfoundlocation": [
+		325,
+		857,
+		105,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[178,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Genericcongcorr_Email_Addresses_Exists.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					326,
+					788,
+					105,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Generic_cong_corr"
+			}
+	]
+}

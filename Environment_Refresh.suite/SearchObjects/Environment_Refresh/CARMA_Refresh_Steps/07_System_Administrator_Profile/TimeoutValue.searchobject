@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		343,
+		351,
+		77,
+		12
+	],
+	"lastmodifieddate": 1613074073.6619999,
+	"createddate": 1613070974.358,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/07_System_Administrator_Profile/TimeoutValue",
+	"lastfounddate": 1613070976.276,
+	"ocrcapturestring": "Timeout Value",
+	"lastfoundlocation": [
+		343,
+		351,
+		77,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[41,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/07_System_Administrator_Profile/TimeoutValue.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					343,
+					351,
+					77,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Timeout Value"
+			}
+	]
+}

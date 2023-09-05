@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		18,
+		623,
+		37,
+		14
+	],
+	"lastmodifieddate": 1603904047.73,
+	"createddate": 1603904045.4429998,
+	"name": "Build",
+	"lastfounddate": 1682349587.7420001,
+	"ocrcapturestring": "Build",
+	"lastfoundlocation": [
+		18,
+		323,
+		37,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/Build.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					18,
+					623,
+					37,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Build"
+			}
+	]
+}

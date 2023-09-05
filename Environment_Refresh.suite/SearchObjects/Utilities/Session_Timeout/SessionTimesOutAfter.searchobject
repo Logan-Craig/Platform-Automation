@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		284,
+		401,
+		128,
+		12
+	],
+	"lastmodifieddate": 1616521283.0089998,
+	"createddate": 1616521283.0089998,
+	"name": "Utilities/Session_Timeout/SessionTimesOutAfter",
+	"lastfounddate": 1617893702.641,
+	"ocrcapturestring": "Session Times Out After",
+	"lastfoundlocation": [
+		284,
+		401,
+		128,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[64,6]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Session_Timeout/SessionTimesOutAfter.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					284,
+					401,
+					128,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Session Times Out After"
+			}
+	]
+}

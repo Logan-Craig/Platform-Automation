@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		17,
+		351,
+		128,
+		36
+	],
+	"lastmodifieddate": 1617142722.6830001,
+	"createddate": 1613754915.625,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/DevelopCustomSettings",
+	"lastfounddate": 1617141733.638,
+	"ocrcapturestring": "□ Develop Custom Settings",
+	"lastfoundlocation": [
+		17,
+		351,
+		128,
+		36
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[64,18]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/DevelopCustomSettings.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					17,
+					351,
+					128,
+					36
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Develop Custom Settings"
+			}
+	]
+}

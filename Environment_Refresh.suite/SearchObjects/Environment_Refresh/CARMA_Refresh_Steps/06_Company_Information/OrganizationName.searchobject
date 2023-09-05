@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		317,
+		396,
+		103,
+		14
+	],
+	"lastmodifieddate": 1613069987.9070001,
+	"createddate": 1613069987.9070001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/06_Company_Information/OrganizationName",
+	"lastfounddate": 1613070384.7849998,
+	"ocrcapturestring": "Organization Name",
+	"lastfoundlocation": [
+		317,
+		396,
+		103,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[49,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/06_Company_Information/OrganizationName.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					317,
+					396,
+					103,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Organization Name"
+			}
+	]
+}

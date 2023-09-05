@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		251,
+		555,
+		24,
+		13
+	],
+	"lastmodifieddate": 1617203616.993,
+	"createddate": 1617203616.993,
+	"name": "Utilities/Common_Buttons/Edit_Link_Blue",
+	"lastfounddate": 1692653090.062,
+	"ocrcapturestring": "Edit",
+	"lastfoundlocation": [
+		256,
+		221,
+		24,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,6]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Common_Buttons/Edit_Link_Blue.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					251,
+					555,
+					24,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit"
+			}
+	]
+}

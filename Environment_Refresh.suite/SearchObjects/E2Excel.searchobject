@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		464,
+		46,
+		13
+	],
+	"lastmodifieddate": 1604009713.3889999,
+	"createddate": 1604009697.365,
+	"name": "E2Excel",
+	"lastfounddate": 1692887858.9159999,
+	"ocrcapturestring": "E2Excel",
+	"lastfoundlocation": [
+		332,
+		502,
+		46,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/E2Excel.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					464,
+					46,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "E2Excel"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		31,
+		8,
+		198,
+		16
+	],
+	"lastmodifieddate": 1685030550.714,
+	"createddate": 1685030550.714,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/03_Schedule_Email_Alerts/DeveloperConsoleGoogleChrome",
+	"lastfounddate": 1692816494.6630001,
+	"ocrcapturestring": "Developer Console - Google Chrome",
+	"lastfoundlocation": [
+		31,
+		8,
+		198,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[99,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/03_Schedule_Email_Alerts/DeveloperConsoleGoogleChrome.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					31,
+					8,
+					198,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Developer Console - Google Chrome"
+			}
+	]
+}

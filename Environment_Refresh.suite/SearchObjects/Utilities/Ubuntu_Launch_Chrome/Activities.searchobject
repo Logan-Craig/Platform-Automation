@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		10,
+		4,
+		80,
+		15
+	],
+	"lastmodifieddate": 1612307023.6849999,
+	"createddate": 1612307023.6849999,
+	"name": "Utilities/Ubuntu_Launch_Chrome/Activities",
+	"lastfounddate": 1612370070.5939999,
+	"ocrcapturestring": "Activities",
+	"lastfoundlocation": [
+		10,
+		4,
+		80,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[45,9]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Ubuntu_Launch_Chrome/Activities.png",
+				"connectionname": "Local Linux",
+				"type": 1,
+				"connectionserverid": "192.168.1.101",
+				"capturerect": [
+					10,
+					4,
+					80,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Activities"
+			}
+	]
+}

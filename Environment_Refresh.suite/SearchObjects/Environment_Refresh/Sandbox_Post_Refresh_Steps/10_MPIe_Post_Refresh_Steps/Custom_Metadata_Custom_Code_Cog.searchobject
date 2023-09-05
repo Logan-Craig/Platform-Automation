@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		366,
+		214,
+		143,
+		28
+	],
+	"lastmodifieddate": 1614962939.842,
+	"createddate": 1614962939.842,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Custom_Metadata_Custom_Code_Cog",
+	"lastfounddate": 1615494378.7750001,
+	"ocrcapturestring": "Custom Metadata Custom Code",
+	"lastfoundlocation": [
+		366,
+		214,
+		143,
+		28
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,10]",
+					"Tolerance": "_67",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Custom_Metadata_Custom_Code_Cog.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					366,
+					214,
+					143,
+					28
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Custom Metadata Custom Code"
+			}
+	]
+}

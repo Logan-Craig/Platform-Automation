@@ -1,0 +1,67 @@
+﻿set BrowserVar to "chrome"
+
+TypeText windowsKey,"r"
+TypeText BrowserVar&&"https://va--dtcsqa.my.salesforce.com",returnkey
+
+Run "Utilities/Launch_and_Login"
+
+TypeText controlKey,"l"
+TypeText controlKey,"c"
+If RemoteClipboard() = "https://va--dtcsqa.my.salesforce.com/home/home.jsp"
+Then
+	Click "Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite.png"
+End If
+WaitFor 15, "Utilities/Launch_and_Login/AvatarLightning.png"
+
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Setup",Waitfor:10
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Blue_Setup",Waitfor:10
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Search_Setup",Waitfor:10
+TypeText "Named Credentials"
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Named_Credentials",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/New_Named_Credential",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_Label",Waitfor:5
+TypeText "WHHL to MPIE"
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_Name",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_URL",Waitfor:5
+TypeText "https://dev-salesforce.lighthouse.va.gov/sfdc-mpi-ent/v0"
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_Identity_Type"
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_Identity_Type_Named_Principal",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_Authentication_Protocol",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/NNC_Authentication_Protocol_Password_Authentication",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Username",Waitfor:5
+put ["Jill", "Jack", "Bob", "Greg", "Ben", "Leo", "Sam", "Josh", "Brian", "Frank", "Paul", "Jim", "John", "Luke", "Dean", "Tom", "Joe", "Hank", "Billy"] into listOfNames
+put Random(number of items in listOfNames) into randomInt
+put item randomInt of listOfNames into randomName
+TypeText randomName
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Password"
+TypeText randomName
+If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Generate_Authorization_Header_Checked")
+Then
+	Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Generate_Authorization_Header_Click_Check"
+Else if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Generate_Authorization_Header_Unchecked")
+	LogSuccess "Not Checked!"
+End If
+
+If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Header_Unchecked")
+Then
+	Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Header_Checkbox"
+	LogSuccess "Box Checked!"
+End If
+
+
+If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Body_Checked")
+Then
+	Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Body_Checked_Click"
+Else if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allow_Merge_Fields_in_HTTP_Body_Unchecked")
+	LogSuccess "Not Checked!"
+End If
+
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Save_New_Named_Credential"
+
+If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Error_This_Name_Already_Exists")
+Then
+	Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Cancel"
+	LogError "Name Already Exists!"
+End If
+
+

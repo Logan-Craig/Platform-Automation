@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		239,
+		240,
+		186,
+		55
+	],
+	"lastmodifieddate": 1603905626.9749999,
+	"createddate": 1603905625.2259998,
+	"name": "SurveyURLPage",
+	"lastfounddate": 1692887680.0450001,
+	"ocrcapturestring": "Assignment Manager Custom Field SurveyURL Back to Assignment Manager",
+	"lastfoundlocation": [
+		239,
+		292,
+		112,
+		25
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/SurveyURLPage.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					239,
+					240,
+					186,
+					55
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Assignment Manager Custom Field SurveyURL Back to Assignment Manager"
+			}
+	]
+}

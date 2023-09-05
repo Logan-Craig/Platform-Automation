@@ -1,0 +1,149 @@
+﻿// 8.	Custom Labels:
+//  a.	Under Setup, go to Build / Create / Custom Labels in Setup.
+//  b.	Update the 'Environment_Base_URL' to the Sandbox URL and click 'Save'
+//  c.	Update the 'Standard_ URL' to the Sandbox URL and click 'Save'.
+//  d.	Update the 'VA_Base_URL' to the Sandbox URL and click 'Save'.
+//  e.	Update the 'VA_Community' to match the sandboxes Community/Site URL and click 'Save'.  The Salesforce site domain can be found under Setup and 'Sites'.
+//  f.	Update the 'VA_Salesforce_Help_Desk' to match the sandboxes Community/Site URL and click 'Save'.  The Salesforce site domain can be found under Setup                 and 'Sites'.
+//  g.	NOTE: Leave the "/Helpdesk" portion of the url address. 
+
+//timestamp: 12.48
+
+
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Custom Labels" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/CustomLabels", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SandboxRefreshLabels", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/ViewALLCustomLabels"
+
+
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/ViewSandboxRefreshLabels", waitFor:6)
+else
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/ViewChange"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/SandboxRefreshLabels"
+end if
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"08_Custom_Labels"& return to file Refresh_Report
+write "Updating Sandbox refresh URL labels" & return to file Refresh_Report
+
+// looking for EnvironmentBaseURL
+
+Log "Checking Environment Base URL label."
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/EditIDelEnvironmentBaseURL", waitFor:6)
+then
+	click FoundImageLocation()
+	click item 1 of everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit", waitfor:6)
+	Run "Environment_Refresh/EnvRefresh_Helpers".Wait_Until_Gone "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Value"	
+	typetext ControlKey, "a"&ControlKey, "c"
+	log SandboxURL
+	if RemoteClipboard()=SandboxURL
+	then
+		Log "Environment Base URL label already updated."
+		write "Environment Base URL already updated to: "&RemoteClipboard()&return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel")
+	else
+		Log "Updating Environment Base URL label."
+		typetext backspace&SandboxURL
+		write "Environment Base URL found: "& remoteclipboard() & return&"Environment Base URL updated to: " & SandboxURL & return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Save")
+	end if
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/BacktoListCustomLabes",waitfor:9
+end if
+
+
+// looking for Standard URL
+Log "Checking Standard URL label."
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/EditIDelStandardURL", waitFor:6)
+then
+	click FoundImageLocation()
+	click item 1 of everyimagelocation(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit", waitfor:6)
+	Run "Environment_Refresh/EnvRefresh_Helpers".Wait_Until_Gone "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Value"	
+	typetext ControlKey, "a"&ControlKey,"c"
+	if RemoteClipboard() = SandboxURL&"/"
+	then
+		Log "Standard URL label already updated."
+		write "Standard URL already updated to: "&RemoteClipboard()&return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel")
+	else
+		Log "Updating Standard URL label."
+		typetext Backspace&SandboxURL&"/"
+		write "Standard URL found: "& remoteclipboard() & return &"Standard URL updated to: " & SandboxURL&"/" & return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Save")
+	end if
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/BacktoListCustomLabes",waitfor:9
+end if
+
+// looking for VABaseURL
+Log "Checking VA Base URL label."
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/EditIDelVABaseURL", waitFor:6)
+then
+	click FoundImageLocation()
+	click item 1 of everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit", waitfor:6)
+	Run "Environment_Refresh/EnvRefresh_Helpers".Wait_Until_Gone "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Value"	
+	typetext ControlKey, "a"&ControlKey,"c"
+	set tmpURL to SandboxURL
+	replace "https://" in tmpURL with ""
+	if RemoteClipboard() = tmpURL&"/"
+	then
+		Log "VA Base URL label already updated."
+		write "VA Base URL already updated to: "&RemoteClipboard()&return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel")
+	else
+		Log "Updating VA Base URL label."
+		typetext Backspace&tmpURL&"/"
+		write "VA Base URL found to be: "&RemoteClipboard()&return&"VA Base URL updated to: " & tmpURL&"/" & return to file Refresh_Report	
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Save")
+	end if
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/BacktoListCustomLabes",waitfor:9
+end if
+
+// looking for VACommunity
+Log "Checking VA Community URL label."
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/EditIDelVACommunity", waitFor:6)
+then
+	click FoundImageLocation()
+	click item 1 of everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit", waitfor:6)
+	Run "Environment_Refresh/EnvRefresh_Helpers".Wait_Until_Gone "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Value"	
+	typetext ControlKey, "a"&ControlKey,"c"
+	if RemoteClipboard() = SitesCommunityURL
+	then
+		Log "VA Community URL label already updated."
+		write "VA Community URL already updated to: "&RemoteClipboard()&return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel")
+	else
+		Log "Updating VA Community URL label."
+		typetext Backspace&SitesCommunityURL
+		write "VA Community URL found to be: "&RemoteClipboard()&return&"VA Community URL updated to: "& SitesCommunityURL & return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Save")
+	end if
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/BacktoListCustomLabes",waitfor:9
+end if
+
+// looking for VASalesforceHelpDesk
+Log "Checking VA Salesforce Helpdesk URL label."
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/EditIDelVASalesforceHelpDesk", waitFor:6)
+then
+	click FoundImageLocation()
+	click item 1 of everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit", waitfor:6)
+	Run "Environment_Refresh/EnvRefresh_Helpers".Wait_Until_Gone "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Edit"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Value"	
+	typetext ControlKey, "a"&ControlKey,"c"
+	if RemoteClipboard() ="https://"& SitesCommunityURL&"/helpdesk"
+	then
+		Log "VA Salesforce Helpdesk URL has already been updated."
+		write "VA Salesforce Helpdesk URL already updated to: "&RemoteClipboard()&return to file Refresh_Report
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel")
+	else
+		Log "Updating VA Salesforce Helpdesk URL."
+		typetext Backspace&"https://"& SitesCommunityURL&"/helpdesk"
+		write "VA Saleforce Helpdesk URL found to be: "&RemoteClipboard()&return&"VA Saleforce Helpdesk URL updated to: " & "https://"&"https://"& SitesCommunityURL&"/helpdesk" & return&return to file Refresh_Report	
+		click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Save")
+	end if
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/BacktoListCustomLabes",waitfor:9
+end if
+
+close file Refresh_Report

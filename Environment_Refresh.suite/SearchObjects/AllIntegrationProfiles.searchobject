@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603840643.9159999,
+	"ocrcapturestring": "All Integration Profiles",
+	"originalcapturelocation": [
+		247,
+		291,
+		144,
+		17
+	],
+	"createddate": 1603840642.027,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/AllIntegrationProfiles.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					247,
+					291,
+					144,
+					17
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "All Integration Profiles"
+			}
+	],
+	"name": "AllIntegrationProfiles"
+}

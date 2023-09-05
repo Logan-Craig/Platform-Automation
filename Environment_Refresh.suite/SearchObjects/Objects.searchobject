@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603904722.829,
+	"ocrcapturestring": "Objects",
+	"originalcapturelocation": [
+		53,
+		652,
+		43,
+		15
+	],
+	"createddate": 1603904721.02,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/Objects.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					652,
+					43,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Objects"
+			}
+	],
+	"name": "Objects"
+}

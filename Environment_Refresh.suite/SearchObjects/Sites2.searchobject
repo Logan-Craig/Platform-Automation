@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		53,
+		749,
+		75,
+		35
+	],
+	"lastmodifieddate": 1604099391.125,
+	"createddate": 1604099385.1630001,
+	"name": "Sites2",
+	"lastfounddate": 1605921299.777,
+	"ocrcapturestring": "S-Controls Sites",
+	"lastfoundlocation": [
+		53,
+		652,
+		75,
+		35
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/4_Exam/Sites.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					749,
+					75,
+					35
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "S-Controls Sites"
+			}
+	]
+}

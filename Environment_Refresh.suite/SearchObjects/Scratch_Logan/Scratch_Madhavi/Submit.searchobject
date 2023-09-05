@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1156,
+		801,
+		43,
+		14
+	],
+	"lastmodifieddate": 1646236835.4489999,
+	"createddate": 1645041229.9619999,
+	"name": "Scratch_Logan/Scratch_Madhavi/Submit",
+	"lastfounddate": 1645041334.7259998,
+	"ocrcapturestring": "Submit",
+	"lastfoundlocation": [
+		1156,
+		801,
+		43,
+		14
+	],
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,7]",
+					"Tolerance": "_16",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/Scratch_Madhavi/Submit.png",
+				"connectionname": "75A_Prceeds.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/75A_Prceeds.png",
+				"capturerect": [
+					1156,
+					801,
+					43,
+					14
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Submit"
+			}
+	]
+}

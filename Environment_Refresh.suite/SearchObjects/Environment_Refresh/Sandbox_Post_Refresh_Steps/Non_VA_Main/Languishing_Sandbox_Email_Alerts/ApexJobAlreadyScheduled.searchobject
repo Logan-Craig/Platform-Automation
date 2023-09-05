@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		251,
+		454,
+		507,
+		16
+	],
+	"lastmodifieddate": 1688071435.908,
+	"createddate": 1688071435.908,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/ApexJobAlreadyScheduled",
+	"lastfounddate": 1692735765.339,
+	"ocrcapturestring": "System.AsyncException: The Apex job named \"Email Alerts' is already scheduled for execution.",
+	"lastfoundlocation": [
+		251,
+		460,
+		507,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[290,5]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/ApexJobAlreadyScheduled.png",
+				"connectionname": "802_SUT",
+				"type": 1,
+				"connectionserverid": "VAC23APPEGY802",
+				"capturerect": [
+					251,
+					454,
+					507,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "System.AsyncException: The Apex job named \"Email Alerts' is already scheduled for execution."
+			}
+	]
+}

@@ -1,0 +1,32 @@
+﻿//Movie timestamp 23:40
+
+Log "Executing CARMA Vet360 - Address Validation (Named Credential)."
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Named Credentials"
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Navigation_Links/NamedCredentials"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/All_View_Selected"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/ALL_View_Desired"
+set ViewName to "ALL"
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView
+
+repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Sort_Arrow")
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Label_Sort"
+end repeat
+Log "Updating MPIE Setup."
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/WHHLtoMPIE"
+click image:"Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:6
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/URL_Field",waitfor:6
+typetext controlkey, "a"
+typetext "https://qa-salesforce.lighthouse.va.gov/sfdc-mvi-ent/v0"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Username_Field"
+typetext controlkey, "a"
+typetext "V8tSdBQ9DdBGPSRASPSdeQQE8p5Ssq"
+typetext tabkey
+typetext "DJKk8mZPEmLfLm5QTyry9JsXLYp3rr"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+

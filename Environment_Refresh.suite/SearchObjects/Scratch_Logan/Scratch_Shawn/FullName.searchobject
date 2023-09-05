@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		340,
+		187,
+		71,
+		16
+	],
+	"lastmodifieddate": 1646236835.5910001,
+	"createddate": 1642623562.612,
+	"name": "Scratch_Logan/Scratch_Shawn/FullName",
+	"lastfounddate": 1643101766.0420001,
+	"ocrcapturestring": "Full Name",
+	"lastfoundlocation": [
+		340,
+		187,
+		71,
+		16
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Full Name",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[38,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					340,
+					187,
+					71,
+					16
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/FullName.png"
+			}
+	]
+}

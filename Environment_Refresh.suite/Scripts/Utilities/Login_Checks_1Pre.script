@@ -1,0 +1,32 @@
+﻿//These are things to check for before even looking for the Username field, but after having launched the browser.
+
+//Checks to be sure SalesForce isn't already logged into somehow.
+put "Checking if Salesforce is somehow already logged in."
+//Close the restore page for ms Edge
+if imagefound(image:"Helper_Utilities/Launch_and_Login/MSEdge_Checks/Restorepages" ,waitfor:0)
+then
+	Click {Image:"Helper_Utilities/Launch_and_Login/MSEdge_Checks/cancelButton"}
+else
+	log "Restore message didn't popup"
+end if
+
+//Close the restore page for Chrome
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Restore", waitfor:0)
+then
+	Log "Chrome Restore Pages pop up encountered. Closing."
+	click image:"Helper_Utilities/Launch_and_Login/Close_Dialogue", searchrectangle:[foundimagelocation(),[x of remotescreensize(),-200]]
+end if
+
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Avatar_Lightning",waitfor:1)
+	Throw "A user is already logged in to Salesforce.", "Dynamic login has most likely been run twice in a row somehow."
+end if
+
+
+//Checks for card reader not found pop up
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Card_Reader_Pop_Up", waitfor: 0, searchrectangle:([890,790],[1280,1024]))
+moveto foundimagelocation()
+if imagefound(image:"Helper_Utilities/Launch_and_Login/Card_Reader_Close", searchrectangle:([890,790],[1280,1024]))
+	click FoundImageLocation()
+	end if
+end if
+

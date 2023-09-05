@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		317,
+		627,
+		102,
+		14
+	],
+	"lastmodifieddate": 1613675923.6900001,
+	"createddate": 1613675923.6900001,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/AcceptEmailFrom",
+	"lastfounddate": 1613683888.168,
+	"ocrcapturestring": "Accept Email From",
+	"lastfoundlocation": [
+		309,
+		367,
+		102,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[61,6]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/AcceptEmailFrom.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					317,
+					627,
+					102,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Accept Email From"
+			}
+	]
+}

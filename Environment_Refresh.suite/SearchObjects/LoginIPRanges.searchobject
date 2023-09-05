@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		583,
+		661,
+		100,
+		19
+	],
+	"lastmodifieddate": 1603841314.3860002,
+	"createddate": 1603841307.665,
+	"name": "LoginIPRanges",
+	"lastfounddate": 1692887560.7420001,
+	"ocrcapturestring": "Login IP Ranges",
+	"lastfoundlocation": [
+		583,
+		632,
+		100,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/LoginIPRanges.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					583,
+					661,
+					100,
+					19
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Login IP Ranges"
+			}
+	]
+}

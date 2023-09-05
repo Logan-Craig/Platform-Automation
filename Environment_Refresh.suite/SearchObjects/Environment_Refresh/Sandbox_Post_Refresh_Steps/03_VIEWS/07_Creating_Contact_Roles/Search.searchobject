@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		304,
+		493,
+		113,
+		16
+	],
+	"lastmodifieddate": 1614366095.2079999,
+	"createddate": 1614366095.2079999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Search",
+	"lastfounddate": 1614366101.1859999,
+	"ocrcapturestring": "Search...",
+	"lastfoundlocation": [
+		304,
+		493,
+		113,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[56,8]",
+					"Tolerance": "_40",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/07_Creating_Contact_Roles/Search.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					304,
+					493,
+					113,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Search..."
+			}
+	]
+}

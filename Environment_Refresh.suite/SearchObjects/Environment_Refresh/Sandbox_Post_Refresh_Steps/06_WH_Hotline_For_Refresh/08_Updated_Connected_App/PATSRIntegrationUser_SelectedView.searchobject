@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1614190368.1210001,
+	"ocrcapturestring": "PATSR Integration User",
+	"originalcapturelocation": [
+		283,
+		349,
+		143,
+		17
+	],
+	"createddate": 1614190368.1210001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_73",
+					"HotSpot": "[71,8]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/PATSRIntegrationUser_SelectedView.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					283,
+					349,
+					143,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "PATSR Integration User"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/PATSRIntegrationUser_SelectedView"
+}

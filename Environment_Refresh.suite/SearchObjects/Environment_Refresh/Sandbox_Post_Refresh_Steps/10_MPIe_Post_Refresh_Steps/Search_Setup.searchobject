@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		368,
+		120,
+		114,
+		17
+	],
+	"lastmodifieddate": 1614702389.2969999,
+	"createddate": 1614702389.2969999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Search_Setup",
+	"lastfounddate": 1620138009.4920001,
+	"ocrcapturestring": "Q. Search Setup",
+	"lastfoundlocation": [
+		372,
+		120,
+		114,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[70,8]",
+					"Tolerance": "_42",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Search_Setup.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					368,
+					120,
+					114,
+					17
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Q. Search Setup"
+			}
+	]
+}

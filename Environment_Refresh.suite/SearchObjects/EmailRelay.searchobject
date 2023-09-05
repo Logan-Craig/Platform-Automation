@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604081743.7059999,
+	"ocrcapturestring": "Email Relay",
+	"originalcapturelocation": [
+		356,
+		400,
+		64,
+		14
+	],
+	"createddate": 1604081616.128,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EmailRelayDF.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					356,
+					400,
+					64,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Email Relay"
+			}
+	],
+	"name": "EmailRelay"
+}

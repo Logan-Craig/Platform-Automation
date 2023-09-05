@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		499,
+		165,
+		87,
+		17
+	],
+	"lastmodifieddate": 1646236835.619,
+	"createddate": 1618601724.451,
+	"name": "Opportunities",
+	"lastfounddate": 1621443752.1859999,
+	"ocrcapturestring": "Opportunities",
+	"lastfoundlocation": [
+		13,
+		722,
+		87,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[46,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/Opportunities.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					499,
+					165,
+					87,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Opportunities"
+			}
+	]
+}

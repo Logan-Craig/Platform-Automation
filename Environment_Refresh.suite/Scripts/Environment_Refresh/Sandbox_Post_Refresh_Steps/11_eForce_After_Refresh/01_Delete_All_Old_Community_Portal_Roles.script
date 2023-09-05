@@ -1,0 +1,13 @@
+﻿//This is Data Loader Step
+
+//Using Dataloader run the following SOQL to extract Old orphan roles
+
+//SELECT Id FROM UserRole WHERE PortalType = 'CustomerPortal' AND (DeveloperName LIKE 'Army%' OR DeveloperName LIKE 'Air%' OR DeveloperName LIKE 'Coast%' OR DeveloperName LIKE 'Defense%' OR DeveloperName LIKE 'Marine%' OR DeveloperName LIKE 'Navy%' OR DeveloperName LIKE 'NOAA%' OR DeveloperName LIKE 'PHS%')
+
+//Save the file as OldCommunityUsers.csv
+
+//Ensure 'Show all Salesforce objects' is checked
+
+//Take the above file and perform a Delete on Role (UserRole) object.
+
+//Note: If you receive this error on deletion: Your attempt to delete the role Air Force Customer User could not be completed because users are currently assigned to that role or at least one role reports to that role.: User: AirForce DODLiaison (or similar), this step and several future steps may not be needed. Please proceed to the next slide

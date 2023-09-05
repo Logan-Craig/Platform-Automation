@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		442,
+		446,
+		128,
+		14
+	],
+	"lastmodifieddate": 1614368527.6950002,
+	"createddate": 1614368527.6950002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/KWMemberRecord",
+	"lastfounddate": 1618412700.6849999,
+	"ocrcapturestring": "KW - Member Record",
+	"lastfoundlocation": [
+		445,
+		446,
+		128,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[95,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/KWMemberRecord.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					442,
+					446,
+					128,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "KW - Member Record"
+			}
+	]
+}

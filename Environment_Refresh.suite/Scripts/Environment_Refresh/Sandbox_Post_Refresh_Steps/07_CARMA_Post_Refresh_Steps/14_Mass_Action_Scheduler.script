@@ -1,0 +1,168 @@
+﻿/////////////////////////////////////////
+//This step requires lightning mode!//
+/////////////////////////////////////////
+Log "Executing Mass Action Scheduler."
+
+//Switching to lightning mode
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar"
+Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+Log "Mode switched to Lightning."
+wait 3
+waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher"
+Log "Switched to Lightning mode."
+typetext controlkey,"l"
+typetext controlkey,"c"
+if remoteclipboard() contains "Mass_Action_Configuration"
+else
+	click FoundImageLocation()
+	typetext "Mass Action Scheduler",returnKey
+end if
+
+
+//Checking to see if the action has been created already
+Log "Checking to see if the action has been created already."
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/RecentlyViewed", waitfor:  8
+click {imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/All", searchrectangle: [(foundimagelocation()+[-150,50]),(FoundImageLocation()+[-25,85])]}
+
+
+if not imagefound({image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/CARMABenefit_Mass_Action", waitfor:3},{image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/WellnessContact_Mass_Action",waitfor:3})
+then	
+	
+	Log "Creating new Mass Action"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/New",waitfor: 6
+	//Begin CARMA Benefit End Mass Action' 
+	Log "Beginning actions for CARMA Benefit End Mass Action"
+	//Data Input for Mass Action Scheduler
+	Log "Data Input for Mass Action Scheduler"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurationN",waitfor:3
+	typetext controlkey,"a",backspace
+	typetext "CARMA Benefit End Mass Action"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurationUniqueN"
+	typetext controlkey,"a",backspace, 
+	typetext "CARMA_Benefit_End_Mass_Action"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Description" 
+	typetext controlkey,"a",backspace, 
+	SetRemoteClipboard "This Mass Action runs daily to pull all CARMA Contact Records that have reached their Benefits End Date and calls the CARMA Benefit End Flow."
+	typetext controlkey,"v"
+	//Verifying Active is checked (default)
+	assert imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Active")
+	assert imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Checked",searchrectangle: [(foundimagelocation()+[-50,50]),(FoundImageLocation()+[50,-50])])
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/BatchSize"
+	typetext controlkey,"a",backspace, 
+	typetext "10"
+	assert imagefound(imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/None", searchrectangle: [topleft of ImageRectangle ("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental")+[10,10],(topleft of ImageRectangle ("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental")+[80,50])])
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Source Information
+	Log "Data Input for Choose Source"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SourceType"
+	typetext "SOQL"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SOQLQuery"
+	SetRemoteClipboard "SELECT Id FROM CARMA_Contact_Relationship__c WHERE Benefits_End_Date__c = YESTERDAY AND Applicant_Type__c != 'General Caregiver'"
+	typetext controlkey,"v"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Action Information
+	Log "Data Input for Action Information"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/ActionType"
+	typetext"Process Builder and Flows"&returnKey
+	assert imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/ActionType")
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Action",waitfor:6,searchrectangle:[(foundimagelocation()+[-50,25]),(FoundImageLocation()+[50,65])]
+	typetext "CARMA Benefit End"&&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Field Mappings
+	Log "Data Input for Field Mappings"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SOURCEFIELD"
+	typetext "ID"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data input for Schedule Information
+	Log "Data input for Schedule Information"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Scheduled"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/0100AM"
+	typetext tabKey&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SUNDAY"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	typetext controlkey,endKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/JANUARY"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	//Saving
+	Log "Saving Mass Action"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Save"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/CARMABenefitEndMassAction", waitfor:8
+	
+	
+	//Create Wellness Contact Mass Action Scheduler Record 
+	Log "Creating new Mass Action"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/New",waitfor: 6
+	//Detail Information
+	Log "Beginning actions for Create Wellness Contact Mass Action Scheduler Record"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurationN",waitfor:3
+	typetext controlkey,"a",backspace
+	typetext "Wellness Contact Task Creation"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/MassActionConfigurationUniqueN"
+	typetext controlkey,"a",backspace, 
+	typetext "Wellness_Contact_Task_Creation"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Description" 
+	typetext controlkey,"a",backspace, 
+	SetRemoteClipboard "Scheduler to create wellness contact on recurring basis."
+	typetext controlkey,"v"
+	//Verifying Active is checked (default)
+	assert imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Active")
+	assert imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Checked",searchrectangle: [(foundimagelocation()+[-50,50]),(FoundImageLocation()+[50,-50])])
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/BatchSize"
+	typetext controlkey,"a",backspace, 
+	typetext "200"
+	assert imagefound(imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/None", searchrectangle: [topleft of ImageRectangle ("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental")+[10,10],(topleft of ImageRectangle ("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/NamedCredental")+[80,50])])
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Source Information
+	Log "Data Input for Choose Source"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SourceType"
+	typetext "SOQL"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SOQLQuery"
+	SetRemoteClipboard "Select Id,CARMA_Veteran_Contact__c,ownerId, Veteran_Contact__r.CARMA_Program_Participant__c,RecordTypeId,Veteran_Contact__c from carma_task__c where RecordTypeId in (SELECT Id FROM RecordType WHERE DeveloperName = 'Monitoring_Assessment') AND Veteran_Contact__r.CARMA_Program_Participant__r.Active__c=TRUE AND Due_Date__c = YESTERDAY AND (Status__c != 'Deleted' or Status__c != 'Not Completed_Inactive') AND Assessment_type__c='Wellness Contact 3' ORDER BY Id"
+	typetext controlkey,"v"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Action Information
+	Log "Data Input for Action Information"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/ActionType"
+	typetext"Process Builder and Flows"&returnKey
+	assert imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/ActionType")
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Action",waitfor:6,searchrectangle:[(foundimagelocation()+[-50,25]),(FoundImageLocation()+[50,65])]
+	typetext "CARMA Monitoring Assessment Task Flow"&&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data Input for Field Mappings
+	Log "Data Input for Field Mappings"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/varCPP"
+	typetext "VETERAN_CONTACT__R.CARMA_PROGRAM_PARTICIPANT__C"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/varRecordTypeld"
+	typetext "RECORDTYPEID"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/varVAMCId"
+	typetext "OWNERID"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/varVeteranContact"
+	typetext "VETERAN_CONTACT__C"&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Next"
+	//Data input for Schedule InformationLog "Data input for Schedule Information"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Scheduled"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/1200AM"
+	typetext tabKey&returnKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/SUNDAY"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	typetext controlkey,endKey
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/JANUARY"
+	typetext controlkey,"a"
+	typetext tabkey&returnKey
+	
+	//Saving
+	Log "Saving Mass Action"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/Save"
+	click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/WellnessContactTaskCreation", waitfor:8
+	
+else 
+	Log "Carma Mass Actions found to already exist. Skipping actions."
+end if
+
+//Switching back to Classic mode
+Click ImageName:"Utilities/Launch_and_Login/AvatarLightning"
+click "Utilities/Launch_and_Login/SwitchtoSalesforceClassic"
+Log "Mode switched to Classic."

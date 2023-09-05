@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		21,
+		570,
+		77,
+		13
+	],
+	"lastmodifieddate": 1604078711.395,
+	"createddate": 1604078711.395,
+	"name": "Customize2",
+	"lastfounddate": 1605921566.802,
+	"ocrcapturestring": "Customize",
+	"lastfoundlocation": [
+		21,
+		270,
+		77,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Customize.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					21,
+					570,
+					77,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Customize"
+			}
+	]
+}

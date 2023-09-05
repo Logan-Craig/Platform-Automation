@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		36,
+		589,
+		63,
+		13
+	],
+	"lastmodifieddate": 1646236835.5469999,
+	"createddate": 1619705533.7350001,
+	"name": "Scratch_Logan/Ramya_List/FirstName",
+	"lastfounddate": 1619705653.335,
+	"ocrcapturestring": "First Name",
+	"lastfoundlocation": [
+		35,
+		589,
+		63,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[31,6]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/FirstName.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					36,
+					589,
+					63,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "First Name"
+			}
+	]
+}

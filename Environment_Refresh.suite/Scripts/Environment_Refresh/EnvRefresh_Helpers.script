@@ -1,0 +1,439 @@
+﻿on Add_To_Trusted_IPs IP1:"152.129.44.132",IP1Name:"Eggplant VAEC SUT"
+	
+	set FoundMode to "Helper_Utilities/Helpers".SwitchSandboxMode ("Lightning")
+	typetext controlkey, "c"
+	put the remoteclipboard
+	
+	if imagefound("Helper_Utilities/Add_to_Trusted_IPs/NetworkAccess_Icon")
+	else
+		if imagefound("Common_Images/QuickFind")
+		else
+			click image:"Common_Images/Setup_Icon_Grey",waitfor:6
+			click image:"Common_Images/Setup_Icon_Blue",waitfor:6
+			waitfor 16, "Common_Images/Home_Icon"
+			waitfor 6,"Common_Images/QuickFind"
+		end if
+		click foundimagelocation()
+		typetext "Network Access"
+		Run "Helper_Utilities/Helpers".Verify_Field_Contents "Network Access", foundimagelocation()
+		click "Helper_Utilities/Add_to_Trusted_IPs/NetworkAccess"
+	end if
+	
+	
+	Log "Entering IP for:"&&IP1Name
+	click image:"Common_Images/New_Lightning/New_Lightning_WordOnly",waitfor:9
+	click image: "Helper_Utilities/Add_to_Trusted_IPs/StartIPAddress",waitfor:3
+	typetext IP1, tabkey, IP1, tabkey, IP1Name, tabkey, Returnkey
+	
+	Run "Helper_Utilities/Helpers".SwitchSandboxMode FoundMode
+end Add_To_Trusted_IPs
+
+
+(*
+Handler to figure out what the correct sandbox user name and URL should be from a given sandbox name.
+Examples of va-main orgs:
+VA--INT
+VA--VACOEDUDEV
+
+Examples of non-va-main orgs:
+VHA--INT
+VA-Vet--INT
+VALOB--INT
+VAEMCC--INT
+VAPM--INTVAPM
+
+
+List of non-va-main Base_Sandbox_Names:
+VHA--
+VA-Vet--
+VALOB--
+VAEMCC--
+VAPM--
+
+Identify a va-main sandbox:
+if the SandboxName does not contain "va--", and is does not contain any of the "Base_Sandbox_Name"s listed above, the sandbox should be considered va-main and have va--added to it's URL.
+If the SandboxName DOES contain "va--" then it should be REMOVED from the SandboxName, but the sandbox should be considered va-main and va--added to it's URL
+
+Set up the MyUsername of a va-main sandbox
+If either of the above is True, then the sandbox MyUsername should be the given username from Login_Ask appended but with everything after the "@" removed and created thusly: 
+<xxxxx>@va.gov.&SandboxName
+eg: logan.craig@va.gov.int or logan.craig@va.gov.dtcsqa
+Note that the SandboxName does NOT contain "va--".
+
+Identify a non-va-main sandbox:
+If the conditions above do not evaluate as True / the base_Sandbox_Name is in the non-va-main list, then the SandboxName should be set as provided in Login_Ask and the URL created as normal WITHOUT any addition of "va--".
+
+Set up the MyUsername of a non-va-main sandbox:
+<xxxxx>@&SandboxName&".gov"&item 2 of Base_Sandbox_Name
+eg: logan.craig@VALOB.gov.INT or logan.craig@va-vet.gov.vahcstage2
+
+*)
+
+on Parse_Sandbox_Name_Info 
+	Log "Here is the provided sandbox name:"&&the suitevariables.SandboxName
+	set the suitevariables.Sandbox_Org to item 1 of "Environment_Refresh/EnvRefresh_Helpers".Parse_Name
+	set the suitevariables.Sandbox_Base_Name to item 2 of "Environment_Refresh/EnvRefresh_Helpers".Parse_Name
+	Log "Sandbox Base_Name:"&&the suitevariables.Sandbox_Base_Name
+	Log "Sandbox Org:"&&the suitevariables.Sandbox_Org 
+	
+	set Base_Org_PList to {
+		VAMain:[
+			"va--"
+		],
+		NonVAMain:[
+			"VHA--",
+			"VHA-GOV--",
+			"VA-Vet--",
+			"VALOB--",
+			"VAEMCC--",
+			"VAPM--"
+		]
+	}
+	
+	if ...
+		...Base_Org_PList.VAMain contains the suitevariables.Sandbox_Org:
+			Log "VA-Main org sandbox."
+			set the suitevariables.MyUsername to the suitevariables.MyUsername&"."&the suitevariables.Sandbox_Base_Name
+			Log "VA-Main username built:"&&the suitevariables.MyUsername
+			Set the suitevariables.VA_Main_Org to True
+		...Base_Org_PList.NonVAMain contains the suitevariables.Sandbox_Org: 
+		//example: chelsea.harmon@va.gov.va-vet.vahcdas
+			Log "Non VA-Main"
+			split the suitevariables.MyUsername by "@"
+			set the suitevariables.MyUsername to item 1 of the suitevariables.MyUsername&"@"&the suitevariables.Sandbox_Org&the suitevariables.Sandbox_Base_Name
+			Log "Non VA-Main username built:"&&the suitevariables.MyUsername
+			Set the suitevariables.VA_Main_Org to False
+		else
+			Set the suitevariables.VA_Main_Org to ""
+			Throw "Unknown Sandbox Base Name:"&Base_Name&&"Not in:"&&Base_Name_PList
+	end if 
+	
+	
+end Parse_Sandbox_Name_Info
+
+
+to Parse_Name
+	set Base_Sandbox_Name to the suitevariables.SandboxName
+	split Base_Sandbox_Name by "--"
+	set item 1 of Base_Sandbox_Name to item 1 of Base_Sandbox_Name&"--"
+	log "My sandbox org is:"&&item 1 of Base_Sandbox_Name
+	return Base_Sandbox_Name
+end Parse_Name
+
+on Build_Sandbox_URL
+	set the suitevariables.SandboxURL to "https://"&the suitevariables.SandboxName&".sandbox.my.salesforce.com"
+	//adds va-- if it wasn't input to a va-main org only
+	//if the suitevariables.VA_Main_Org = True and the suitevariables.SandboxURL does not contain "va--" then set the suitevariables.SandboxURL to "https://"&"va--"&the suitevariables.SandboxURL
+end Build_Sandbox_URL
+
+
+
+
+on Navigate_To_Module Module_Name, Module_Loaded_Image
+	Log "Beginning Navigate_To_Module for:"&&Module_Name
+	if imagefound(image:Module_Loaded_Image,waitfor:1)
+	Then
+		Log "Module already loaded."
+	else
+		repeat at least once until imagefound("Common_Images/SearchAppLauncher")
+			click "Common_Images/Waffle_Grey", "Common_Images/Waffle_Grey_Selected"
+			moveto foundimagelocation()+[250,-40]
+			if the repeatindex > 20 then Throw "Unable to work with application launcher."
+		end repeat
+		Typetext Module_Name
+		Typetext returnkey
+		Waitfor_Static_Image Module_Loaded_Image
+		Log "Module loaded."
+	end if
+end Navigate_To_Module
+
+
+to FindSandboxName
+	typetext controlkey, "lc"
+	put the remoteclipboard into FoundSandbox
+	if FoundSandbox contains ".sandbox"
+	then
+		set Enhanced_Domain to True
+	end if
+	delete "https://" from FoundSandbox
+	split FoundSandbox by "."
+	put the first item of FoundSandbox into FoundSandbox
+	
+	put "Found Sandbox:"&&FoundSandbox
+	//all sandboxes are now enhanced domain
+	(*	if Enhanced_Domain is True
+		set FoundSandbox to FoundSandbox&".sandbox"
+		Log "Enhanced domain found. Setting FoundSandbox to:"&&FoundSandbox
+	end if*)
+	return FoundSandbox
+end FindSandboxName
+
+
+//clicks something until something appears
+//click image can be a hotspot, Verification_Image cannot
+on Click_Until_It_Opens Click_Image, Verification_Image, wait_time:9, wait_limit:6
+	Log "Executing click handler for image/hotspot:"&&Click_Image
+	repeat at least once until imagefound(image:Verification_Image,waitfor:wait_time)
+		if Click_Image contains ","
+		then
+			if the repeatindex > wait_limit then throw "Failed to find verification image for click handler image:"&&Click_Image,"A wait of about:"&&wait_limit&&"was allowed."
+			click Click_Image	
+		else
+			if the repeatindex > wait_limit then throw "Failed to find verification image for click handler image:"&&Click_Image,"A wait of about:"&&wait_limit*wait_time&&"was allowed."
+			click image:Click_Image,waitfor:wait_time
+		end if
+		
+	end repeat
+end Click_Until_It_Opens
+
+
+to Determine_Org
+	if the suitevariables.VA_Main_Org = True
+	then
+		Log "VA Main Org sandbox found."
+		Set SetupLocation to "VA-Main"
+	else
+		Log "Non VA-main org sandbox found: "&&the remoteclipboard
+		Set SetupLocation to "Non va-main"
+	end if
+	Log "Setup Location:"&&SetupLocation
+	return SetupLocation
+end Determine_Org
+
+
+on Document_Refresh_List Remark
+	Put ResourcePath("Refresh_Report_List"&".csv") into Refresh_Report_List
+	open file Refresh_Report_List for appending 
+	write Remark&return to file Refresh_Report_List
+	close file Refresh_Report_List
+end Document_Refresh_List
+
+
+//Comprehensive Navigate around setup helper.
+//Also checks that sandbox is in approved list.
+//Stays put if its already in the correct spot. But still checks sandbox against approved list.
+//Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup NavtText, NavImage, NavHeader
+on Search_Setup NavText, NavImage, Header1, Header2:empty,Header3:empty,Header4:empty
+	Set FoundHeader to False
+	Set HeaderList to [Header1,Header2,Header3,Header4]
+	delete each item of HeaderList which is empty
+	Log "HeaderList:"&&HeaderList
+	repeat for each item of HeaderList
+		if imagefound(Image:it,waitfor:0)
+		then 
+			Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+			set FoundHeader to True
+			exit repeat
+		end if	
+	end repeat
+	
+	Put ResourcePath("Script_Runs.csv") into ScriptRuns
+	open file ScriptRuns for appending 
+	write return&the suitevariables.SandboxName&&the date && the time && NavText&return to file ScriptRuns
+	
+	if FoundHeader is not true
+		Navigate_to_Setup//findsandboxname leaves focus in the URL. Better to move to top of page first.
+		Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+		Log "Navigating to:"&&NavText
+		QuickFind NavText, NavImage
+		
+		Set HeaderListCount to the number of items in HeaderList
+		Set HeaderIndex to 1
+		//if this isn't item 1 it will never decide it is in the right place.
+		repeat until imagefound(image:(item HeaderIndex of HeaderList),waifor:4)
+			Put "Waiting for"&&NavText&&"banner to load..."
+			Put "This image:"&item HeaderIndex of HeaderList
+			Put the repeatindex * 4&&"Seconds have passed"
+			add 1 to HeaderIndex
+			if HeaderIndex > HeaderListCount then set HeaderIndex to 1
+			if the repeatindex > 20
+				Throw NavText&&"Expected banner failed to load after 60 seconds.","Show Logan a screenshot of the page you're on, it might be a new/different banner that he needs to add to the list."
+			end if
+		end repeat
+	end if
+end Search_Setup
+
+on Wait_Until_Gone ImageVar
+	repeat until everyimagelocation(image:ImageVar,waitfor:0) is Empty
+		wait 1
+		if the repeatindex > 12
+			throw "Image still present."
+		end if
+	end repeat
+end Wait_Until_Gone
+
+
+//old version of the search setup
+on Search_Setup_Old NavText, NavImage, NavHeader
+	put NavText
+	if imagefound(image:NavHeader,waitfor:0)
+	then
+		Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+	else
+		Navigate_to_Setup//findsandboxname leaves focus in the URL. Better to move to top of page first.
+		Check_For_PII_Sandbox ("Helper_Utilities/Helpers".FindSandboxName)
+		Log "Navigating to:"&&NavText
+		QuickFind NavText, NavImage
+		repeat until imagefound(image:NavHeader,waitfor:6)
+			Put "Waiting for"&&NavText&&"banner to load..."
+			Put the repeatindex * 6&&"Seconds have passed"
+			if the repeatindex > 10
+				Throw NavText&&"banner failed to load after 60 seconds."
+			end if
+		end repeat
+	end if
+end Search_Setup_Old
+
+
+
+
+on Check_For_PII_Sandbox FoundSandbox
+	put [
+		"va",
+		"va--staging",
+		"va--prodmirror",
+		"vapm",
+		"vapm--perfvapm",
+		"VHA-Gov",
+		"vha-gov--perf",
+		"va-vet",
+		"va-vet--perf",
+		"valob",
+		"valob--perf",
+		"vaempl",
+		"vaempl--perf"
+	] into PII_Sandboxes
+	if FoundSandbox is in PII_Sandboxes
+		typetext controlkey, "lc"
+		put the remoteclipboard into FullURL
+		beep
+		throw "Automation found to be running in"&&FoundSandbox&&"environment!","This is a sandbox with potential PII!! This is very bad! Do not run automated scripts in production environments.","Full URL:"&&FullURL,"Found Sandbox name:"&&FoundSandbox
+	end if
+end Check_For_PII_Sandbox
+
+
+on QuickFind NavText, NavImage
+	if the suitevariables.VA_Main_Org = True
+	then
+		repeat at least once until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch_OnFocus")
+			Navigate_to_setup_from_other_page
+			click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch", waitfor:9
+			//			click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch",hotspot:[25,0], waitfor:9
+			typetext controlkey, "a", deletekey
+			if repeatindex()>12
+				throw "Could not bring focus to quick search after 12 tries."
+			end if
+		end repeat
+	else if the suitevariables.VA_Main_Org = False
+		//Lightning mode leaves previous search parameters in the search box
+		
+		repeat at least once until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch/QuickFindSearch_Lightning", waitfor:9,searchrectangle:[bottomleft of imagerectangle("Common_Images/Waffle_Grey")+[-8,10],bottomright of imagerectangle("Common_Images/Waffle_Grey")+[8,100]])
+			click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch", waitfor:9,hotspot:[100,0]
+			if repeatindex()>12
+				throw "Could not bring focus to quick search after 12 tries."
+			end if
+		end repeat
+	else
+		Throw "Unknown if org is va main or not."
+	end if
+	typetext controlkey, "a"
+	TypeText NavText
+	//Click item two of everyimagelocation(Image:NavImage, waitFor:3)
+	Click item 1 of everyimagelocation(Image:NavImage, waitFor:6, searchrectangle:[foundimagelocation()+[-200,15],remotescreensize()+[-800,0]])
+
+end QuickFind
+
+on Navigate_to_Setup SetupType:"Classic"
+	if "Environment_Refresh/EnvRefresh_Helpers".Determine_Org...
+		...="Non va-main": 
+			Log "Sandbox determined to be non-va-main."
+			//exam and the apex wizard no longer display the quick find stuff at the top
+			repeat until imagefound("Utilities/Launch_and_Login/Avatar_Non_VA_Main") or imagefound("Utilities/Launch_and_Login/AvatarLightning")
+				typetext PageUp,escapekey,escapekey
+				if the repeatindex >5 then throw "Unable to reach Setup."
+			end repeat
+			//Actually navigates to setup for lightning mode (non va-main orgs)
+			click image:"Utilities/Login_As/Setup_Icon_Grey", searchrectangle:[topleft of imagerectangle(image:"Common_Images/Notification_Icon_2",waitfor:9)+[0,-15],bottomright of imagerectangle("Common_Images/Notification_Icon_2")+[-75,15]],waitfor:9
+			click image:"Common_Images/Setup_Icon_Blue",waitfor:9
+			(*if imagefound("Common_Images/Avatar_Classic") and if not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch/QuickFindSearch")
+			then
+				Navigate_to_setup_Lightning
+			end if*)
+		...="VA-Main":
+			Log "Sandbox is va-main org."
+			repeat until imagefound(image:"Common_Images/Avatar_Classic",waitfor:2) or imagefound(image:"Common_Images/Avatar_Lightning",waitfor:2)
+				if the repeatindex > 2
+					typetext tabkey
+				end if
+				typetext homeKey
+				if the repeatindex > 10
+					Throw "Unable to return to top of page for some reason."
+				end if
+			end repeat
+			//Navigate_to_setup_from_other_page SetupType
+	end if
+end Navigate_to_Setup
+
+on Navigate_to_setup_from_other_page SetupType:"Classic"
+	if imagefound(image:"Common_Images/QuickFind_Classic",waitfor:0)
+	then
+		Log "Already in Setup."
+	else
+		Set SetupClicked = False
+		Repeat at least once until SetupClicked = true
+			if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar",waitfor:0)
+			then
+				Click foundimagelocation()
+				try
+					if ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Setup")
+						click foundimagelocation()
+						set SetupClicked = true
+					else
+						Log "Setup link NOT found"
+						wait 1
+					end if
+					if repeatindex() >10
+					then
+						Throw "Failed to return to Beginning State after 10 tries"
+					end if
+				catch theException
+					put theException
+				end catch
+			else if imagefound("Utilities/Launch_and_Login/AvatarLightning")
+				Run "Utilities/Helpers".SwitchSandboxMode SetupType
+			end if
+		End repeat
+		Log "Setup page reached"
+	end if
+end Navigate_to_setup_from_other_page
+
+
+
+
+on Navigate_to_ExAM
+	if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/TabDropDown",waitfor:6)
+	then
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/TabDropDown",waitfor:6
+	end if
+	if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExAMConfigurationTab",waitfor:6)	
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExAMConfigurationTab",waitfor:6
+	else 
+		if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/Exam_Loaded/EditEndpointURL")
+		then
+			put "Already in ExAM somehow."
+		else
+			Throw "Unable to find ExAM Configuration tab option! Please send Logan a screenshot!"
+		end if
+	end if
+end Navigate_to_ExAM
+
+
+on Navigate_to_setup_Lightning
+	repeat at least once until imagefound(image:"Utilities/Login_As/Setup_Icon_Blue",waitfor:3)
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/Setup_Lightning"
+		if the repeatindex > 10 then  throw "Unable to reach non va-main setup."
+	end repeat
+	click foundimagelocation()
+	waitfor 30, "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/QuickFindSearch/QuickFindSearch_new"
+	click foundimagelocation()
+end Navigate_to_setup_Lightning

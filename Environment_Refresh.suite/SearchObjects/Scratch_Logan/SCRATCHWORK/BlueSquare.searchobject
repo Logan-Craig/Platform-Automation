@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1646236835.585,
+	"lastfoundlocation": [
+		0,
+		0,
+		17,
+		16
+	],
+	"originalcapturelocation": [
+		161,
+		89,
+		17,
+		16
+	],
+	"createddate": 1641849404.5120001,
+	"lastfounddate": 1641849489.9530001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,8]",
+					"Tolerance": "_1",
+					"Discrepancy": "_0",
+					"SearchType": "Precise to Pixel"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/SCRATCHWORK/BlueSquare.png",
+				"connectionname": "SUT4 - Eggplant2",
+				"type": 1,
+				"capturerect": [
+					161,
+					89,
+					17,
+					16
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.252.45.244"
+			}
+	],
+	"name": "Scratch_Logan/SCRATCHWORK/BlueSquare"
+}

@@ -1,0 +1,30 @@
+﻿set Sadnbox_List to [
+	"va--ofmdev3",
+	"va--RDTOFM",
+	"VA--RDTCDDEV",
+	"VA--OFMSIT2",
+	"VA--RDTCDSIT",
+	"va--afitsit",
+	"va--rpmdev",
+	"va--orhsit",
+	"va--mbmsdevtst"
+]
+
+
+Repeat for each item Sandbox_Name of Sadnbox_List
+	set tempsandboxnamevar to Sandbox_Name
+	delete "va--" from tempsandboxnamevar
+	set the suitevariables.MyUsername to "jonathan.casey@va.gov."&tempsandboxnamevar
+	set the suitevariables.SandboxName to Sandbox_Name
+	set the suitevariables.SandboxURL to "https://"&Sandbox_Name&".sandbox.my.salesforce.com"
+	
+	Run "Utilities/Login_Jonathan" Sandbox_Name	
+	
+	//Run "Environment_Refresh/EnvRefresh_Helpers".Parse_Sandbox_Name_Info	
+	Run "Helper_Utilities/Helpers".SwitchSandboxMode "Classic"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/VA_Main_Post_Refresh"
+	typetext controlkey, "w"
+	typetext controlkey, "w"
+End Repeat
+
+typetext "logan.craig@vha.gov.ohrsd0923"

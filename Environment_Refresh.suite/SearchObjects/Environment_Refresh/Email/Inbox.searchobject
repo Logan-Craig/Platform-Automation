@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		56,
+		450,
+		38,
+		14
+	],
+	"lastmodifieddate": 1608650474.9559999,
+	"createddate": 1608650474.9559999,
+	"name": "Environment_Refresh/Email/Inbox",
+	"lastfounddate": 1608650492.9489999,
+	"ocrcapturestring": "In box",
+	"lastfoundlocation": [
+		56,
+		450,
+		38,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,11]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Email/Inbox.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					56,
+					450,
+					38,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "In box"
+			}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		705,
+		12,
+		9,
+		9
+	],
+	"lastmodifieddate": 1646236835.6030002,
+	"createddate": 1619805860.8540001,
+	"name": "Scratch_Logan/Ramya_List/CloseTab",
+	"lastfounddate": 1622057824.473,
+	"ocrcapturestring": "X",
+	"lastfoundlocation": [
+		227,
+		12,
+		9,
+		9
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[4,3]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/CloseTab.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					705,
+					12,
+					9,
+					9
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "X"
+			}
+	]
+}

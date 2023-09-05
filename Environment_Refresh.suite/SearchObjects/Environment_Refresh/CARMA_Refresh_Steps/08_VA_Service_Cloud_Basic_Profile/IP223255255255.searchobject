@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		625,
+		426,
+		93,
+		13
+	],
+	"lastmodifieddate": 1613508832.1919999,
+	"createddate": 1613508832.1919999,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/IP223255255255",
+	"lastfounddate": 1613509863.723,
+	"ocrcapturestring": "223.255.255.255",
+	"lastfoundlocation": [
+		625,
+		426,
+		93,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[48,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/IP223255255255.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					625,
+					426,
+					93,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "223.255.255.255"
+			}
+	]
+}

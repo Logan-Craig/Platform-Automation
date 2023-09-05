@@ -1,0 +1,73 @@
+{
+	"lastmodifieddate": 1685030315.392,
+	"lastfoundlocation": [
+		279,
+		266,
+		46,
+		46
+	],
+	"originalcapturelocation": [
+		279,
+		226,
+		46,
+		46
+	],
+	"createddate": 1684509621.5780001,
+	"lastfounddate": 1692816478.802,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[23,23]",
+					"Tolerance": "_54",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Shield_Icon/Shield_Icon.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"capturerect": [
+					279,
+					226,
+					46,
+					46
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.105"
+			},
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[23,23]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Shield_Icon/Shield_Icon_new.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					279,
+					226,
+					46,
+					46
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "©"
+			}
+	],
+	"name": "Common_Images/Shield_Icon"
+}

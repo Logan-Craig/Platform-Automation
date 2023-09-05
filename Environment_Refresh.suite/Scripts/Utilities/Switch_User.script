@@ -1,0 +1,37 @@
+﻿params Login_As_Username
+
+waitfor 6, "Utilities/Login_As/SearchSetup"
+wait 2 //Search Setup tends to bounce around.
+click "Utilities/Login_As/SearchSetup"
+typetext Login_As_Username
+
+//waits for icons that only appear next to names that include the search term. (for use with usernames that have multiple results eg: user, user1, user2
+put "Login_As username:"&& Login_As_Username
+
+//wait for the search in setup option that always seems to come after the user is found and bumps it down the list.
+waitfor 15, text:"in Setup",SearchRectangle:[167,75,1105,302]
+repeat until imagefound(image:"Utilities/Login_As/User_Icon",SearchRectangle:[167,75,1105,602])
+	log "Waiting for a username result."&&the repeatindex
+	if the repeatindex > 15
+		throw "No username result was returned."
+	end if
+end repeat
+
+repeat for EveryImageRectangle("Utilities/Login_As/User_Icon")
+	put readtext((topright of it+[0,-7]),(bottomright of it+[300,-7])) into FoundUser
+	if FoundUser = Login_As_Username
+		put it
+		click the center of it
+		exit repeat
+	end if
+end repeat
+
+//This forces Eggy to wait for the links to load above the Login button before attempting to click
+repeat until imagefound(image:"Utilities/Login_As/LoginHistory",searchrectangle:[[0,(y of imagelocation(image:"Utilities/Login_As/Login_Button",waitfor:10)-100)],imagelocation("Utilities/Login_As/Login_Button")+[x of remotescreensize(),0]])
+	wait 1
+	if the repeatindex > 10
+		throw "Unable to find Login button for user:"&&Login_As_Username
+	end if
+end repeat
+wait 2
+click "Utilities/Login_As/Login_Button"

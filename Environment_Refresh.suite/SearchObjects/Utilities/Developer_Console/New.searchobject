@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		46,
+		96,
+		23,
+		9
+	],
+	"lastmodifieddate": 1613514676.575,
+	"createddate": 1613514676.575,
+	"name": "Utilities/Developer_Console/New",
+	"lastfounddate": 1619726053.7030001,
+	"ocrcapturestring": "New",
+	"lastfoundlocation": [
+		50,
+		474,
+		23,
+		9
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,3]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/New.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					46,
+					96,
+					23,
+					9
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "New"
+			}
+	]
+}

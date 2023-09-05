@@ -1,0 +1,46 @@
+﻿Params BrowserVar:"Chrome", URL_Var:"No_URL_Given"
+
+typetext windowskey, "r"
+if BrowserVar is ...
+	... "chrome": Set BrowserVar to "Chrome"
+	... "msedge": Set BrowserVar to "MSEdge"
+end if
+if BrowserVar is ...
+	... "Chrome" then
+		Run "Helper_Utilities/Helpers".Verify_Field_Contents "c:\Scripts\Chrome.bat"
+	... "MSEdge" then
+		Run "Helper_Utilities/Helpers".Verify_Field_Contents "c:\Scripts\MSEdge.bat"
+		Run "Helper_Utilities/Launch_Helper".MSEdge_First_Time
+	else
+		Throw "Unrecognized BrowserVar:"&&BrowserVar
+end if
+typetext returnkey
+set the remoteclipboard to ""
+repeat at least once until the remoteclipboard contains "google"
+	wait 1
+	click [280,512]
+	typetext controlkey, "l","c"
+	log "URL found:"&&the remoteclipboard
+	if the repeatindex > 8 then Run "Helper_Utilities/Launch_Helper".MSEdge_First_Time
+	if the repeatindex > 20 then throw "Browser window never opened to Google."
+end repeat
+typetext shiftKey, f5
+set the remoteclipboard to URL_Var
+Log "Navigating to:"&&URL_Var
+
+repeat forever
+	if the repeatindex > 8 then Throw "Unable to verify input URL."
+	typetext controlkey, "l","v"
+	typetext controlkey, "l","c"
+	if the remoteclipboard contains URL_Var
+	then
+		Log "URL sucessfully input:"&&the remoteclipboard
+		exit repeat
+	else
+		set the remoteclipboard to URL_Var
+	end if
+end repeat
+
+
+typetext returnkey
+WaitFor 30, "Helper_Utilities/Launch_and_Login/LogIntoSandbox"

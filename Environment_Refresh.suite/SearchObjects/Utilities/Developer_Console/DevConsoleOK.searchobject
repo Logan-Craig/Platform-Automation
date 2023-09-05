@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		429,
+		495,
+		77,
+		22
+	],
+	"lastmodifieddate": 1613514977.2649999,
+	"createddate": 1613514977.2649999,
+	"name": "Utilities/Developer_Console/DevConsoleOK",
+	"lastfounddate": 1614964976.927,
+	"ocrcapturestring": "OK",
+	"lastfoundlocation": [
+		429,
+		495,
+		77,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[38,11]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/DevConsoleOK.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					429,
+					495,
+					77,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "OK"
+			}
+	]
+}

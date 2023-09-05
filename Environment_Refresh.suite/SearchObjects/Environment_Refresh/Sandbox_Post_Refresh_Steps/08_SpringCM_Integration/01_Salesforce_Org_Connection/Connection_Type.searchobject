@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		373,
+		574,
+		69,
+		18
+	],
+	"lastmodifieddate": 1614293531.2280002,
+	"createddate": 1614293531.2280002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/Connection_Type",
+	"lastfounddate": 1614293547.678,
+	"ocrcapturestring": "Test (UAT)",
+	"lastfoundlocation": [
+		373,
+		574,
+		69,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[31,10]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/Connection_Type.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					373,
+					574,
+					69,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Test (UAT)"
+			}
+	]
+}

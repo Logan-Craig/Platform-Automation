@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		426,
+		547,
+		120,
+		14
+	],
+	"lastmodifieddate": 1617209418.789,
+	"createddate": 1614281796.2589998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AvailableRecipients",
+	"lastfounddate": 1617209261.6599998,
+	"ocrcapturestring": "Available Recipients",
+	"lastfoundlocation": [
+		423,
+		561,
+		120,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[-8,30]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/AvailableRecipients.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					426,
+					547,
+					120,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Available Recipients"
+			}
+	]
+}

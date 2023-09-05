@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		865,
+		693,
+		59,
+		32
+	],
+	"lastmodifieddate": 1614293561.402,
+	"createddate": 1614293561.402,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/NEXT",
+	"lastfounddate": 1614293563.2950001,
+	"ocrcapturestring": "NEXT",
+	"lastfoundlocation": [
+		865,
+		693,
+		59,
+		32
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[29,16]",
+					"Tolerance": "_62",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/NEXT.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					865,
+					693,
+					59,
+					32
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "NEXT"
+			}
+	]
+}

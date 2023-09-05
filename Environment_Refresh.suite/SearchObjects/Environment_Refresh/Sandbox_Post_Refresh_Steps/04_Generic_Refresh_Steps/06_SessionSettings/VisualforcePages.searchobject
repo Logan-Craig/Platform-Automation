@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		938,
+		643,
+		95,
+		15
+	],
+	"lastmodifieddate": 1626295285.4170001,
+	"createddate": 1626295285.4170001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/VisualforcePages",
+	"lastfounddate": 1692887597.329,
+	"ocrcapturestring": "VisualforcePages",
+	"lastfoundlocation": [
+		961,
+		640,
+		95,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/VisualforcePages.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					938,
+					643,
+					95,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VisualforcePages"
+			}
+	]
+}

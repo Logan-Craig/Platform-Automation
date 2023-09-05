@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		250,
+		474,
+		129,
+		16
+	],
+	"lastmodifieddate": 1614050582.8200002,
+	"createddate": 1614050582.8200002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/EditIDelEnvironme",
+	"lastfounddate": 1617143130.9630001,
+	"ocrcapturestring": "Edit I Del Environme",
+	"lastfoundlocation": [
+		250,
+		474,
+		129,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[13,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/EditIDelEnvironme.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					250,
+					474,
+					129,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit I Del Environme"
+			}
+	]
+}

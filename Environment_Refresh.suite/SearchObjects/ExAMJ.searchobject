@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		1124,
+		140,
+		110,
+		24
+	],
+	"lastmodifieddate": 1603831068.836,
+	"createddate": 1603830942.3210001,
+	"name": "ExAMJ",
+	"lastfounddate": 1692887469.0209999,
+	"ocrcapturestring": "ExAM ▼ J",
+	"lastfoundlocation": [
+		1124,
+		178,
+		110,
+		24
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/ExAM.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1124,
+					140,
+					110,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "ExAM ▼ J"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		369,
+		480,
+		81,
+		11
+	],
+	"lastmodifieddate": 1618804556.0450001,
+	"createddate": 1618804556.0450001,
+	"name": "Utilities/Helpers/AddIPs_Lightning/StartIPAddress",
+	"lastfounddate": 1632159306.7869999,
+	"ocrcapturestring": "Start IP Address",
+	"lastfoundlocation": [
+		368,
+		480,
+		81,
+		11
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[40,5]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Helpers/AddIPs_Lightning/StartIPAddress.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					369,
+					480,
+					81,
+					11
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Start IP Address"
+			}
+	]
+}

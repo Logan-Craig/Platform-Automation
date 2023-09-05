@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		264,
+		186,
+		134,
+		17
+	],
+	"lastmodifieddate": 1608650577.2130001,
+	"createddate": 1608650577.2130001,
+	"name": "Environment_Refresh/Email/SelectLatestMessage",
+	"lastfounddate": 1609433474.029,
+	"ocrcapturestring": "Verification Code",
+	"lastfoundlocation": [
+		264,
+		186,
+		134,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[77,70]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Email/SelectLatestMessage.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					264,
+					186,
+					134,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Verification Code"
+			}
+	]
+}

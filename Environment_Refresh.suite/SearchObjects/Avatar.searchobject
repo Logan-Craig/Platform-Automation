@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		1039,
+		78,
+		19,
+		18
+	],
+	"lastmodifieddate": 1603901112.8639998,
+	"createddate": 1603901093.8639998,
+	"name": "Avatar",
+	"lastfounddate": 1692887953.5770001,
+	"ocrcapturestring": "±",
+	"lastfoundlocation": [
+		1039,
+		119,
+		19,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/1_Delete_Production/Avatar.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1039,
+					78,
+					19,
+					18
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "±"
+			}
+	]
+}

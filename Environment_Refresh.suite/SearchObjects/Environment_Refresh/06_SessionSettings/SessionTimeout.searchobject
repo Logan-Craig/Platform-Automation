@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		256,
+		323,
+		107,
+		14
+	],
+	"lastmodifieddate": 1604674019.4879999,
+	"createddate": 1604674019.4879999,
+	"name": "Environment_Refresh/06_SessionSettings/SessionTimeout",
+	"lastfounddate": 1692887579.586,
+	"ocrcapturestring": "Session Timeout",
+	"lastfoundlocation": [
+		256,
+		361,
+		107,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/06_SessionSettings/SessionTimeout.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					256,
+					323,
+					107,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Session Timeout"
+			}
+	]
+}

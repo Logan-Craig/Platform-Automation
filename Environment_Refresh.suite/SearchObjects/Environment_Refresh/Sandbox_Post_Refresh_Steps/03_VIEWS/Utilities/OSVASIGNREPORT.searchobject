@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		27,
+		465,
+		311,
+		15
+	],
+	"lastmodifieddate": 1614895536.302,
+	"createddate": 1614895536.302,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/OSVASIGNREPORT",
+	"lastfounddate": 1614899974.4630001,
+	"ocrcapturestring": "View Report (Overdue OCLA Cases for OSVA Signatures)",
+	"lastfoundlocation": [
+		27,
+		465,
+		311,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[113,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/OSVASIGNREPORT.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					27,
+					465,
+					311,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "View Report (Overdue OCLA Cases for OSVA Signatures)"
+			}
+	]
+}

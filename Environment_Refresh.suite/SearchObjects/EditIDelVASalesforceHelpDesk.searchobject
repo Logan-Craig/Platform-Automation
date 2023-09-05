@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		253,
+		553,
+		214,
+		14
+	],
+	"lastmodifieddate": 1603983535.714,
+	"createddate": 1603983514.0420001,
+	"name": "EditIDelVASalesforceHelpDesk",
+	"lastfounddate": 1624815516.493,
+	"ocrcapturestring": "Edit I Del VA Salesforce Help Desk",
+	"lastfoundlocation": [
+		253,
+		568,
+		214,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/EditIDelVASalesforceHelpDesk.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					253,
+					553,
+					214,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit I Del VA Salesforce Help Desk"
+			}
+	]
+}

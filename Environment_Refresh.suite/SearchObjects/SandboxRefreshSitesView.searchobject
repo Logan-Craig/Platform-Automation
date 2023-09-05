@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		282,
+		355,
+		136,
+		14
+	],
+	"lastmodifieddate": 1604005626.086,
+	"createddate": 1604005623.5250001,
+	"name": "SandboxRefreshSitesView",
+	"lastfounddate": 1692887795.1459999,
+	"ocrcapturestring": "Sandbox Refresh Sites",
+	"lastfoundlocation": [
+		282,
+		393,
+		136,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/SandboxRefreshSitesView.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					282,
+					355,
+					136,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Sandbox Refresh Sites"
+			}
+	]
+}

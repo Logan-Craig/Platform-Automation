@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		108,
+		309,
+		1092,
+		27
+	],
+	"lastmodifieddate": 1615414045.52,
+	"createddate": 1615324934.701,
+	"name": "CaseNumSubjectzSubjectzStatusv",
+	"lastfounddate": 1615324965.3839998,
+	"ocrcapturestring": "Case Num... Subject \\z Subject’ \\z Status v Legacy Ca... v Date/Tim... v Case Own... v Last Modi... v Responsib... v Case Sens... v",
+	"lastfoundlocation": [
+		108,
+		309,
+		1092,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[546,13]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "CaseNumSubjectzSubjectzStatusv.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					108,
+					309,
+					1092,
+					27
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Case Num... Subject \\z Subject’ \\z Status v Legacy Ca... v Date/Tim... v Case Own... v Last Modi... v Responsib... v Case Sens... v"
+			}
+	]
+}

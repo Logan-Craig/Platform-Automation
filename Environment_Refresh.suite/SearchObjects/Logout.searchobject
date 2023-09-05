@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		1035,
+		313,
+		48,
+		19
+	],
+	"lastmodifieddate": 1604590265.5599999,
+	"createddate": 1604590243.0780001,
+	"name": "Logout",
+	"lastfounddate": 1653662447.586,
+	"ocrcapturestring": "Logout",
+	"lastfoundlocation": [
+		1035,
+		345,
+		48,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/0_Launch_and_Login/Logout.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					1035,
+					313,
+					48,
+					19
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Logout"
+			}
+	]
+}

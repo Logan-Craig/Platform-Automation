@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		582,
+		331,
+		323,
+		174
+	],
+	"lastmodifieddate": 1608650166.648,
+	"createddate": 1608650117.2969999,
+	"name": "Environment_Refresh/Email/Surbey",
+	"lastfounddate": 1608650171.398,
+	"ocrcapturestring": "X",
+	"lastfoundlocation": [
+		582,
+		331,
+		323,
+		174
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[305,18]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Email/Survey.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					582,
+					331,
+					323,
+					174
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "X"
+			}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"lastmodifieddate": 1603821121.6110001,
+	"originalcapturelocation": [
+		1109,
+		137,
+		129,
+		26
+	],
+	"createddate": 1603821118.382,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"connectionserverid": "18.253.36.232",
+				"connectiontype": "RDP",
+				"type": 1,
+				"capturerect": [
+					1109,
+					137,
+					129,
+					26
+				],
+				"connectionname": "SUT2",
+				"name": "Environment_Refresh/Exam/AppLauncher.png"
+			}
+	],
+	"name": "AppLauncher"
+}

@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604005350.8559999,
+	"ocrcapturestring": "Remote Site Settings",
+	"originalcapturelocation": [
+		53,
+		812,
+		115,
+		15
+	],
+	"createddate": 1604005316.072,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/RemoteSiteSettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					812,
+					115,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Remote Site Settings"
+			}
+	],
+	"name": "RemoteSiteSettings"
+}

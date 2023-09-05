@@ -1,0 +1,45 @@
+
+Step 01 - Delete Production
+Production Custom Setting found and deleted.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, April 24, 2023, 10:48:55
+Salesforce site domain name:, va--int.sandbox.my.salesforce-sites.com
+Assess Anything Endpoint URL updated to:, va--int.sandbox.my.salesforce-sites.com
+Public Site Assessment URL Configuration updated to:, https://va--int.sandbox.my.salesforce-sites.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+https://va.my.salesforce.com updated to: https://va--int.sandbox.my.salesforce.com
+va.lightning.force.com updated to: va--int.sandbox.lightning.force.com
+Logout URL updated to: https://va--int.sandbox.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://va--int.sandbox.my.salesforce-sites.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va.my.salesforce.com
+Environment Base URL updated to: https://va--int.sandbox.my.salesforce.com
+Standard URL found: https://va--afitdev.my.salesforce.com/
+Standard URL updated to: https://va--int.sandbox.my.salesforce.com/
+VA Base URL found to be: va.my.salesforce.com
+VA Base URL updated to: va--int.sandbox.my.salesforce.com/
+VA Community URL found to be: vacommunity.force.com
+VA Community URL updated to: va--int.sandbox.my.salesforce-sites.com
+VA Saleforce Helpdesk URL found to be: https://vacommunity.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://va--int.sandbox.my.salesforce-sites.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL found to be: https://va.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+Application Enhancement Request URL updated to: https://va--int.sandbox.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL found to be: https://va.my.salesforce.com/a3d/o
+DTC Exception Request updated to: https://va--int.sandbox.my.salesforce.com/a3d/o
+My Application Requests URL found to be: https://va.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application Requests updated to: https://va--int.sandbox.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Applications URL found to be: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+My Applications updated to: https://va--int.sandbox.my.salesforce-sites.com/MyVA/a0J?fcf=00Br0000000NcXF

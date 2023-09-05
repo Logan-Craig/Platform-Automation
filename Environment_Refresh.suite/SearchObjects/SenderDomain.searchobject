@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		338,
+		320,
+		81,
+		12
+	],
+	"lastmodifieddate": 1604081655.0669999,
+	"createddate": 1604081587.5479999,
+	"name": "SenderDomain",
+	"lastfounddate": 1682520898.7750001,
+	"ocrcapturestring": "Sender Domain",
+	"lastfoundlocation": [
+		338,
+		320,
+		81,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/SenderDomainDF.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					338,
+					320,
+					81,
+					12
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Sender Domain"
+			}
+	]
+}

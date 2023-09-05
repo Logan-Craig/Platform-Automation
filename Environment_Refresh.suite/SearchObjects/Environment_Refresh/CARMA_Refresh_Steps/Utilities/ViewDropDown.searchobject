@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		423,
+		291,
+		170,
+		15
+	],
+	"lastmodifieddate": 1613146750.8470001,
+	"createddate": 1613146750.8470001,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Utilities/ViewDropDown",
+	"lastfounddate": 1692887546.8140001,
+	"ocrcapturestring": "Edit | Delete | Create New View",
+	"lastfoundlocation": [
+		423,
+		329,
+		170,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[-75,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Utilities/ViewDropDown.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					423,
+					291,
+					170,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Edit | Delete | Create New View"
+			}
+	]
+}

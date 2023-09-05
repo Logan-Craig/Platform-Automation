@@ -1,0 +1,35 @@
+{
+	"lastmodifieddate": 1646236835.4419999,
+	"ocrcapturestring": "Orange",
+	"originalcapturelocation": [
+		444,
+		424,
+		45,
+		17
+	],
+	"createddate": 1642623567.3660002,
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Orange",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					444,
+					424,
+					45,
+					17
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Orange.png"
+			}
+	],
+	"name": "Scratch_Logan/Scratch_Shawn/Orange"
+}

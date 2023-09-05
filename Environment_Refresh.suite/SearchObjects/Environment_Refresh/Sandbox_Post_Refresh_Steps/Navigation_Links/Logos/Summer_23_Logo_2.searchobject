@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		109,
+		111,
+		71,
+		57
+	],
+	"lastmodifieddate": 1685998711.099,
+	"createddate": 1685998703.809,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Logos/Summer_23_Logo_2",
+	"lastfounddate": 1692654014.5009999,
+	"ocrcapturestring": "2",
+	"lastfoundlocation": [
+		109,
+		149,
+		71,
+		57
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,28]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Logos/Summer_23_Logo/Summer_23_Logo_2.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					109,
+					111,
+					71,
+					57
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "2"
+			}
+	]
+}

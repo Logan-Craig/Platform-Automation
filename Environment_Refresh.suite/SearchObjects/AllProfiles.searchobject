@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603840818.904,
+	"ocrcapturestring": "All Profiles",
+	"originalcapturelocation": [
+		247,
+		342,
+		65,
+		14
+	],
+	"createddate": 1603840817.325,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/AllProfiles.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					247,
+					342,
+					65,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "All Profiles"
+			}
+	],
+	"name": "AllProfiles"
+}

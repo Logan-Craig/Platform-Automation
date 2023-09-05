@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		255,
+		414,
+		195,
+		32
+	],
+	"lastmodifieddate": 1604693427.697,
+	"createddate": 1604693427.697,
+	"name": "Environment_Refresh/12_Single_Sign_On_Enabled/DisableUnchecked",
+	"lastfounddate": 1692887901.53,
+	"ocrcapturestring": "Disable login with Salesforce credentials",
+	"lastfoundlocation": [
+		254,
+		452,
+		195,
+		32
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/12_Single_Sign_On_Enabled/DisableUnchecked.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					255,
+					414,
+					195,
+					32
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Disable login with Salesforce credentials"
+			}
+	]
+}

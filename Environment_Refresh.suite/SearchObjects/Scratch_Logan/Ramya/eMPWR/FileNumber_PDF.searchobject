@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		466,
+		232,
+		94,
+		20
+	],
+	"lastmodifieddate": 1621631026.444,
+	"createddate": 1621631026.444,
+	"name": "Scratch_Logan/Ramya/eMPWR/FileNumber_PDF",
+	"lastfounddate": 1621633697.612,
+	"ocrcapturestring": "File Number:",
+	"lastfoundlocation": [
+		466,
+		232,
+		94,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,10]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya/eMPWR/FileNumber_PDF.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					466,
+					232,
+					94,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "File Number:"
+			}
+	]
+}

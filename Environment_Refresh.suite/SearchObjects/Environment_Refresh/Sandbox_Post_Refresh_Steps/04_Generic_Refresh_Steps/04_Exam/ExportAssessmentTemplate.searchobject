@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		646,
+		566,
+		190,
+		17
+	],
+	"lastmodifieddate": 1651596230.625,
+	"createddate": 1651596207.355,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/ExportAssessmentTemplate",
+	"lastfounddate": 1692887496.575,
+	"ocrcapturestring": "Export Assessment Template",
+	"lastfoundlocation": [
+		646,
+		585,
+		190,
+		17
+	],
+	"testlocationdata": [
+		{
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[79,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam/EditEndpointURL/ExportAssessmentTemplate.png",
+				"connectionname": "MicrosoftTeams-image (5).png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/MicrosoftTeams-image (5).png",
+				"capturerect": [
+					646,
+					566,
+					190,
+					17
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Export Assessment Template"
+			}
+	]
+}

@@ -1,0 +1,70 @@
+﻿Params SandboxMode:""
+
+Ask "Input the full username as provided by email."with "You can paste here." title "Sandbox Username" message <<>>
+delete " " from it
+put it into the suitevariables.MyUsername
+
+set PasswordVar to "EggyPassword1!"
+
+Ask "Input the sandbox name. This should come from slack." with "" title "Sandbox to Refresh" message <<>>
+if it = ""
+	throw "User did not input a sandbox name."
+end if
+delete " " from it
+
+put it into the suitevariables.SandboxName
+log "Sandbox name:"&&the suitevariables.SandboxName
+
+
+//Set VA-Main boolean
+set the suitevariables.Sandbox_Org to item 1 of "Environment_Refresh/EnvRefresh_Helpers".Parse_Name
+set the suitevariables.Sandbox_Base_Name to item 2 of "Environment_Refresh/EnvRefresh_Helpers".Parse_Name
+Log "Sandbox Base_Name:"&&the suitevariables.Sandbox_Base_Name
+Log "Sandbox Org:"&&the suitevariables.Sandbox_Org 
+set Base_Org_PList to {
+	VAMain:[
+		"va--"
+	],
+	NonVAMain:[
+		"VHA--",
+		"VHA-GOV--",
+		"VA-Vet--",
+		"VALOB--",
+		"VAEMCC--",
+		"VAPM--",
+		"vaempl--"
+	]
+}
+
+Set the suitevariables.VA_Main_Org to ""
+if ...
+	...Base_Org_PList.VAMain contains the suitevariables.Sandbox_Org:
+		Log "VA-Main org sandbox."
+		Set the suitevariables.VA_Main_Org to True
+		set SandboxMode to "Classic"
+	...Base_Org_PList.NonVAMain contains the suitevariables.Sandbox_Org: 
+		Log "Non VA-Main"
+		Set the suitevariables.VA_Main_Org to False
+		set SandboxMode to "Lightning"
+	else
+		Set the suitevariables.VA_Main_Org to ""
+		Throw "Unknown Sandbox Base Name:"&Base_Name&&"Not in:"&&Base_Name_PList
+end if 
+
+//Run "Environment_Refresh/EnvRefresh_Helpers".Parse_Sandbox_Name_Info
+Run "Environment_Refresh/EnvRefresh_Helpers".Build_Sandbox_URL
+
+
+
+put "Loading login variables."
+set UsernameVar to the suitevariables.MyUsername
+set SandboxName to "va--"&the suitevariables.SandboxName
+set BrowserVar to "Chrome"
+//set URL_Var to "https://"&SandboxName&".lightning.force.com"
+put "Running Dynamic_Login"
+Run "Utilities/Login_Dynamic" UsernameVar, PasswordVar, the suitevariables.SandboxName, BrowserVar, the suitevariables.SandboxURL
+
+//Checks which mode you are in
+Run "Utilities/Helpers".SwitchSandboxMode SandboxMode
+
+

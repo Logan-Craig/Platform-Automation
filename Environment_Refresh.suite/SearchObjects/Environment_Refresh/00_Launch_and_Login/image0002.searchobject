@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		596,
+		617,
+		108,
+		32
+	],
+	"lastmodifieddate": 1608649986.1659999,
+	"createddate": 1608649632.2249999,
+	"name": "Environment_Refresh/00_Launch_and_Login/image0002",
+	"lastfounddate": 1617715444.191,
+	"ocrcapturestring": "No",
+	"lastfoundlocation": [
+		596,
+		617,
+		108,
+		32
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "No",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[46,16]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"type": 1,
+				"capturerect": [
+					596,
+					617,
+					108,
+					32
+				],
+				"name": "Environment_Refresh/Email/NoButton.png"
+			}
+	]
+}

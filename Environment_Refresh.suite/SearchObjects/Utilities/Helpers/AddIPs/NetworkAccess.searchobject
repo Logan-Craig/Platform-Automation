@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		52,
+		303,
+		98,
+		13
+	],
+	"lastmodifieddate": 1618803797.9419999,
+	"createddate": 1618803741.7410002,
+	"name": "Utilities/Helpers/AddIPs/NetworkAccess",
+	"lastfounddate": 1627925000.082,
+	"ocrcapturestring": "Network Access",
+	"lastfoundlocation": [
+		50,
+		336,
+		98,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[49,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Helpers/AddIPs_Lightning/NetworkAccess.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					52,
+					303,
+					98,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Network Access"
+			}
+	]
+}

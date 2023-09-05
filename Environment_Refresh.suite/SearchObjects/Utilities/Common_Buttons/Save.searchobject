@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		543,
+		329,
+		39,
+		22
+	],
+	"lastmodifieddate": 1617292729.8200002,
+	"createddate": 1617292729.8200002,
+	"name": "Utilities/Common_Buttons/Save",
+	"lastfounddate": 1692887679.799,
+	"ocrcapturestring": "Save",
+	"lastfoundlocation": [
+		543,
+		340,
+		39,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[19,11]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Common_Buttons/Save.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					543,
+					329,
+					39,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Save"
+			}
+	]
+}

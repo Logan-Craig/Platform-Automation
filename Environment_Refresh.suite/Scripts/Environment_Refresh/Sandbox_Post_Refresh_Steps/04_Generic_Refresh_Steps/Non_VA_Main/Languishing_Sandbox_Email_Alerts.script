@@ -1,0 +1,41 @@
+﻿on Install_Apex_Package
+	Log "Languishing Sandbox Email Alerts Deployment Plan"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/OK"
+	//This is only for INT:
+	set the remoteclipboard to "https://"&SandboxName&".sandbox.lightning.force.com/packaging/installPackage.apexp?p0=04t3d0000000ZhaAAE"
+	typetext controlkey, "w"
+	TypeText controlkey, "t"
+	Typetext controlkey, "l"
+	Typetext controlkey, "v"
+	typetext returnkey
+	waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/Install_Icon"
+	assert that imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/RadioButton") with error "Admin install not selected by default."
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/AdvancedOptions"
+	Click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/CompileonlytheApexinthepackage",waitfor:3
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/Install_Button"
+	repeat until not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/Installingandgrantingaccesstoa")
+		Put "Waiting for install to complete."&&the repeatindex
+		if the repeatindex > 20 then throw "Install did not complete after about 60 seconds."
+		wait 3
+	end repeat
+	assert that imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/InstallationComplete",wait: 6) with Error "No installation complete message received."
+	typetext ControlKey, "w"
+end Install_Apex_Package
+
+on Run_Email_Alert_Apex
+	click image:"Common_Images/Setup_Icon_Grey",waitfor:16
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/DeveloperConsole",waitfor:6
+	waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/03_Schedule_Email_Alerts/DeveloperConsoleGoogleChrome"
+	
+	typetext controlkey, "e"
+	//Adds the script to a variable and loads it into the SUT clipboard and pastes it. This script has something to do with removing the "invalid" text that gets automatically added to these email addresses when the environment refresh occurs.
+	set UpdateScript to <<
+EmailAlertSchedulable emailAlert = new EmailAlertSchedulable();
+String chron = '0 0 10 ? * MON';
+system.schedule('Email Alerts', chron, emailAlert);
+>>
+	setremoteclipboard UpdateScript
+	log UpdateScript
+	
+	Run "Utilities/Developer_Console_Apex".RunApex UpdateScript
+end Run_Email_Alert_Apex

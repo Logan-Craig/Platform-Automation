@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1614128707.342,
+	"lastfoundlocation": [
+		286,
+		451,
+		9,
+		9
+	],
+	"originalcapturelocation": [
+		487,
+		423,
+		9,
+		9
+	],
+	"createddate": 1614128707.342,
+	"lastfounddate": 1651609439.9889998,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[2,7]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Sort_Arrow.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"capturerect": [
+					487,
+					423,
+					9,
+					9
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.252.46.96"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Sort_Arrow"
+}

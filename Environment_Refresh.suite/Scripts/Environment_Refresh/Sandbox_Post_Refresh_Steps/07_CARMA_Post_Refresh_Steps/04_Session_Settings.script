@@ -1,0 +1,53 @@
+﻿Log "Executing Update session settings."
+
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Session Settings" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Navigation_Links/NamedCredentials"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+//Force relogin after Login-As-User
+repeat until ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/ForcereloginafterLoginAsUser")
+	if repeatindex()>12 then throw <<Could not locate "Force relogin after Login-As-User" checkbox.>>
+	typetext pageDown
+	wait 1
+end repeat
+set the searchrectangle to [(FoundImageLocation()),(FoundImageLocation()+[20,20])]
+if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Checked")
+	click FoundImageLocation()
+	Log <<"Force relogin after Login-As-User" checkbox unchecked.>>
+else
+	if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Empty") then Log <<"Force relogin after Login-As-User" checkbox already unchecked.>>
+end if
+set the searchrectangle to []
+
+//Enable secure and persistent browser caching to improve performance
+repeat until ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/EnableCaching_Title")
+	if repeatindex()>12 then throw <<Could not locate "Enable secure and persistent browser caching to improve performance" checkbox.>>
+	typetext pageDown
+	wait 1
+end repeat
+set the searchrectangle to [(FoundImageLocation()+[12,-7]),(FoundImageLocation()+[-7,12])]
+if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Checked")
+	click FoundImageLocation()
+	Log <<"Enable secure and persistent browser caching to improve performance" checkbox unchecked.>>
+else
+	if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Empty") then Log <<"Enable secure and persistent browser caching to improve performance" checkbox already unchecked.>>
+end if
+set the searchrectangle to []
+
+//Set the logout URL
+typetext endKey
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/LogoutPageSettingsLogoutURL",waitfor:6
+typetext controlKey,"a","c"
+if RemoteClipboard() = SandboxURL
+then
+	Log "Logout URL already set to:"&& SandboxURL
+else
+	Log "Logout URL found to be:"&&RemoteClipboard()&&"(May be null.)"
+	Log "Setting Logout URL to:"&&SandboxURL
+	typetext SandboxURL
+end if
+

@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		443,
+		511,
+		39,
+		14
+	],
+	"lastmodifieddate": 1646236835.4460001,
+	"createddate": 1642623572.224,
+	"name": "Scratch_Logan/Scratch_Shawn/Phone",
+	"lastfounddate": 1643101750.3239999,
+	"ocrcapturestring": "Phone",
+	"lastfoundlocation": [
+		443,
+		511,
+		39,
+		14
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Phone",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					443,
+					511,
+					39,
+					14
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/Phone.png"
+			}
+	]
+}

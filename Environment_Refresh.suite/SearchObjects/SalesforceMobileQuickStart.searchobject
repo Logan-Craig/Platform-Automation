@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		19,
+		496,
+		199,
+		15
+	],
+	"lastmodifieddate": 1603991904.1389999,
+	"createddate": 1603990361.0050001,
+	"name": "SalesforceMobileQuickStart",
+	"lastfounddate": 1613069957.198,
+	"ocrcapturestring": "Salesforce Mobile Quick Start",
+	"lastfoundlocation": [
+		19,
+		496,
+		199,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/9_Custom_Links/SalesforceMobileQuickStart.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					19,
+					496,
+					199,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Salesforce Mobile Quick Start"
+			}
+	]
+}

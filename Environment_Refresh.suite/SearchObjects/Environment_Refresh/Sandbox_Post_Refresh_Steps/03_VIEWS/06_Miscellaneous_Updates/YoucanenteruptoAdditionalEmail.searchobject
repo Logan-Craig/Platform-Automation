@@ -1,0 +1,77 @@
+{
+	"originalcapturelocation": [
+		253,
+		873,
+		153,
+		41
+	],
+	"lastmodifieddate": 1614201910.76,
+	"createddate": 1614200093.595,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/YoucanenteruptoAdditionalEmail",
+	"lastfounddate": 1614200339.7079999,
+	"ocrcapturestring": "You can enter up to Additional Emails (5) e VAb",
+	"lastfoundlocation": [
+		253,
+		873,
+		153,
+		41
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[137,24]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/YoucanenteruptoAdditionalEmail.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					253,
+					873,
+					153,
+					41
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "You can enter up to Additional Emails (5) e VAb"
+			},
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[137,24]",
+					"Tolerance": "_30",
+					"Discrepancy": "_0",
+					"SearchType": "Adaptive to Image"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/YoucanenteruptoAdditionalEmail.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					253,
+					873,
+					153,
+					41
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "You can enter up to Additional Emails (5) e VAb"
+			}
+	]
+}

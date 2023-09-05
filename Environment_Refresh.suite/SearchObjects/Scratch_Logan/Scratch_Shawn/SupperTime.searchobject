@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		327,
+		595,
+		84,
+		18
+	],
+	"lastmodifieddate": 1646236835.4450002,
+	"createddate": 1642623577.1799998,
+	"name": "Scratch_Logan/Scratch_Shawn/SupperTime",
+	"lastfounddate": 1643101774.2880001,
+	"ocrcapturestring": "Supper Time",
+	"lastfoundlocation": [
+		327,
+		595,
+		84,
+		18
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Supper Time",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[51,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					327,
+					595,
+					84,
+					18
+				],
+				"name": "Scratch_Logan/Scratch_Shawn/SupperTime.png"
+			}
+	]
+}

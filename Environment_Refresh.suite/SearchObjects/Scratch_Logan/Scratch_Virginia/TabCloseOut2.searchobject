@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		576,
+		165,
+		49,
+		23
+	],
+	"lastmodifieddate": 1646236835.424,
+	"createddate": 1629491412.5609999,
+	"name": "Scratch_Logan/Scratch_Virginia/TabCloseOut2",
+	"lastfounddate": 1629733506.1160002,
+	"ocrcapturestring": "xz X",
+	"lastfoundlocation": [
+		576,
+		165,
+		49,
+		23
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[36,8]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Virginia/TabCloseOut2.png",
+				"connectionname": "WinDevEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					576,
+					165,
+					49,
+					23
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "xz X"
+			}
+	]
+}

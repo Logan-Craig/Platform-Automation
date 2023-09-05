@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		966,
+		218,
+		115,
+		17
+	],
+	"lastmodifieddate": 1614701750.7740002,
+	"createddate": 1614701750.7740002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Settings_Log_Out",
+	"lastfounddate": 1614701755.3,
+	"ocrcapturestring": "Settings Log Out",
+	"lastfoundlocation": [
+		965,
+		218,
+		115,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[23,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Settings_Log_Out.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					966,
+					218,
+					115,
+					17
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Settings Log Out"
+			}
+	]
+}

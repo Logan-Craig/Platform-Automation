@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		263,
+		515,
+		220,
+		17
+	],
+	"lastmodifieddate": 1688057282.2350001,
+	"createddate": 1688057282.2350001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/CompileonlytheApexinthepackage",
+	"lastfounddate": 1688057406.589,
+	"ocrcapturestring": "Compile only the Apex in the package",
+	"lastfoundlocation": [
+		263,
+		515,
+		220,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[110,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/CompileonlytheApexinthepackage.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					263,
+					515,
+					220,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Compile only the Apex in the package"
+			}
+	]
+}

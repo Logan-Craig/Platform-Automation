@@ -1,0 +1,52 @@
+﻿(*
+This script will create an Eggplant@b3groupinc.com user in ONLY the following environments:
+https://va--int.my.salesforce.com/
+https://va--reg.my.salesforce.com/
+This user will be given a role of VA Admin Plus as the use must be able to login as other users for testing purposes.
+This script will also add various IPs to the whitelist so that they are unaffected by 2FA
+*)
+
+
+//set CreateUser to "Eggplant@b3groupinc.com"
+set CreateUser to "Logan.Craig@octo.us"
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Create_Users/DigitalAssuranceUsers_Selected_View"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Create_Users/DigitalAssuranceUsers_Desired_View"
+set ViewName to "Digital Assurance Users"
+Set MakeMyView to true
+Set FilterBoolean to true
+Set FieldFilterVar to "Email"
+Set FieldOperatorVar to "Contains"
+Set FieldValueVar to "@octo.us"
+
+put ["va--int", 
+	"va--reg", 
+	"va--dtcsqa"
+] into EggySandboxes
+
+Log "Environment_Refresh/EnvRefresh_Helpers".FindSandboxName 
+if  EggySandboxes contains "Environment_Refresh/EnvRefresh_Helpers".FindSandboxName 
+then
+	Log "DTC Sandbox. Checking to see if user should be created."
+	Run "Environment_Refresh/Create_Users" CreateUser,SelectedView,DesiredView,ViewName,MakeMyView,FilterBoolean,FieldFilterVar,FieldOperatorVar,FieldValueVar
+else
+	Log "Not an Eggplant sandbox. No Eggplant user will be created."
+end if
+
+
+put ["VA--INT", 
+	"VA--REG", 
+	"VA--DTCSQA",
+	"VA--DTCSQA2",
+	"VA-OPSIT",
+	"VA--OMVASIT",
+	"VAPM--DTCSQA",
+	"VAPM--OMSIT",
+	"VAPM--INT",
+	"VAPM--REG",
+	"VAVET--DTCSQA",
+	"VAVET--INT",
+	"VAVET--REG",
+	"VHA-GOV--DTCSQA",
+	"VHA-GOV--INT",
+	"VHA-GOV--REG"
+] into DA_Users_Sandboxes

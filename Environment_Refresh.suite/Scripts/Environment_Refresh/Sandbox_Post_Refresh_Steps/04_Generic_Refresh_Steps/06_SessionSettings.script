@@ -1,0 +1,92 @@
+﻿//6.	 Session Settings: 
+//a.	Under Setup, go to Administer / Security Controls / Session Settings.
+//b.	Scroll down the page to the 'Logout Page Settings' section and update the 'Logout URL' to match the Sandbox URL.  EX: https://va--SANDBOX.my.salesforce.com
+
+
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Session Settings" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/SessionSettings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SessionSettings"
+
+WaitFor 6, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/SessionTimeout.png"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"06_SessionSettings"& return to file Refresh_Report
+
+
+//Edditing domains
+put the MultipleFoundAction into MultipleFoundState
+set the MultipleFoundAction to UseFirstLocation
+
+set DomainListVar to [
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_1",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_2"
+]
+
+repeat for each item DomainVar of DomainListVar
+	repeat until imagefound(image:DomainVar , waitFor:1)
+		if the repeatindex > 5
+			LogWarning "Could not find:"&&DomainVar, "This probably means that the script has already run in this environment and updated the Trusted Domains."
+			write "Could not find:"&&DomainVar&&"This probably means that the script has already run in this environment and updated the Trusted Domains."& return to file Refresh_Report
+			typetext homekey
+			exit repeat
+		end if	
+		typetext pagedown
+		wait 1
+	end repeat
+	repeat for everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/VisualforcePages")
+		put it
+		if imagefound(image:DomainVar, searchrectangle:[it+[-1200,-12],it+[-100,12]])
+		then
+			click image:"Common_Images/Edit_Link_Blue", searchrectangle:[foundimagelocation()+[-250,-12],foundimagelocation()+[-25,12]]
+			waitfor 6,"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+			click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Domain_Address_Label"
+			wait 1
+			typetext controlkey,"a",deletekey
+			if DomainVar = "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_1"
+			then
+				typetext "https://va--"&the suitevariables.SandboxName&".my.salesforce.com"
+				write "https://va.my.salesforce.com updated to:"&&"https://va--"&the suitevariables.SandboxName&".my.salesforce.com"& return to file Refresh_Report
+			end if
+			if DomainVar = "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_2"
+			then
+				typetext "va--"&the suitevariables.SandboxName&".lightning.force.com"
+				write "va.lightning.force.com updated to:"&&"va--"&the suitevariables.SandboxName&".lightning.force.com"& return to file Refresh_Report
+			end if
+			click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+			waitfor 9, "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/SessionSettings"
+			exit repeat
+			else
+			Log "Looking for:"&&DomainVar
+		end if
+	end repeat
+end repeat
+set the MultipleFoundAction to MultipleFoundState
+
+
+repeat [6] times
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/LogoutPageSettingsLogoutURL", waitFor:1)
+		click FoundImageLocation()
+		Exit Repeat
+	else
+		typetext PageDown
+		wait 1
+	end if
+end repeat
+typetext PageDown
+typetext ControlKey, "a"
+typetext Backspace
+typetext the suitevariables.SandboxURL
+
+
+
+//Force relogin after Login-As-User
+
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Save"
+write "Logout URL updated to:"&&SandboxURL& return to file Refresh_Report
+WaitFor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/UnlimitedEdition.png"
+
+
+close file Refresh_Report

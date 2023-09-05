@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		351,
+		461,
+		132,
+		17
+	],
+	"lastmodifieddate": 1614210470.803,
+	"createddate": 1614204558.118,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_Updated_Connected_App/IntegrationUserPATSR",
+	"lastfounddate": 1614893419.4200001,
+	"ocrcapturestring": "Integration User. PATSR",
+	"lastfoundlocation": [
+		351,
+		461,
+		132,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[66,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_PATSR_Setup/IntegrationUserPATSR.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					351,
+					461,
+					132,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Integration User. PATSR"
+			}
+	]
+}

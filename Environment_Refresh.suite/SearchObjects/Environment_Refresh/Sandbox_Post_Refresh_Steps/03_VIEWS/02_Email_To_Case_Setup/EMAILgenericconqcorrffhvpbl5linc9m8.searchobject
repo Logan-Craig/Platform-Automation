@@ -1,0 +1,42 @@
+{
+	"lastmodifieddate": 1617142926.2839999,
+	"ocrcapturestring": "generic conq corr@ffhv>,pbl5linc9m8km1d4vwe3uQv;v14vk4wr2re77oasd0ws5i.r-2iwieaacs32.apex sandbox.salesforce.com",
+	"originalcapturelocation": [
+		429,
+		391,
+		674,
+		14
+	],
+	"createddate": 1613763942.2909999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[337,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EMAILgenericconqcorrffhvpbl5linc9m8.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					429,
+					391,
+					674,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "generic conq corr@ffhv>,pbl5linc9m8km1d4vwe3uQv;v14vk4wr2re77oasd0ws5i.r-2iwieaacs32.apex sandbox.salesforce.com"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/EMAILgenericconqcorrffhvpbl5linc9m8"
+}

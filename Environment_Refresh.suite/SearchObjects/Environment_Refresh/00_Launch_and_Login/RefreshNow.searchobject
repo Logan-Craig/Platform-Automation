@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		834,
+		568,
+		110,
+		32
+	],
+	"lastmodifieddate": 1608827210.849,
+	"createddate": 1608827210.849,
+	"name": "Environment_Refresh/00_Launch_and_Login/RefreshNow",
+	"lastfounddate": 1608827406.3439999,
+	"ocrcapturestring": "Refresh Now",
+	"lastfoundlocation": [
+		834,
+		568,
+		110,
+		32
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[49,14]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/RefreshNow.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					834,
+					568,
+					110,
+					32
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Refresh Now"
+			}
+	]
+}

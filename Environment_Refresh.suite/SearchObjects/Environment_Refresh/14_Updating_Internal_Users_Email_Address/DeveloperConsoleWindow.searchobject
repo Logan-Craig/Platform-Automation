@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604344421.579,
+	"ocrcapturestring": "Developer Co",
+	"originalcapturelocation": [
+		8,
+		5,
+		130,
+		20
+	],
+	"createddate": 1604344286.3400002,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/DeveloperConsoleWindow.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					8,
+					5,
+					130,
+					20
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Developer Co"
+			}
+	],
+	"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/DeveloperConsoleWindow"
+}

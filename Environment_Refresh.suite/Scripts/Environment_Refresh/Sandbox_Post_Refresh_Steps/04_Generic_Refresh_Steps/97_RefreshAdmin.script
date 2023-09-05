@@ -1,0 +1,48 @@
+﻿
+
+set RefreshAdminList to [
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/ResetNamedCredentials",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/WhitelistProfileIpRange"
+]
+
+put SandboxURL&"/apex/sandboxrefreshadmin" into the remoteclipboard
+typetext controlkey, "lv",returnkey
+
+//Should adda  waitfor page to load here
+
+repeat for each item of RefreshAdminList
+	//	put (topright of imagerectangle(it)+[0,-10]), [x of the remotescreensize, (bottom of imagerectangle(it)+15)]
+	//	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/Run",waitfor:10, searchrectangle:[(topright of imagerectangle(image:it,waitfor:20)+[0,-10]), [x of the remotescreensize, (bottom of imagerectangle(it)+15)]]
+	
+	repeat at least once until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/successfully",waitfor:10)
+		click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/Run",waitfor:10, searchrectangle:[(topright of imagerectangle(image:it,waitfor:20)+[0,-10]), [x of the remotescreensize, (bottom of imagerectangle(it)+15)]]
+		if the repeatindex > 4
+			throw "Tried four times to run:"&&it&&"and never recieved success confirmation."
+		end if
+	end repeat
+	//	assert that imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/successfully",waitfor:10) with exception
+	
+	
+	if the repeatindex = the number of items in RefreshAdminList 
+		exit repeat
+	end if
+	repeat until not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/successfully")
+		wait 1
+		if the repeatindex > 15
+			throw "Successfully image didn't disapear."
+		end if
+	end repeat
+end repeat
+
+
+
+
+//Add this to the end of the URL to get to new page that has buttons to push
+///apex/sandboxrefreshadmin
+
+//Push the Reset Named Credentials Run button
+//Push the Whitelist Profile IP Range Run button
+
+
+//Stop running step 14 - 14_Updating_Internal_Users_Email_Address
+

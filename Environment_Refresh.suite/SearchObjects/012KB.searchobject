@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604422074.7920001,
+	"ocrcapturestring": "0.12 KB",
+	"originalcapturelocation": [
+		842,
+		709,
+		160,
+		18
+	],
+	"createddate": 1604419909.4809999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "012KB.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					842,
+					709,
+					160,
+					18
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "0.12 KB"
+			}
+	],
+	"name": "012KB"
+}

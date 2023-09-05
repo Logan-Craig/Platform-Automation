@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		52,
+		303,
+		78,
+		19
+	],
+	"lastmodifieddate": 1684504250.2880001,
+	"createddate": 1684504250.2880001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Lightning/Deliverability",
+	"lastfounddate": 1692816461.556,
+	"ocrcapturestring": "Deliverability",
+	"lastfoundlocation": [
+		52,
+		343,
+		78,
+		19
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[39,9]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Lightning/Deliverability.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					52,
+					303,
+					78,
+					19
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Deliverability"
+			}
+	]
+}

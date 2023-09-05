@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		15,
+		161,
+		161,
+		27
+	],
+	"lastmodifieddate": 1614894473.026,
+	"createddate": 1614894473.026,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/VIEWSCCM",
+	"lastfounddate": 1614899946.9559999,
+	"ocrcapturestring": "VIEWS CCM",
+	"lastfoundlocation": [
+		15,
+		126,
+		161,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[80,13]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/Utilities/VIEWSCCM.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					15,
+					161,
+					161,
+					27
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VIEWS CCM"
+			}
+	]
+}

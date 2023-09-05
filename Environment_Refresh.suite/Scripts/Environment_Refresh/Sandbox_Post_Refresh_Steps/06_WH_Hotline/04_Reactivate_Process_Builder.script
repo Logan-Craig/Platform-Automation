@@ -1,0 +1,35 @@
+﻿Log "04_Reactivate_Process_Builder."
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Validation Rules" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/ContactsValidationRules"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+
+
+Repeat until ImageFound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/WHVAHotlineLockAnonymousCaller", searchrectangle: [[318,90],[580,980]])
+	typetext pagedown
+	wait 1
+End Repeat
+click FoundImageLocation()
+
+click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Edit"
+
+
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Empty",SearchRectangle:[(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[25,-25]),(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[125,25])])
+then
+	Log "Active is unchecked."
+	Log "Checking"
+	click foundimagelocation()
+else
+	if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Checked", searchrectangle:[(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[25,-25]),(imagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active")+[125,25])])
+	then
+		Log 	"Active is checked."
+	else
+	end if
+end if
+
+click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Save"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/01_Deactivate_Process_Builder/Confirm"

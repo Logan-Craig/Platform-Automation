@@ -1,0 +1,12 @@
+﻿Log "Executing Change Company Information."
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Company Information" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Navigation_Links/CompanyInformation"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+click imagename: "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/06_Company_Information/OrganizationName", waitfor: 6
+typetext uppercase (SandboxName&" - ")

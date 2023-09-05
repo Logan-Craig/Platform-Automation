@@ -1,0 +1,75 @@
+{
+	"originalcapturelocation": [
+		283,
+		380,
+		177,
+		20
+	],
+	"lastmodifieddate": 1613756940.2059999,
+	"createddate": 1613756071.2589998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ALL",
+	"lastfounddate": 1618431644.6440001,
+	"ocrcapturestring": "ALL",
+	"lastfoundlocation": [
+		905,
+		71,
+		177,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[88,10]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ALL.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					283,
+					380,
+					177,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ALL"
+			},
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[88,10]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Pulsing to Element"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/ALL.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					283,
+					380,
+					177,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ALL"
+			}
+	]
+}

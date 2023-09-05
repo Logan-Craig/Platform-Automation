@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		280,
+		376,
+		142,
+		14
+	],
+	"lastmodifieddate": 1618432305.3280001,
+	"createddate": 1618432305.3280001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/RecordTypeofnewrecord",
+	"lastfounddate": 1618432475.7519999,
+	"ocrcapturestring": "Record Type of new record",
+	"lastfoundlocation": [
+		280,
+		376,
+		142,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[179,8]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/RecordTypeofnewrecord.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					280,
+					376,
+					142,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Record Type of new record"
+			}
+	]
+}

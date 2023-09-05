@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		67,
+		288,
+		73,
+		15
+	],
+	"lastmodifieddate": 1646236835.427,
+	"createddate": 1620084556.1859999,
+	"name": "Scratch_Logan/Scratch_Alex/LastName_Label",
+	"lastfounddate": 1620087842.961,
+	"ocrcapturestring": "Last Name",
+	"lastfoundlocation": [
+		67,
+		288,
+		73,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[36,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/LastName_Label.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					67,
+					288,
+					73,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Last Name"
+			}
+	]
+}

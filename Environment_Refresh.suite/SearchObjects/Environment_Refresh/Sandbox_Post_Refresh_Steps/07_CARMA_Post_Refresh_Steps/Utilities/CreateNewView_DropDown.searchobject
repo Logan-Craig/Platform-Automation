@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		317,
+		367,
+		114,
+		14
+	],
+	"lastmodifieddate": 1661782990.197,
+	"createddate": 1661782990.197,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_DropDown",
+	"lastfounddate": 1692653429.8839998,
+	"ocrcapturestring": "Create New View",
+	"lastfoundlocation": [
+		317,
+		373,
+		114,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[-13,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_DropDown.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					317,
+					367,
+					114,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Create New View"
+			}
+	]
+}

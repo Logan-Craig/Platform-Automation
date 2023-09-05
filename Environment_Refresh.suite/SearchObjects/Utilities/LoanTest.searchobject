@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		269,
+		214,
+		73,
+		22
+	],
+	"lastmodifieddate": 1617195677.0409999,
+	"createddate": 1617148836.247,
+	"name": "Utilities/LoanTest",
+	"lastfounddate": 1617148899.3499999,
+	"ocrcapturestring": "Lo^anTest",
+	"lastfoundlocation": [
+		269,
+		214,
+		73,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,11]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/LoanTest.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					269,
+					214,
+					73,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Lo^anTest"
+			}
+	]
+}

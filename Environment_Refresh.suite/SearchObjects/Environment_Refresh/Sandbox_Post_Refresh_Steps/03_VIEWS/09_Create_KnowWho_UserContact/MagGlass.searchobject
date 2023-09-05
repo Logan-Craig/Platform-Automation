@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1618600567.5970001,
+	"lastfoundlocation": [
+		586,
+		587,
+		22,
+		21
+	],
+	"originalcapturelocation": [
+		586,
+		587,
+		22,
+		21
+	],
+	"createddate": 1618600567.5970001,
+	"lastfounddate": 1618603246.223,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[11,10]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MagGlass.png",
+				"connectionname": "Ramya VM",
+				"type": 1,
+				"capturerect": [
+					586,
+					587,
+					22,
+					21
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.1.70"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/09_Create_KnowWho_UserContact/MagGlass"
+}

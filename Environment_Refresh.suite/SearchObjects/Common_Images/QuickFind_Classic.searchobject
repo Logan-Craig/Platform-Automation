@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		28,
+		240,
+		70,
+		18
+	],
+	"lastmodifieddate": 1646947626.0310001,
+	"createddate": 1646947626.0310001,
+	"name": "Common_Images/QuickFind_Classic",
+	"lastfounddate": 1692887909.1230001,
+	"ocrcapturestring": "Quick Find",
+	"lastfoundlocation": [
+		28,
+		278,
+		70,
+		18
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,9]",
+					"Tolerance": "_40",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/QuickFind_Classic.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					28,
+					240,
+					70,
+					18
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Quick Find"
+			}
+	]
+}

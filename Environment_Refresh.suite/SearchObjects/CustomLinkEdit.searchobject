@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604080413.652,
+	"ocrcapturestring": "Custom Link Edit",
+	"originalcapturelocation": [
+		251,
+		305,
+		120,
+		14
+	],
+	"createddate": 1603990243.6040001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/9_Custom_Links/CustomLinkEdit.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					305,
+					120,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Custom Link Edit"
+			}
+	],
+	"name": "CustomLinkEdit"
+}

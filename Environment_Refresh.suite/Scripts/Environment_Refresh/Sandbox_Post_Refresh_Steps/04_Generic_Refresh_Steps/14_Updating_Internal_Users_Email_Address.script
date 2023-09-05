@@ -1,0 +1,84 @@
+﻿//14.	 Updating Internal Users Email Address:
+// a.	Open Dev Console.
+// b.	Debug:
+//  i.	Open Execute Anonymous Window:
+// ii.	Post code
+// c.	Run / Report any errors. 
+
+//timestamp of step video: 31:23
+
+//Open the developer console
+if imagefound("Common_Images/QuickFind_Classic")
+else
+	Run "Environment_Refresh/EnvRefresh_Helpers".Navigate_to_Setup
+end if
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"14_Updating_Internal_Users_Email_Address"& return to file Refresh_Report
+write "Updating internal users email addresses." & return to file Refresh_Report
+
+
+
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+
+
+//Adds the script to a variable and loads it into the SUT clipboard and pastes it. This script has something to do with removing the "invalid" text that gets automatically added to these email addresses when the environment refresh occurs.
+set UpdateScript to <<
+List<String> idlist = new List<String> {
+'005t0000000MU0m', // kerry.dolch@va.gov
+'005t0000000PK9J', // crystal.cottrill@mbaoutcome.com
+'005t0000001Qnns', // maura.vitelli@b3groupinc.com
+'005t0000001xlUu', // mckinzie.schrettenbrunner@va.gov
+'005t0000002bZwE', // theodore.staub@va.gov
+'005t00000035FiS', // gabriel.diaz1@va.gov
+'005t00000035dBn', // bethany.sharb@va.gov
+'005t00000035qqv', // gordon.adolphson@va.gov
+'005t0000003KWHo', // anubha.rastogi@va.gov
+'005t0000003KZ9T', // joseph.tomarchio@va.gov
+'005t0000001Q1ch', // aditya.vinnakota@mbaoutcome.coma
+'005t0000001QovJ', // wsteele@salesforce.com
+'005t0000001fvS9', // zachary.blake@b3groupinc.com
+'005t0000000ZSQ8', // kelly.leuyer@va.gov
+'005t0000001Gd4Q', // gloria.parker3@va.gov
+'005t0000001VcYl', // robert.greer@b3groupinc.com
+'005t0000001gjp3', // joshua.hester@va.gov
+'005t0000001zXaC', // chelsea.harman@b3groupinc.com
+'005t0000003LxN2', // ramesh.sirigireddy@va.gov
+'005t0000003KzSV', // john.shaw@b3groupinc.com
+'005t0000003TQYy'// SFLoginAlerts2@va.gov
+};
+List<User> toupdate = new List<User>();
+List<User> ulist = [SELECT Id, Email from User where id in :idlist];
+for (User u : ulist) {
+if (u.email.indexOf('.invalid') <> -1) {
+u.email = u.email.substring(0, u.email.indexOf('.invalid'));
+toupdate.add(u);
+}
+}
+update toupdate;
+>>
+setremoteclipboard UpdateScript
+log UpdateScript
+
+
+
+Run "Utilities/Developer_Console_Apex".RunApex
+
+write "Email addresses have been updated."& return to file Refresh_Report
+
+typetext controlkey, "w"
+
+close file Refresh_Report
+
+
+
+
+
+
+
+
+
+
+
+

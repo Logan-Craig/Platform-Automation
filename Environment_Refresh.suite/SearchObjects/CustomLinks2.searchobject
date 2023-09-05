@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		70,
+		400,
+		75,
+		13
+	],
+	"lastmodifieddate": 1603994362.813,
+	"createddate": 1603994360.043,
+	"name": "CustomLinks2",
+	"lastfounddate": 1692887771.0799999,
+	"ocrcapturestring": "Custom Links",
+	"lastfoundlocation": [
+		70,
+		471,
+		75,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/9_Custom_Links/CustomLinks2.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					70,
+					400,
+					75,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Custom Links"
+			}
+	]
+}

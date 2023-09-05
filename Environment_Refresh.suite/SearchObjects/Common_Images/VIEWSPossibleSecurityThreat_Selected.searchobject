@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1617295001.378,
+	"ocrcapturestring": "VIEWS Possible Security Threat",
+	"originalcapturelocation": [
+		283,
+		315,
+		192,
+		17
+	],
+	"createddate": 1617294976.063,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[96,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/VIEWSPossibleSecurityThreat_Selected.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					283,
+					315,
+					192,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VIEWS Possible Security Threat"
+			}
+	],
+	"name": "Common_Images/VIEWSPossibleSecurityThreat_Selected"
+}

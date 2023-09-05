@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		444,
+		424,
+		45,
+		17
+	],
+	"lastmodifieddate": 1646236835.628,
+	"createddate": 1632766847.4349999,
+	"name": "Scratch_Logan/Scratch_Phillip/Color/Orange",
+	"lastfounddate": 1642623551.204,
+	"ocrcapturestring": "Orange",
+	"lastfoundlocation": [
+		444,
+		424,
+		45,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[24,4]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Phillip/Color/Orange.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					444,
+					424,
+					45,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Orange"
+			}
+	]
+}

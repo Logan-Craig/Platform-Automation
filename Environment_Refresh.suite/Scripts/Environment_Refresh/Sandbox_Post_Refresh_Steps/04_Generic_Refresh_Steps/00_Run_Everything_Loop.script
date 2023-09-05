@@ -1,0 +1,84 @@
+﻿
+///////////////////////////////////////////////////////////////////////
+//set the StartPoint to the sandbox you want to start on and the script will begin with that sandbox and complete the list from that point.
+//if you want the script to start at the beginning then set the StartPoint to ""
+////////////////////////////////////////////
+set StartPoint to ""
+put file ResourcePath("Credentials.csv") into MyFileVar
+if StartPoint = ""
+then
+	log "Starting at the beginning of the Sandbox list."
+	set StartLine = 2//starting at 2 skips the header
+else
+	log "Starting Sandbox name:"&&StartPoint
+	repeat for each line of MyFileVar
+		if it contains StartPoint
+		then set StartLine to the repeatindex//the CSVValue loses a row because it knows a header isn't a row.
+	end repeat
+end if
+log "Row number of the text file to start at:"&&StartLine
+repeat for each line of MyFileVar
+	if the repeatIndex is less than StartLine then next repeat
+	insert line the repeatindex of MyFileVar after SandboxList
+end repeat
+
+repeat for each item SandboxCredentials of SandboxList
+	Set CSVWorkingLine to Startline-2+(the repeatindex)
+	Set SandboxCredentials to item CSVWorkingLine of CSVValue(file resourcePath("Credentials.csv"))
+	Log "Row number of the CSV file:"&&CSVWorkingLine
+	Log "Sandbox Name:"&&SandboxCredentials's Sandbox 
+	if SandboxCredentials's VID = "" 
+	then 
+		Log "No VID provided for"&&SandboxCredentials's Sandbox 
+	else
+		Log "Sandbox VID:"&&SandboxCredentials's VID	
+	end if
+	Log "Sandbox Username:"&&SandboxCredentials's Username
+	Log "Sandbox Password:"&&SandboxCredentials's Password
+	log "Beginning Sandbox Refresh sequence..."
+	//Everything above this line works to set up a start point of the loop in case you don't want it to start at the beginning.
+	Run "Utilities/Launch" SandboxCredentials
+	Log "Logging in."
+	Run "Utilities/Login_Loop" SandboxCredentials
+	Log "Login complete."
+	Log "Beginning Step 1"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production"
+	Log "Step 1 Complete"
+	Log "Beginning Step 4"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/04_Exam"
+	Log "Step 4 Complete"
+	Log "Beginning Step 5"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability"
+	Log "Step 5 Complete"
+	Log "Beginning Step 6"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings"
+	Log "Step 6 Complete"
+	Log "Beginning Step 7"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/07_Assignment_Manager"
+	Log "Step 7 Complete"
+	Log "Beginning Step 8"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels"
+	Log "Step 8 Complete"
+	Log "Beginning Step 9"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links"
+	Log "Step 9 Complete"
+	Log "Beginning Step 10"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings"
+	Log "Step 10 Complete"
+	Log "Beginning Step 11"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/11_Email_Relay_Configuration"
+	Log "Step 11 Complete"
+	Log "Beginning Step 12"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/12_Single_Sign_On_Enabled"
+	Log "Step 12 Complete"
+	Log "Beginning Step 14"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/14_Updating_Internal_Users_Email_Address"
+	Log "Step 14 Complete"
+	Log "Beginning Step 15"
+	Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/15_Named_Credentials_Manual_Masking"
+	Log "Step 15 Complete"
+	Log "Cleaning up."
+	Run "Utilities/Clean_up"
+end repeat
+
+Log "04_Generic_Refresh_Steps completed for all sandboxes listed in the Credentials.csv."

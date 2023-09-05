@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		12,
+		984,
+		24,
+		40
+	],
+	"lastmodifieddate": 1612307794.24,
+	"createddate": 1612307794.24,
+	"name": "Utilities/Ubuntu_Launch_Chrome/Windows_Launcher",
+	"lastfounddate": 1684424467.98,
+	"ocrcapturestring": "□",
+	"lastfoundlocation": [
+		12,
+		984,
+		24,
+		40
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,20]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Ubuntu_Launch_Chrome/Windows_Launcher.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					12,
+					984,
+					24,
+					40
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□"
+			}
+	]
+}

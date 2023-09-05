@@ -1,0 +1,41 @@
+﻿set BrowserVar to "chrome"
+
+TypeText windowsKey,"r"
+TypeText BrowserVar&&"https://va--sqacarma.my.salesforce.com",returnkey
+
+Run "Utilities/Launch_and_Login"
+
+WaitFor 15, "Utilities/Launch_and_Login/AvatarLightning.png"
+
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Setup",Waitfor:10
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Blue_Setup",Waitfor:10
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Search_Setup",Waitfor:10
+TypeText "Custom Metadata Types"
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Custom_Metadata_Custom_Code_Cog",Waitfor:5
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/New_Custom_Metadata_Type",Waitfor:5
+ScrollWheelDown 10
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Manage_Records_MPIsetting"
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Click_Edit_MPI_WHHL"
+
+If imageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Label_MPI_WHHL")
+	LogSuccess "Label is Correct!"
+End if
+
+If imageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/MPI_Setting_Name_WHHL")
+	LogSuccess "MPI setting Name is Correct!"
+End if
+
+If imageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Named_Credential_Dev_Name_WHHL")
+	LogSuccess "Named Credential Dev Name is Correct!"
+End if
+
+If imageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Allowed_API_MPI")
+	LogSuccess "Allowed API is Correct!"
+End if
+
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Cancel",Waitfor:5
+
+//●	Make sure to uncheck "Use Predefined Data" in UAT, Staging and PROD, but it should remain "checked" in the lower region.
+//●	Make sure to check "Send Correlation Request" in UAT, Staging and PROD, but it should remain "unchecked" in lower region
+
+

@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		315,
+		719,
+		182,
+		11
+	],
+	"lastmodifieddate": 1615318759.878,
+	"createddate": 1615318759.878,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Manage_Records_MPIsetting",
+	"lastfounddate": 1615494490.5250001,
+	"ocrcapturestring": "Manage Records MPI setting",
+	"lastfoundlocation": [
+		315,
+		819,
+		182,
+		11
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[43,2]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Manage_Records_MPIsetting.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					315,
+					719,
+					182,
+					11
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Manage Records MPI setting"
+			}
+	]
+}

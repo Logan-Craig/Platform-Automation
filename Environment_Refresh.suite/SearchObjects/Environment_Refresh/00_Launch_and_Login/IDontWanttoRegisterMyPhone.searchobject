@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		469,
+		755,
+		194,
+		16
+	],
+	"lastmodifieddate": 1608331181.9910002,
+	"createddate": 1608331181.9910002,
+	"name": "Environment_Refresh/00_Launch_and_Login/IDontWanttoRegisterMyPhone",
+	"lastfounddate": 1646157357.3329999,
+	"ocrcapturestring": "I Don't Want to Register My Phone",
+	"lastfoundlocation": [
+		469,
+		730,
+		194,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[117,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/00_Launch_and_Login/IDontWanttoRegisterMyPhone.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					469,
+					755,
+					194,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "I Don't Want to Register My Phone"
+			}
+	]
+}

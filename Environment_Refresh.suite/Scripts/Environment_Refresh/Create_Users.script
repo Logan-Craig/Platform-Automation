@@ -1,0 +1,146 @@
+﻿//This script will create users in the environment that is logged into assuming the script user has permission to create users.
+//It switches to classic mode to do so, but will switch back if the found mode was Lightning.
+
+Params CreateUser:"logan.craig@octo.us",SelectedView:"Helper_Utilities/Helpers/Create_Users/Eggplant_Selected_View", DesiredView:"Helper_Utilities/Helpers/Create_Users/Eggplant_Desired_View", ViewName:"Digital Assurance Users", MakeMyView:true, FilterBoolean:true, FieldFilterVar:"Email", FieldOperatorVar:"Contains", FieldValueVar:"@octo.us"
+
+//Checks the mode and changes it if needed. Stores the Found Mode. Script is designed to run in Classic mode, but will switch back to Lightning if it finds that it is in Lightning mode.
+set FoundMode to "Helper_Utilities/Helpers".SwitchSandboxMode ("Classic")
+
+
+
+//Navigates to New User
+if imagefound("Common_Images/QuickFind_Classic")
+else
+	click "Common_Images/Avatar_Classic"
+	click "Common_Images/Setup_Classic"
+end if
+
+repeat until imagefound("Helper_Utilities/Helpers/Create_Users/QuickFindSearch_Box")
+	click "Common_Images/QuickFind_Classic"
+	if the repeatindex > 10
+		throw "Failed to locate Quick Find box."
+	end if
+end repeat
+
+//Navigates to the User menu.
+typetext "Manage Users", 
+click "Helper_Utilities/Launch_and_Login/ManageUsersUsers"
+
+//Create Custom View Handler so that the user can be found easily (if the user exists).
+Run "Helper_Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+
+//Does the actual checking to see if the user exists (actually only check that no results are found from the custom view).
+if imagefound(image:"Helper_Utilities/Helpers/Create_Users/Norecordstodisplay",waitfor:3)
+then
+	Log "No results found. No Octo users have been created yet.","Proceeding to create users..."
+	
+	//Creates the new user
+	click item 1 of everyimagelocation(image:"Helper_Utilities/Helpers/Create_Users/NewUser",waitfor:9)
+	
+	//Figures out what sandbox your are in to append the abbreviation to the username
+	typetext controlkey, "l","c"
+	put the remoteclipboard into SandboxName
+	split SandboxName by "."
+	put item 1 of SandboxName into SandboxName
+	split SandboxName by "-"
+	put the last item of SandboxName into SandboxName
+	put SandboxName
+	
+	//Enters Eggplant User Information
+	waitfor 12,"Helper_Utilities/Helpers/Create_Users/LastName"
+	Run "Helper_Utilities/Helpers".Verify_Field_Contents FieldValueVar, "Helper_Utilities/Helpers/Create_Users/LastName"
+	
+	
+	click "Helper_Utilities/Helpers/Create_Users/Email"
+	typetext CreateUser
+	click "Helper_Utilities/Helpers/Create_Users/Username"
+	typetext "."&SandboxName
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//On 11/26/2021 we noticed that the new user page for INT was formatted strangely so that side scrolling was needed for fields in the 2nd (right) column. 
+	//The code below scrolls to the side if needed.
+	if not imagefound(image:"Helper_Utilities/Helpers/Create_Users/UserLicense",waitfor:0)
+	then
+		Log "User License field not found. This can occur when the page formatting puts the right-hand column really far to the right for some reason.","Attempting to side scroll."
+		click "Helper_Utilities/Helpers/Create_Users/Division"
+		typetext tabkey
+		wait 1
+		if not imagefound(image:"Helper_Utilities/Helpers/Create_Users/UserLicense",waitfor:0)
+		then
+			moveto [250,770]	
+			mouseButtonDown 2
+			moveto [750,770]
+			mouseButtonUp 2
+			if not imagefound(image:"Helper_Utilities/Helpers/Create_Users/UserLicense",waitfor:0)
+			then
+				Throw "Still can't find User License field. Giving up."
+			else
+				Log "User License field located."
+				click FoundImageLocation()
+			end if
+		end if
+	end if 
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	click "Helper_Utilities/Helpers/Create_Users/UserLicense"
+	typetext "Salesforce"
+	click "Helper_Utilities/Helpers/Create_Users/Profile"
+	typetext "System Administrator"
+	click "Helper_Utilities/Helpers/Create_Users/ReceiveSalesforceCRMContent"
+	
+	//scrolls back to the left if needed.
+	if not imagefound(image:"Helper_Utilities/Helpers/Create_Users/Division",waitfor:0)
+	then
+		Put "Moving back to the left of the screen to find the Federation ID field."
+		moveto [750,770]	
+		mouseButtonDown 2
+		moveto [250,770]
+		mouseButtonUp 2
+	end if
+	
+	typetext pagedown
+	click "Helper_Utilities/Helpers/Create_Users/FederationID"
+	typetext CreateUser&"."&SandboxName
+	click foundimagelocation()+[0,25]
+
+	//Uncheck generate new password
+	typetext endkey
+	click image:"Common_Images/Check_Box_Checked_Blue",searchrectangle:[topleft of imagerectangle("Helper_Utilities/Helpers/Create_Users/Generatenewpassword")+[10,-10],bottomleft of imagerectangle("Helper_Utilities/Helpers/Create_Users/Generatenewpassword")+[-25,10]],waitfor:3
+	click "Helper_Utilities/Helpers/Create_Users/Save_Classic"
+	
+	//Checking for error message
+	if imagefound(Image:"Helper_Utilities/Helpers/Create_Users/ErrorInvalidData",waitfor:3)
+		Throw "Error saving record. Please review error message in Salesforce."
+	end if
+	
+	Put "Waiting for new user record to save. This can take a while..."
+	repeat until imagefound(image:"Helper_Utilities/Helpers/Create_Users/Login_Button_Classic",waitfor:3)
+		put (the repeatindex * 3)&&"seconds have elapsed.","Giving up after 60."
+		if the repeatindex = 20
+			throw "Record did not save after about 60 seconds of waiting."
+		end if
+	end repeat
+	
+	//Clicking the Reset Password button
+	click image:"Helper_Utilities/Helpers/Create_Users/ResetPassword",waitfor:9
+	click image:"Common_Images/OK",waitfor:3
+	
+	//Setting the Sandbox Mode back to the Found Mode
+	if FoundMode is not "Classic"
+	then
+		Click "Common_Images/Avatar_Classic"
+		Click image:"Helper_Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+		waitfor 25, "Common_Images/Avatar_Lightning"
+		Log "Mode switched to Lightning."
+	end if
+	Log "Completed Eggplant user creation."
+else
+	Log "Results found. User has been created already."
+end if
+
+
+
+//put the mode back (if needed)
+Run "Helper_Utilities/Helpers".SwitchSandboxMode FoundMode
+

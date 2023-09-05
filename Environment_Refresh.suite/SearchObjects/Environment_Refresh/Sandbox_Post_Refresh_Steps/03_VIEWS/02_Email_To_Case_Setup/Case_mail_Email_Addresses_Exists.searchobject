@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		325,
+		786,
+		61,
+		15
+	],
+	"lastmodifieddate": 1617119097.233,
+	"createddate": 1617119097.233,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Case_mail_Email_Addresses_Exists",
+	"lastfounddate": 1655761333.5609999,
+	"ocrcapturestring": "Case_mail",
+	"lastfoundlocation": [
+		324,
+		818,
+		61,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[181,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/Case_mail_Email_Addresses_Exists.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					325,
+					786,
+					61,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Case_mail"
+			}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		309,
+		519,
+		205,
+		15
+	],
+	"lastmodifieddate": 1646936733.974,
+	"createddate": 1646936733.974,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/CVEBVACommunities",
+	"lastfounddate": 1646949309.322,
+	"ocrcapturestring": "Login Flow for CVEB VA Communities",
+	"lastfoundlocation": [
+		309,
+		519,
+		205,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for CVEB VA Communities",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[102,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					309,
+					519,
+					205,
+					15
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/CVEBVACommunities.png"
+			}
+	]
+}

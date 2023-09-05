@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		590,
+		539,
+		85,
+		17
+	],
+	"lastmodifieddate": 1642534204.2750001,
+	"createddate": 1642534204.2750001,
+	"name": "Scratch_Logan/Scratch_Scott/Labels/CaseSensitivity",
+	"lastfounddate": 1642534695.8099999,
+	"ocrcapturestring": "Case Sensitivity",
+	"lastfoundlocation": [
+		589,
+		539,
+		85,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[42,8]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Scott/Labels/CaseSensitivity.png",
+				"connectionname": "SUT1 - Eggplant2",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					590,
+					539,
+					85,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Case Sensitivity"
+			}
+	]
+}

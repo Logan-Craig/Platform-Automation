@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1624816279.694,
+	"lastfoundlocation": [
+		1039,
+		117,
+		20,
+		19
+	],
+	"originalcapturelocation": [
+		1039,
+		79,
+		20,
+		19
+	],
+	"createddate": 1624816279.694,
+	"lastfounddate": 1692887923.0139999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[10,9]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/Avatar.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"capturerect": [
+					1039,
+					79,
+					20,
+					19
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232"
+			}
+	],
+	"name": "Utilities/Developer_Console/Avatar"
+}

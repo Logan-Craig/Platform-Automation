@@ -1,0 +1,9 @@
+
+Step 01 - Deliverability
+Access Level set to All Email.
+
+Step 02 - Session Settings
+Logout URL updated to: https://va-vet--avrtuat.sandbox.my.salesforce.com
+
+Step 03 - Schedule Email Alerts
+Scheduled email alerts updated

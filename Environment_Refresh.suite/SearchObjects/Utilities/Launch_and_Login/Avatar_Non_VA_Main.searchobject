@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1090,
+		75,
+		56,
+		13
+	],
+	"lastmodifieddate": 1684425554.816,
+	"createddate": 1684425554.816,
+	"name": "Utilities/Launch_and_Login/Avatar_Non_VA_Main",
+	"lastfounddate": 1689606671.9990001,
+	"ocrcapturestring": "Sandbox:",
+	"lastfoundlocation": [
+		1103,
+		107,
+		56,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[28,6]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Launch_and_Login/Avatar_Non_VA_Main.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					1090,
+					75,
+					56,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Sandbox:"
+			}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		562,
+		711,
+		41,
+		12
+	],
+	"lastmodifieddate": 1604419335.29,
+	"createddate": 1604419305.6459999,
+	"name": "Success",
+	"lastfounddate": 1619107474.783,
+	"ocrcapturestring": "Success",
+	"lastfoundlocation": [
+		563,
+		712,
+		41,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/Success.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					562,
+					711,
+					41,
+					12
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Success"
+			}
+	]
+}

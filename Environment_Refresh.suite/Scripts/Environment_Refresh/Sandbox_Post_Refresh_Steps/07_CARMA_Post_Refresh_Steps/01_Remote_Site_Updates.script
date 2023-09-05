@@ -1,0 +1,60 @@
+﻿//https://va--reg.my.salesforce.com/
+//Amanda Long, Chelsea Harman, Allan Rainey
+//Start with analytics setup and Grid Buddy (dataloader)
+//https://community.max.gov/display/VAExternal/Sandbox+Refresh+Steps+-+VA+Org
+//Carma - big undertaking but will have a big impact
+//gridbuddy - good one to test out dataloading
+//Analytics - low hanging fruit
+
+Log "Executing CARMA DVP (Remote Site)."
+Run "Environment_Refresh/Return_to_Setup"
+
+
+set NavText to "Remote Site Settings" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/RemoteSiteSettings"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+
+
+//Prepare the log for editing
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&return&"******************************************************************************************"&return to file Refresh_Report
+write "Test run start: " & the long date &", "& the abbrev time & return to file Refresh_Report
+write return&"Remote Site/Named Credential URL/Password Updates"&return to file Refresh_Report
+
+
+//Verify Correct View (the generic refresh steps put you in a Sandbox Refresh view. This stuff needs the All Remote Site Settigns view.
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/01_Remote_Site_Updates/AllRemoteSiteSettings",waitfor:3)
+else
+	click "Environment_Refresh/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/View"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/01_Remote_Site_Updates/AllRemoteSiteSettings"
+end if
+
+
+
+//CARMA DVP 
+Log "Beginning CARMA DVP Update"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/01_Remote_Site_Updates/CARMADVP",waitfor:6
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteEdit" //clicks the URL field
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log remoteclipboard()
+write "Remote Site URL found to be: " &RemoteClipboard()&return to file Refresh_Report
+typetext "https://qa-salesforce.lighthouse.va.gov"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+Log "Remote site Edit for CARMA_DVP updated to https://qa-salesforce.lighthouse.va.gov"
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+write "Remote Site URL updated to be: " &RemoteClipboard()&return to file Refresh_Report
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3
+
+close file Refresh_Report
+
+
+

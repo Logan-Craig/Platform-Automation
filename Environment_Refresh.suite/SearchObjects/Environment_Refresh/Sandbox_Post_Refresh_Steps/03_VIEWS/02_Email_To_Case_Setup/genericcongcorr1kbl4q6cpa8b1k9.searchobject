@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		439,
+		624,
+		432,
+		16
+	],
+	"lastmodifieddate": 1617116703.471,
+	"createddate": 1614106484.069,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/genericcongcorr1kbl4q6cpa8b1k9",
+	"lastfounddate": 1614179985.3140001,
+	"ocrcapturestring": "generic_cong_corr@1kbl4q6cpa8b1k9w24obuba9trjmvykuafe3eswbrtxop4l65i.",
+	"lastfoundlocation": [
+		465,
+		787,
+		115,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[216,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/genericcongcorr1kbl4q6cpa8b1k9.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					439,
+					624,
+					432,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "gene ric_co ng_corr@"
+			}
+	]
+}

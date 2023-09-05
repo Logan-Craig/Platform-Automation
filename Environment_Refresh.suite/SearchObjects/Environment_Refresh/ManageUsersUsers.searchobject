@@ -1,0 +1,30 @@
+{
+	"lastmodifieddate": 1604620392.74,
+	"ocrcapturestring": "□ Manage Users Users",
+	"originalcapturelocation": [
+		17,
+		630,
+		134,
+		44
+	],
+	"createddate": 1604615851.2449999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"name": "Environment_Refresh/ManageUsersUsers.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					17,
+					630,
+					134,
+					44
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "□ Manage Users Users"
+			}
+	],
+	"name": "Environment_Refresh/ManageUsersUsers"
+}

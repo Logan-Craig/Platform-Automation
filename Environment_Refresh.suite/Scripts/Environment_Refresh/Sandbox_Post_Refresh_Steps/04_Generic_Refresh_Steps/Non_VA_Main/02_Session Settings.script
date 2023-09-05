@@ -1,0 +1,24 @@
+﻿//We need to be in setup to do stuff
+Run "Environment_Refresh/EnvRefresh_Helpers".Navigate_to_Setup "Lightning"
+
+//Searches Setup
+Run "Environment_Refresh/EnvRefresh_Helpers".QuickFind "Session Settings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Lightning/SessionSettings"
+waitfor 12, "Common_Images/Shield_Icon"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"Step 02 - Session Settings"&return to file Refresh_Report
+
+
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/02_Session_Settings/LogoutURL",waitor:9,hotspot:[120,8]
+typetext controlkey, "a"
+set the remoteclipboard to the suitevariables.SandboxURL
+typetext controlkey, "v"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Save_New_Named_Credential"
+waitfor 12, "Common_Images/Home_Icon"
+
+
+write "Logout URL updated to:"&&the suitevariables.SandboxURL &return to file Refresh_Report
+
+close file Refresh_Report

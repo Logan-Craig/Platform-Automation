@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		389,
+		867,
+		129,
+		13
+	],
+	"lastmodifieddate": 1613675788.2350001,
+	"createddate": 1613675788.2350001,
+	"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/VIEWSEmailtoCase",
+	"lastfounddate": 1655761327.648,
+	"ocrcapturestring": "VIEWS Email to Case",
+	"lastfoundlocation": [
+		384,
+		874,
+		129,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,9]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/03_VIEWS/03_Schedule_Business_Days/VIEWSEmailtoCase.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					389,
+					867,
+					129,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VIEWS Email to Case"
+			}
+	]
+}

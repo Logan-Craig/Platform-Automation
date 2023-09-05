@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		266,
+		553,
+		146,
+		14
+	],
+	"lastmodifieddate": 1646236835.4200001,
+	"createddate": 1616420291.161,
+	"name": "Scratch_Logan/OHRS_Study/AllowOAuthforemployee",
+	"lastfounddate": 1616427758.1820002,
+	"ocrcapturestring": "Allow OAuth for employee",
+	"lastfoundlocation": [
+		266,
+		567,
+		146,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[73,7]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/OHRS_Study/AllowOAuthforemployee.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					266,
+					553,
+					146,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Allow OAuth for employee"
+			}
+	]
+}

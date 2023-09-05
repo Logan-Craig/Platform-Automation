@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		856,
+		512,
+		37,
+		22
+	],
+	"lastmodifieddate": 1617209114.849,
+	"createddate": 1617209114.849,
+	"name": "Utilities/Common_Buttons/Find",
+	"lastfounddate": 1617297041.549,
+	"ocrcapturestring": "Find",
+	"lastfoundlocation": [
+		856,
+		535,
+		37,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[18,11]",
+					"Tolerance": "_60",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Common_Buttons/Find.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					856,
+					512,
+					37,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Find"
+			}
+	]
+}

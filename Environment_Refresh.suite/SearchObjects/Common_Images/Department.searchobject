@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		28,
+		113,
+		72,
+		15
+	],
+	"lastmodifieddate": 1663785759.8179998,
+	"createddate": 1663785759.8179998,
+	"name": "Common_Images/Department",
+	"lastfounddate": 1663785761.1719999,
+	"ocrcapturestring": "Department",
+	"lastfoundlocation": [
+		28,
+		113,
+		72,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[36,7]",
+					"Tolerance": "_40",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Department.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					28,
+					113,
+					72,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Department"
+			}
+	]
+}

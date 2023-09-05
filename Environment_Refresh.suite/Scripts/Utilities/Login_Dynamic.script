@@ -1,0 +1,83 @@
+﻿Params UsernameVar, PasswordVar, sandboxName, BrowserVar, URL_Var, UseDTC_Login:False, EncodedPass:False, UseKeyVault:False
+
+
+Set Eggplant_IPs to [
+	"18.252.46.96",
+	"18.252.47.44",
+	"18.253.100.225",
+	"18.252.45.244",
+	"192.168.56.107",
+	"192.168.56.108"
+]
+
+if UseKeyVault = True
+then
+	Log "Fetching Password from KeyVault..."
+	Set SecretName to PasswordVar
+	Set PasswordVar to "Utilities/Shell_Key_Vault".Get_Password (SecretName)
+	Log "Done!"
+	if PasswordVar = "" then throw "KeyVault returned null value! Verify secret name is correct. Secret name:"&&SecretName
+	Set EncodedPass to False
+end if
+
+Run "Utilities/Launch" BrowserVar, URL_Var
+
+Log "Server IP of SUT:"&&the ServerID of the ConnectionInfo
+
+//Checks for pop ups and things that might interfere with find login elements.
+Run "Utilities/Login_Checks_1Pre"
+
+//Login
+//waits for the logo to appear
+
+WaitFor 30, "Utilities/Launch_and_Login/LogIntoSandbox"
+
+//Begin actual login
+//Enter Username and Password
+Click Image:"Utilities/Launch_and_Login/Username", WaitFor:1
+//Identify the location of the run.
+put "Server IP:"&&the ServerID of the ConnectionInfo
+put "Username:"&&the username of the ConnectionInfo
+
+
+
+Normal_Login UsernameVar, PasswordVar, EncodedPass
+
+
+//Login Button
+typetext returnkey
+repeat until not imagefound("Utilities/Launch_and_Login/LogIntoSandbox")
+	if imagefound(imagename:"Utilities/Launch_and_Login/FailedLogin", waitfor:1)
+	then
+		throw "Login failed."
+	end if
+	if the repeatindex > 10
+		throw "Unable to login."
+	end if
+end repeat
+
+//Checks for pop-ups and things that appear before the avatar but after the login button has been clicked.
+Run "Utilities/Login_Checks_2Mid"
+
+
+
+/////////These are checks for things that occur after the Avatar image shows up. Stuff like browser password caching and such.
+Run "Utilities/Login_Checks_3Post"
+
+
+//Handlers
+on Normal_Login UsernameVar, PasswordVar, EncodedPass
+	if EncodedPass is True
+	then
+		Log "This is an encoded login."
+		"Utilities/Helpers".Verify_Field_Contents UsernameVar, "Utilities/Launch_and_Login/Username" //Double-checks that what was typed in the field is what was intended.
+		click "Utilities/Launch_and_Login/Password"
+		TypeEncodedText (PasswordVar)
+	else if EncodedPass is False
+	then
+		Log "This is an unencoded login."
+		"Utilities/Helpers".Verify_Field_Contents UsernameVar, "Utilities/Launch_and_Login/Username" //Double-checks that what was typed in the field is what was intended.
+		click "Utilities/Launch_and_Login/Password"
+		typetext PasswordVar
+	end if
+end Normal_Login

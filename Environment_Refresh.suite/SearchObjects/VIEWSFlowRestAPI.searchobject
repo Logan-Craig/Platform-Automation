@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		575,
+		117,
+		13
+	],
+	"lastmodifieddate": 1604009713.5139999,
+	"createddate": 1604009707.1370001,
+	"name": "VIEWSFlowRestAPI",
+	"lastfounddate": 1692887814.2779999,
+	"ocrcapturestring": "VIEWS FlowRestAPI",
+	"lastfoundlocation": [
+		332,
+		613,
+		117,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/VIEWSFlowRestAPI.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					575,
+					117,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "VIEWS FlowRestAPI"
+			}
+	]
+}

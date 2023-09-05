@@ -1,0 +1,57 @@
+﻿//It would seem that these non-va main orgs need to have their post-refresh steps done in lightning mode, as I have no idea how to find these settings in classic mode. Therefore, this script and all others that deal with non va-main orgs will be executed in lightning mode.
+
+//as such, the first thing to do is to make sure we are in lightning mode after login.
+
+//mode verification
+repeat until imagefound(image:"Utilities/Launch_and_Login/Avatar_Lightning",waitfor:9) or imagefound(image:"Utilities/Launch_and_Login/Avatar_Non_VA_Main",waitfor:9)
+	if imagefound("Utilities/Launch_and_Login/Avatar_Lightning")
+		Log "non VA-Main org Lightning mode identified."
+	else if imagefound("Utilities/Launch_and_Login/Avatar_Non_VA_Main")
+		Log "Classic mode non va-main org identified. Switching to lighting mode for non va-main post-refresh steps."
+		repeat at least once until not imagefound("Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite")
+			click foundimagelocation()
+			if imagefound(image:"Utilities/Launch_and_Login/Avatar_Lightning",waitfor:3) 
+			then 
+				exit repeat
+			else if the repeatindex > 7 
+			then 
+				throw "Unable to switch to lightning mode."
+			end if
+		end repeat
+	end if
+end repeat
+
+Log "Eggy is ready to commence non va-main org sandbox post-refresh steps."
+if imagefound("Utilities/Launch_and_Login/Avatar_Non_VA_Main")
+then
+	repeat at least once until imagefound(image:"Utilities/Launch_and_Login/Avatar_Lightning",waitfor:3)
+		click "Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite"
+		if the repeatindex > 15 then throw "unable to navigate to non va-main lightning mode."
+	end repeat
+end if
+
+
+
+
+//Here is where we actually start doing useful stuff.
+Log "Beginning step 01 Deliverability, Access to Send Email (All Email Services) changed Access Level to All email."
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main/01_Deliverability"
+Log "Completed step 01."
+
+Log "Beginning step 02 Session Settings, cheange Logout URL."
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main/02_Session Settings"
+Log "Completed step 02."
+
+Log "Beginning step 03 Scheduled Email Alerts, Apex code EmailAlertSchedulable change."
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main/03_Schedule Email Alerts"
+Log "Completed step 03."
+(*
+
+Log "Adding Eggplant IP to Trusted IPs"
+Run "Environment_Refresh/EnvRefresh_Helpers".Add_To_Trusted_IPs
+Log "Completed adding Eggplant IP to Trusted IPs."
+*)
+
+
+
+

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		282,
+		683,
+		141,
+		17
+	],
+	"lastmodifieddate": 1684339148.6789999,
+	"createddate": 1684339148.6789999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Create_Users/DigitalAssuranceUsers_Desired_View",
+	"lastfounddate": 1684339150.503,
+	"ocrcapturestring": "Digital Assurance Users",
+	"lastfoundlocation": [
+		282,
+		683,
+		141,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[70,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Create_Users/DigitalAssuranceUsers_Desired_View.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					282,
+					683,
+					141,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Digital Assurance Users"
+			}
+	]
+}

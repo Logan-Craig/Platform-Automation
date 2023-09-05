@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		1031,
+		315,
+		102,
+		16
+	],
+	"lastmodifieddate": 1684513433.526,
+	"createddate": 1684513433.526,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/DeveloperConsole",
+	"lastfounddate": 1692816492.5420001,
+	"ocrcapturestring": "Developer Console",
+	"lastfoundlocation": [
+		1030,
+		355,
+		102,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[51,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/DeveloperConsole.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					1031,
+					315,
+					102,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Developer Console"
+			}
+	]
+}

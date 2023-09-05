@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		173,
+		637,
+		96,
+		16
+	],
+	"lastmodifieddate": 1646236835.599,
+	"createddate": 1635970919.7350001,
+	"name": "Scratch_Logan/Scratch_Alex/Rememberme",
+	"lastfounddate": 1635973203.615,
+	"ocrcapturestring": "Remember me",
+	"lastfoundlocation": [
+		173,
+		622,
+		96,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[48,8]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Alex/Rememberme.png",
+				"connectionname": "SUT3 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.253.100.225",
+				"capturerect": [
+					173,
+					637,
+					96,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Remember me"
+			}
+	]
+}

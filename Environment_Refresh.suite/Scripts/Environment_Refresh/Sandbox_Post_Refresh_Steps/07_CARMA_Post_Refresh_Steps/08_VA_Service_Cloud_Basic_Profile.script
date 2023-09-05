@@ -1,0 +1,68 @@
+﻿Log "Executing Update VA Service Cloud Basic Profile."
+
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Profiles" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Profiles"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/UVW", waitfor:9
+
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/VAServiceCloudBasic_Selected"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/VAServiceCloudBasic_Desired" 
+set ViewName to "VA Service Cloud Basic"
+set MakeMyView = "True"
+Run "Utilities/CustomView".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView
+
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/VAServiceCloudBasic_Link"
+waitfor 16, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/ProfileOverview", 
+
+//Session settings
+typetext controlkey,endkey
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/SessionSettings"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:12
+Wait until imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save", waitfor:16)
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/RelaxloginIPrestrictions"
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/04_Session_Settings/Check_Empty",searchrectangle: [(foundimagelocation()+[75,-12]),(FoundImageLocation()+[125,15])])
+then
+	Log "Found empty checkbox."
+	click FoundImageLocation()
+else
+	Log "Did not find empty checkbox (its probably already checked)."
+end if
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+wait until imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:6)
+//System Permissions
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SessionSettings_Options"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SystemPermissions"
+wait until imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:6)
+click foundimagelocation()
+Wait until imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save", waitfor:16)
+//could not find an option for "Is Single Sign-On Enabled"
+typetext homeKey
+//Login IP Ranges
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/SystemPermissions_DropDown"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/LoginIPRanges"
+
+waitfor 12, "Utilities/Helpers/AddIPs/AddIPRanges"
+//Checking if IP range already exists
+//click FoundImageLocation()
+if not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/IP0000") and not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/08_VA_Service_Cloud_Basic_Profile/IP223255255255")
+then 
+	Log "IP Range does not exist. Adding it now."
+	Put [
+		["0.0.0.0","223.255.255.255"]
+	] into IP_List
+	Log IP_List
+	Set IPRangeDescription to "VA Service Cloud Basic Profile"
+	Run "Utilities/Helpers".AddIps IP_List, IPRangeDescription
+else
+	Log "IP Range found to already exist."
+end if
+
+
+

@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		466,
+		787,
+		632,
+		16
+	],
+	"lastmodifieddate": 1614113864.6630001,
+	"createddate": 1614113091.2649999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/leanJetterc3qbdhkw4z9v3dlgm92z",
+	"lastfounddate": 1614113094.381,
+	"ocrcapturestring": "leanJetter@c-3qbdhkw4z9v3dlgm92zcooxrqfyhrvihh2mnlza6eoqhn48r0.r-2jwieaa.cs32.apex.sandDox.salesforce.com",
+	"lastfoundlocation": [
+		466,
+		787,
+		632,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[316,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/leanJetterc3qbdhkw4z9v3dlgm92z.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					466,
+					787,
+					632,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "leanJetter@c-3qbdhkw4z9v3dlgm92zcooxrqfyhrvihh2mnlza6eoqhn48r0.r-2jwieaa.cs32.apex.sandDox.salesforce.com"
+			}
+	]
+}

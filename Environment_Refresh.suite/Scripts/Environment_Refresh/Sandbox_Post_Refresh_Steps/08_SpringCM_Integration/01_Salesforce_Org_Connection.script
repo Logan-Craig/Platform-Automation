@@ -1,0 +1,12 @@
+﻿//01_Salesforce_Org_Connection
+Log "Beginning 08_SpringCM_Integration"
+Log "01_Salesforce_Org_Connection"
+
+typetext controlkey,homekey
+Run "Utilities/Helpers".SwitchToLightning
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/14_Mass_Action_Scheduler/AppLauncher"
+typetext "SpringCM Setup"&returnKey
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/SETUPCONNECTION"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/Connection_Type"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/08_SpringCM_Integration/01_Salesforce_Org_Connection/NEXT"

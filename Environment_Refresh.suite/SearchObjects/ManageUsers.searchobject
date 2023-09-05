@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		35,
+		636,
+		84,
+		15
+	],
+	"lastmodifieddate": 1603840078.5840001,
+	"createddate": 1603840075.372,
+	"name": "ManageUsers",
+	"lastfounddate": 1614190129.96,
+	"ocrcapturestring": "Manage Users",
+	"lastfoundlocation": [
+		35,
+		351,
+		84,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/ManageUsers.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					35,
+					636,
+					84,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Manage Users"
+			}
+	]
+}

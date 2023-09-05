@@ -1,0 +1,46 @@
+{
+	"lastmodifieddate": 1685029847.5369999,
+	"lastfoundlocation": [
+		797,
+		601,
+		24,
+		24
+	],
+	"originalcapturelocation": [
+		1172,
+		119,
+		24,
+		24
+	],
+	"createddate": 1627410051.8829999,
+	"lastfounddate": 1685466715.497,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,12]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Common_Images/Notification_Icon.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"capturerect": [
+					1172,
+					119,
+					24,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "192.168.56.106"
+			}
+	],
+	"name": "Common_Images/Notification_Icon"
+}

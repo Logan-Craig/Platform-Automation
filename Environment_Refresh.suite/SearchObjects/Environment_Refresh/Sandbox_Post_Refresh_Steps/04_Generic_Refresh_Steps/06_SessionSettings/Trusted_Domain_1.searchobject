@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		313,
+		554,
+		156,
+		15
+	],
+	"lastmodifieddate": 1626118726.7280002,
+	"createddate": 1626118726.7280002,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_1",
+	"lastfounddate": 1692653090.0089998,
+	"ocrcapturestring": "https A'va.mv.salesforce.com",
+	"lastfoundlocation": [
+		313,
+		220,
+		156,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[78,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_1.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					313,
+					554,
+					156,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "https A'va.mv.salesforce.com"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		15,
+		690,
+		25,
+		12
+	],
+	"lastmodifieddate": 1624816372.7810001,
+	"createddate": 1624816372.7810001,
+	"name": "Utilities/Developer_Console/User",
+	"lastfounddate": 1692887925.674,
+	"ocrcapturestring": "User",
+	"lastfoundlocation": [
+		15,
+		696,
+		25,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[14,7]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Developer_Console/User.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					15,
+					690,
+					25,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "User"
+			}
+	]
+}

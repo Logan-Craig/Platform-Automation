@@ -1,0 +1,47 @@
+﻿Log "98_Login_Flows"
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Login Flows", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/LoginFlows", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/LoginFlows"
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"98_Login_Flows"& return to file Refresh_Report
+write "Updating Login Flows" & return to file Refresh_Report
+
+put [
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/CVEBVACommunities",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/ProstheticsUser",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/ReadOnly",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAMarketingUser",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAPlatform",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VASalesCloud",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VAServiceCloudBasic",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAAdmin",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAPlatform",
+	"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAPlatformQMSAdmin"
+] into LoginFlowList
+
+repeat for each item of LoginFlowList
+	put it into FlowName
+	split FlowName by "/"
+	put the last item of FlowName into FlowName
+	
+	Log "Searching for Login Flow:"&&FlowName
+	if imagefound(image:it,waitfor:3)
+	then
+		click foundimagelocation()
+		waitfor 9, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/LoginFlowDetail"
+		if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/Login_User_acceptance",waitfor:0)
+		then
+			Log FlowName&&<<found to have Flow: "Login User acceptance".>>,"Deleting flow."
+			click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/02_Remove_IP_Restrictions/Delete"), 
+			click image:"Common_Images/OK",waitfor:3	
+			write "Deleting flow:"&&FlowName & return to file Refresh_Report
+		end if
+	else
+		LogWarning FlowName&&"flow not found."
+		write "WARNING! Login Flow not found:"&&FlowName & return to file Refresh_Report
+	end if
+	
+end repeat
+
+close file Refresh_Report

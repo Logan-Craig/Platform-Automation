@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		251,
+		530,
+		155,
+		14
+	],
+	"lastmodifieddate": 1603983535.697,
+	"createddate": 1603983500.1919999,
+	"name": "EditIDelVACommunity",
+	"lastfounddate": 1624815479.573,
+	"ocrcapturestring": "Edit I Del VA Community",
+	"lastfoundlocation": [
+		251,
+		545,
+		155,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/EditIDelVACommunity.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					251,
+					530,
+					155,
+					14
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit I Del VA Community"
+			}
+	]
+}

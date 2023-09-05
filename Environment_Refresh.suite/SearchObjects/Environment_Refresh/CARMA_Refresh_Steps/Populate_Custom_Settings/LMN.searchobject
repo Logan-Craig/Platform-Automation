@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		894,
+		410,
+		52,
+		15
+	],
+	"lastmodifieddate": 1612462132.1859999,
+	"createddate": 1612462132.1859999,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/LMN",
+	"lastfounddate": 1614199304.385,
+	"ocrcapturestring": "L M N",
+	"lastfoundlocation": [
+		1055,
+		342,
+		52,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[26,7]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/LMN.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					894,
+					410,
+					52,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "L M N"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		311,
+		451,
+		51,
+		13
+	],
+	"lastmodifieddate": 1670954859.2420001,
+	"createddate": 1670954859.2420001,
+	"name": "NewText",
+	"lastfounddate": 1690821528.674,
+	"ocrcapturestring": "New Text",
+	"lastfoundlocation": [
+		496,
+		135,
+		35,
+		9
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,4]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "NewText.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					311,
+					451,
+					51,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "New Text"
+			}
+	]
+}

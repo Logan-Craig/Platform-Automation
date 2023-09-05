@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		332,
+		409,
+		116,
+		17
+	],
+	"lastmodifieddate": 1624814554.286,
+	"createddate": 1624814554.286,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusUserMgmt_Link",
+	"lastfounddate": 1692887552.8670001,
+	"ocrcapturestring": "VA Admin Plus User.",
+	"lastfoundlocation": [
+		332,
+		447,
+		116,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[58,8]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusUserMgmt_Link.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					332,
+					409,
+					116,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VA Admin Plus User."
+			}
+	]
+}

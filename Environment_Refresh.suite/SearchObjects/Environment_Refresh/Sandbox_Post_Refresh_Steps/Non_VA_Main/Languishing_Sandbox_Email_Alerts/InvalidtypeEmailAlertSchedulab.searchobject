@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		396,
+		454,
+		189,
+		16
+	],
+	"lastmodifieddate": 1687892181.2049999,
+	"createddate": 1687892181.2049999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/InvalidtypeEmailAlertSchedulab",
+	"lastfounddate": 1688057384.3150001,
+	"ocrcapturestring": "Invalid type: EmailAlertSchedulable",
+	"lastfoundlocation": [
+		396,
+		454,
+		189,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[94,8]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/InvalidtypeEmailAlertSchedulab.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					396,
+					454,
+					189,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Invalid type: EmailAlertSchedulable"
+			}
+	]
+}

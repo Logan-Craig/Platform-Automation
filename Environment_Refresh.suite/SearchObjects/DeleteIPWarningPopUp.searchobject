@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		480,
+		520,
+		32,
+		29
+	],
+	"lastmodifieddate": 1604065980.161,
+	"createddate": 1604065972.3990002,
+	"name": "DeleteIPWarningPopUp",
+	"lastfounddate": 1658757441.329,
+	"ocrcapturestring": "□",
+	"lastfoundlocation": [
+		480,
+		536,
+		32,
+		29
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/DeleteIPWarningPopUp.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					480,
+					520,
+					32,
+					29
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "□"
+			}
+	]
+}

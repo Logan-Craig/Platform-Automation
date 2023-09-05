@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		439,
+		906,
+		102,
+		17
+	],
+	"lastmodifieddate": 1646236835.5799999,
+	"createddate": 1619794292.033,
+	"name": "Scratch_Logan/Scratch_Matthew/EntitlementUsed",
+	"lastfounddate": 1621443752.941,
+	"ocrcapturestring": "Entitlement Used",
+	"lastfoundlocation": [
+		15,
+		722,
+		102,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[51,8]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Matthew/EntitlementUsed.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					439,
+					906,
+					102,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Entitlement Used"
+			}
+	]
+}

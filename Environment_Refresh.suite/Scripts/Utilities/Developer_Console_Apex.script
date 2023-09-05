@@ -1,0 +1,151 @@
+﻿//Opens the DevConsole
+to OpenDevConsole
+	//Open the developer console
+	typetext windowsKey, upArrow
+	typetext homeKey
+	Click "Utilities/Developer_Console/Avatar"
+	Click image:"Utilities/Developer_Console/DeveloperConsole", waitfor:6
+	
+	//Looks for a "User" column header to see if the console has loaded yet
+	WaitFor 18, "Utilities/Developer_Console/User"
+	
+	//Looks like it is sometimes doing ctrl+e too soon despite the "User" wait. Adding an "if".
+	TypeText ControlKey, "e"
+	//Its also sometimes showing this weird "you don't have permission to execute Apex" error that I think is also related to trying to get to the code window too soon.
+	(*	if imagefound(imagename:"Utilities/Developer_Console/Youdonthavethepermission", waitfor:1)
+	then
+		click FoundImageLocation()
+	end if
+	repeat
+		if ImageFound(imageName:"Utilities/Developer_Console/EnterApexCode", waitFor:6)
+		then
+			exit repeat
+		else 
+			TypeText ControlKey, "e"
+			if repeatindex() > 4
+			then
+				Throw "Eggy can't open the deveoper console for some reason."
+				exit repeat
+			end if
+		end if
+	end repeat*)
+end OpenDevConsole
+
+
+
+
+//to use this utility copy the below contents into your script and customize the resource path and the TeamUser label
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//put file ResourcePath("Environment_Refresh/CARMA_Refresh_Steps/CARMA_TeamUserSetupScript.txt") into MyApexCode
+//Update the TeamUser text below to suit your step.
+//set ClassNameVar to uppercase(SandboxName)&"_TeamUser_"&"Eggy"
+//Run "Utilities/Developer_Console_Apex".CustomClass ClassNameVar, MyApexCode
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+to CustomClass ClassNameVar, MyApexCode
+	
+	//should be "public VOID "&CARMA_REG&"(){"
+	//set CustomClassHandler to "public VOID"&&ClassNameVar&"(){"
+	set ClassExecutionLine1Var to ClassNameVar&&uppercase(SandboxName)&&"= new"&&ClassNameVar&&"();"
+	set ClassExecutionLine2Var to uppercase(SandboxName)&"."&ClassNameVar&&"();"
+	
+	//Customizes the apex code to run from the customclass
+	put "public VOID"&&ClassNameVar&"(){"&return into ApexCode_tmp
+	put MyApexCode after ApexCode_tmp
+	replace "public class SetupException extends Exception{}" in ApexCode_tmp with "}"&return&"public class SetupException extends Exception{}"
+	//log ApexCode_tmp
+	setRemoteClipboard ApexCode_tmp
+	
+	typetext windowsKey, upArrow
+	typetext homeKey
+	Click "Utilities/Developer_Console/Avatar"
+	Click image:"Utilities/Developer_Console/DeveloperConsole",waitfor:6
+	
+	//Looks for a "User" column header to see if the console has loaded yet
+	if imagefound(imagename:"Utilities/Developer_Console/NOTFOUND",waitfor:2) then click "Utilities/Developer_Console/DevConsoleOK"
+	WaitFor 6, "Utilities/Developer_Console/User"
+	click "Utilities/Developer_Console/File"
+	moveto "Utilities/Developer_Console/New"
+	click "Utilities/Developer_Console/ApexClass"
+	typetext ClassNameVar
+	click "Utilities/Developer_Console/DevConsoleOK"
+	//wait for the save to complete.
+	repeat until not imagefound("Utilities/Developer_Console/CreatingClassWindow")
+		Log "Waiting for Class to save."
+		wait 1
+		if repeatindex()>100 then throw "Saving did not complete after about 300 seconds."
+	end repeat
+	if imagefound("Utilities/Developer_Console/DUPLICATEVALUE") 
+	then 
+		Log "Duplicate Class name discovered.","Eggy will skip execution of the customclass under the assumption that it has already run."
+	else
+		Log "Class saved."
+		typetext downArrow //Puts cursor where the code goes and open the class
+		typetext controlkey,"v" //pastes RemoteClipboard()
+		typetext controlKey,"s" //saves the customclass
+		//Runs the class from the Anonymous window
+		typetext Controlkey,"e"
+		TypeText controlKey,"a",backspace //Clears out anything that might be in the anonymous window
+		typetext ClassExecutionLine1Var,ReturnKey,ClassExecutionLine2Var
+		//Executes
+		Click "Utilities/Developer_Console/Execute"
+		if imagefound(Imagename:"Utilities/Developer_Console/ExecuteAnonymousError", waitfor:6)
+		then
+			Throw "Developer Console script failed to execute."
+		end if
+		repeat until not imagefound("Utilities/Developer_Console/Executing")
+			Log "Waiting for Custom Class execution to complete."
+			wait 3
+			if repeatindex()>100 then throw "Execution did not complete after about 300 seconds."
+		end repeat
+		if imagefound(imagename:"Utilities/Developer_Console/Success", waitfor:15)
+		then
+			Log "The code execution has completed successfully."
+			Log ReadText({image:"Utilities/Developer_Console/Success", HotSpot: [-550, -1]},{image:"Utilities/Developer_Console/Success", HotSpot: [400, 12]})
+			typetext altKey, f4
+		else
+			Throw "A successful code execution was not detected."
+		end if	
+		Log "Apex run complete"
+	end if
+end CustomClass
+
+
+
+
+
+//Inserts and runs Apex code that has been loaded into the remoteclipboard()
+to RunApex UpdateScript
+	Log "Running Apex code"
+	if UpdateScript is ""or if UpdateScript = "UpdateScript" then set UpdateScript to the remoteclipboard
+	//Waits to be sure apex code input window is ready to take input
+	
+	repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/EnterApexCode")
+		Typetext Controlkey, "e"
+		if the repeatindex > 15 then throw "Unable to open execute anonymous window."
+	end repeat
+	
+	Run "Helper_Utilities/Helpers".Verify_Field_Contents,UpdateScript,"Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/EnterApexCode"
+	
+	
+	(*	//Clears out anything that might be in the developer console run window and pastes whatever is in the SUT clipboard.
+	TypeText controlKey, "a"
+	TypeText deleteKey
+	TypeText controlKey,"v"*)
+	
+	//Executes
+	Click item 1 of everyimagelocation("Utilities/Developer_Console/Execute")
+	(*
+	if imagefound(Imagename:"Utilities/Developer_Console/ExecuteAnonymousError", waitfor:6)
+	then
+		Throw "Developer Console script failed to execute."
+	end if
+	if imagefound(imagename:"Utilities/Developer_Console/Success", waitfor:15)
+	then
+		Log "The code execution has completed successfully."
+		Log ReadText({image:"Utilities/Developer_Console/Success", HotSpot: [-550, -1]},{image:"Utilities/Developer_Console/Success", HotSpot: [400, 12]})
+		typetext altKey, f4
+	else
+		Throw "A successful code execution was not detected."
+	end if	*)
+	Log "Apex run complete"
+end RunApex

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		442,
+		353,
+		83,
+		14
+	],
+	"lastmodifieddate": 1616518140.6210001,
+	"createddate": 1616518098.349,
+	"name": "Utilities/Session_Timeout/24hoursv",
+	"lastfounddate": 1617893650.6240001,
+	"ocrcapturestring": "24 hours v",
+	"lastfoundlocation": [
+		443,
+		355,
+		54,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[41,7]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Utilities/Session_Timeout/24hours.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					442,
+					353,
+					83,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "24 hours"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		570,
+		626,
+		88,
+		16
+	],
+	"lastmodifieddate": 1646236835.4980001,
+	"createddate": 1643099670.9630001,
+	"name": "Scratch_Logan/Scratch_Scott/CreatedDateTab",
+	"lastfounddate": 1643100451.244,
+	"ocrcapturestring": "Created Date",
+	"lastfoundlocation": [
+		570,
+		626,
+		88,
+		16
+	],
+	"testlocationdata": [
+		{
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[44,8]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"Type": "Testplant Screen Image"
+				},
+				"name": "Scratch_Logan/Scratch_Scott/CreatedDateTab.png",
+				"connectionname": "199A.png",
+				"type": 1,
+				"connectionserverid": "C:/Users/admin/Downloads/199A.png",
+				"capturerect": [
+					570,
+					626,
+					88,
+					16
+				],
+				"connectiontype": "Screenshot",
+				"capturedocrtext": "Created Date"
+			}
+	]
+}

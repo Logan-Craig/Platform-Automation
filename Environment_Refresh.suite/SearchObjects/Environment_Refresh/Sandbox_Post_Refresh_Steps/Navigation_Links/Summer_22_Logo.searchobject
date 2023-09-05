@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		107,
+		152,
+		61,
+		46
+	],
+	"lastmodifieddate": 1661878700.6500001,
+	"createddate": 1661878581.3080001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Summer_22_Logo",
+	"lastfounddate": 1665775436.7449999,
+	"ocrcapturestring": "'fc22",
+	"lastfoundlocation": [
+		107,
+		152,
+		61,
+		46
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[35,19]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Logos/Summer_22_Logo.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					107,
+					152,
+					61,
+					46
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "'fc22"
+			}
+	]
+}

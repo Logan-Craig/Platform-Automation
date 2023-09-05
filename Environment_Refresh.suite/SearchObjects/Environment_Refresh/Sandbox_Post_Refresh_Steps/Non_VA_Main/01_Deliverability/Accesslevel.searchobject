@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		295,
+		526,
+		67,
+		12
+	],
+	"lastmodifieddate": 1684507910.408,
+	"createddate": 1684507910.408,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/01_Deliverability/Accesslevel",
+	"lastfounddate": 1692816464.6110001,
+	"ocrcapturestring": "Access level",
+	"lastfoundlocation": [
+		294,
+		566,
+		67,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[33,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/01_Deliverability/Accesslevel.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					295,
+					526,
+					67,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Access level"
+			}
+	]
+}

@@ -1,0 +1,105 @@
+﻿Log "Executing Populate Custom Settings."
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "Custom Settings" 
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/CustomSettings"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+//Update the View
+if imagefound(imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/ALL_View",waitfor:3)
+else
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/View"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/ALL_View"
+end if
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/BCD"
+
+//CARMA Settings
+Log "populating CARMA Custom Settings"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/CARMASettings","Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/CARMASettings_2"
+waitfor 8, "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/CustomSettingDefinitionDetail"
+
+Put [
+	["CSC Task Re-Open Days","7"],
+	["CSC Task Snooze Days","14"],
+	["Default Application Queue API Name",<<"CARMA_Unassigned_Online_10_10CG">>],
+	["Hospitalization Threshold Days","90"],
+	["Incarceration Threshold Days","180"],
+	["Address Notification Threshold Days","14"],
+	["CSC Address Task Snooze Days","7"],
+	["VA Helpdesk Queue API Name",<<"VA_Helpdesk_Queue">>],
+	["CARMA DTC Preferred Email Address",<<"carmasupport@acumensolutions.com.invalid">>],
+	["CARMA DTC Application API Name",<<"CARMA">>],
+	["CARMA DTC Business Hours API Name",<<"Default">>],
+	["CSC Task Ack on Un-snooze","True"],
+	["DTC Case Record Type Name",<<"VA_Help_Desk_Issues">>],
+	["Regulative Effective Date","DATE(2020,10,01)"],
+	["Regulative End Date","DATE(2021,09,30)"],
+	["Wellness Contact Days","120"],
+	["Activate Regulative Changes","True"],
+	["Payment Rate Locked Days","60"],
+	["Special Compensation Codes to Show","ALL"]
+] into Custom_Settings_List
+Log Custom_Settings_List
+
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Populate_List Custom_Settings_List
+
+//CARMA Feature Toggle
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Return_to_Custom_Settings
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/BCD"
+
+
+Log "Populating CARMA Feature Toggle"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/CARMAFeatureToggle"
+//need to empty Custom_Settings_List
+set Custom_Settings_List to ""
+put[
+	["Active Enhancement Changes","True"],
+	["Auto Address Validation","True"],
+	["Bypass Address Task Creation","True"],
+	["Bypass Death Task Creation","False"],
+	["Bypass Demographic Task Create","False"],
+	["Bypass ES/Vista Integration","False"],
+	["Bypass InstitutionalizationTask Creation","False"],
+	["Bypass MPI Integration(Outbound)","False"],
+	["Bypass Notification Task Creation","False"],
+	["Bypass VA Profile Address Update","False"],
+	["Enforce Male or Female Gender","True"],
+	["Send GCG Updates to MPI","False"]
+] into Custom_Settings_List
+Log Custom_Settings_List
+
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Populate_List Custom_Settings_List
+
+//CARMA Trigger Manager
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Return_to_Custom_Settings
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/BCD"
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/CARMATriggerManager"
+
+set Custom_Settings_List to ""
+put[
+	["Name","CARMA"],
+	["isActive","True"]
+] into Custom_Settings_List
+Log Custom_Settings_List
+
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Populate_List_ Custom_Settings_List
+
+//MPI Integration Setting
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Return_to_Custom_Settings
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/03_Populate_Custom_Settings/LMN"
+
+
+set Custom_Settings_List to ""
+put[
+	["Name","CARMA"],
+	["Is MPI Contact Correlation Enabled","True"],
+	["Timeout","45000"],
+	["Use Predefined Data(Mock Response)","False"]
+] into Custom_Settings_List
+Log Custom_Settings_List
+
+run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".Populate_List_ Custom_Settings_List

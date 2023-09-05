@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1603822094.4850001,
+	"ocrcapturestring": "Develop",
+	"originalcapturelocation": [
+		18,
+		308,
+		74,
+		17
+	],
+	"createddate": 1603822091.908,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/DevelopDropDown.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					18,
+					308,
+					74,
+					17
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Develop"
+			}
+	],
+	"name": "DevelopDropDown3"
+}

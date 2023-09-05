@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		540,
+		513,
+		43,
+		24
+	],
+	"lastmodifieddate": 1604090108.5780001,
+	"createddate": 1604090105.112,
+	"name": "Save7",
+	"lastfounddate": 1624815922.4349999,
+	"ocrcapturestring": "Save",
+	"lastfoundlocation": [
+		540,
+		291,
+		43,
+		24
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/12_Single_Sign_On_Enabled/Save.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					540,
+					513,
+					43,
+					24
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Save"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		255,
+		569,
+		195,
+		20
+	],
+	"lastmodifieddate": 1661376207.9759998,
+	"createddate": 1661376207.9759998,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/WhitelistProfileIpRange",
+	"lastfounddate": 1692887948.059,
+	"ocrcapturestring": "Whitelist Profile Ip Range",
+	"lastfoundlocation": [
+		255,
+		575,
+		195,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[97,10]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/97_RefreshAdmin/WhitelistProfileIpRange.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					255,
+					569,
+					195,
+					20
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Whitelist Profile Ip Range"
+			}
+	]
+}

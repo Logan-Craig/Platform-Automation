@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		253,
+		279,
+		156,
+		13
+	],
+	"lastmodifieddate": 1604954488.2719998,
+	"createddate": 1604954488.2719998,
+	"name": "Environment_Refresh/08_Custom_Labels/BacktoListCustomLabes",
+	"lastfounddate": 1692887736.546,
+	"ocrcapturestring": "Back to List: Custom Labe s",
+	"lastfoundlocation": [
+		253,
+		318,
+		156,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/08_Custom_Labels/BacktoListCustomLabes.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					253,
+					279,
+					156,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Back to List: Custom Labe s"
+			}
+	]
+}

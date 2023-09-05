@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		337,
+		313,
+		94,
+		15
+	],
+	"lastmodifieddate": 1682535033.425,
+	"createddate": 1682535033.425,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusU_Link",
+	"lastfounddate": 1682535136.0869999,
+	"ocrcapturestring": "VA Admin Plus U.",
+	"lastfoundlocation": [
+		337,
+		313,
+		94,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,7]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/05_Deliverability/VAAdminPlusU_Link.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					337,
+					313,
+					94,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "VA Admin Plus U."
+			}
+	]
+}

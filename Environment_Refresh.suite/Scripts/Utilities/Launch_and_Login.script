@@ -1,0 +1,21 @@
+﻿Set SandboxCredentials to item 1 of CSVValue(file resourcePath("Credentials.csv"))
+Log SandboxCredentials
+Log "Sandbox Name:"&&SandboxCredentials's Sandbox 
+if SandboxCredentials's VID = "" 
+	Log "No VID provided for"&&SandboxCredentials's Sandbox 
+else
+	Log "Sandbox VID:"&&SandboxCredentials's VID	
+end if
+Log "Sandbox Username:"&&SandboxCredentials's Username
+Log "Sandbox Password:"&&SandboxCredentials's Password
+log "Beginning Sandbox Refresh sequence..."
+
+
+Run "Utilities/Launch" SandboxCredentials
+Log "Logging in."
+Run "Utilities/Login" SandboxCredentials
+Log "Login complete."
+
+
+typetext controlkey,"l","c"
+put the RemoteClipboard

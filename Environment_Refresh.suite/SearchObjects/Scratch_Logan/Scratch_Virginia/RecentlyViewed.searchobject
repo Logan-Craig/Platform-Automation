@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		56,
+		220,
+		145,
+		22
+	],
+	"lastmodifieddate": 1646236835.4219999,
+	"createddate": 1629491460.2719998,
+	"name": "Scratch_Logan/Scratch_Virginia/RecentlyViewed",
+	"lastfounddate": 1642533946.941,
+	"ocrcapturestring": "Recently Viewed",
+	"lastfoundlocation": [
+		68,
+		221,
+		145,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[72,11]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Virginia/RecentlyViewed.png",
+				"connectionname": "WinDevEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.106",
+				"capturerect": [
+					56,
+					220,
+					145,
+					22
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Recently Viewed"
+			}
+	]
+}

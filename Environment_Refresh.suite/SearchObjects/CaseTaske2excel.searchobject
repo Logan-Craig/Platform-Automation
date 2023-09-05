@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		333,
+		427,
+		110,
+		13
+	],
+	"lastmodifieddate": 1604005763.0019999,
+	"createddate": 1604005760.168,
+	"name": "CaseTaske2excel",
+	"lastfounddate": 1663614116.7079999,
+	"ocrcapturestring": "Case Task e2excel",
+	"lastfoundlocation": [
+		332,
+		459,
+		110,
+		13
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/CaseTaske2excel.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					333,
+					427,
+					110,
+					13
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Case Task e2excel"
+			}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		908,
+		145,
+		188,
+		14
+	],
+	"lastmodifieddate": 1614205254.6820002,
+	"createddate": 1614205254.6820002,
+	"name": "Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite",
+	"lastfounddate": 1689606672.027,
+	"ocrcapturestring": "Switch to Lightning Experience",
+	"lastfoundlocation": [
+		645,
+		141,
+		188,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[94,7]",
+					"Tolerance": "_64",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Utilities/Launch_and_Login/SwitchtoLightningExperienceWhite.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					908,
+					145,
+					188,
+					14
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Switch to Lightning Experience"
+			}
+	]
+}

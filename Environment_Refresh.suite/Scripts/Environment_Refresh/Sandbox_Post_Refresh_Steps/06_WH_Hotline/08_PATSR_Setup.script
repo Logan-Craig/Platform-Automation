@@ -1,0 +1,78 @@
+﻿//video timestamp 27:35
+
+//Reset Password for PATSR Integration User
+
+
+Log "Executing 08_Update_Connected_App"
+Log "Reset Password for PATSR Integration User"
+Run "Environment_Refresh/Return_to_Setup"
+
+set NavText to "User"
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/ManageUsersUsers"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_PATSR_Setup/PATSRIntegrationUser_SelectedView"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_PATSR_Setup/PATSRIntegrationUser_DesiredView"
+set ViewName to "PATSR Integration User"
+set MakeMyView to "true"
+set FieldFilterVar to "Username"
+set FieldOperatorVar to "starts with"
+set FieldValueVar to "PATSR"
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FieldFilterVar, FieldOperatorVar, FieldValueVar
+
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_PATSR_Setup/IntegrationUserPATSR", waitfor:9
+click "Environment_Refresh/Generic_Refresh_Steps/09_Custom_Links/Edit"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/08_PATSR_Setup/Email"
+typetext controlKey,"a","c"
+set Emailtmp to remoteclipboard()
+replace ".invalid" in Emailtmp with ""
+SetRemoteClipboard Emailtmp
+typetext controlkey, "v"
+
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+waitfor 9, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+
+
+//named credentials stuff for PATSR
+Log "08_PATSR_Setup (PATSR Update Named Credentials)"
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+set NavText to "Named Credentials"
+Log NavText
+set NavImage to "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Navigation_Links/NamedCredentials"
+Log NavImage
+Run "Environment_Refresh/Navigate_Setup",NavText,NavImage
+
+set SelectedView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/All_View_Selected"
+set DesiredView to "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/ALL_View_Desired"
+set ViewName to "ALL"
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities".ChangeMyView SelectedView, DesiredView, ViewName
+
+repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Sort_Arrow")
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Label_Sort"
+end repeat
+
+//find the PATRSync
+repeat until imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/09_Updated_Connected_App/PATSRSync_Named_Credential")
+	typetext pageDown
+	wait 1
+	if repeatindex()>3
+		throw "Unable to find PATS R Sync link."
+	end if
+end repeat
+click FoundImageLocation()
+
+Log "Updating PATS R Sync."
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:6
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/URL_Field",waitfor:6
+typetext controlkey, "a"
+typetext "https://qa-salesforce.lighthouse.va.gov"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/07_MPIE_Setup/Username_Field"
+typetext controlkey, "a"
+typetext "w6LjkbVr7kRDfnhWwV3wnPK4e7m5TFBG"
+typetext tabkey
+typetext "7L9qjZWH3JhPDUHCfgwcY3x3TcYSnXnA"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		35,
+		371,
+		148,
+		42
+	],
+	"lastmodifieddate": 1614095655.3610001,
+	"createddate": 1614095655.3610001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/WorkflowApprovalsEmailAlerts",
+	"lastfounddate": 1614098806.6300001,
+	"ocrcapturestring": "□ Workflow & Approvals Email Alerts",
+	"lastfoundlocation": [
+		275,
+		0,
+		126,
+		20
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[61,33]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/WorkflowApprovalsEmailAlerts.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					35,
+					371,
+					148,
+					42
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Workflow & Approvals Email Alerts"
+			}
+	]
+}

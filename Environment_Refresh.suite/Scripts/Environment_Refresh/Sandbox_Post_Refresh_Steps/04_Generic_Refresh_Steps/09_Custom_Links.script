@@ -1,0 +1,193 @@
+﻿
+// 9. Custom Links:
+// a.	Under Setup, go to Build / Customize / Home / Custom Links.
+// b.	Update the 'Application Enhancement Request' to the Sandbox URL and click 'Save'.
+//  i.	NOTE: Leave the "/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH" portion of the url address. 
+//  c.	Update the 'DTC Exception Request' to the Sandbox URL and click 'Save'.
+//  i.	NOTE: Leave the "/a3d/o" portion of the url address. 
+//  d.	Update the 'My Application Requests' to the Sandbox URL and click 'Save'.
+//  i.	NOTE: Leave the "/a0K?fcf=00Bt00000015Z4J" portion of the url address. 
+//  e.	Update the 'My Application Requests' (for communities) to match the sandboxes Community/Site URL and click 'Save'.  The Salesforce site domain can be                     found under Setup and 'Sites'.
+//  i.	NOTE: Leave the "/MyVA/a0J/e?retURL=%2FMyVA%2Fa0J%2Fo" portion of the url address. 
+
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Custom Links", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/CustomLinks", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/CustomLinks"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"08_Custom_Links"& return to file Refresh_Report
+write "Updating Sandbox custom links" & return to file Refresh_Report
+
+//Updates only the baseURL
+put the MultipleFoundAction into MultipleFoundState
+set the MultipleFoundAction to UseFirstLocation
+Click imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/ApplicationEnhancementRequest", waitFor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkEdit"
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log "Clipboard: "&remoteclipboard()
+set CustomLinkEdit to remoteclipboard()
+log "CustomLinkEdit: ", CustomLinkEdit
+log "Sandbox URL: ", SandboxURL
+replace "https://va.my.salesforce.com" in CustomLinkEdit with SandboxURL
+log CustomLinkEdit
+if CustomLinkEdit = RemoteClipboard()
+then
+	write "Application Enhancement Request URL already updated to: " &RemoteClipboard()&return to file Refresh_Report
+	Log "Application Enhancement Request URL already updated to: " &RemoteClipboard()
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+else
+	TypeText DeleteKey
+	TypeText CustomLinkEdit	
+	Log "Updating Application Enhancement Request URL to: " &CustomLinkEdit
+	write "Application Enhancement Request URL found to be: " &RemoteClipboard()&return&"Application Enhancement Request URL updated to: " & CustomLinkEdit & return to file Refresh_Report
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+end if
+
+//Navigates back to the Custom Links section
+typetext PageDown
+wait 1
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinks2"
+
+
+//Looks for DTC Exception Request link and clicks it
+repeat [6] times
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/DTCExceptionRequest", waitFor:1)
+		repeat at least once until the number of items in everyimagelocation(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:9)>1
+			click FoundImageLocation()
+			if the repeatindex > 5
+				throw "Edit view of DTC Exception Request never showed up. Must have had trouble clicking on it."
+			end if
+		end repeat
+		//Clicking Edit too soon perrhaps...
+		repeat at least once until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save",waitfor:9)
+			click FoundImageLocation()
+			if the repeatindex > 5
+				throw "Edit view of DTC Exception Request never showed up. Must have had trouble clicking on it."
+			end if
+		end repeat
+		Exit Repeat
+	else
+		typetext PageDown
+		wait 1
+	end if
+end repeat
+//Updates only the baseURL
+
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkEdit",waitfor:6
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log "Clipboard: "&remoteclipboard()
+set CustomLinkEdit to remoteclipboard()
+log CustomLinkEdit
+replace "https://va.my.salesforce.com" in CustomLinkEdit with SandboxURL
+log "CustomLinkEdit: ", CustomLinkEdit
+log "Sandbox URL: ", SandboxURL
+if CustomLinkEdit = RemoteClipboard()
+then
+	write "DTC Exception Request URL already found to be: " &RemoteClipboard()&return to file Refresh_Report
+	Log "DTC Exception Request URL already found to be: "& RemoteClipboard()
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+else
+	TypeText DeleteKey
+	TypeText CustomLinkEdit
+	Log "DTC Exception Request URL updated to: "& CustomLinkEdit
+	write "DTC Exception Request URL found to be: " &RemoteClipboard()&return&"DTC Exception Request updated to: " & CustomLinkEdit & return to file Refresh_Report
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+end if
+//Navigates back to the Custom Links section
+typetext PageDown
+wait 1
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinks2"
+
+
+//Looks for MyApplicationRequests link and clicks it
+repeat [6] times
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/MyApplicationRequests", waitFor:1)
+		click FoundImageLocation()
+		Exit Repeat
+	else
+		typetext PageDown
+		wait 1
+	end if
+end repeat
+//Updates only the baseURL
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkEdit",waitfor:3
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log "Clipboard: "&remoteclipboard()
+set CustomLinkEdit to remoteclipboard()
+log "CustomLinkEdit: ", CustomLinkEdit
+log "Sandbox URL: ", SandboxURL
+replace "https://va.my.salesforce.com" in CustomLinkEdit with SandboxURL
+log CustomLinkEdit
+if RemoteClipboard() = CustomLinkEdit
+then
+	write "My Application Requests URL already found to be: "&RemoteClipboard()&return to file Refresh_Report
+	Log "My Application Requests URL already found to be: "& RemoteClipboard()
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+else
+	TypeText DeleteKey
+	TypeText CustomLinkEdit
+	Log "My Application Requests URL updated to: "&CustomLinkEdit
+	write "My Application Requests URL found to be: "&RemoteClipboard()&return&"My Application Requests updated to: " & CustomLinkEdit & return to file Refresh_Report
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+end if
+//Navigates back to the Custom Links section
+typetext PageDown
+wait 1(*  *)
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinks2"
+
+
+//Looks for MyApplications link and clicks it
+repeat [6] times
+	if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/MyApplications", waitFor:1)
+		click FoundImageLocation()
+		Exit Repeat
+	else
+		typetext PageDown
+		wait 1
+	end if
+end repeat
+//timestamp 16:40
+//original is: https://vacommunity.secure.force.com/MyVA/a0J?fcf=00B0000000NcXF
+//Updates only the baseURL
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkEdit"
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log "Clipboard: "&remoteclipboard()
+set CustomLinkEdit to remoteclipboard()
+log "CustomLinkEdit: ", CustomLinkEdit
+log "Sandbox URL: ", SandboxURL
+//This one adds the Community link instead of the site link
+replace "https://vacommunity.secure.force.com" in CustomLinkEdit with SitesCommunityURL
+log CustomLinkEdit
+if remoteclipboard() = CustomLinkEdit
+then
+	write "My Application URL already found to be: "&RemoteClipboard()&return to file Refresh_Report
+	Log "My Applications URL updated to: "&RemoteClipboard()
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+else
+	TypeText DeleteKey
+	//Community link does not have http://, so we add it.
+	TypeText "https://"
+	TypeText CustomLinkEdit
+	write "My Applications URL found to be: "&RemoteClipboard()&return&"My Applications updated to: " & "https://" & CustomLinkEdit & return to file Refresh_Report
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+	waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/CustomLinkDetail"
+end if
+set the MultipleFoundAction to MultipleFoundState
+close file Refresh_Report
+

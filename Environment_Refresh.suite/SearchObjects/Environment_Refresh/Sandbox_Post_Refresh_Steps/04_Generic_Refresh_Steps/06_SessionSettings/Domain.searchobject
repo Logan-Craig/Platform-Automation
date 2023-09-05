@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		316,
+		462,
+		42,
+		12
+	],
+	"lastmodifieddate": 1626120206.1110001,
+	"createddate": 1626118345.7709999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Domain",
+	"lastfounddate": 1626119505.2589998,
+	"ocrcapturestring": "Domain",
+	"lastfoundlocation": [
+		377,
+		335,
+		42,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[21,6]",
+					"Tolerance": "_71",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Domain.png",
+				"connectionname": "WindDeEval",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					316,
+					462,
+					42,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Domain"
+			}
+	]
+}

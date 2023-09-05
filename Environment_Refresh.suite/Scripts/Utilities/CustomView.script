@@ -1,0 +1,86 @@
+﻿//There are two handlers here. 
+//ChangeMyView wil change the view to the one you want. If the view you want doesn't exist you can create it with this helper by having it call the 2nd helper: CreateEasyView
+//Follow the instructions below.
+
+
+//to use, create an image of the desired view in the drop down and set it to SelectedView (selected view is the image after you click it from the drop down)
+//also create an image of the view name from within the drop down and set it to DesiredView (DesiredView should be white text on blue background)
+//set the view name string to ViewName
+//set MakeMyView to true if you would like Eggy to create the view if it doesn't already exist. It is not necessary to set the value (or pass it) if you do not wish to have a view created.
+//if you set MakeMyView to true you can also add a FilterBoolean true to filter by only the ProfileName you want.
+//set FieldFilterVar, FieldOperatorVar, and FieldValueVar to the string values of the filter you want if you want to add a filter to your new view. Handler only allows for one at this time.
+to ChangeMyView SelectedView, DesiredView, ViewName, MakeMyView, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+	//change rectangle size if needed here. If there are super-long strings in your view name the drop down could get wider than this rectangle. If your rectangle is huge consider making a duplicate of this handler so it doesn't jack up other people's stuff. This one is already pretty wide. Could pass the rectangle as an argument too if needed.
+	set DropDownTL to [-250,-25]
+	set DropDownBR to [70,350]
+	waitfor 25, ["Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/ViewDropDown", "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/EditCreateNewView","Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_DropDown"]
+
+	if imagefound(imagename:SelectedView,searchrectangle: [(foundimagelocation()+[-250,25]),(FoundImageLocation()+[70,-25])])
+	then
+		Log ViewName&&"view is already selected."
+	else
+		Log "Changing view to"&&ViewName
+		click foundimagelocation()
+		typetext ViewName
+		if imagefound(image:DesiredView,searchrectangle: [(foundimagelocation()+DropDownTL),(FoundImageLocation()+DropDownBR)])
+		then 
+			click FoundImageLocation()
+		else
+			Log "Desired view not found."
+			if MakeMyView = "True"
+			then 
+				Log "MakeMyView set to true. Creating view."
+				Run "Utilities/CustomView".CreateEasyView ViewName, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+				//changes view to the new view name
+				Log "Changing view to"&&ViewName
+				click {image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/ViewDropDown",waitfor:18},{image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/07_System_Administrator_Profile/EditCreateNewView",waitfor:3}
+				typetext ViewName
+				if imagefound(imagename:DesiredView,searchrectangle: [(foundimagelocation()+DropDownTL),(FoundImageLocation()+DropDownBR)])
+				then 
+					click FoundImageLocation()
+				else
+					Throw "Desired view not found."
+				end if
+			else
+				Log "MakeMyView not set to True, so the view will not be created.","If a new view by the name of:"&&ViewName&&"is desired, please set MakeMyView to True."
+			end if
+		end if
+		////////////
+	end if
+	//If this handler gets run twice in a row the focus might get left in the view drop down, which can screw up the next run if circumstances are right. So clicking above the view label gets focus out.
+	//click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/02_Email_To_Case_Setup/view", hotspot:[10,-15]
+end ChangeMyView
+
+//Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_Scaled at (545, 298)
+moveto "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_Scaled"
+
+//This will create a very simple view and name it after the Profile Name you are looking for.
+//Set ViewName to "My Profile Name" and pass it to the utility
+//It is handy for when there are too many columns or you just don't want a bunch of trash included in your view.
+//Set the FilterBoolean to "true" if you want it to filter for a Profile that matches your name (Salesforce won't filter for more than one).
+to CreateEasyView ViewName, FilterBoolean, FieldFilterVar, FieldOperatorVar, FieldValueVar
+	Log "Creating view for:"&&ViewName
+	click [{image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView",HotSpot:[0, -50]},{image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_Scaled",hotspot:[0,-15]}]
+	click ["Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView","Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/CreateNewView_Scaled"] 
+	click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/ViewName",waitfor:6
+	typetext ViewName
+	typetext tabkey,endkey
+	typetext "_"&any item of 1..9&any item of 1..9
+	if FilterBoolean = "True"
+	then
+		Log "Assigning filters."
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Field","Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Setting"
+		log "how did I get here? 1"
+		typetext FieldFilterVar
+		log "how did I get here? 2"
+		Log FieldFilterVar
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Operator"
+		typetext FieldOperatorVar
+		Log FieldOperatorVar
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/07_CARMA_Post_Refresh_Steps/Utilities/Filter_Value"
+		typetext FieldValueVar
+		Log FieldValueVar
+		wait 1	
+	end if
+	click  item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save")
+end CreateEasyView

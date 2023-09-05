@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		279,
+		318,
+		70,
+		19
+	],
+	"lastmodifieddate": 1612396160.131,
+	"createddate": 1612395193.563,
+	"name": "Environment_Refresh/Generic_Refresh_Steps/01_Delete_Production/All_View",
+	"lastfounddate": 1612395244.8380001,
+	"ocrcapturestring": "ALL v",
+	"lastfoundlocation": [
+		280,
+		353,
+		31,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[16,8]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Generic_Refresh_Steps/01_Delete_Production/All_View.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					279,
+					318,
+					70,
+					19
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "ALL"
+			}
+	]
+}

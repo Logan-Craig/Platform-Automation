@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1605907320.289,
+	"ocrcapturestring": "You don't have the permission to execute Apex",
+	"originalcapturelocation": [
+		377,
+		442,
+		253,
+		16
+	],
+	"createddate": 1605907320.289,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/Youdonthavethepermission.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					377,
+					442,
+					253,
+					16
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "You don't have the permission to execute Apex"
+			}
+	],
+	"name": "Environment_Refresh/14_Updating_Internal_Users_Email_Address/Youdonthavethepermission"
+}

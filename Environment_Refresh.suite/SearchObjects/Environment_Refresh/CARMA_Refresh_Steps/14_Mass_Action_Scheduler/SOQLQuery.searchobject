@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		31,
+		389,
+		74,
+		17
+	],
+	"lastmodifieddate": 1613605099.6820002,
+	"createddate": 1613605099.6820002,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/SOQLQuery",
+	"lastfounddate": 1614116862.602,
+	"ocrcapturestring": "SOQL Query",
+	"lastfoundlocation": [
+		31,
+		389,
+		74,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[71,83]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/14_Mass_Action_Scheduler/SOQLQuery.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					31,
+					389,
+					74,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "SOQL Query"
+			}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		253,
+		272,
+		191,
+		15
+	],
+	"lastmodifieddate": 1604009650.5420001,
+	"createddate": 1604009647.7610002,
+	"name": "BacktoListRemoteSiteSettings",
+	"lastfounddate": 1692887867.2090001,
+	"ocrcapturestring": "Back to List: Remote Site Settings",
+	"lastfoundlocation": [
+		253,
+		310,
+		191,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/10_Remote_Site_Settings/BacktoListRemoteSiteSettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					253,
+					272,
+					191,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Back to List: Remote Site Settings"
+			}
+	]
+}

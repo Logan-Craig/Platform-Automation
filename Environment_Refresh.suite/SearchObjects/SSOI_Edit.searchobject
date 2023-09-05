@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604089981.444,
+	"ocrcapturestring": "Delegated Authentication Disable login with Salesforce credentials □ ±",
+	"originalcapturelocation": [
+		253,
+		323,
+		227,
+		57
+	],
+	"createddate": 1604089975.5,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/12_Single_Sign_On_Enabled/SSOI_Edit.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					253,
+					323,
+					227,
+					57
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Delegated Authentication Disable login with Salesforce credentials □ ±"
+			}
+	],
+	"name": "SSOI_Edit"
+}

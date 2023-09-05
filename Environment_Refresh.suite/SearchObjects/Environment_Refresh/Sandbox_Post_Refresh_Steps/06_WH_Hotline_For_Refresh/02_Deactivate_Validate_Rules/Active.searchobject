@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		252,
+		410,
+		34,
+		10
+	],
+	"lastmodifieddate": 1614036262.4390001,
+	"createddate": 1614036262.4390001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active",
+	"lastfounddate": 1614281426.1360002,
+	"ocrcapturestring": "Active",
+	"lastfoundlocation": [
+		252,
+		410,
+		34,
+		10
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[17,5]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/02_Deactivate_Validate_Rules/Active.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					252,
+					410,
+					34,
+					10
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Active"
+			}
+	]
+}

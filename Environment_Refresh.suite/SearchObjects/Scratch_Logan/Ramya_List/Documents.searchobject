@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		329,
+		195,
+		73,
+		14
+	],
+	"lastmodifieddate": 1646236835.4320002,
+	"createddate": 1616451542.319,
+	"name": "Scratch_Logan/Ramya_List/Documents",
+	"lastfounddate": 1616454002.4450002,
+	"ocrcapturestring": "Documents",
+	"lastfoundlocation": [
+		329,
+		195,
+		73,
+		14
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[36,7]",
+					"Tolerance": "_57",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Ramya_List/Documents.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					329,
+					195,
+					73,
+					14
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Documents"
+			}
+	]
+}

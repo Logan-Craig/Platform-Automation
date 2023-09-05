@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		551,
+		586,
+		44,
+		27
+	],
+	"lastmodifieddate": 1604074203.592,
+	"createddate": 1604074201.096,
+	"name": "Save6",
+	"lastfounddate": 1682520901.2090001,
+	"ocrcapturestring": "Save",
+	"lastfoundlocation": [
+		551,
+		483,
+		44,
+		27
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/Save.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					551,
+					586,
+					44,
+					27
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Save"
+			}
+	]
+}

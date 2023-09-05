@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		388,
+		418,
+		32,
+		12
+	],
+	"lastmodifieddate": 1603983898.365,
+	"createddate": 1603983895.9359999,
+	"name": "Value",
+	"lastfounddate": 1692887731.3959999,
+	"ocrcapturestring": "Value",
+	"lastfoundlocation": [
+		387,
+		457,
+		32,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/Value.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					388,
+					418,
+					32,
+					12
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Value"
+			}
+	]
+}

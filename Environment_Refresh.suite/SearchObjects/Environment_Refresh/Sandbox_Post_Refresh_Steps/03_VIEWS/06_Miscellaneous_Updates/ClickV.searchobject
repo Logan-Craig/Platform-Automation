@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		1220,
+		339,
+		43,
+		23
+	],
+	"lastmodifieddate": 1617293509.1890001,
+	"createddate": 1614199329.1560001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ClickV",
+	"lastfounddate": 1614282399.875,
+	"ocrcapturestring": "U V",
+	"lastfoundlocation": [
+		1220,
+		339,
+		43,
+		23
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[30,9]",
+					"Tolerance": "_45",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/ClickV.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1220,
+					339,
+					43,
+					23
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "U V"
+			}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"lastmodifieddate": 1632935258.7779999,
+	"lastfoundlocation": [
+		76,
+		418,
+		50,
+		50
+	],
+	"originalcapturelocation": [
+		1195,
+		425,
+		50,
+		50
+	],
+	"createddate": 1632933316.1199999,
+	"lastfounddate": 1632933776.9619999,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[16,27]",
+					"Tolerance": "_1",
+					"Discrepancy": "_0",
+					"SearchType": "Precise to Pixel"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Green.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"capturerect": [
+					1195,
+					425,
+					50,
+					50
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.252.46.96"
+			}
+	],
+	"name": "Green"
+}

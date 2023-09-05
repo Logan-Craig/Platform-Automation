@@ -1,0 +1,60 @@
+﻿//We need to be in setup to do stuff
+Run "Environment_Refresh/EnvRefresh_Helpers".Navigate_to_Setup "Lightning"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"Step 03 - Schedule Email Alerts"&return to file Refresh_Report
+
+
+Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts".Run_Email_Alert_Apex
+
+
+Repeat forever
+	if imagefound(image: "Common_Images/Success_Apex", waitfor:3)
+	then
+		Log "Apex code ran successfully."
+		write "Scheduled email alerts updated" &return to file Refresh_Report
+		exit repeat
+	else if imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/InvalidtypeEmailAlertSchedulab",waitfor:3)
+	then
+		//INT
+		write "Languishing Sandbox Email Alerts installation required." to file Refresh_Report
+		Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts".Install_Apex_Package
+		write "...Installation completed."&return to file Refresh_Report
+		Run "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts".Run_Email_Alert_Apex
+		Repeat forever
+			if imagefound(image: "Common_Images/Success_Apex", waitfor:3)
+			then
+				Log "Apex code ran successfully."
+				write "Scheduled email alerts updated" &return to file Refresh_Report
+				if the repeatindex > 10 then throw "Unknown Apex Code execution result."
+				exit repeat
+			end if
+		End Repeat
+		exit repeat
+	end if
+	if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/ApexJobAlreadyScheduled")
+	then
+		Log "Apex script already scheduled. This is probably a re-run of the post refresh scripts."
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/Non_VA_Main/Languishing_Sandbox_Email_Alerts/OK"
+		exit repeat
+	end if
+	if the repeatindex > 10 then throw "Unknown Apex Code execution result."
+End Repeat
+typetext controlkey, "w"
+
+close file Refresh_Report
+
+
+
+(*Enter the following link into the URL for the specific org the package is being deployed to:
+Int: https://vapm--intvapm.sandbox.lightning.force.com/packaging/installPackage.apexp?p0=04t3d0000000ZhaAAE
+Reg: https://vapm--regvapm.sandbox.lightning.force.com/packaging/installPackage.apexp?p0=04t3d0000000ZhaAAE
+Perf: https://vapm--perfvapm.sandbox.lightning.force.com/packaging/installPackage.apexp?p0=04t3d0000000ZhaAAE
+Prod: https://vapm.my.salesforce.com/packaging/installPackage.apexp?p0=04t3d0000000ZhaAAE
+Login with your credentials.
+Check Install for Admins Only.
+Expand Advanced Options and check Compile only the Apex in the package.
+Click Install.*)
+

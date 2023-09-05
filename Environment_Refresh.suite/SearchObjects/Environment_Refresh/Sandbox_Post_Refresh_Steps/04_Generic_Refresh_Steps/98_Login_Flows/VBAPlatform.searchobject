@@ -1,0 +1,41 @@
+{
+	"originalcapturelocation": [
+		310,
+		747,
+		152,
+		15
+	],
+	"lastmodifieddate": 1646936735.671,
+	"createddate": 1646936735.671,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAPlatform",
+	"lastfounddate": 1646949400.2639999,
+	"ocrcapturestring": "Login Flow for VBA Platform",
+	"lastfoundlocation": [
+		310,
+		549,
+		152,
+		15
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Login Flow for VBA Platform",
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[92,6]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					310,
+					747,
+					152,
+					15
+				],
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/98_Login_Flows/VBAPlatform.png"
+			}
+	]
+}

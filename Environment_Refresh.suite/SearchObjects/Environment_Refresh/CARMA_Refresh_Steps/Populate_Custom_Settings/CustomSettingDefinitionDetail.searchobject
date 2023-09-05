@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		250,
+		333,
+		219,
+		17
+	],
+	"lastmodifieddate": 1612397489.573,
+	"createddate": 1612397489.573,
+	"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CustomSettingDefinitionDetail",
+	"lastfounddate": 1612452116.0549998,
+	"ocrcapturestring": "Custom Setting Definition Detail",
+	"lastfoundlocation": [
+		250,
+		333,
+		219,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[104,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Populate_Custom_Settings/CustomSettingDefinitionDetail.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					250,
+					333,
+					219,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Custom Setting Definition Detail"
+			}
+	]
+}

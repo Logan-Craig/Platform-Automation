@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		553,
+		336,
+		34,
+		22
+	],
+	"lastmodifieddate": 1603905780.273,
+	"createddate": 1603905778.395,
+	"name": "Edit",
+	"lastfounddate": 1692887671.5190001,
+	"ocrcapturestring": "Edit",
+	"lastfoundlocation": [
+		554,
+		375,
+		34,
+		22
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/8_Custom_Labels/Edit.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					553,
+					336,
+					34,
+					22
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Edit"
+			}
+	]
+}

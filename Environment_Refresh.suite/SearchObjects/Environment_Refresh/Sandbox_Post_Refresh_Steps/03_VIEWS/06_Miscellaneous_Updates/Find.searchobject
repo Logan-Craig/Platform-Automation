@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		861,
+		517,
+		25,
+		12
+	],
+	"lastmodifieddate": 1617295640.2509999,
+	"createddate": 1614197570.848,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/Find",
+	"lastfounddate": 1617209116.576,
+	"ocrcapturestring": "Find",
+	"lastfoundlocation": [
+		861,
+		517,
+		25,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[12,4]",
+					"Tolerance": "_59",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/Find.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					861,
+					517,
+					25,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Find"
+			}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		52,
+		305,
+		95,
+		17
+	],
+	"lastmodifieddate": 1684509517.9349999,
+	"createddate": 1684509517.9349999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Lightning/SessionSettings",
+	"lastfounddate": 1692816477.171,
+	"ocrcapturestring": "Session Settings",
+	"lastfoundlocation": [
+		52,
+		345,
+		95,
+		17
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[47,8]",
+					"Tolerance": "_66",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Lightning/SessionSettings.png",
+				"connectionname": "Local Eggplant1",
+				"type": 1,
+				"connectionserverid": "192.168.56.105",
+				"capturerect": [
+					52,
+					305,
+					95,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Session Settings"
+			}
+	]
+}

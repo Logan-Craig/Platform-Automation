@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		340,
+		187,
+		71,
+		16
+	],
+	"lastmodifieddate": 1646236835.631,
+	"createddate": 1632765314.352,
+	"name": "Scratch_Logan/Scratch_Phillip/FullName",
+	"lastfounddate": 1642624168.845,
+	"ocrcapturestring": "Full Name",
+	"lastfoundlocation": [
+		340,
+		187,
+		71,
+		16
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[44,8]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Scratch_Phillip/FullName.png",
+				"connectionname": "SUT1 - Eggplant1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					340,
+					187,
+					71,
+					16
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Full Name"
+			}
+	]
+}

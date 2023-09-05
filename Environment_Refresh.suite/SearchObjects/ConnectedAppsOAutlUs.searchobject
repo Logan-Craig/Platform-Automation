@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		19,
+		349,
+		159,
+		52
+	],
+	"lastmodifieddate": 1613061862.3969998,
+	"createddate": 1613061716.7950001,
+	"name": "ConnectedAppsOAutlUs",
+	"lastfounddate": 1613061941.826,
+	"ocrcapturestring": "□ Manage Apps Connected Apps OAutl Usage",
+	"lastfoundlocation": [
+		19,
+		349,
+		159,
+		52
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[67,28]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/CARMA_Refresh_Steps/Navigation_Links/ConnectedAppsOAutlUs.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					19,
+					349,
+					159,
+					52
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Manage Apps Connected Apps OAutl Usage"
+			}
+	]
+}

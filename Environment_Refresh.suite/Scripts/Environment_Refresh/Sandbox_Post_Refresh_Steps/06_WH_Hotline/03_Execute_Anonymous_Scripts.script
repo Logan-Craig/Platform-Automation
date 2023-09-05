@@ -1,0 +1,285 @@
+﻿Run "Utilities/Developer_Console_Apex".OpenDevConsole
+
+//i.	Create WHVA Hotline Accounts 
+Log "Running Create WHVA Hotline Accounts  script."
+SetRemoteClipboard <<
+Id whAccountCallCenterRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName()
+    .get('WH_VA_Call_Center_Veteran')
+    .getRecordTypeId();
+
+Id viewsAccountRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName()
+    .get('Views')
+    .getRecordTypeId();
+
+List<Account> accountsToCreate = new List<Account>();
+
+Account whHotlineEntitlementAccount = new Account(
+    Name = 'WH VA Hotline Entitlements',
+    RecordTypeId = whAccountCallCenterRecordTypeId
+);
+
+accountsToCreate.add(whHotlineEntitlementAccount);
+
+Account nonVeteranAccount = new Account(
+    Name = 'NON-VETERAN',
+    RecordTypeId = viewsAccountRecordTypeId
+);
+
+accountsToCreate.add(nonVeteranAccount);
+
+String anonAccountName = 'WHVA Anonymous';
+
+Account anonymousAccount = new Account(
+    Name = anonAccountName,
+    RecordTypeId = viewsAccountRecordTypeId
+);
+
+accountsToCreate.add(anonymousAccount);
+
+insert accountsToCreate;
+
+Id nonVAEmployeeVetContactRecordTypeId = Schema.SObjectType.Contact.getRecordTypeInfosByDeveloperName()
+    .get('VIEWS_Tier_1_Call_Center')
+    .getRecordTypeId();
+
+Contact anonContact = new Contact(
+    AccountId = anonymousAccount.Id,
+    RecordTypeId = nonVAEmployeeVetContactRecordTypeId,
+    FirstName = 'Anonymous',
+    LastName = 'Anonymous'
+);
+
+insert anonContact;
+
+String fifteenCharacterTrimmedRecordId = ((String) anonContact.Id)
+    .substring(0, 15);
+
+System.debug(
+    LoggingLevel.ERROR,
+    'NON VA EMPLOYEE/VETERAN CONTACT ID: ' + fifteenCharacterTrimmedRecordId
+);
+>>
+log RemoteClipboard()
+
+Run "Utilities/Developer_Console_Apex".RunApex
+
+//ii.	Create the WH VA Entitlement Record
+Log "Running Create the WH VA Entitlement Record Apex script."
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+setremoteclipboard <<
+String slaProcessName = 'wh va hotline entitlement process (v7)';
+Account vaAccount = [
+    SELECT Id, Name
+    FROM Account
+    WHERE Name = 'WH VA Hotline Entitlements'
+    LIMIT 1
+];
+	
+List<SLAProcess> hotlineSLAProcesses = [
+    SELECT Id, Name 
+    FROM SLAProcess
+    WHERE Name = :slaProcessName
+    LIMIT 1
+];
+
+if (hotlineSLAProcesses.isEmpty()) {
+    System.assert(false, 'The Entitlement Process must have changed cuz I ' + 
+    'cannot find one named ' + slaProcessName);
+}
+
+Entitlement whVAEntitlement = new Entitlement(
+    Type = 'Phone Support',
+    Name = 'WH VA Hotline Entitlements',
+    // TODO: query for this
+    BusinessHoursId = '01mt0000000PC4zAAG',
+    SlaProcessId = hotlineSLAProcesses[0].Id,
+    StartDate = Date.newInstance(2017, 12, 21),
+    AccountId = vaAccount.Id
+);
+
+insert whVAEntitlement;
+
+String fifteenCharacterTrimmedRecordId = ((String) whVAEntitlement.Id)
+    .substring(0, 15);
+
+System.debug(
+    LoggingLevel.ERROR,
+    'Here is the Entitlement Record Id you just inserted: ' + fifteenCharacterTrimmedRecordId
+);
+>>
+log RemoteClipboard()
+
+Run "Utilities/Developer_Console_Apex".RunApex
+
+//iii.	Update the SLA MDTs with the Entitlement Id
+Log "Running Update the SLA MDTs with the Entitlement Id apex script."
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+setremoteclipboard <<
+List<Entitlement> entitlements = [
+    SELECT Id, Name
+    FROM Entitlement
+    WHERE Name = 'WH VA Hotline Entitlements'
+    LIMIT 1
+];
+if (entitlements.isEmpty()) {
+    System.assert(
+        false,
+        'The WHVA Hotline Entitlement has not been created yet. Please create the entitlement, then try this script again.'
+    );
+}
+Entitlement whvaEntitlement = entitlements[0];
+String fifteenCharacterTrimmedRecordId = ((String) whvaEntitlement.Id)
+    .substring(0, 15);
+
+List<WH_VA_Hotline_SLA__mdt> hotlineSLACustomMetadata = [
+    SELECT Label, DeveloperName
+    FROM WH_VA_Hotline_SLA__mdt
+    WHERE Entitlement_ID__c != :fifteenCharacterTrimmedRecordId
+];
+
+if (hotlineSLACustomMetadata.isEmpty()) {
+    System.assert(false, 'All the Entitlement MDTs are up to date.');
+}
+
+Metadata.DeployContainer mdContainer = new Metadata.DeployContainer();
+
+for (WH_VA_Hotline_SLA__mdt hotlineSlaMdt : hotlineSLACustomMetadata) {
+    Metadata.CustomMetadata customMetadata = new Metadata.CustomMetadata();
+    String fullName = 'WH_VA_Hotline_SLA__mdt.' + hotlineSlaMdt.DeveloperName;
+    customMetadata.fullName = fullName;
+    customMetadata.label = hotlineSlaMdt.Label;
+
+    Metada-ta.CustomMetadataValue entitlementIdCustomField = new Metadata.CustomMetadataValue();
+    entitlementIdCustomField.field = 'Entitlement_ID__c';
+    entitlementIdCustomField.value = fifteenCharacterTrimmedRecordId;
+
+    customMetadata.values.add(entitlementIdCustomField);
+
+    mdContainer.addMetadata(customMetadata);
+}
+
+CustomMetadataCallback callback = new CustomMetadataCallback();
+
+// Enqueue custom metadata deployment
+// jobId is the deployment ID
+Id jobId = Metadata.Operations.enqueueDeployment(mdContainer, callback);
+
+public class CustomMetadataCallback implements Metadata.DeployCallback {
+    public void handleResult(
+        Metadata.DeployResult result,
+        Metadata.DeployCallbackContext context
+    ) {
+        if (result.status == Metadata.DeployStatus.Succeeded) {
+            System.debug('success: ' + result);
+        } else {
+            // Deployment was not successful
+            System.assert(false, 'fail: ' + result);
+        }
+    }
+}
+>>
+log RemoteClipboard()
+
+Run "Utilities/Developer_Console_Apex".RunApex
+
+//iv.	Create b + s Configuration
+Log "Running Create b + s Configuration apex script."
+Run "Utilities/Developer_Console_Apex".OpenDevConsole
+setremoteclipboard <<
+// STEP 1 of 2: Update the name of environment with --nameOfEnv
+// set to empty string if prod 
+// Step 2 of 2: run this script
+String nameOfEnvironment = '--uat';
+String configName = 'WH VA Hotline Configuration Testing';
+
+//call log variable creations 
+List<callLogVariable> listCallLogVM = new List<callLogVariable>();
+callLogVariable clv = new callLogVariable();
+clv.key = 'Subject';
+clv.value = 'Call {DATE:YYYY-MM-DD HH:mm:ss}';
+listCallLogVM.add(clv); 
+
+callLogVariable clv1 = new callLogVariable();
+clv1.key = 'cnx__UniqueId__c';
+clv1.value = '{UniqueId}';
+listCallLogVM.add(clv1); 
+
+callLogVariable clv2 = new callLogVariable();
+clv2.key = 'cnx__CTIInfo__c';
+clv2.value = 'Agent Id: {AgentId}, Queue Name: {QueueName}';
+listCallLogVM.add(clv2);
+
+callLogVariable clv3 = new callLogVariable();
+clv3.key = 'WH_VA_Hotline_Caller_ID__c';
+clv3.value = '{Sender}';
+listCallLogVM.add(clv3); 
+
+callLogVariable clv4 = new callLogVariable();
+
+//WH VA Hotline task record ID 
+clv4.key = 'RecordTypeId';
+clv4.value = Schema.SObjectType.task.getRecordTypeInfosByName().get('WH VA Hotline Task').getRecordTypeId();
+listCallLogVM.add(clv4); 
+
+callLogVariable clv5 = new callLogVariable();
+clv5.key = 'WH_VA_Hotline_Call_Type__c';
+clv5.value = '{CallType}';
+listCallLogVM.add(clv5); 
+
+callLogVariable clv6 = new callLogVariable();
+clv6.key = 'WH_VA_Hotline_Dialed_Number__c';
+clv6.value = '{DialedNumber}';
+listCallLogVM.add(clv6); 
+
+callLogVariable clv7 = new callLogVariable();
+clv7.key ='WH_VA_Hotline_Queue__c';
+clv7.value = '{PV1}';
+listCallLogVM.add(clv7);
+
+//screen pop variable creation
+public class callLogVariable{
+    public String key;
+    public String value;
+}
+    
+JSONGenerator genCL = JSON.createGenerator(true);
+JSONGenerator genSP = JSON.createGenerator(true);
+cnx__Connects_Configuration__c bcConfigInsert = new cnx__Connects_Configuration__c();
+
+//Call Log Variable Array 
+
+genCL.writeStartArray(); 
+
+for(callLogVariable keyValSet : listCallLogVM){
+    genCL.writeStartObject();
+    genCL.writeStringField('key', keyValSet.key);
+    genCL.writeStringField('value', keyValSet.value);
+    genCL.writeEndObject();
+}
+
+genCL.writeEndArray();
+
+String strJsonCL = genCL.getAsString();
+
+// Some necessary fields 
+bcConfigInsert.Name = configName;
+bcConfigInsert.cnx__Is_Default__c = true;
+bcConfigInsert.cnx__Enable_HTML5_Desktop_Notifications__c = true;
+//DEMO: https://finesse-pcce-rtp-1.cxdemo.net/
+bcConfigInsert.cnx__Finesse_URL_A__c = 'https://vacoappccfina01.dva.va.gov:8445/';
+bcConfigInsert.cnx__Types_To_Include_In_Directory_Lookup__c = 'AdditionalNumber';
+
+// Call Log Variable Mapping
+bcConfigInsert.cnx__Call_Log_Variable_Mapping__c = strJsonCL;
+
+// Screen Pop for Call Events
+bcConfigInsert.cnx__Integrations_Custom_Toolbars__c = '[{"location":"BOTTOM","url":"https://va'+nameOfEnvironment+'--c.visualforce.com/apex/WHVAHotlineCTIToolbar", "height":"120"}]';
+bcConfigInsert.cnx__Integration_Settings__c = '[{"key":"RealtimeView","value":"hideTeamView=true;hideQueueView=false"}]';
+bcConfigInsert.cnx__Enable_Integration_API_in_Lightning__c = true;
+insert bcConfigInsert; 
+>>
+log RemoteClipboard()
+
+Run "Utilities/Developer_Console_Apex".RunApex
+
+Log "Apex script execution complete."

@@ -1,0 +1,10 @@
+﻿{EPVersionNumber = 202304070406; RunPreScript = NO; Schedules = ({ChangeCount = 18; Name = "Schedule 1"; Path = "~~schedule~~Schedule 1"; Schedule = ({Connection = SUT2; Num = 4; Parameters = test; Run = YES; Script = "Utilities/Launch_and_Login.script"; ScriptDepth = 0; }, {Connection = SUT2; Num = 10; Parameters = ""; Run = YES; Script = "Utilities/Clear_Cache.script"; }); }); ScriptMetaData = {}; SuiteEncodedTextKey = "Ljp,JQMq7<kpE/TT"; SuiteVariables = "{
+ MyUsername:@\"logan.craig@va.gov.orhdeva\",
+ Sandbox_Base_Name:@\"ORHDEVa\",
+ Sandbox_Org:@\"va--\",
+ SandboxName:@\"va--ORHDEVa\",
+ SandboxURL:@\"https://va--ORHDEVa.sandbox.my.salesforce.com\",
+ SitesCommunityURL:@\"va--orhdeva.sandbox.my.salesforce-sites.com\",
+ To_Var:@\"logan.craig@va.gov\",
+ VA_Main_Org:True
+}"; Tags = (Buttons, "Navigation_Links", Logo); helpedSuitesInfo = (); helperSuitesInfo = ({filePath = "./Helper.suite"; }); }

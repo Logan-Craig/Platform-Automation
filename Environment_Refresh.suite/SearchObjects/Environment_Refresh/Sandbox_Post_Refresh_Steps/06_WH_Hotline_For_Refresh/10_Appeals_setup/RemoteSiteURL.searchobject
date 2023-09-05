@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		329,
+		407,
+		91,
+		12
+	],
+	"lastmodifieddate": 1614232379.4530001,
+	"createddate": 1614232379.4530001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/10_Appeals_setup/RemoteSiteURL",
+	"lastfounddate": 1614232523.747,
+	"ocrcapturestring": "Remote Site URL",
+	"lastfoundlocation": [
+		329,
+		407,
+		91,
+		12
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[145,9]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/06_WH_Hotline_For_Refresh/10_Appeals_setup/RemoteSiteURL.png",
+				"connectionname": "SUT1",
+				"type": 1,
+				"connectionserverid": "18.252.46.96",
+				"capturerect": [
+					329,
+					407,
+					91,
+					12
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Remote Site URL"
+			}
+	]
+}

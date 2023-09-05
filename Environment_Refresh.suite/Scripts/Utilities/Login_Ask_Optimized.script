@@ -1,0 +1,38 @@
+﻿set SandboxMode to "Classic"
+//this launch and login asks the user for input
+beep
+Ask "What is your sandbox name?" with "" title "Sandbox to Refresh" message "For example: dtcsqa"
+if it = ""
+	throw "User did not input a sandbox name."
+end if
+replace " " in it with ""
+put it into the suitevariables.SandboxName
+
+put "https://va--"&the suitevariables.SandboxName&".my.salesforce.com" into the suitevariables.SandboxURL
+
+Ask "What is the refresh Username for this sandbox? Please input the ENTIRE username WITH the sandbox name if you appended it." with "" title "Username" message "For example: eggplant@b3groupinc.com.dtcsqa"
+if it = ""
+	throw "User did not input a Username."
+end if
+set the suitevariables.MyUsername to it 
+Log "Username set to:"&&the suitevariables.MyUsername
+Ask Password "What is the refresh Password for this sandbox?" with "" title "Password"
+if it = ""
+	throw "User did not input a Password."
+end if
+Set PasswordVar to it
+
+
+put "Loading login variables."
+set UsernameVar to the suitevariables.MyUsername
+set SandboxName to "va--"&the suitevariables.SandboxName
+set BrowserVar to "Chrome"
+set URL_Var to "https://"&SandboxName&".lightning.force.com"
+Set Use_DTC_Login to False
+
+put "Running Dynamic_Login"
+Run "Helper_Utilities/Login_Dynamic"UsernameVar, PasswordVar, sandboxName, BrowserVar, URL_Var, Use_DTC_Login
+
+//Checks which mode you are in
+Run "Helper_Utilities/Switch_Modes" SandboxMode
+

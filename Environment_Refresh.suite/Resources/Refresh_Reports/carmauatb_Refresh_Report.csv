@@ -1,0 +1,76 @@
+
+Step 01 - Delete Production
+Production Custom Setting not found.
+
+Step 04 - Exam
+Sandbox Post-Refresh: Monday, April 24, 2023, 11:56:12
+Salesforce site domain name:, carmauatb-vacommunity.cs132.force.com
+Assess Anything Endpoint URL updated to:, carmauatb-vacommunity.cs132.force.com
+Public Site Assessment URL Configuration updated to:, https://carmauatb-vacommunity.cs132.force.com/survey
+
+Step 05 - Deliverability
+Deliverability > Access Level set to All Email.
+
+06_SessionSettings
+Could not find: Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/06_SessionSettings/Trusted_Domain_1 This probably means that the script has already run in this environment and updated the Trusted Domains.
+Logout URL updated to: https://va--carmauatb.sandbox.my.salesforce.com
+
+07_Assignment_Manager
+Survey URL updated to: "Https://carmauatb-vacommunity.cs132.force.com/survey/ShareyourVAexperience?id="& Id
+
+08_Custom_Labels
+Updating Sandbox refresh URL labels
+Environment Base URL found: https://va--carmauat.my.salesforce.com
+Environment Base URL updated to: https://va--carmauatb.sandbox.my.salesforce.com
+Standard URL found: https://va--carmauat.my.salesforce.com/
+Standard URL updated to: https://va--carmauatb.sandbox.my.salesforce.com/
+VA Base URL found to be: va--carmauat.my.salesforce.com/
+VA Base URL updated to: va--carmauatb.sandbox.my.salesforce.com/
+VA Community URL found to be: carmauat-vacommunity.cs132.force.com
+VA Community URL updated to: carmauatb-vacommunity.cs132.force.com
+VA Saleforce Helpdesk URL found to be: https://carmauat-vacommunity.cs132.force.com/helpdesk
+VA Saleforce Helpdesk URL updated to: https://https://carmauatb-vacommunity.cs132.force.com/helpdesk
+
+
+08_Custom_Links
+Updating Sandbox custom links
+Application Enhancement Request URL already updated to: https://va--carmauat.my.salesforce.com/a0K/e?retURL=%2Fa0K%2Fo&RecordType=012t0000000TRfW&ent=01It0000000GqgH
+DTC Exception Request URL already found to be: https://va--carmauat.my.salesforce.com/a3d/o
+My Application Requests URL already found to be: https://va--carmauat.my.salesforce.com/a0K?fcf=00Bt00000015Z4J
+My Application URL already found to be: https://carmauat-vacommunity.cs132.force.com/MyVA/a0J?fcf=00Br0000000NcXF
+
+10.0_Remote_Site_Settings
+Updating Remote Site Settings
+
+Updating Sandbox refresh Sites
+Meta Data End Point Sandbox Refresh Site URL found to be: https://va--carmauat.my.salesforce.com
+Meta Data End Point Sanbox Refresh Site URL set to: https://va--carmauatb.sandbox.my.salesforce.com
+VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: https://va--carmauat--c.cs132.visual.force.com
+VBA ERP FlowRestAPI Sandbox Refresh URL updated to: https://va--carmauatb.sandbox--c.cs132.visual.force.com
+VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: https://va--carmauat.my.salesforce.com
+VIEWS FlowRestAPI Sandbox Refresh URL updated to: https://va--carmauatb.sandbox.my.salesforce.com
+
+10.1_E2Excel
+Checking E2Excel URL from remote site settings against the E2Excel configuration tab.
+E2Excel URL found to be: https://va--carmauatb.my.salesforce.com
+E2Excel Sandbox Refresh Site URL found to be: https://va--carmauat.my.salesforce.com
+E2Excel Sandbox Refresh Site URL updated to: https://va--carmauatb.my.salesforce.com
+Updated E2Ex_Custom URL to: https://va--carmauatb--c.visualforce.com
+
+11_Email_Relay_Configuration
+Updating Email Relay Configurations
+Email Relay "partnersmtp.va.gov" found to already exist. This probably means the script has already updated it.
+Domain filter found to already exist. Most likely the script has already run and created it.
+
+12_Single_Sign_On_Enabled
+Updating single sign on Configurations
+
+14_Updating_Internal_Users_Email_Address
+Updating internal users email addresses.
+Email addresses have been updated.
+
+15_Named_Credentials_Manual_Masking
+Updating named credentials using manual masking.
+
+Test run End: Monday, April 24, 2023 12:06:34
+

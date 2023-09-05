@@ -1,0 +1,42 @@
+﻿//This script switches from Lightning mode to Classic Mode or Classic Mode to Lighting Mode
+
+set SandboxMode to "Classic"
+//Checks which mode you are in
+//since the browser buttons are OS-dependent I need a different way of getting here. Ctrl+l is the hotkey, but I'm worried about losing the wait.
+typetext controlKey,"l"
+//click imagename:"Utilities/Launch_and_Login/URL", waitfor:6
+typetext controlKey, "c"
+log RemoteClipboard()
+if "lightning" is in RemoteClipboard()
+then
+	Log "Sandbox is in Lightning Mode."
+	Set FoundMode to "lightning"
+else
+	log "Sandbox is in Classic Mode."
+	Set FoundMode to "Classic"
+end if
+
+Log "Script requires: "&SandboxMode&" Mode."
+
+//Changes Mode if needed
+if FoundMode = SandboxMode
+then
+	Log "No environment change needed."
+else
+	if SandboxMode = "Lightning"
+	then
+		Wait 3
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Avatar"
+		Click imageName:"Utilities/Launch_and_Login/SwitchtoLightningExperience", waitFor:3
+		Log "Mode switched to Lightning."
+		Wait 3
+	end if
+	if SandboxMode = "Classic"
+	then
+		Wait 3
+		Click ImageName:"Utilities/Launch_and_Login/AvatarLightning"
+		click "Utilities/Launch_and_Login/SwitchtoSalesforceClassic"
+		Log "Mode switched to Classic."
+		Wait 3
+	end if
+end if

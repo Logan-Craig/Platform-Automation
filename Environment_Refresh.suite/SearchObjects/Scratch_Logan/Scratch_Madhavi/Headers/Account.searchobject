@@ -1,0 +1,42 @@
+{
+	"originalcapturelocation": [
+		850,
+		391,
+		56,
+		14
+	],
+	"lastmodifieddate": 1646236835.5780001,
+	"createddate": 1646163855.586,
+	"name": "Scratch_Logan/Scratch_Madhavi/Headers/Account",
+	"lastfounddate": 1646165470.4299998,
+	"ocrcapturestring": "Account",
+	"lastfoundlocation": [
+		850,
+		391,
+		56,
+		14
+	],
+	"testlocationdata": [
+		{
+				"capturedocrtext": "Account",
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[33,8]",
+					"Tolerance": "_52",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"type": 1,
+				"capturerect": [
+					850,
+					391,
+					56,
+					14
+				],
+				"name": "Scratch_Logan/Scratch_Madhavi/Headers/Account.png"
+			}
+	]
+}

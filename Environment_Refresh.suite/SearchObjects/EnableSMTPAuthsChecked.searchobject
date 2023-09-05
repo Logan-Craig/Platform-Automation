@@ -1,0 +1,29 @@
+{
+	"lastmodifieddate": 1604074168.4289999,
+	"ocrcapturestring": "Enable SMTP Auth s",
+	"originalcapturelocation": [
+		321,
+		454,
+		140,
+		21
+	],
+	"createddate": 1604074156.023,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/11_Email_Relay_Configuration/EnableSMTPAuthsChecked.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					321,
+					454,
+					140,
+					21
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Enable SMTP Auth s"
+			}
+	],
+	"name": "EnableSMTPAuthsChecked"
+}

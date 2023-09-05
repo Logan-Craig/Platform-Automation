@@ -1,0 +1,118 @@
+﻿
+
+
+
+Run "Untitled1".imageupdate_Panel_Test
+
+
+
+
+
+
+
+
+waitfor 3,"NewText"
+
+click image:"OOM",WaitFor:1,Searchrectangle:[[foundimagelocation()-[30,0]],[60,120]]
+
+Run "./Helper_Utilities/Add_to_Trusted_IPs"
+
+
+//A simple Property List
+Set Plist to {
+	Key1:"Data1",
+	Key2:"Data2",
+	Key3:"Data3"
+}
+put Plist.Key2
+
+//A list of property lists
+Set Plist_of_Plists to [
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	}
+]
+//A Property list of property lists
+Set Plist_of_Plists to {
+	Plist1:
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	Plist2:
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	Plist3:
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	}
+}
+//A list containing two property lists of property lists and a list
+Set Plist_of_Plists to [
+	{Plist1:
+		{
+			Key1:"Data1",
+			Key2:"Data2",
+			Key3:"Data3"
+		}
+	},
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	{Plist2:
+		{
+			Key1:"Data1",
+			Key2:"Data2",
+			Key3:"Data3"
+		}
+	}
+]
+
+//How to reference items from a property list of property lists
+Set Plist_of_Plists to {
+	Plist1:
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	Plist2:
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	},
+	Plist3:
+	{
+		Key1:"Data1",
+		Key2:"Data2",
+		Key3:"Data3"
+	}
+}
+put the keys of Plist_of_Plists
+put Plist_of_Plists.Plist2.Key2
+
+
+
+
+

@@ -1,0 +1,42 @@
+{
+	"lastmodifieddate": 1646236835.434,
+	"ocrcapturestring": "To",
+	"originalcapturelocation": [
+		701,
+		348,
+		16,
+		13
+	],
+	"createddate": 1619725406.2920001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[8,6]",
+					"Tolerance": "_55",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Scratch_Logan/Kevin/To_DateReport.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.56.103",
+				"capturerect": [
+					701,
+					348,
+					16,
+					13
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "To"
+			}
+	],
+	"name": "Scratch_Logan/Kevin/To_DateReport"
+}

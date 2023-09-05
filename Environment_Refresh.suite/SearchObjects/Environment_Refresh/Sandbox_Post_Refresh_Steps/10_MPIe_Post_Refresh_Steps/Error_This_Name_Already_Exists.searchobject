@@ -1,0 +1,47 @@
+{
+	"originalcapturelocation": [
+		470,
+		544,
+		481,
+		10
+	],
+	"lastmodifieddate": 1614958454.9850001,
+	"createddate": 1614958454.9850001,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Error_This_Name_Already_Exists",
+	"lastfounddate": 1617121450.4190001,
+	"ocrcapturestring": "Error: This Name already exists or has been previously used. Please choose a different name.",
+	"lastfoundlocation": [
+		468,
+		544,
+		481,
+		10
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[240,5]",
+					"Tolerance": "_54",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Error_This_Name_Already_Exists.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					470,
+					544,
+					481,
+					10
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Error: This Name already exists or has been previously used. Please choose a different name."
+			}
+	]
+}

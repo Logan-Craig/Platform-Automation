@@ -1,0 +1,48 @@
+{
+	"originalcapturelocation": [
+		35,
+		366,
+		152,
+		39
+	],
+	"lastmodifieddate": 1617143671.3109999,
+	"createddate": 1617143671.3109999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/EmailAlerts",
+	"lastfounddate": 1655763307.605,
+	"ocrcapturestring": "□ Workflow & Approvals Email Alerts",
+	"lastfoundlocation": [
+		35,
+		398,
+		152,
+		39
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[66,31]",
+					"Tolerance": "_69",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/EmailAlerts.png",
+				"connectionname": "Windows WM",
+				"type": 1,
+				"connectionserverid": "192.168.1.123",
+				"capturerect": [
+					35,
+					366,
+					152,
+					39
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "□ Workflow & Approvals Email Alerts"
+			}
+	]
+}

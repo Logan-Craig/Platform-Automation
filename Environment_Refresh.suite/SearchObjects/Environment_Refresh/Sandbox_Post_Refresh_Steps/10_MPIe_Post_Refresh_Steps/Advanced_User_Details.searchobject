@@ -1,0 +1,40 @@
+{
+	"lastmodifieddate": 1614701839.115,
+	"ocrcapturestring": "Advanced User Details",
+	"originalcapturelocation": [
+		64,
+		322,
+		138,
+		14
+	],
+	"createddate": 1614701839.115,
+	"testlocationdata": [
+		{
+				"connectionportnum": 5900,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_71",
+					"HotSpot": "[83,9]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown VNC"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Advanced_User_Details.png",
+				"connectionname": "W10SUT",
+				"type": 1,
+				"capturerect": [
+					64,
+					322,
+					138,
+					14
+				],
+				"connectionserverid": "192.168.56.103",
+				"capturedocrtext": "Advanced User Details"
+			}
+	],
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/10_MPIe_Post_Refresh_Steps/Advanced_User_Details"
+}

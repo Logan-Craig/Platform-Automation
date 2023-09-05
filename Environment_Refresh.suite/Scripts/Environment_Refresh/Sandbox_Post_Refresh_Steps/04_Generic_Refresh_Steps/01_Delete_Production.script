@@ -1,0 +1,48 @@
+﻿//Delete_Production
+
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Custom Settings" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/CustomSettings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/CustomSettings"
+
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending 
+write return&"Step 01 - Delete Production"&return to file Refresh_Report
+
+
+//Checks the View you're in
+If ImageFound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/ViewSpringCMEosOnlyv") 
+else 
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/View"
+	if imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/SpringCMEosOnly")
+	then
+		click FoundImageLocation()
+	else
+		click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Filter"
+	end if
+End If
+
+//Manage Environment
+click image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Manage",searchrectangle:[topleft of imagerectangle(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Environment",waitfor:9)+[0,-6],[0,(bottom of imagerectangle("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/Environment")+8)]]
+
+//Makes sure Production environment actually exists
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/EditDelProduction", waitFor:3)
+then
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/EditDelProduction"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/ConfirmDeleteEnvironment"
+	write "Production Custom Setting found and deleted."&return to file Refresh_Report
+else
+	Log "Production Environment does not exist!"
+	write "Production Custom Setting not found."&return to file Refresh_Report
+end if
+
+//Makes sure the environment was actually deleted
+//it is deleting it, but finding the link before the page refreshes.
+repeat until not imagefound("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/01_Delete_Production/EditDelProduction")
+	if the repeatindex >15
+		throw "Production Environment found to still exist after attempted deletion.", "you probably wrote a crappy script (maybe two prods?)"
+	end if
+	wait 3
+end repeat
+
+close file Refresh_Report

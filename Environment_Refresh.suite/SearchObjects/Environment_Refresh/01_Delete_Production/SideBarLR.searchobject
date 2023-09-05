@@ -1,0 +1,41 @@
+{
+	"lastmodifieddate": 1606928449.8270001,
+	"ocrcapturestring": "» Logs",
+	"originalcapturelocation": [
+		18,
+		899,
+		51,
+		17
+	],
+	"createddate": 1606928449.8270001,
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Tolerance": "_45",
+					"HotSpot": "[207,16]",
+					"Scale": "    1",
+					"Discrepancy": "_0",
+					"SearchType": "Tolerant of Background"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/01_Delete_Production/SideBarLR.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					18,
+					899,
+					51,
+					17
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "» Logs"
+			}
+	],
+	"name": "Environment_Refresh/01_Delete_Production/SideBarLR"
+}

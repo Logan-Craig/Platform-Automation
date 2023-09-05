@@ -1,0 +1,49 @@
+{
+	"originalcapturelocation": [
+		1090,
+		317,
+		147,
+		15
+	],
+	"lastmodifieddate": 1617295388.6069999,
+	"createddate": 1614199478.7869999,
+	"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/PreviousPageNextPage",
+	"lastfounddate": 1614282403.1619999,
+	"ocrcapturestring": "Previous Page Next Page",
+	"lastfoundlocation": [
+		1090,
+		317,
+		147,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"deleted": true,
+				"properties": {
+					"CropRectangle": "[0,0,0,0]",
+					"Rotate": 0,
+					"Scale": "    1",
+					"HotSpot": "[114,5]",
+					"Tolerance": "_73",
+					"Discrepancy": "_0",
+					"SearchType": "Smoothed for Text"
+				},
+				"sutinfo": {
+					"type": "Unknown RDP"
+				},
+				"name": "Environment_Refresh/Sandbox_Post_Refresh_Steps/03_VIEWS/06_Miscellaneous_Updates/PreviousPageNextPage.png",
+				"connectionname": "18.253.36.232",
+				"type": 1,
+				"connectionserverid": "18.253.36.232",
+				"capturerect": [
+					1090,
+					317,
+					147,
+					15
+				],
+				"connectiontype": "RDP",
+				"capturedocrtext": "Previous Page Next Page"
+			}
+	]
+}

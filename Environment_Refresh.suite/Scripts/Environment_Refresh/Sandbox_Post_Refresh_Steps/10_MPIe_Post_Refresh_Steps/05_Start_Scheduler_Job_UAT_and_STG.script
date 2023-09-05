@@ -1,0 +1,12 @@
+﻿//Start scheduler job for UAT and Staging sandbox only (not needed in ENTSD, DEV, etc)
+
+//Make sure the scheduled job for MPI Correlation Request is still being scheduled
+
+//First check if the "MPI Correlation Request" job with "MPI_VeteranCorrelationSchedule" class has been scheduled. If it has NOT been scheduled, then schedule it with the following steps:
+
+//1.	Setup -> Custom Code ->  Apex Class -> Schedule Apex
+//2.	Job Name "MPI Correlation Request"
+//3.	Apex Class "MPI_VeteranCorrelationSchedule". 
+//4.	If the class doesn't show up in the search result, it is a known issue. It is either because it has already been scheduled, or because the class has not been compiled yet. For the latter, please go to Setup -> Custom Code -> Apex Class, and click on the link "Compile all classes"
+//5.	Frequency: every day at 9 pm (or midnight depends on DTC policy)
+//

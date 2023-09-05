@@ -1,0 +1,188 @@
+﻿// 10. Remote Site Settings:
+//  a.	Under Setup, go to Administer / Security Controls / Remote Site Settings.
+//  b.	Update the 'Case_Task_e2excel' to the Sandbox URL and click 'Save'.
+//    i.	NOTE: Pay attention to the formatting with the url. EX: https://va--SANDBOX--c.cs32.visual.force.com
+//  c.	Update the 'E2Excel' to the Sandbox URL and click 'Save'.
+//    i.	NOTE: Pay attention to the formatting with the url. EX: https://va--SANDBOX--e2ex.cs32.visual.force.com
+//  d.	Update the 'MetaDataEndPoint' to the Sandbox URL and click 'Save'.
+//  e.	Update the 'VBA_ERP_FlowRestAPI' to the Sandbox URL and click 'Save'.
+//    i.	NOTE: Pay attention to the formatting with the url. EX: https://va--SANDBOX--c.cs32.visual.force.com
+//  f.	Update the 'VIEWS_FlowRestAPI' to the Sites URL and click 'Save'. The Salesforce site domain can be found under Setup and 'Sites'.
+
+Run "Environment_Refresh/EnvRefresh_Helpers".Search_Setup "Remote Site Settings" , "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/RemoteSiteSettings", "Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/RemoteSiteSettings","Environment_Refresh/Sandbox_Post_Refresh_Steps/Navigation_Links/Step_Headers/AllRemoteSiteSettings"
+
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"10_0_Remote_Site_Settings"& return to file Refresh_Report
+write "Updating Remote Site Settings" & return to file Refresh_Report
+
+
+//Verify Correct View
+if ImageFound(imageName:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/ViewSandboxRefreshSites.png", waitFor:3)
+else
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/View"
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/SandboxRefreshSitesView"
+end if
+
+Put ResourcePath("Refresh_Reports\"&the suitevariables.SandboxName&"_Refresh_Report"&".csv") into Refresh_Report
+open file Refresh_Report for appending
+write return&"Updating Sandbox refresh Sites"&return to file Refresh_Report
+
+put the MultipleFoundAction into MultipleFoundState
+set the MultipleFoundAction to UseFirstLocation
+//notes from Chelsea
+//https://va--entsd--c.cs32.visual.force.com
+//https://va--c.na21.visual.force.com/   --default after refresh
+//https://va--dtcsqava2--c.cs32.visual.force.com  --not always going to be "32"
+
+//establishing sandbox name and number for later use building URLs
+set SandboxName to SandboxURL
+replace "https://va--" in SandboxName with ""
+replace ".my.salesforce.com" in SandboxName with ""
+Log SandboxName
+put SitesCommunityURL into TempSandboxNum
+replace "." in TempSandboxNum with ","
+put item 2 of TempSandboxNum into SandboxNum
+Log SandboxNum
+
+//Moved e2excel to its own script for new requested method
+(*//edits the CaseTaske2excel URL
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/CaseTaske2excel",waitfor:3
+
+//clicks the edit too soon sometimes
+repeat until imagefound(image:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteEdit", waitfor:0)
+	Click item 1 of everyimagelocation("Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit")
+	wait 3
+end repeat
+Click foundimagelocation()
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log remoteclipboard()
+
+//Builds the Case_Task_ecexcel URL
+put "https://va--"&SandBoxName&"-c."&SandboxNum&".visual.force.com"into Case_Task_ecexcel
+Log Case_Task_ecexcel
+
+if Case_Task_ecexcel = RemoteClipboard()
+then
+	Log "Case Task ecexcel Sandbox Refresh Site URL found to be: "&RemoteClipboard()
+	write "Case Task ecexcel Sandbox Refresh Site URL found to be: " &RemoteClipboard()&return to file Refresh_Report
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+else
+	TypeText DeleteKey
+	TypeText Case_Task_ecexcel
+	write "Case Task ecexcel Sandbox Refresh Site URL found to be: " &RemoteClipboard()&return&"Case Task e2excel Sandbox Refresh Site URL updated to: " & Case_Task_ecexcel & return to file Refresh_Report
+	Log "Case Task ecexcel Sandbox Refresh Site URL updated to: "& Case_Task_ecexcel
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3
+
+
+
+//edits the E2Excel URL
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/E2Excel", waitfor:3
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit",waitfor:3
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteEdit",waitfor:7
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+Log RemoteClipboard()
+
+//Builds the E2Excel URL
+put "https://va--"&SandboxName&"--e2ex."&SandboxNum&".visual.force.com" into E2Excel
+log "e2excel URL will be set to:"&&E2Excel
+
+if E2Excel = RemoteClipboard()
+then
+	Log "E2Excel Sandbox Refresh Site URL already set to: "&RemoteClipboard()
+	write "E2Excel Sandbox Refresh Site URL already set to: " &RemoteClipboard()&return to file Refresh_Report
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+else
+	TypeText DeleteKey
+	typetext  E2Excel
+	write "E2Excel Sandbox Refresh Site URL found to be: " &RemoteClipboard()&return&"E2Excel Sandbox Refresh Site URL updated to: " &E2Excel& return to file Refresh_Report
+	Log  "E2Excel Sandbox Refresh Site URL updated to: " & CustomSandBoxURL & "--e2ex" & CustomSitesCommunityURL & ".visual.force.com"
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3*)
+
+//edits the MetaDataEndPoint URL
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/MetaDataEndPoint", waitfor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteEdit"
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+if RemoteClipboard()= SandboxURL
+then
+	Log "Meta Data End Point Sandbox Refresh Site URL already found to be: "&RemoteClipboard()
+	write "Meta Data End Point Sandbox Refresh Site URL already found to be: "&RemoteClipboard()  & return to file Refresh_Report
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+else
+	TypeText DeleteKey
+	TypeText SandboxURL
+	write "Meta Data End Point Sandbox Refresh Site URL found to be: " &RemoteClipboard()&return&"Meta Data End Point Sanbox Refresh Site URL set to: " & SandboxURL  & return to file Refresh_Report
+	Log "Meta Data End Point Sandbox Refresh Site URL set to: " & SandboxURL
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3
+
+
+//edits the VBA ERP FlowRestAPI URL
+//https://va--SANDBOX--c.cs32.visual.force.com
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/VBAERPFlowRestAPI", waitfor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteEdit"
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log remoteclipboard()
+
+//builds the VBA ERP FlowRestAPI URL
+put "https://va--"&SandboxName&"--c."&SandboxNum&".visual.force.com" into VBAERPFlowResAPIURL
+Log VBAERPFlowResAPIURL
+
+if RemoteClipboard() = VBAERPFlowResAPIURL
+then
+	Log "VBA ERP FlowRestAPI Sandbox Refresh URL found to be: "&RemoteClipboard()
+	write "VBA ERP FlowRestAPI Sandbox Refresh URL found to be: "&RemoteClipboard()  & return to file Refresh_Report
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+else
+	TypeText DeleteKey
+	typetext VBAERPFlowResAPIURL
+	write "VBA ERP FlowRestAPI Sandbox Refresh Site URL found to be: " &RemoteClipboard()&return&"VBA ERP FlowRestAPI Sandbox Refresh URL updated to: " & VBAERPFlowResAPIURL  & return to file Refresh_Report
+	Log "VBA ERP FlowRestAPI Sandbox Refresh URL updated to: " & VBAERPFlowResAPIURL
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3
+
+
+//edits the VIEWS FlowRestAPI URL
+Click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/VIEWSFlowRestAPI", waitfor:3
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Edit"
+Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteEdit"
+TypeText ControlKey, "a"
+TypeText ControlKey, "c"
+log remoteclipboard()
+Log "VIEWS FlowRestAPI should be: "&"https://va--"&SandboxName&".my.salesforce.com"
+set VIEWSFlowRestAPI to "https://va--"&SandboxName&".my.salesforce.com"
+
+if RemoteClipboard() = VIEWSFlowRestAPI
+then
+	Log "VIEWS FlowRestAPI Sandbox Refresh URL already set to: "&RemoteClipboard()
+	write "VIEWS FlowRestAPI Sandbox Refresh URL already set to: "&RemoteClipboard()  & return to file Refresh_Report
+	click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/08_Custom_Labels/Cancel"
+else
+	TypeText DeleteKey
+	TypeText SandboxURL
+	write "VIEWS FlowRestAPI Sanbox Refresh Site URL found to be: " &RemoteClipboard()&return&"VIEWS FlowRestAPI Sandbox Refresh URL updated to: " & VIEWSFlowRestAPI & return to file Refresh_Report
+	Log "VIEWS FlowRestAPI Sandbox Refresh URL updated to: " & SandboxURL
+	Click "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/09_Custom_Links/Save"
+end if
+waitfor 12, "Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/RemoteSiteDetail"
+click imagename:"Environment_Refresh/Sandbox_Post_Refresh_Steps/04_Generic_Refresh_Steps/10_0_Remote_Site_Settings/BacktoListRemoteSiteSettings",waitfor:3
+set the MultipleFoundAction to MultipleFoundState
+
+close file Refresh_Report

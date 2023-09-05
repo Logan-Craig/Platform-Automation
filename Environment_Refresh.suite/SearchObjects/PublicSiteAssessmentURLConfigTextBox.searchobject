@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		280,
+		268,
+		365,
+		39
+	],
+	"lastmodifieddate": 1603831688.148,
+	"createddate": 1603831678.9060001,
+	"name": "PublicSiteAssessmentURLConfigTextBox",
+	"lastfounddate": 1614895044.8470001,
+	"ocrcapturestring": "Public Site Assessment URL Configuration",
+	"lastfoundlocation": [
+		181,
+		826,
+		365,
+		39
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/Exam/PublicSiteAssessmentURLConfigTextBox.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					280,
+					268,
+					365,
+					39
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Public Site Assessment URL Configuration"
+			}
+	]
+}

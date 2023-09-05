@@ -1,0 +1,36 @@
+{
+	"originalcapturelocation": [
+		53,
+		897,
+		92,
+		15
+	],
+	"lastmodifieddate": 1603842385.5380001,
+	"createddate": 1603842382.888,
+	"name": "SessionSettings",
+	"lastfounddate": 1605921411.2460001,
+	"ocrcapturestring": "Session Settings",
+	"lastfoundlocation": [
+		53,
+		897,
+		92,
+		15
+	],
+	"testlocationdata": [
+		{
+				"connectionportnum": 3389,
+				"name": "Environment_Refresh/5_Deliverability/SessionSettings.png",
+				"connectionname": "SUT2",
+				"type": 1,
+				"capturerect": [
+					53,
+					897,
+					92,
+					15
+				],
+				"connectiontype": "RDP",
+				"connectionserverid": "18.253.36.232",
+				"capturedocrtext": "Session Settings"
+			}
+	]
+}
