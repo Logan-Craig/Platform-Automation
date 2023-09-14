@@ -1,10 +1,10 @@
 on:
   pull_request:
     branches:
-      - master
+      - main
   push:
     branches:
-      - master
+      - main
       
   # To re-run job from github action
   workflow_dispatch:
