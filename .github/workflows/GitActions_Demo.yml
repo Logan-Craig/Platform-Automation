@@ -1,0 +1,26 @@
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+      
+  # To re-run job from github action
+  workflow_dispatch:
+  
+jobs:
+  Run-Test-Configuration:
+    strategy:
+      max-parallel: 1
+    runs-on: self-hosted
+    name: Run Test Configuration
+    steps:
+      - name: Eggplant Runner 1
+        uses: keysight-eggplant/eggplant-github-action@v1.0.6
+        with:
+          serverURL: "http://vac23appegy800:8000/"
+          clientID: "client:dai:api:integration:39b88924-45da-4c25-b70f-9826c38d88d6"
+          testConfigID: "aebe7588-ee76-4189-b45a-e4667ec383fb" # Test configuration which need to perform execution
+          clientSecret: "xVAn9wmqTABCytUW4TwFULnn7dJ8Dwtm" # Eggplant DAI service client secret
+          eggplantRunnerPath: "C:/Github_Actions/actions-runner/eggplant-runner-Windows-6.5.0-3.exe"
